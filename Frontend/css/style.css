@@ -1,16 +1,16 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 header {
-  background-image: url("../img/sea.jpg");
+  background-color: #fff;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -18,6 +18,26 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed; /* Adăugăm poziționarea fixă */
+  top: 0; /* Specificăm să fie fixat în partea de sus a paginii */
+  width: 100%; /* Asigurăm că ocupă întreaga lățime a ecranului */
+  z-index: 1000; /* Setăm un z-index mare pentru a se afișa deasupra altor elemente */
+}
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 1); /* Folosim o culoare aproape solidă */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Umbra ușoară */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fixed-header .logo .name,
+.fixed-header .logo .subtitle,
+.fixed-header nav ul li a {
+  color: #333; /* Schimbăm culoarea textului la scroll */
 }
 
 .logo {
@@ -28,14 +48,14 @@ header {
 .logo .name {
   font-size: 40px;
   font-weight: bold;
-  color: white;
+  color: rgb(0, 0, 0);
   text-shadow: 1px 1px 1px black;
 }
 
 .logo .subtitle {
   font-size: 24px;
-  color: white;
-  text-shadow: 1px 1px 1px black;
+  color: rgb(0, 0, 0);
+  /*text-shadow: 1px 1px 1px black;*/
 }
 
 nav ul {
@@ -49,21 +69,27 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: white;
   font-weight: bold;
-  text-shadow: 1px 1px 1px black;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #9a9494;
 }
 
 .hero {
-  background-color: rgb(255, 255, 255);
-  padding: 30px 0;
+  background-color: #fff;
+  padding: 110px 0;
   text-align: center;
 }
 
 .hero h1 {
   font-size: 60px;
   margin-bottom: 25px;
-  text-shadow: 3px 1px 1px rgb(89, 199, 209);
 }
 
 .btn {
@@ -72,7 +98,7 @@ nav ul li a {
   background-color: #555;
   color: white;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: background-color 0.5s ease;
 }
 
@@ -81,11 +107,11 @@ nav ul li a {
 }
 
 .content {
-  flex: 1;
+  background-color: #ffffff;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0;
+  flex-direction: column; /* Schimbăm direcția la coloană */
+  align-items: center; /* Aliniem elementele pe orizontală */
+  padding: 50px 70px;
 }
 
 .image-collage {
@@ -95,34 +121,31 @@ nav ul li a {
 }
 
 .image-item {
-  flex: 1 1 200px; /* Flexibilitate pe axa orizontală */
-  height: 200px; /* Înălțime fixă pentru fiecare imagine */
-  position: relative; /* Pentru a poziționa butonul de pe imagine */
+  flex: 1 1 200px;
+  height: 200px;
+  position: relative;
 }
 
 .image-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Pentru a asigura că imaginea se potrivește în întregime în div */
+  object-fit: cover;
+  border-radius: 10px; /* Rotunjim colțurile imaginilor */
 }
 
-.image-item .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Suprapunere semi-transparentă */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0; /* Inițial invizibil */
-  transition: opacity 0.3s ease; /* Tranzitie pentru efectul de hover */
+.text-container {
+  background-color: rgba(255, 255, 255, 0.9); /* Adăugăm culoare de fundal */
+  padding: 20px; /* Adăugăm padding */
+  border-radius: 10px; /* Rotunjim colțurile containerului */
+  margin-top: 50px; /* Spațiu între poze și text */
+  text-align: center; /* Aliniem textul la centru */
 }
 
-.image-item:hover .overlay {
-  opacity: 1; /* Facem overlay-ul vizibil când trecem cu mouse-ul peste imagine */
+.content-text {
+  font-weight: bold; /* Textul este acum bold */
+  margin: 0; /* Eliminăm marginile implicite ale textului */
 }
+
 
 .overlay .btn {
   padding: 10px 20px;
@@ -138,5 +161,66 @@ nav ul li a {
 }
 
 .promo {
-  text-align: center; /* Alinierea textului pe mijloc */
+  text-align: center;
+  padding: 100px 0;
+}
+
+.promo h1:hover,
+.promo h3:hover {
+  text-shadow: 0 0 10px rgba(93, 32, 32, 0.8); /* Add a glowing effect */
+  transition: text-shadow 1 ease; /* Add transition for smooth effect */
+}
+
+.promo-content {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.promo-text {
+  flex: 1; /* Take remaining space */
+}
+
+.text-container {
+  background-color: rgba(255, 255, 255, 0.9); /* Add background color */
+  padding: 20px; /* Add padding */
+  border-radius: 10px; /* Add border radius */
+}
+
+
+.promo-image {
+  flex: 1; /* Take remaining space */
+  text-align: right; /* Align image to the right */
+}
+
+.promo-image img {
+  width: 100%; /* Make sure the image takes full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Add border radius */
+  margin-top: 20px; /* Add margin */
+}
+
+/* Stil pentru întunecarea imaginii */
+.image-item img.darken {
+  filter: brightness(70%);
+}
+
+/* Stil pentru afișarea mesajului text */
+.image-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Stil pentru afișarea mesajului text la hover */
+.image-item:hover .overlay {
+  opacity: 1;
 }

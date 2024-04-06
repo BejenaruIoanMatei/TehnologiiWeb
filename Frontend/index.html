@@ -21,63 +21,105 @@
     />
 
     <link href="./css/style.css" rel="stylesheet">
-
+    
 </head>
 
 <body>
+    
     <header>
         <div class="logo">
             <span class="name">SoRe</span>
             <span class="subtitle">Your Souvenir Recommender</span>
         </div>
         <nav>
-            <ul>
-                <!-- <li><a href="#home">Home</a></li> -->
-                <li><a href="aboutUs.html">About</a></li>
-                <li><a href="contact">Contact</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li><a href="aboutUs.html">About</a></li>
+                    <li><a href="#contact">Contact </a></li>                    
+                </ul>
+            </nav>
         </nav>
     </header>
 
-    <section id="home" class="hero">
+    <section id="home" class="hero" style="padding-top: 200px;">
+        <!-- Adaugăm un padding-top pentru a compensa înălțimea header-ului fixat -->
+        <br>
         <h1>Start a new voyage</h1>
         <a href="blank.html" class="btn">Explore</a>
-        <br>
-        <h2>Let us choose the best souvenir for you !</h2>
     </section>
+    
 
     <section id="about" class="content">
         <div class="image-collage">
             <div class="image-item">
-                <img src="./img/greece.jpg" alt="Image 1">
+                <img src="./img/greece.jpg" alt="Image 1" title="Imaginea Grecia">
+                <div class="overlay">Greece</div>
             </div>
             <div class="image-item">
-                <img src="./img/dessert.jpg" alt="Image 2">
+                <img src="./img/dessert.jpg" alt="Image 2" title="Imaginea Desert">
+                <div class="overlay">Egypt</div>
             </div>
             <div class="image-item">
-                <img src="./img/japan.jpg" alt="Image 3">
+                <img src="./img/japan.jpg" alt="Image 3" title="Imaginea Japonia">
+                <div class="overlay">Japan</div>
             </div>
             <div class="image-item">
-                <img src="./img/city.png" alt="Image 3">
+                <img src="./img/city.png" alt="Image 3" title="Imaginea Oraș">
+                <div class="overlay">Italy</div>
             </div>
         </div>
-        <h2></h2>
+        
+        <div class="text-container">
+            <h1 class="content-text">You've got plenty of places to choose from !</h1>
+        </div>
+    </section>
+    
+    
+
+    <section id="text" class="promo">
+        <div class="promo-content">
+            <div class="promo-text">
+                <div class="text-container">
+                    <h1>Stop 
+                        waiting 
+                        and 
+                        plan 
+                        your 
+                        next 
+                        voyage</h1>
+                </div>
+            </div>
+            <div class="promo-image">
+                <!-- Add your image here -->
+                <img src="./img/mountains.jpg" alt="Promo Image">
+            </div>
+        </div>
     </section>
 
-    <section id = "text" class="promo">
-        <div>
-            <h1>You have got plenty of places to choose from !</h1>
-            <h3>Stop waiting and plan your next voyage</h3>
-        </div>
-    </section>
-    
-    
-    <!--
-        <footer id="info" class="footer">
-        <h1>INFORMATII CONTACT</h1>       
-        </footer>
-    -->
-    
+    <script>
+        // JavaScript pentru a face header-ul fixat după scroll
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            if (window.scrollY > header.offsetHeight) {
+                header.classList.add('fixed-header');
+            } else {
+                header.classList.remove('fixed-header');
+            }
+        });
+
+        // JavaScript pentru întunecarea imaginilor și afișarea mesajului text la hover
+        var imageItems = document.querySelectorAll('.image-item');
+        imageItems.forEach(function(item) {
+            item.addEventListener('mouseover', function() {
+                var image = item.querySelector('img');
+                image.classList.add('darken');
+            });
+            item.addEventListener('mouseout', function() {
+                var image = item.querySelector('img');
+                image.classList.remove('darken');
+            });
+        });
+    </script>
 </body>
 
 </html>
