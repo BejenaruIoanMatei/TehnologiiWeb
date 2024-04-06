@@ -218,6 +218,7 @@ nav ul li a:hover {
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s;
+  border-radius: 10px;
 }
 
 /* Stil pentru afișarea mesajului text la hover */
