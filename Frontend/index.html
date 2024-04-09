@@ -35,7 +35,7 @@
             <nav>
                 <ul>
                     <li><a href="aboutUs.html">About</a></li>
-                    <li><a href="#contact">Contact </a></li>                    
+                    <li><a href="#contact">Contact</a></li> 
                 </ul>
             </nav>
         </nav>
@@ -96,6 +96,9 @@
         </div>
     </section>
 
+    
+
+    <!--Partea de javascript-->
     <script>
         // JavaScript pentru a face header-ul fixat după scroll
         window.addEventListener('scroll', function() {
@@ -119,7 +122,31 @@
                 image.classList.remove('darken');
             });
         });
+
     </script>
+
+    <footer>
+        <div class="left-section" id="contact">
+            <div class="contact-section">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="right-section">
+        </div>
+    </footer>
+    
+
 </body>
 
 </html>

@@ -225,3 +225,87 @@ nav ul li a:hover {
 .image-item:hover .overlay {
   opacity: 1;
 }
+
+/* Stilizare footer */
+footer {
+  padding: 50px 0; /* Spațiere între conținut și margini */
+  text-align: center; /* Aliniere text la centru */
+  display: flex; /* Setare footer ca flex container */
+  justify-content: space-between; /* Așezare elemente la margini */
+}
+
+/* Stilizare secțiune stângă */
+.left-section {
+  width: 50%; /* Lățimea secțiunii stângi */
+}
+
+/* Stilizare secțiune dreaptă (în caz că aveți conținut) */
+/* Stilizare secțiune dreaptă */
+.right-section {
+  width: 50%; /* Lățimea secțiunii drepte */
+  background-size: cover; /* Asigurare că imaginea de fundal acoperă întreaga secțiune */
+  background-position: center; /* Centrare imagine de fundal */
+  background-repeat: no-repeat; /* Împiedicare repetarea imaginii de fundal */
+}
+
+
+/* Stilizare pentru conținutul din secțiunea de contact */
+.contact-section {
+  max-width: 300px; /* Lățime maximă a conținutului */
+  margin: 0 auto; /* Centrare conținut */
+  text-align: left; /* Aliniere text la stânga */
+  padding-left: 10px; /* Adaugare padding la stânga pentru spațiere */
+}
+
+.contact-section h2 {
+  font-size: 24px; /* Dimensiune font pentru titlu */
+  margin-bottom: 20px; /* Spațiere între titlu și formular */
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section .form-group {
+  margin-bottom: 20px; /* Spațiere între grupurile de câmpuri */
+  text-align: left; /* Aliniere text la stânga */
+}
+
+.contact-section label {
+  font-size: 18px; /* Dimensiune font pentru etichete */
+  display: block; /* Afisare etichete pe linii separate */
+  margin-bottom: 5px; /* Spațiere între etichetă și câmp */
+}
+
+.contact-section input,
+/* Stilizare textarea pentru mesaj */
+.contact-section textarea {
+  width: 100%; /* Latime 100% */
+  padding: 10px; /* Spatiere in interiorul textarea */
+  font-size: 16px; /* Dimensiune font pentru textarea */
+  border: 1px solid #ccc; /* Border gri deschis */
+  border-radius: 5px; /* Raza colturilor */
+  resize: none; /* Face textarea-ul neresizabil */
+}
+
+
+.contact-section textarea {
+  height: 120px; /* Inaltime textarea */
+}
+
+.contact-section button {
+  width: 30%; /* Latime 100% */
+  padding: 10px; /* Spatiere in interiorul butonului */
+  font-size: 18px; /* Dimensiune font pentru buton */
+  background-color: #70767c; /* Culoare de fundal pentru buton */
+  color: #fff; /* Culoare text buton */
+  border: none; /* Border none */
+  border-radius: 5px; /* Raza colturilor */
+  cursor: pointer; /* Cursor pointer la hover */
+  transition: background-color 0.3s; /* Tranzitie culoare fundal la hover */
+}
+
+.contact-section button:hover {
+  background-color: #0056b3; /* Culoare de fundal la hover */
+}
