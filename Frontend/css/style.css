@@ -95,7 +95,7 @@ nav ul li a:hover {
 .btn {
   display: inline-block;
   padding: 10px 30px;
-  background-color: #555;
+  background-color: #1E5573;
   color: white;
   text-decoration: none;
   border-radius: 20px;
@@ -167,7 +167,9 @@ nav ul li a:hover {
 
 .promo h1:hover,
 .promo h3:hover {
-  text-shadow: 0 0 10px rgba(93, 32, 32, 0.8); /* Add a glowing effect */
+  /*
+  text-shadow: 0 0 10px rgba(93, 32, 32, 0.8);*/ /* Add a glowing effect */
+  
   transition: text-shadow 1 ease; /* Add transition for smooth effect */
 }
 
@@ -228,84 +230,115 @@ nav ul li a:hover {
 
 /* Stilizare footer */
 footer {
-  padding: 50px 0; /* Spațiere între conținut și margini */
+  padding: 20px 0; /* Spațiere între conținut și margini */
   text-align: center; /* Aliniere text la centru */
   display: flex; /* Setare footer ca flex container */
   justify-content: space-between; /* Așezare elemente la margini */
 }
-
-/* Stilizare secțiune stângă */
+/* Stilizare pentru secțiunea stângă a footer-ului */
 .left-section {
-  width: 50%; /* Lățimea secțiunii stângi */
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+
 }
 
-/* Stilizare secțiune dreaptă (în caz că aveți conținut) */
-/* Stilizare secțiune dreaptă */
+.left-section h2 {
+  margin-bottom: 20px;
+  
+}
+
+/* Stilizare pentru secțiunea dreaptă a footer-ului */
 .right-section {
-  width: 50%; /* Lățimea secțiunii drepte */
-  background-size: cover; /* Asigurare că imaginea de fundal acoperă întreaga secțiune */
-  background-position: center; /* Centrare imagine de fundal */
-  background-repeat: no-repeat; /* Împiedicare repetarea imaginii de fundal */
+  width: 50%;
+  padding: 20px;
 }
 
-
-/* Stilizare pentru conținutul din secțiunea de contact */
-.contact-section {
-  max-width: 300px; /* Lățime maximă a conținutului */
-  margin: 0 auto; /* Centrare conținut */
-  text-align: left; /* Aliniere text la stânga */
-  padding-left: 10px; /* Adaugare padding la stânga pentru spațiere */
+/* Stilizare pentru formularul de contact */
+.contact-form {
+  max-width: 300px;
+  margin: 0 auto;
 }
 
-.contact-section h2 {
-  font-size: 24px; /* Dimensiune font pentru titlu */
-  margin-bottom: 20px; /* Spațiere între titlu și formular */
+.contact-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.contact-section form {
+.contact-form form {
   display: flex;
   flex-direction: column;
 }
 
-.contact-section .form-group {
-  margin-bottom: 20px; /* Spațiere între grupurile de câmpuri */
-  text-align: left; /* Aliniere text la stânga */
+.contact-form .form-group {
+  margin-bottom: 20px;
 }
 
-.contact-section label {
-  font-size: 18px; /* Dimensiune font pentru etichete */
-  display: block; /* Afisare etichete pe linii separate */
-  margin-bottom: 5px; /* Spațiere între etichetă și câmp */
+.contact-form label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 5px;
+
 }
 
-.contact-section input,
-/* Stilizare textarea pentru mesaj */
-.contact-section textarea {
-  width: 100%; /* Latime 100% */
-  padding: 10px; /* Spatiere in interiorul textarea */
-  font-size: 16px; /* Dimensiune font pentru textarea */
-  border: 1px solid #ccc; /* Border gri deschis */
-  border-radius: 5px; /* Raza colturilor */
-  resize: none; /* Face textarea-ul neresizabil */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #1E5573;
+  color: #ffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color:#0b0b0b;
 }
 
 
-.contact-section textarea {
-  height: 120px; /* Inaltime textarea */
+.contact-container {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 80%), url('../img/gate.jpg');
+  background-size: cover; /* Asigură că imaginea de fundal acoperă întreaga suprafață a div-ului */
+    background-position: center; /* Centrează imaginea de fundal */
+    display: flex; /* Setează display flex pentru a alinia conținutul pe orizontală */
+    justify-content: space-between; /* Așează div-urile stânga și dreapta la margini */
+    padding: 50px; /* Adaugă spațiere între conținut și margini */
+    bottom: 0; /* Aliniază la partea de jos a paginii */
+    left: 0; /* Aliniază la stânga */
+    right: 0; /* Aliniază la dreapta */
+    margin: 0 auto; /* Centrează pe orizontală */
+    width: 90%; /* Ocupă 90% din lățimea ecranului */
+    max-width: 1200px;
+    border-radius: 5px;
 }
 
-.contact-section button {
-  width: 30%; /* Latime 100% */
-  padding: 10px; /* Spatiere in interiorul butonului */
-  font-size: 18px; /* Dimensiune font pentru buton */
-  background-color: #70767c; /* Culoare de fundal pentru buton */
-  color: #fff; /* Culoare text buton */
-  border: none; /* Border none */
-  border-radius: 5px; /* Raza colturilor */
-  cursor: pointer; /* Cursor pointer la hover */
-  transition: background-color 0.3s; /* Tranzitie culoare fundal la hover */
+.left-section, .right-section {
+    width: 48%; /* Lățimea fiecărui div */
 }
 
-.contact-section button:hover {
-  background-color: #0056b3; /* Culoare de fundal la hover */
+.left-section {
+    background-color: rgba(255, 255, 255, 0.9); /* Adaugă un fundal semi-transparent pentru div-ul stâng */
+    padding: 20px; /* Adaugă padding pentru a crea spațiu în interiorul div-ului */
+}
+
+.right-section {
+    padding: 20px; /* Adaugă padding pentru a crea spațiu în interiorul div-ului */
 }
