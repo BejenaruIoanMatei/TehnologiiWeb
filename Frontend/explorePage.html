@@ -29,12 +29,12 @@
     <header>
         <div class="logo">
             <span class="name">SoRe</span>
-            <span class="subtitle">Your Souvenir Recommender</span>
         </div>
         <nav>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="404.html">Sign in</a></li>
                 </ul>
             </nav>
         </nav>
@@ -46,10 +46,10 @@
             <label for="country"></label>
             <input type="text" id="country" name="country" placeholder="Select a City" required><br><br>
     
-            <label for="start"></label>
+            <label for="start">Starting day : </label>
             <input type="date" id="start" name="trip-start" required><br><br>
     
-            <label for="end"></label>
+            <label for="end">Final day : </label>
             <input type="date" id="end" name="trip-end" required><br><br>
             
             <button type="submit">+ Add destination</button>
@@ -58,8 +58,21 @@
     </section>
 
     <section id="create" class="text">
-        <button type="submit">Create trip</button>
+        <div class="left-section">
+            <h2>Don't forget to create the trip!</h2>
+            <select id="trip-options">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <!-- Adăugați mai multe opțiuni după nevoie -->
+            </select>
+            <button type="submit">Create trip</button>
+        </div>
+        <div class="right-section">
+            <img src="link-catre-imagine" alt="Imagine">
+        </div>
     </section>
+    
 
     <script>
         // JavaScript pentru a face header-ul fixat după scroll

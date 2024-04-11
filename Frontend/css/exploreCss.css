@@ -52,11 +52,6 @@
     text-shadow: 1px 1px 1px black;
   }
   
-  .logo .subtitle {
-    font-size: 24px;
-    color: rgb(0, 0, 0);
-    /*text-shadow: 1px 1px 1px black;*/
-  }
 
   nav ul {
     list-style: none;
@@ -91,6 +86,7 @@
   .hero h1 {
     font-size: 30px;
     margin-bottom: 25px;
+    font-weight: normal;
   }
   
   .btn {
@@ -106,3 +102,66 @@
   .btn:hover {
     background-color: #0b0b0b;
   }
+
+  #country {
+    width: 300px; /* Lungime mai mare pentru casetă */
+    margin: 0 auto; /* Centrarea pe mijloc */
+    border: 2px solid #2c7188; /* Adăugarea unui contur cu albastru deschis */
+    padding: 10px; /* Spațiere pentru conținut */
+    text-align: center; /* Alinierea textului în mijloc */
+    font-size: 16px; /* Mărimea textului */
+    border-radius: 20px;
+}
+
+button[type="submit"] {
+    background-color: #FFB6C1; /* Roz deschis */
+    color: white; /* Text alb */
+    padding: 10px 20px; /* Mărirea padding-ului pentru a face butonul mai mare */
+    border: none; /* Eliminăm conturul */
+    border-radius: 10px; /* Bordura butonului rotunjită */
+    font-size: 16px; /* Mărimea textului */
+    cursor: pointer; /* Cursor pointer la interacțiune */
+    transition: background-color 0.3s ease; /* Efect de tranziție pentru schimbarea culorii de fundal */
+}
+
+button[type="submit"]:hover {
+    background-color: #FF69B4; /* Roșu deschis la hover */
+}
+
+.left-section {
+    float: left;
+    width: 50%; /* Se va întinde pe jumătate din lățimea secțiunii */
+}
+
+.right-section {
+    float: right;
+    width: 50%; /* Se va întinde pe jumătate din lățimea secțiunii */
+}
+
+
+.right-section img {
+    width: 100%; /* Asigurăm că imaginea ocupă întreaga lățime a secțiunii */
+}
+
+
+.text{
+    margin-bottom: 40px;
+}
+
+#create {
+    text-align: center; /* Centrarea textului și a butonului */
+    
+}
+
+#create h2 {
+    margin-bottom: 20px; /* Spațierea de la buton */
+}
+
+.text h2{
+    font-weight: normal;
+}
+
+#create button[type="submit"] {
+    display: block; /* Facem butonul să fie un element de bloc */
+    margin: 0 auto; /* Centrarea butonului */
+}
