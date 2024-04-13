@@ -125,7 +125,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #FF69B4; /* Roșu deschis la hover */
+    background-color: #bc7a9a; /* Roșu deschis la hover */
 }
 
 .left-section {
@@ -164,4 +164,73 @@ button[type="submit"]:hover {
 #create button[type="submit"] {
     display: block; /* Facem butonul să fie un element de bloc */
     margin: 0 auto; /* Centrarea butonului */
+}
+
+.styled-button {
+  background-color: #1E5573;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px; /* adăugat pentru spațiere */
+}
+
+.styled-button:hover {
+  background-color: #0b0b0b;
+}
+
+.checkbox-options {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkbox-options input[type="checkbox"] {
+  margin-right: 5px; /* spațiere între casetele de bifare și etichete */
+}
+
+.main-section {
+  text-align: center;
+  margin-bottom: 20px; /* Adăugăm un spațiu între elementele din main-section */
+
+}
+
+.main-section h2 {
+  margin-bottom: 20px; /* Adăugăm un spațiu între h2 și butonul #beneficiaries-toggle */
+  font-weight: normal;
+}
+
+#beneficiaries-toggle {
+  /* Stilurile definite pentru clasa .btn */
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #FFB6C1;
+  border: none; /* Eliminăm conturul */
+  color: white;
+  border-radius: 10px;
+  transition: background-color 0.5s ease;
+  margin-bottom: 20px; /* Adăugăm un spațiu între butonul #beneficiaries-toggle și .checkbox-options */
+}
+
+#beneficiaries-toggle:hover {
+  background-color: #bc7a9a;
+}
+
+.checkbox-options {
+  padding: 10px;
+  border: 10px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2; /* Setăm culoarea gri deschis pentru fundal */
+}
+
+.checkbox-options label {
+  display: block;
+  text-align: center; /* Centrăm textul */
+  margin-bottom: 5px; /* Adăugăm o mică separare între opțiuni */
+}
+
+.checkbox-options input[type="checkbox"] {
+  margin-right: 5px;
+  border-radius: 50%; /* Facem casuțele de bifare rotunde */
 }
