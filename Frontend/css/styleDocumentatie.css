@@ -22,6 +22,7 @@ header {
   top: 0; /* Specificăm să fie fixat în partea de sus a paginii */
   width: 100%; /* Asigurăm că ocupă întreaga lățime a ecranului */
   z-index: 1000; /* Setăm un z-index mare pentru a se afișa deasupra altor elemente */
+  display: inline-block;
 }
 .fixed-header {
   position: fixed;
@@ -53,28 +54,49 @@ header {
 }
 
 .logo .subtitle {
-  font-size: 24px;
+  font-size: 30px;
   color: rgb(0, 0, 0);
   /*text-shadow: 1px 1px 1px black;*/
+}
+
+.title {
+  display: flex;
+  flex-direction: column; /* Schimbăm direcția la coloană */
+  align-items: center; /* Aliniem elementele pe orizontală */
+  font-size : 2em;
+  color : rgba(0,0,0);
+  padding-top: 7.5%;
+  padding-bottom: 3%;
+  width: 100%;
+}
+
+nav{
+  padding: 30px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
-nav ul li {
+nav li {
   margin-right: 20px;
+  font-size: 16px;
+  text-align: center;
 }
 
-nav ul li a {
+nav a {
   text-decoration: none;
   font-weight: bold;
-  padding: 10px 20px;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
-  border-radius: 20px;
+  border-radius: 0px;
   transition: background-color 0.3s ease;
+  font-size: 16px;
+  display: inline-block;
 }
 
 nav ul li a:hover {
@@ -110,9 +132,10 @@ nav ul li a:hover {
   background-color: #ffffff;
   display: flex;
   flex-direction: column; /* Schimbăm direcția la coloană */
-  align-items: center; /* Aliniem elementele pe orizontală */
-  padding: 50px 70px;
+  justify-content: flex-start; /* Aliniem elementele pe orizontală */
+  padding: 0px 25px;
 }
+
 
 .image-collage {
   display: flex;
@@ -342,3 +365,7 @@ footer {
 .right-section {
     padding: 20px; /* Adaugă padding pentru a crea spațiu în interiorul div-ului */
 }
+.spacer {
+  height: 200px; /* Adjust the height as needed */
+}
+

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoRe - Software Requirements Specification</title>
+  <link href="https://fonts.googleapis.com/css?family=Irish+Grover&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link href="./css/styleDocumentatie.css" rel="stylesheet">
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#revision-history">Revision History</a></li>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#overall-description">Overall Description</a></li>
+      <li><a href="#external-interface-requirements">External Interface Requirements</a></li>
+      <li><a href="#system-features">System Features</a></li>
+      <li><a href="#other-nonfunctional-requirements">Other Nonfunctional Requirements</a></li>
+      <li><a href="#other-requirements">Other Requirements</a></li>
+      <li><a href="#appendix-a">Appendix A</a></li>
+      <li><a href="#appendix-b">Appendix B</a></li>
+      <li><a href="#appendix-c">Appendix C</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="content">
+  <article>
+    <h2 id="title" class="title">Software Requirements Specification</h2> <!-- Add a heading here -->
+    <!-- Revision History -->
+    <section>
+      <h2 id="revision-history">Revision History</h2>
+      <p>Revision 1.0: Initial SRS documentation for SoRe</p>
+    </section>
+
+    <!-- Introduction -->
+    <section>
+      <h2 id="introduction">Introduction</h2>
+      <section>
+        <h3>1.1 Purpose</h3>
+        <p role="doc-introduction"><b>SoRe</b>, short for Souvenir Recommender,
+          is an innovative web application tailored for
+          individuals embarking on multi-region or multi-country journeys.
+          Its primary aim is to streamline the souvenir management process by offering personalized recommendations
+          for each visited destination. Whether you've traversed the vast landscapes of Australia or explored the cultural depths of Romania,
+          <b>SoRe</b> leverages cultural insights, local customs, and seasonal nuances to suggest the perfect memento. </p>
+      </section>
+      <section>
+        <h3>1.2 Document Conventions</h3>
+        <p>Follow the IEEE standard for software requirement specifications (SRS).</p>
+      </section>
+      <section>
+        <h3>1.3 Intended Audience and Reading Suggestions</h3>
+        <p>Target audience includes developers, project managers, designers, testers, and stakeholders. Start with an overview of the project scope, followed by detailed descriptions of product functions and requirements relevant to each stakeholder.</p>
+      </section>
+      <section>
+        <h3>1.4 Product Scope</h3>
+        <p><b>SoRe</b> is a comprehensive web application designed to offer personalized souvenir recommendations based on travel destinations, local culture, customs, and individual preferences.</p>
+      </section>
+      <section>
+        <h3>1.5 References</h3>
+        <p>Refer to user interface style guides, vision and scope documents, and cultural databases for relevant information.</p>
+      </section>
+    </section>
+
+    <!-- Overall Description -->
+    <section>
+      <h2 id="overall-description">Overall Description</h2>
+      <section>
+        <h3>2.1 Product Perspective</h3>
+        <p>The "Travel Souvenir Manager" is a standalone product, but it may interact with external databases or APIs for data retrieval and recommendation generation.</p>
+      </section>
+      <section>
+        <h3>2.2 Product Functions</h3>
+        <p>Enable users to log their travel experiences and manage souvenirs collected from each visited territory. Utilize machine learning algorithms to analyze travel data and provide personalized souvenir recommendations. Allow users to specify the purpose of the souvenir (e.g., family, friends, colleagues) to tailor recommendations accordingly.</p>
+      </section>
+      <section>
+        <h3>2.3 User Classes and Characteristics</h3>
+        <p>User classes include novice and experienced travelers seeking unique souvenir recommendations. Users can personalize recommendations based on the recipient's profile (e.g., family, friends, colleagues).</p>
+      </section>
+      <section>
+        <h3>2.4 Operating Environment</h3>
+        <p>Ensure compatibility with major web browsers (Chrome, Firefox, Safari) and operating systems (Windows, macOS, Linux).</p>
+      </section>
+      <section>
+        <h3>2.5 Design and Implementation Constraints</h3>
+        <p>Adhere to corporate data privacy policies and utilize secure communication protocols (HTTPS) for data transfer. <b>We will not utilize</b> modern web development frameworks (React, Angular) for frontend development and scalable cloud infrastructure for backend services.</p>
+      </section>
+      <section>
+        <h3>2.6 User Documentation</h3>
+        <p>Provide user-friendly guides and tutorials within the application interface to assist users in navigating features and functionalities.</p>
+      </section>
+      <section>
+        <h3>2.7 Assumptions and Dependencies</h3>
+        <p>Assume availability of cultural databases and APIs for recommendation generation. Dependencies on third-party services for data retrieval and recommendation algorithms.</p>
+      </section>
+    </section>
+
+    <!-- External Interface Requirements -->
+    <section>
+      <h2 id="external-interface-requirements">External Interface Requirements</h2>
+      <section>
+        <h3>3.1 User Interfaces</h3>
+        <p>Design an intuitive and responsive user interface with interactive elements for managing travel experiences and souvenir recommendations.</p>
+      </section>
+      <section>
+        <h3>3.2 Hardware Interfaces</h3>
+        <p>No specific hardware dependencies; compatible with standard computing devices (laptops, tablets, smartphones).</p>
+      </section>
+      <section>
+        <h3>3.3 Software Interfaces</h3>
+        <p>Interact with external APIs for retrieving cultural and travel data.</p>
+      </section>
+      <section>
+        <h3>3.4 Communications Interfaces</h3>
+        <p>Utilize HTTPS protocol for secure communication between client and server. Implement RESTful APIs for seamless integration with external services.</p>
+      </section>
+    </section>
+
+    <!-- System Features -->
+    <section>
+      <h2 id="system-features">System Features</h2>
+      <section>
+        <h3>4.1 Souvenir Management</h3>
+        <p>Users can log and organize souvenirs collected from each visited territory, including photos and descriptions. Provide a searchable database of souvenir items with details on their cultural significance and availability.</p>
+      </section>
+      <!-- Add more sections for additional system features -->
+    </section>
+
+    <!-- Other Nonfunctional Requirements -->
+    <section>
+      <h2 id="other-nonfunctional-requirements">Other Nonfunctional Requirements</h2>
+      <section>
+        <h3>5.1 Performance Requirements</h3>
+        <p>Ensure fast response times (&lt; 2 seconds) for retrieving souvenir recommendations. Support concurrent user access without performance degradation.</p>
+      </section>
+      <section>
+        <h3>5.2 Safety Requirements</h3>
+        <p>Implement data encryption and access control mechanisms to protect user data from unauthorized access. Regularly perform security audits and vulnerability assessments to ensure compliance with industry standards.</p>
+      </section>
+      <section>
+        <h3>5.3 Security Requirements</h3>
+        <p>Employ strong authentication mechanisms (e.g., OAuth, JWT) to verify user identities. Encrypt sensitive user data both at rest and in transit to prevent data breaches.</p>
+      </section>
+      <section>
+        <h3>5.4 Software Quality Attributes</h3>
+        <p>Prioritize usability and user experience by conducting user testing and feedback sessions. Ensure scalability and reliability through automated testing and continuous integration practices.</p>
+      </section>
+      <section>
+        <h3>5.5 Business Rules</h3>
+        <p>Implement business logic to personalize souvenir recommendations based on user preferences and recipient profiles. Adhere to legal and regulatory requirements regarding data privacy and user consent.</p>
+      </section>
+    </section>
+
+    <!-- Other Requirements -->
+    <section>
+      <h2 id="other-requirements">Other Requirements</h2>
+      <p>Legal requirements: The website is only local and it is a demo, will not be published, therefore no legal requirements must be met. <br>
+         Reuse objectives: <b>To be discussed.</b> <br></p>
+    </section>
+
+    <!-- Appendix -->
+    <section role="doc-appendix">
+      <h2>Appendix</h2>
+      <section>
+        <h3 id="appendix-a">Appendix A: Glossary</h3>
+        <p>
+          This appendix contains a glossary of terms used in the document.<br>
+          SoRe: Souvenir Recommender<br>
+          SRS: Software Requirements Specification<br>
+          OAuth: Open Authorization <br>
+          JWT: JSON Web Token<br>
+        </p>
+      </section>
+      <section>
+        <h3 id="appendix-b">Appendix B: Analysis Models</h3>
+        <p>This appendix contains analysis models related to the product.</p>
+        <img src="../Documentatie/DiagramaUml.png" alt="Analysis model" width="45%">
+      </section>
+      <section>
+        <h3 id="appendix-c">Appendix C: To Be Determined List</h3>
+        <p>This appendix contains a list of items yet to be determined:<br>
+          Reuse objectives
+        </p>
+      </section>
+    </section>
+  </article>
+</main>
+<footer>
+  <p>&copy; 2024 | Bejenaru Matei Ioan & Moscalu Stefan</p>
+</footer>
+</body>
+</html>
