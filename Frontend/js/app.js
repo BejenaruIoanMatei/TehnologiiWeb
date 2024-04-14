@@ -1,5 +1,5 @@
 
-        // JavaScript pentru a face header-ul fixat după scroll
+        //  pentru a face header-ul fixat dupa scroll
         window.addEventListener('scroll', function() {
             var header = document.querySelector('header');
             if (window.scrollY > header.offsetHeight) {
@@ -8,8 +8,8 @@
                 header.classList.remove('fixed-header');
             }
         });
-
-        // JavaScript pentru întunecarea imaginilor și afișarea mesajului text la hover
+        
+        // pentru efectul de intunecare al imaginilor si afisarea mesajului la hover
         var imageItems = document.querySelectorAll('.image-item');
         imageItems.forEach(function(item) {
             item.addEventListener('mouseover', function() {
@@ -22,6 +22,7 @@
             });
         });
 
+        // pentru partea de beneficiari si check-box din Explore
         document.getElementById("beneficiaries-toggle").addEventListener("click", function() {
         var checkboxOptions = document.getElementById("checkbox-options");
         if (checkboxOptions.style.display === "none") {
@@ -31,6 +32,7 @@
         }
     });
 
+    // la fel pentru partea de beneficiari - verifica sa fie macar o casuta checked
     document.getElementById("submit-trip").addEventListener("click", function() {
     var checkboxes = document.querySelectorAll('.checkbox-options input[type="checkbox"]');
     var checked = false;
@@ -42,14 +44,11 @@
     });
 
     if (checked) {
-        // Cel puțin un checkbox este bifat, deci putem crea călătoria
-        // Aici puteți adăuga logica suplimentară pentru crearea călătoriei
-        // De exemplu, puteți trimite datele către server sau puteți afișa un mesaj de confirmare
-        alert("Călătoria a fost creată!");
+        //macar un checkbox selectat
+        alert("Congrats, your journey was created!");
     } else {
-        // Niciun checkbox nu este bifat, deci nu putem crea călătoria
-        // Aici puteți afișa un mesaj de eroare sau puteți face altceva pentru a indica utilizatorului că trebuie să bifeze cel puțin un checkbox
-        alert("Trebuie să selectați cel puțin un beneficiar!");
+        //cand nu am niciun checkbox selectat
+        alert("You must choose who gets the souvenir!");
     }
 });
 

@@ -18,26 +18,26 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed; /* Adăugăm poziționarea fixă */
-  top: 0; /* Specificăm să fie fixat în partea de sus a paginii */
-  width: 100%; /* Asigurăm că ocupă întreaga lățime a ecranului */
-  z-index: 1000; /* Setăm un z-index mare pentru a se afișa deasupra altor elemente */
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 1000; 
 }
 .fixed-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 1); /* Folosim o culoare aproape solidă */
+  background-color: rgba(255, 255, 255, 1); 
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Umbra ușoară */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .fixed-header .logo .name,
 .fixed-header .logo .subtitle,
 .fixed-header nav ul li a {
-  color: #333; /* Schimbăm culoarea textului la scroll */
+  color: #333; 
 }
 
 .logo {
@@ -109,8 +109,8 @@ nav ul li a:hover {
 .content {
   background-color: #ffffff;
   display: flex;
-  flex-direction: column; /* Schimbăm direcția la coloană */
-  align-items: center; /* Aliniem elementele pe orizontală */
+  flex-direction: column; 
+  align-items: center; 
   padding: 50px 70px;
 }
 
@@ -130,20 +130,20 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px; /* Rotunjim colțurile imaginilor */
+  border-radius: 10px; 
 }
 
 .text-container {
-  background-color: rgba(255, 255, 255, 0.9); /* Adăugăm culoare de fundal */
-  padding: 20px; /* Adăugăm padding */
-  border-radius: 10px; /* Rotunjim colțurile containerului */
-  margin-top: 50px; /* Spațiu între poze și text */
-  text-align: center; /* Aliniem textul la centru */
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 20px; 
+  border-radius: 10px; 
+  margin-top: 50px; 
+  text-align: center; 
 }
 
 .content-text {
-  font-weight: bold; /* Textul este acum bold */
-  margin: 0; /* Eliminăm marginile implicite ale textului */
+  font-weight: bold; 
+  margin: 0;
 }
 
 
@@ -170,43 +170,41 @@ nav ul li a:hover {
   /*
   text-shadow: 0 0 10px rgba(93, 32, 32, 0.8);*/ /* Add a glowing effect */
   
-  transition: text-shadow 1s ease; /* Add transition for smooth effect */
+  transition: text-shadow 1s ease; 
 }
 
 .promo-content {
   display: flex;
-  align-items: center; /* Center items vertically */
+  align-items: center; 
 }
 
 .promo-text {
-  flex: 1; /* Take remaining space */
+  flex: 1; 
 }
 
 .text-container {
-  background-color: rgba(255, 255, 255, 0.9); /* Add background color */
-  padding: 20px; /* Add padding */
-  border-radius: 10px; /* Add border radius */
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 20px; 
+  border-radius: 10px; 
 }
 
 
 .promo-image {
-  flex: 1; /* Take remaining space */
-  text-align: right; /* Align image to the right */
+  flex: 1; 
+  text-align: right; 
 }
 
 .promo-image img {
-  width: 100%; /* Make sure the image takes full width of its container */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Add border radius */
-  margin-top: 20px; /* Add margin */
+  width: 100%; 
+  height: auto; 
+  border-radius: 10px; 
+  margin-top: 20px; 
 }
 
-/* Stil pentru întunecarea imaginii */
 .image-item img.darken {
   filter: brightness(70%);
 }
 
-/* Stil pentru afișarea mesajului text */
 .image-item .overlay {
   position: absolute;
   top: 0;
@@ -223,19 +221,19 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
-/* Stil pentru afișarea mesajului text la hover */
+
 .image-item:hover .overlay {
   opacity: 1;
 }
 
-/* Stilizare footer */
+
 footer {
-  padding: 20px 0; /* Spațiere între conținut și margini */
-  text-align: center; /* Aliniere text la centru */
-  display: flex; /* Setare footer ca flex container */
-  justify-content: space-between; /* Așezare elemente la margini */
+  padding: 20px 0; 
+  text-align: center; 
+  display: flex; 
+  justify-content: space-between; 
 }
-/* Stilizare pentru secțiunea stângă a footer-ului */
+
 .left-section {
   width: 50%;
   text-align: center;
@@ -249,13 +247,12 @@ footer {
   
 }
 
-/* Stilizare pentru secțiunea dreaptă a footer-ului */
 .right-section {
   width: 50%;
   padding: 20px;
 }
 
-/* Stilizare pentru formularul de contact */
+
 .contact-form {
   max-width: 300px;
   margin: 0 auto;
@@ -316,31 +313,31 @@ footer {
 
 .contact-container {
   background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 80%), url('../img/gate.jpg');
-  background-size: cover; /* Asigură că imaginea de fundal acoperă întreaga suprafață a div-ului */
-    background-position: center; /* Centrează imaginea de fundal */
-    display: flex; /* Setează display flex pentru a alinia conținutul pe orizontală */
-    justify-content: space-between; /* Așează div-urile stânga și dreapta la margini */
-    padding: 50px; /* Adaugă spațiere între conținut și margini */
-    bottom: 0; /* Aliniază la partea de jos a paginii */
-    left: 0; /* Aliniază la stânga */
-    right: 0; /* Aliniază la dreapta */
-    margin: 0 auto; /* Centrează pe orizontală */
-    width: 90%; /* Ocupă 90% din lățimea ecranului */
+  background-size: cover;
+    background-position: center; 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 50px; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    margin: 0 auto; 
+    width: 90%; 
     max-width: 1200px;
     border-radius: 5px;
 }
 
 .left-section, .right-section {
-    width: 48%; /* Lățimea fiecărui div */
+    width: 48%; 
 }
 
 .left-section {
-    background-color: rgba(255, 255, 255, 0.9); /* Adaugă un fundal semi-transparent pentru div-ul stâng */
-    padding: 20px; /* Adaugă padding pentru a crea spațiu în interiorul div-ului */
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
 }
 
 .right-section {
-    padding: 20px; /* Adaugă padding pentru a crea spațiu în interiorul div-ului */
+    padding: 20px; 
 }
 
 /* Media queries for responsiveness */
@@ -387,5 +384,33 @@ footer {
   
   nav a {
     font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .logo .name {
+    font-size: 20px;
+  }
+  
+  .logo .subtitle {
+    font-size: 14px;
+  }
+  
+  nav ul li {
+    margin-right: 3px;
+  }
+  
+  nav a {
+    font-size: 10px;
+  }
+  
+  .title {
+    padding-top: 3%;
+    padding-bottom: 1%;
+  }
+  
+  .left-section,
+  .right-section {
+    width: 100%;
   }
 }

@@ -18,26 +18,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* Adăugăm poziționarea fixă */
-    top: 0; /* Specificăm să fie fixat în partea de sus a paginii */
-    width: 100%; /* Asigurăm că ocupă întreaga lățime a ecranului */
-    z-index: 1000; /* Setăm un z-index mare pentru a se afișa deasupra altor elemente */
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
   }
   .fixed-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 1); /* Folosim o culoare aproape solidă */
+    background-color: rgba(255, 255, 255, 1); 
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Umbra ușoară */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
   
   .fixed-header .logo .name,
   .fixed-header .logo .subtitle,
   .fixed-header nav ul li a {
-    color: #333; /* Schimbăm culoarea textului la scroll */
+    color: #333; 
   }
   
   .logo {
@@ -104,43 +104,43 @@
   }
 
   #country {
-    width: 300px; /* Lungime mai mare pentru casetă */
-    margin: 0 auto; /* Centrarea pe mijloc */
-    border: 2px solid #2c7188; /* Adăugarea unui contur cu albastru deschis */
-    padding: 10px; /* Spațiere pentru conținut */
-    text-align: center; /* Alinierea textului în mijloc */
-    font-size: 16px; /* Mărimea textului */
+    width: 300px; 
+    margin: 0 auto; 
+    border: 2px solid #2c7188; 
+    padding: 10px; 
+    text-align: center; 
+    font-size: 16px; 
     border-radius: 20px;
 }
 
 button[type="submit"] {
-    background-color: #FFB6C1; /* Roz deschis */
-    color: white; /* Text alb */
-    padding: 10px 20px; /* Mărirea padding-ului pentru a face butonul mai mare */
-    border: none; /* Eliminăm conturul */
-    border-radius: 10px; /* Bordura butonului rotunjită */
-    font-size: 16px; /* Mărimea textului */
-    cursor: pointer; /* Cursor pointer la interacțiune */
-    transition: background-color 0.3s ease; /* Efect de tranziție pentru schimbarea culorii de fundal */
+    background-color: #FFB6C1; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 10px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 
 button[type="submit"]:hover {
-    background-color: #bc7a9a; /* Roșu deschis la hover */
+    background-color: #bc7a9a; 
 }
 
 .left-section {
     float: left;
-    width: 50%; /* Se va întinde pe jumătate din lățimea secțiunii */
+    width: 50%; 
 }
 
 .right-section {
     float: right;
-    width: 50%; /* Se va întinde pe jumătate din lățimea secțiunii */
+    width: 50%;
 }
 
 
 .right-section img {
-    width: 100%; /* Asigurăm că imaginea ocupă întreaga lățime a secțiunii */
+    width: 100%; 
 }
 
 
@@ -149,12 +149,12 @@ button[type="submit"]:hover {
 }
 
 #create {
-    text-align: center; /* Centrarea textului și a butonului */
+    text-align: center; 
     
 }
 
 #create h2 {
-    margin-bottom: 20px; /* Spațierea de la buton */
+    margin-bottom: 20px; 
 }
 
 .text h2{
@@ -162,8 +162,8 @@ button[type="submit"]:hover {
 }
 
 #create button[type="submit"] {
-    display: block; /* Facem butonul să fie un element de bloc */
-    margin: 0 auto; /* Centrarea butonului */
+    display: block; 
+    margin: 0 auto; 
 }
 
 .styled-button {
@@ -173,7 +173,7 @@ button[type="submit"]:hover {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 10px; /* adăugat pentru spațiere */
+  margin-bottom: 10px; 
 }
 
 .styled-button:hover {
@@ -187,17 +187,17 @@ button[type="submit"]:hover {
 }
 
 .checkbox-options input[type="checkbox"] {
-  margin-right: 5px; /* spațiere între casetele de bifare și etichete */
+  margin-right: 5px; 
 }
 
 .main-section {
   text-align: center;
-  margin-bottom: 20px; /* Adăugăm un spațiu între elementele din main-section */
+  margin-bottom: 20px; 
 
 }
 
 .main-section h2 {
-  margin-bottom: 20px; /* Adăugăm un spațiu între h2 și butonul #beneficiaries-toggle */
+  margin-bottom: 20px; 
   font-weight: normal;
 }
 
@@ -206,11 +206,11 @@ button[type="submit"]:hover {
   display: inline-block;
   padding: 10px 30px;
   background-color: #FFB6C1;
-  border: none; /* Eliminăm conturul */
+  border: none; 
   color: white;
   border-radius: 10px;
   transition: background-color 0.5s ease;
-  margin-bottom: 20px; /* Adăugăm un spațiu între butonul #beneficiaries-toggle și .checkbox-options */
+  margin-bottom: 20px; 
 }
 
 #beneficiaries-toggle:hover {
@@ -221,18 +221,18 @@ button[type="submit"]:hover {
   padding: 10px;
   border: 10px solid #ccc;
   border-radius: 5px;
-  background-color: #f2f2f2; /* Setăm culoarea gri deschis pentru fundal */
+  background-color: #f2f2f2; 
 }
 
 .checkbox-options label {
   display: block;
-  text-align: center; /* Centrăm textul */
-  margin-bottom: 5px; /* Adăugăm o mică separare între opțiuni */
+  text-align: center; 
+  margin-bottom: 5px; 
 }
 
 .checkbox-options input[type="checkbox"] {
   margin-right: 5px;
-  border-radius: 50%; /* Facem casuțele de bifare rotunde */
+  border-radius: 50%; 
 }
 
 
@@ -283,3 +283,30 @@ button[type="submit"]:hover {
   }
 }
 
+@media only screen and (max-width: 280px) {
+  .logo .name {
+    font-size: 20px;
+  }
+  
+  .logo .subtitle {
+    font-size: 14px;
+  }
+  
+  nav ul li {
+    margin-right: 3px;
+  }
+  
+  nav a {
+    font-size: 10px;
+  }
+  
+  .title {
+    padding-top: 3%;
+    padding-bottom: 1%;
+  }
+  
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
+}
