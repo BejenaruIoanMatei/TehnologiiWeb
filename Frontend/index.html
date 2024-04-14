@@ -96,35 +96,6 @@
         </div>
     </section>
 
-    
-
-    <!--Partea de javascript-->
-    <script>
-        // JavaScript pentru a face header-ul fixat după scroll
-        window.addEventListener('scroll', function() {
-            var header = document.querySelector('header');
-            if (window.scrollY > header.offsetHeight) {
-                header.classList.add('fixed-header');
-            } else {
-                header.classList.remove('fixed-header');
-            }
-        });
-
-        // JavaScript pentru întunecarea imaginilor și afișarea mesajului text la hover
-        var imageItems = document.querySelectorAll('.image-item');
-        imageItems.forEach(function(item) {
-            item.addEventListener('mouseover', function() {
-                var image = item.querySelector('img');
-                image.classList.add('darken');
-            });
-            item.addEventListener('mouseout', function() {
-                var image = item.querySelector('img');
-                image.classList.remove('darken');
-            });
-        });
-
-    </script>
-
 <footer>
     <div class="contact-container" id="contact">
         <div class="left-section">
@@ -149,6 +120,7 @@
     </div>
 </footer>
 
+<script src="./js/app.js"></script>
 
 </body>
 
