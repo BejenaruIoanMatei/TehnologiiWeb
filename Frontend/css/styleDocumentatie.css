@@ -1,3 +1,4 @@
+/* General styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,34 +12,10 @@ body {
 
 header {
   background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
   padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed; /* Adăugăm poziționarea fixă */
-  top: 0; /* Specificăm să fie fixat în partea de sus a paginii */
-  width: 100%; /* Asigurăm că ocupă întreaga lățime a ecranului */
-  z-index: 1000; /* Setăm un z-index mare pentru a se afișa deasupra altor elemente */
-  display: inline-block;
-}
-.fixed-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, 1); /* Folosim o culoare aproape solidă */
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Umbra ușoară */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.fixed-header .logo .name,
-.fixed-header .logo .subtitle,
-.fixed-header nav ul li a {
-  color: #333; /* Schimbăm culoarea textului la scroll */
 }
 
 .logo {
@@ -50,27 +27,14 @@ header {
   font-size: 40px;
   font-weight: bold;
   color: rgb(0, 0, 0);
-  text-shadow: 1px 1px 1px black;
 }
 
 .logo .subtitle {
   font-size: 30px;
   color: rgb(0, 0, 0);
-  /*text-shadow: 1px 1px 1px black;*/
 }
 
-.title {
-  display: flex;
-  flex-direction: column; /* Schimbăm direcția la coloană */
-  align-items: center; /* Aliniem elementele pe orizontală */
-  font-size : 2em;
-  color : rgba(0,0,0);
-  padding-top: 7.5%;
-  padding-bottom: 3%;
-  width: 100%;
-}
-
-nav{
+nav {
   padding: 30px;
 }
 
@@ -97,275 +61,92 @@ nav a {
   transition: background-color 0.3s ease;
   font-size: 16px;
   display: inline-block;
+  border-radius: 5px;
 }
 
 nav ul li a:hover {
   background-color: #9a9494;
 }
 
-.hero {
-  background-color: #fff;
-  padding: 110px 0;
-  text-align: center;
+/* Title section */
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2em;
+  color: rgba(0, 0, 0);
+  padding-top: 7.5%;
+  padding-bottom: 3%;
+  width: 100%;
 }
 
-.hero h1 {
-  font-size: 60px;
-  margin-bottom: 25px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 30px;
-  background-color: #1E5573;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  transition: background-color 0.5s ease;
-}
-
-.btn:hover {
-  background-color: #0b0b0b;
-}
-
+/* Main content */
 .content {
   background-color: #ffffff;
   display: flex;
-  flex-direction: column; /* Schimbăm direcția la coloană */
-  justify-content: flex-start; /* Aliniem elementele pe orizontală */
+  flex-direction: column;
+  justify-content: flex-start;
   padding: 0px 25px;
 }
 
-
-.image-collage {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.image-item {
-  flex: 1 1 200px;
-  height: 200px;
-  position: relative;
-}
-
-.image-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px; /* Rotunjim colțurile imaginilor */
-}
-
-.text-container {
-  background-color: rgba(255, 255, 255, 0.9); /* Adăugăm culoare de fundal */
-  padding: 20px; /* Adăugăm padding */
-  border-radius: 10px; /* Rotunjim colțurile containerului */
-  margin-top: 50px; /* Spațiu între poze și text */
-  text-align: center; /* Aliniem textul la centru */
-}
-
-.content-text {
-  font-weight: bold; /* Textul este acum bold */
-  margin: 0; /* Eliminăm marginile implicite ale textului */
-}
-
-
-.overlay .btn {
-  padding: 10px 20px;
-  background-color: #555;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.overlay .btn:hover {
-  background-color: #0b0b0b;
-}
-
-.promo {
-  text-align: center;
-  padding: 100px 0;
-}
-
-.promo h1:hover,
-.promo h3:hover {
-  /*
-  text-shadow: 0 0 10px rgba(93, 32, 32, 0.8);*/ /* Add a glowing effect */
-
-  transition: text-shadow 1s ease; /* Add transition for smooth effect */
-}
-
-.promo-content {
-  display: flex;
-  align-items: center; /* Center items vertically */
-}
-
-.promo-text {
-  flex: 1; /* Take remaining space */
-}
-
-.text-container {
-  background-color: rgba(255, 255, 255, 0.9); /* Add background color */
-  padding: 20px; /* Add padding */
-  border-radius: 10px; /* Add border radius */
-}
-
-
-.promo-image {
-  flex: 1; /* Take remaining space */
-  text-align: right; /* Align image to the right */
-}
-
-.promo-image img {
-  width: 100%; /* Make sure the image takes full width of its container */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Add border radius */
-  margin-top: 20px; /* Add margin */
-}
-
-/* Stil pentru întunecarea imaginii */
-.image-item img.darken {
-  filter: brightness(70%);
-}
-
-/* Stil pentru afișarea mesajului text */
-.image-item .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-  border-radius: 10px;
-}
-
-/* Stil pentru afișarea mesajului text la hover */
-.image-item:hover .overlay {
-  opacity: 1;
-}
-
-/* Stilizare footer */
+/* Footer */
 footer {
-  padding: 20px 0; /* Spațiere între conținut și margini */
-  text-align: center; /* Aliniere text la centru */
-  display: flex; /* Setare footer ca flex container */
-  justify-content: space-between; /* Așezare elemente la margini */
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
-/* Stilizare pentru secțiunea stângă a footer-ului */
-.left-section {
+
+.left-section,
+.right-section {
   width: 50%;
   text-align: center;
   padding: 20px;
-  border-radius: 20px;
-
 }
 
-.left-section h2 {
-  margin-bottom: 20px;
-
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .logo .name {
+    font-size: 30px;
+  }
+  
+  .logo .subtitle {
+    font-size: 20px;
+  }
+  
+  nav ul li {
+    margin-right: 10px;
+  }
+  
+  nav a {
+    font-size: 14px;
+  }
+  
+  .title {
+    padding-top: 5%;
+    padding-bottom: 2%;
+  }
+  
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
 }
 
-/* Stilizare pentru secțiunea dreaptă a footer-ului */
-.right-section {
-  width: 50%;
-  padding: 20px;
+@media only screen and (max-width: 480px) {
+  .logo .name {
+    font-size: 24px;
+  }
+  
+  .logo .subtitle {
+    font-size: 16px;
+  }
+  
+  nav ul li {
+    margin-right: 5px;
+  }
+  
+  nav a {
+    font-size: 12px;
+  }
 }
-
-/* Stilizare pentru formularul de contact */
-.contact-form {
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-.contact-form h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form .form-group {
-  margin-bottom: 20px;
-}
-
-.contact-form label {
-  font-size: 18px;
-  display: block;
-  margin-bottom: 5px;
-
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  resize: none;
-
-}
-
-.contact-form textarea {
-  height: 120px;
-}
-
-.contact-form button {
-  width: 100%;
-  padding: 10px;
-  font-size: 18px;
-  background-color: #1E5573;
-  color: #ffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-  background-color:#0b0b0b;
-}
-
-
-.contact-container {
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 80%), url('../img/gate.jpg');
-  background-size: cover; /* Asigură că imaginea de fundal acoperă întreaga suprafață a div-ului */
-    background-position: center; /* Centrează imaginea de fundal */
-    display: flex; /* Setează display flex pentru a alinia conținutul pe orizontală */
-    justify-content: space-between; /* Așează div-urile stânga și dreapta la margini */
-    padding: 50px; /* Adaugă spațiere între conținut și margini */
-    bottom: 0; /* Aliniază la partea de jos a paginii */
-    left: 0; /* Aliniază la stânga */
-    right: 0; /* Aliniază la dreapta */
-    margin: 0 auto; /* Centrează pe orizontală */
-    width: 90%; /* Ocupă 90% din lățimea ecranului */
-    max-width: 1200px;
-    border-radius: 5px;
-}
-
-.left-section, .right-section {
-    width: 48%; /* Lățimea fiecărui div */
-}
-
-.left-section {
-    background-color: rgba(255, 255, 255, 0.9); /* Adaugă un fundal semi-transparent pentru div-ul stâng */
-    padding: 20px; /* Adaugă padding pentru a crea spațiu în interiorul div-ului */
-}
-
-.right-section {
-    padding: 20px; /* Adaugă padding pentru a crea spațiu în interiorul div-ului */
-}
-.spacer {
-  height: 200px; /* Adjust the height as needed */
-}
-

@@ -132,4 +132,51 @@
     position: relative;
 }
 
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .logo .name {
+    font-size: 30px;
+  }
+  
+  .logo .subtitle {
+    font-size: 20px;
+  }
+  
+  nav ul li {
+    margin-right: 10px;
+  }
+  
+  nav a {
+    font-size: 14px;
+  }
+  
+  .title {
+    padding-top: 5%;
+    padding-bottom: 2%;
+  }
+  
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .logo .name {
+    font-size: 24px;
+  }
+  
+  .logo .subtitle {
+    font-size: 16px;
+  }
+  
+  nav ul li {
+    margin-right: 5px;
+  }
+  
+  nav a {
+    font-size: 12px;
+  }
+}
+
 
