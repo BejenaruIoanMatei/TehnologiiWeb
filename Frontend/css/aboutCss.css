@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  header {
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Adăugăm poziționarea fixă */
+    top: 0; /* Specificăm să fie fixat în partea de sus a paginii */
+    width: 100%; /* Asigurăm că ocupă întreaga lățime a ecranului */
+    z-index: 1000; /* Setăm un z-index mare pentru a se afișa deasupra altor elemente */
+  }
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 1); /* Folosim o culoare aproape solidă */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Umbra ușoară */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  }
+  
+  .fixed-header .logo .name,
+  .fixed-header .logo .subtitle,
+  .fixed-header nav ul li a {
+    color: #333; /* Schimbăm culoarea textului la scroll */
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo .name {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 1px black;
+  }
+  
+  .logo .subtitle {
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    /*text-shadow: 1px 1px 1px black;*/
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #9a9494;
+  }
+  
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../img/about.jpg); /* Schimbă cu calea către imaginea de fundal */
+    background-size: cover; /* Imaginea va fi întinsă pentru a acoperi întreaga fereastră */
+    background-position: center;
+
+}
+
+
+.container {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column; /* Așezăm elementele unul sub celălalt */
+    align-items: center;
+    height: 100vh;
+}
+
+.about-box,
+.why {
+    max-width: 800px;
+    margin: 20px; /* Spațiere între chenare */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+}
+
+
