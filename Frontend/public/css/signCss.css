@@ -3,12 +3,12 @@
     margin: 0;
     padding: 0;
   }
-  
+
   body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-image: url(../img/clouds.jpg); 
+    background-image: url(../img/clouds.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -21,10 +21,10 @@
 }
 
 .signin-box {
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .signin-box h2 {
@@ -59,11 +59,27 @@ button[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
+button[type="submitRegister"] {
+  border-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: #1E5573;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 button[type="submit"]:hover {
     background-color: #0b0b0b;
 }
+button[type="submitRegister"]:hover {
+  background-color: #0b0b0b;
+  padding-top: 1%;
+}
 
-  
+
   header {
     background-color: #fff;
     background-repeat: no-repeat;
@@ -74,49 +90,49 @@ button[type="submit"]:hover {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    top: 0; 
-    width: 100%; 
-    z-index: 1000; 
+    top: 0;
+    width: 100%;
+    z-index: 1000;
   }
   .fixed-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 1); 
+    background-color: rgba(255, 255, 255, 1);
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
-  
+
   .fixed-header .logo .name,
   .fixed-header .logo .subtitle,
   .fixed-header nav ul li a {
-    color: #333; 
+    color: #333;
   }
-  
+
   .logo {
     display: flex;
     flex-direction: column;
   }
-  
+
   .logo .name {
     font-size: 40px;
     font-weight: bold;
     color: rgb(0, 0, 0);
     text-shadow: 1px 1px 1px black;
   }
-  
+
 
   nav ul {
     list-style: none;
     display: flex;
   }
-  
+
   nav ul li {
     margin-right: 20px;
   }
-  
+
   nav ul li a {
     text-decoration: none;
     font-weight: bold;
@@ -126,7 +142,7 @@ button[type="submit"]:hover {
     border-radius: 20px;
     transition: background-color 0.3s ease;
   }
-  
+
   nav ul li a:hover {
     background-color: #9a9494;
   }
@@ -136,24 +152,24 @@ button[type="submit"]:hover {
   .logo .name {
     font-size: 30px;
   }
-  
+
   .logo .subtitle {
     font-size: 20px;
   }
-  
+
   nav ul li {
     margin-right: 10px;
   }
-  
+
   nav a {
     font-size: 14px;
   }
-  
+
   .title {
     padding-top: 5%;
     padding-bottom: 2%;
   }
-  
+
   .left-section,
   .right-section {
     width: 100%;
@@ -164,15 +180,15 @@ button[type="submit"]:hover {
   .logo .name {
     font-size: 24px;
   }
-  
+
   .logo .subtitle {
     font-size: 16px;
   }
-  
+
   nav ul li {
     margin-right: 5px;
   }
-  
+
   nav a {
     font-size: 12px;
   }
@@ -182,24 +198,24 @@ button[type="submit"]:hover {
   .logo .name {
     font-size: 20px;
   }
-  
+
   .logo .subtitle {
     font-size: 14px;
   }
-  
+
   nav ul li {
     margin-right: 3px;
   }
-  
+
   nav a {
     font-size: 10px;
   }
-  
+
   .title {
     padding-top: 3%;
     padding-bottom: 1%;
   }
-  
+
   .left-section,
   .right-section {
     width: 100%;

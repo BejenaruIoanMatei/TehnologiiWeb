@@ -1,0 +1,4 @@
+1. install node js
+2. npm init -y
+3. npm install express bcryptjs jsonwebtoken body-parser mongoose cookie-parser
+4. npm install pm2

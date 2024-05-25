@@ -9,12 +9,12 @@
     margin: 0;
     padding: 0;
   }
-  
+
   body {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
   }
-  
+
   header {
     background-color: #fff;
     background-repeat: no-repeat;
@@ -24,56 +24,56 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    z-index: 1000; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
   }
   .fixed-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 1); 
+    background-color: rgba(255, 255, 255, 1);
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
   }
-  
+
   .fixed-header .logo .name,
   .fixed-header .logo .subtitle,
   .fixed-header nav ul li a {
-    color: #333; 
+    color: #333;
   }
-  
+
   .logo {
     display: flex;
     flex-direction: column;
   }
-  
+
   .logo .name {
     font-size: 40px;
     font-weight: bold;
     color: rgb(0, 0, 0);
     text-shadow: 1px 1px 1px black;
   }
-  
+
   .logo .subtitle {
     font-size: 24px;
     color: rgb(0, 0, 0);
-    
+
   }
-  
+
   nav ul {
     list-style: none;
     display: flex;
   }
-  
+
   nav ul li {
     margin-right: 20px;
   }
-  
+
   nav ul li a {
     text-decoration: none;
     font-weight: bold;
@@ -83,18 +83,18 @@
     border-radius: 20px;
     transition: background-color 0.3s ease;
   }
-  
+
   nav ul li a:hover {
     background-color: #9a9494;
   }
-  
-  
+
+
   body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-image: url(../img/about.jpg); 
-    background-size: cover; 
+    background-image: url(../img/about.jpg);
+    background-size: cover;
     background-position: center;
 
 }
@@ -103,7 +103,7 @@
 .container {
     margin-top: 150px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     height: 100vh;
 }
@@ -111,7 +111,7 @@
 .about-box,
 .why {
     max-width: 800px;
-    margin: 20px; 
+    margin: 20px;
     padding: 20px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -123,7 +123,7 @@
 .about-box
 {
     max-width: 800px;
-    margin: 20px; 
+    margin: 20px;
     padding: 20px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -136,24 +136,24 @@
   .logo .name {
     font-size: 30px;
   }
-  
+
   .logo .subtitle {
     font-size: 20px;
   }
-  
+
   nav ul li {
     margin-right: 10px;
   }
-  
+
   nav a {
     font-size: 14px;
   }
-  
+
   .title {
     padding-top: 5%;
     padding-bottom: 2%;
   }
-  
+
   .left-section,
   .right-section {
     width: 100%;
@@ -164,15 +164,15 @@
   .logo .name {
     font-size: 24px;
   }
-  
+
   .logo .subtitle {
     font-size: 16px;
   }
-  
+
   nav ul li {
     margin-right: 5px;
   }
-  
+
   nav a {
     font-size: 12px;
   }
@@ -182,24 +182,24 @@
   .logo .name {
     font-size: 20px;
   }
-  
+
   .logo .subtitle {
     font-size: 14px;
   }
-  
+
   nav ul li {
     margin-right: 3px;
   }
-  
+
   nav a {
     font-size: 10px;
   }
-  
+
   .title {
     padding-top: 3%;
     padding-bottom: 1%;
   }
-  
+
   .left-section,
   .right-section {
     width: 100%;
