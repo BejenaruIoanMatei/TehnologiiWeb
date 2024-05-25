@@ -2,3 +2,5 @@
 2. npm init -y
 3. npm install express bcryptjs jsonwebtoken body-parser mongoose cookie-parser
 4. npm install pm2
+5. pm2 start server.js
+6. in broswer put localhost:3000
