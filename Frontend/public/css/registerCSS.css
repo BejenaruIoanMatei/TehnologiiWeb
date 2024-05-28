@@ -18,6 +18,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin-top: 60px; /* Sau orice altă valoare potrivită */
 }
 
 .register-box {
@@ -63,7 +64,6 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #0b0b0b;
-  padding-top: 1%;
 }
 
 

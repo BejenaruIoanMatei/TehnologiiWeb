@@ -146,6 +146,34 @@ button[type="submitRegister"]:hover {
   nav ul li a:hover {
     background-color: #9a9494;
   }
+  
+
+  .signin-box span,
+.signin-box #submitRegisterFromSignIn {
+    display: inline-block; /* Asigură că elementele sunt afișate pe aceeași linie */
+    width: auto;         /* Permite elementelor să își ajusteze lățimea automat */
+    margin: 10px;        /* Adaugă spațiu în jurul elementelor */
+    padding: 10px;       /* Adaugă padding în interiorul elementelor */
+}
+
+.signin-box span {
+    text-align: left;   /* Aliniază textul la stânga */
+}
+
+/* Container pentru mesaj și buton, pentru a aplica chenarul și efectul */
+.registration-container {
+    border: 1px solid #ccc; /* Chenarul gri */
+    border-radius: 5px;     /* Rotunjește colțurile chenarului */
+    padding: 20px;         /* Adaugă padding în interiorul containerului */
+    opacity: 0;            /* Inițial, ascunde containerul */
+    transition: opacity 0.5s ease; /* Tranziție lină pentru opacitate */
+}
+
+/* Afișează containerul cu efect de fade-in */
+.registration-container.show {
+    opacity: 1;
+}
+
 
 /* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
