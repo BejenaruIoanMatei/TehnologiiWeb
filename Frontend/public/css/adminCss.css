@@ -15,7 +15,12 @@ a{
 li{
     list-style: none;
 }
-h1,h2{
+
+h1{
+    color: rgb(180, 178, 178);
+}
+
+h2{
     color:  rgb(180, 178, 178);
 }
 h3{
@@ -37,6 +42,13 @@ h3{
     border: 2px solid grey;
     border-radius: 10px;
 }
+.container .header .nav .user .btn:hover::after {
+    content: "Go to Statistics";
+    display: block; /* Ensure the text appears below */
+    font-size: 12px; 
+    margin-top: 5px; /* Add space between button and text */
+    text-align: center; /* Center the text */
+  }
 
 .title{
     display: flex;
@@ -249,9 +261,9 @@ td{
         height: 40px;
     }
     .side-menu li:hover {
-        background: pink;
+        background: white;
         padding: 8px 38px;
-        border: 2px solid white;
+        border: 2px solid rgba(0,0,0,0.2);
     }
 }
 
