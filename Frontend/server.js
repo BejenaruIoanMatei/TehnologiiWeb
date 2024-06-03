@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const loginRoute = require('./components/loginComponent');
+const logoutRoute = require('./components/logoutComponent');
 const explorePageRoute = require('./routes/indexToExplorePageButtonRoute');
 const aboutUsRoute = require('./routes/indexToAboutButtonRoute');
 const helpRoute = require('./routes/indexToHelpRoute')
