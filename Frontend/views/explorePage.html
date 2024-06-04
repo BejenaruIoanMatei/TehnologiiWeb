@@ -42,26 +42,29 @@
 
     <section id="home" class="hero">
         <h1>Where do you want to go ?</h1>
-        <form action="/submit-destination" method="post">
-            <label for="country"></label>
-            <input type="text" id="country" name="country" placeholder="Select a Country" required><br><br>
+        <div class="hero-content">
+            <form action="/submit-destination" method="post">
+                <label for="country"></label>
+                <input type="text" id="country" name="country" placeholder="Select a Country" required><br><br>
+                
+                <label for="city"></label>
+                <input type="text" id="city" name="city" placeholder="Select a City" required><br><br>
             
-            <label for="city"></label>
-            <input type="text" id="city" name="city" placeholder="Select a City" required><br><br>
-        
-            <label for="start">Starting day : </label>
-            <input type="date" id="start" name="trip-start" required><br><br>
-        
-            <label for="end">Final day : </label>
-            <input type="date" id="end" name="trip-end" required><br><br>
-        
-            <div class="form-actions">
-                <img src="../public/img/suitcase.png" alt="Image Description" id="add-image">
-                <button type="submit">+ Add destination</button>
-            </div>
-        </form>
-        
+                <label for="start">Starting day : </label>
+                <input type="date" id="start" name="trip-start" required><br><br>
+            
+                <label for="end">Final day : </label>
+                <input type="date" id="end" name="trip-end" required><br><br>
+            
+                <div class="form-actions">
+                    <img src="../public/img/suitcase.png" alt="Image Description" id="add-image">
+                    <button type="submit">+ Add destination</button>
+                </div>
+            </form>
+            <img src="../public/img/chestii2.png" alt="Hero Image" class="hero-image">
+        </div>
     </section>
+    
 
 
     <section id="create">

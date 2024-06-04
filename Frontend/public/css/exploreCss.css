@@ -7,9 +7,9 @@
 body {
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
-  display: flex;           
-  flex-direction: column;  
-  min-height: 100vh;       
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
@@ -21,10 +21,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed; 
-  top: 0; 
-  width: 100%; 
-  z-index: 1000; 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   box-shadow: 0 3px 8px 0 rgb(180, 178, 178);
 }
 
@@ -33,16 +33,16 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 1); 
+  background-color: rgba(255, 255, 255, 1);
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .fixed-header .logo .name,
 .fixed-header .logo .subtitle,
 .fixed-header nav ul li a {
-  color: #333; 
+  color: #333;
 }
 
 .logo {
@@ -108,43 +108,43 @@ nav ul li a:hover {
 }
 
 #city {
-  width: 300px; 
-  margin: 0 auto; 
-  border: 2px solid #2c7188; 
-  padding: 10px; 
-  text-align: center; 
-  font-size: 16px; 
+  width: 300px;
+  margin: 0 auto;
+  border: 2px solid #2c7188;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
   border-radius: 20px;
 }
 
 #country {
-  width: 350px; 
-  margin: 0 auto; 
-  border: 2px solid #2c7188; 
-  padding: 10px; 
-  text-align: center; 
-  font-size: 16px; 
+  width: 350px;
+  margin: 0 auto;
+  border: 2px solid #2c7188;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
   border-radius: 20px;
 }
 
 button[type="submit"] {
-  background-color: #FFB6C1; 
-  color: white; 
-  padding: 10px 20px; 
+  background-color: #FFB6C1;
+  color: white;
+  padding: 10px 20px;
   border: none;
-  border-radius: 10px; 
-  font-size: 16px; 
-  cursor: pointer; 
-  transition: background-color 0.3s ease; 
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #bc7a9a; 
+  background-color: #bc7a9a;
 }
 
 .left-section {
   float: left;
-  width: 50%; 
+  width: 50%;
 }
 
 .right-section {
@@ -153,7 +153,7 @@ button[type="submit"]:hover {
 }
 
 .right-section img {
-  width: 100%; 
+  width: 100%;
 }
 
 .text {
@@ -165,12 +165,12 @@ button[type="submit"]:hover {
 }
 
 #create {
-  text-align: center; 
+  text-align: center;
   flex: 1;
 }
 
 #create h2 {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .text h2 {
@@ -178,8 +178,8 @@ button[type="submit"]:hover {
 }
 
 #create button[type="submit"] {
-  display: block; 
-  margin: 0 auto; 
+  display: block;
+  margin: 0 auto;
 }
 
 .styled-button {
@@ -189,7 +189,7 @@ button[type="submit"]:hover {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .styled-button:hover {
@@ -208,16 +208,16 @@ button[type="submit"]:hover {
 }
 
 .checkbox-options input[type="checkbox"] {
-  margin-right: 5px; 
+  margin-right: 5px;
 }
 
 .main-section {
   text-align: center;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .main-section h2 {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   font-weight: normal;
 }
 
@@ -225,11 +225,11 @@ button[type="submit"]:hover {
   display: inline-block;
   padding: 10px 30px;
   background-color: #FFB6C1;
-  border: none; 
+  border: none;
   color: white;
   border-radius: 10px;
   transition: background-color 0.5s ease;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 #beneficiaries-toggle:hover {
@@ -240,18 +240,18 @@ button[type="submit"]:hover {
   padding: 10px;
   border: 10px solid #ccc;
   border-radius: 5px;
-  background-color: #f2f2f2; 
+  background-color: #f2f2f2;
 }
 
 .checkbox-options label {
   display: block;
-  text-align: center; 
-  margin-bottom: 5px; 
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 .checkbox-options input[type="checkbox"] {
   margin-right: 5px;
-  border-radius: 50%; 
+  border-radius: 50%;
 }
 
 .form-actions {
@@ -261,134 +261,125 @@ button[type="submit"]:hover {
 }
 
 #add-image {
-  width: 100px; 
-  height: auto; 
-  margin-right: 10px; 
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
 }
-
-footer {
-  background-image: url('../img/chestii2.png'); 
-  height: 900px;
-  background-size: cover;
-  background-position: bottom;
-  width: 100%;
-  flex-shrink: 0;
-  padding: 50px 0;
-  position: relative;
-}
-
 
 .create-section {
-  background-color: white; 
+  background-image: url('../img/chestii2.png'); /* Apply the background image from the footer */
+  background-size: cover; 
+  background-position: center center; 
   padding: 20px;
   border-radius: 15px;
   width: 80%;
   max-width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: absolute;
-  top: 50%;         /* Ajustează această valoare pentru poziționarea dorită */
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centrează secțiunea */
+  transform: translate(-50%, -50%);
 }
 
 button[type="submit"] {
-  background-color: #FFB6C1; 
-  color: white; 
-  padding: 10px 20px; 
+  background-color: #FFB6C1;
+  color: white;
+  padding: 10px 20px;
   border: none;
-  border-radius: 10px; 
-  font-size: 16px; 
-  cursor: pointer; 
-  transition: background-color 0.3s ease; 
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #bc7a9a; 
+  background-color: #bc7a9a;
 }
 
 input[type="date"] {
   padding: 5px;
-  border: 1px solid #ccc; 
-  border-radius: 5px;     
-  font-size: 14px;      
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 input[type="date"]:focus {
-  outline: none;         
-  border-color: #1E5573; 
+  outline: none;
+  border-color: #1E5573;
 }
 
 /* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
   .logo .name {
-      font-size: 30px;
+    font-size: 30px;
   }
-  
+
   .logo .subtitle {
-      font-size: 20px;
+    font-size: 20px;
   }
-  
+
   nav ul li {
-      margin-right: 10px;
+    margin-right: 10px;
   }
-  
+
   nav a {
-      font-size: 14px;
+    font-size: 14px;
   }
-  
+
   .title {
-      padding-top: 5%;
-      padding-bottom: 2%;
+    padding-top: 5%;
+    padding-bottom: 2%;
   }
-  
+
   .left-section,
   .right-section {
-      width: 100%;
+    width: 100%;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .logo .name {
-      font-size: 24px;
+    font-size: 24px;
   }
-  
+
   .logo .subtitle {
-      font-size: 16px;
+    font-size: 16px;
   }
-  
+
   nav ul li {
-      margin-right: 5px;
+    margin-right: 5px;
   }
-  
+
   nav a {
-      font-size: 12px;
+    font-size: 12px;
   }
 }
 
 @media only screen and (max-width: 280px) {
   .logo .name {
-      font-size: 20px;
+    font-size: 20px;
   }
-  
+
   .logo .subtitle {
-      font-size: 14px;
+    font-size: 14px;
   }
-  
+
   nav ul li {
-      margin-right: 3px;
+    margin-right: 3px;
   }
-  
+
   nav a {
-      font-size: 10px;
+    font-size: 10px;
   }
-  
+
   .title {
-      padding-top: 3%;
-      padding-bottom: 1%;
+    padding-top: 3%;
+    padding-bottom: 1%;
   }
-  
+
   .left-section,
   .right-section {
-      width: 100%;
+    width: 100%;
   }
 }
+
