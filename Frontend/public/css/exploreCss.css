@@ -94,6 +94,13 @@ nav ul li a:hover {
   color: grey;
 }
 
+.hero h3{
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: normal;
+  color: grey;
+}
+
 .hero-content {
   display: flex;
   align-items: center;
@@ -260,7 +267,7 @@ button[type="submit"]:hover {
   color: black;
   border-radius: 10px;
   transition: background-color 0.5s ease;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   border: 2px solid #2c7188;
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
 
@@ -343,6 +350,19 @@ input[type="date"] {
 input[type="date"]:focus {
   outline: none;
   border-color: #1E5573;
+}
+
+#submit-trip.btn {
+  background-color: #006400; /* Verde închis (DarkGreen) */
+  border:none;
+  color: white;
+  margin-top: 100px; /* Margine superioară de 20px */
+  margin-bottom: 20px; /* Margine inferioară de 20px */
+}
+
+#submit-trip:hover {
+  background-color: #057b05; /* Verde închis (DarkGreen) */
+  color: white;
 }
 
 /* Media queries for responsiveness */
