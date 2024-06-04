@@ -91,6 +91,36 @@ nav ul li a:hover {
   font-size: 30px;
   margin-bottom: 25px;
   font-weight: normal;
+  color: grey;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  max-width: 400px;
+  margin-right: 20px; /* Space between the form and the image */
+  
+}
+
+.form-container h2{
+  font-size: 30px;
+  margin-bottom: 25px;
+  font-weight: normal;
+  color: black;
+}
+
+.hero form {
+  max-width: 100%;
+}
+
+.hero-image {
+  max-width: 400px; /* Adjust the size as needed */
+  height: auto;
+  border-radius: 10px;
 }
 
 .btn {
@@ -310,6 +340,19 @@ input[type="date"]:focus {
 
 /* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .form-container {
+    margin-right: 0;
+    margin-bottom: 20px; /* Space between the form and the image on smaller screens */
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+
   .logo .name {
     font-size: 30px;
   }
@@ -382,4 +425,3 @@ input[type="date"]:focus {
     width: 100%;
   }
 }
-
