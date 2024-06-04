@@ -1,6 +1,6 @@
 // Import Firestore database from firebaseInit.js
 const { db } = require('../firebaseInit');
-const { collection, query, where, getDocs } = require('firebase/firestore');
+const { collection, query, where, getDocs, updateDoc, doc } = require('firebase/firestore');
 
 const loginComponent = async (req, res) => {
   let body = '';
@@ -27,12 +27,24 @@ const loginComponent = async (req, res) => {
       const userDoc = querySnapshot.docs[0];
       const user = userDoc.data();
 
+      // Check if the user is already logged in
+      if (user.loggedIn) {
+        res.writeHead(403, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ message: 'User already logged in' }));
+        return;
+      }
+
       // Directly compare the provided password with the stored password
       if (password !== user.password) {
         res.writeHead(401, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ message: 'Invalid email or password' }));
         return;
       }
+
+      // Update the loggedIn field to true
+      await updateDoc(doc(db, 'users', userDoc.id), {
+        loggedIn: true
+      });
 
       // If login is successful
       res.writeHead(200, { 'Content-Type': 'application/json' });
