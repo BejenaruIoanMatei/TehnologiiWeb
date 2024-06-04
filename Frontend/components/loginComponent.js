@@ -1,6 +1,7 @@
-// Import Firestore database from firebaseInit.js
+// Import Firestore database and bcrypt from firebaseInit.js
 const { db } = require('../firebaseInit');
 const { collection, query, where, getDocs, updateDoc, doc } = require('firebase/firestore');
+const bcrypt = require('bcrypt');
 
 const loginComponent = async (req, res) => {
   let body = '';
@@ -34,8 +35,9 @@ const loginComponent = async (req, res) => {
         return;
       }
 
-      // Directly compare the provided password with the stored password
-      if (password !== user.password) {
+      // Compare the provided password with the stored hashed password
+      const passwordMatch = await bcrypt.compare(password, user.password);
+      if (!passwordMatch) {
         res.writeHead(401, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ message: 'Invalid email or password' }));
         return;
