@@ -1,169 +1,185 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  header {
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    z-index: 1000; 
-  }
-  .fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, 1); 
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .fixed-header .logo .name,
-  .fixed-header .logo .subtitle,
-  .fixed-header nav ul li a {
-    color: #333; 
-  }
-  
-  .logo {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .logo .name {
-    font-size: 40px;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-    text-shadow: 1px 1px 1px black;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    background-color: #9a9494;
-  }
+body {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;           
+  flex-direction: column;  
+  min-height: 100vh;       
+}
 
+header {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 1000; 
+  box-shadow: 0 3px 8px 0 rgb(180, 178, 178);
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 1); 
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fixed-header .logo .name,
+.fixed-header .logo .subtitle,
+.fixed-header nav ul li a {
+  color: #333; 
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo .name {
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 1px black;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #9a9494;
+}
 
 .hero {
-    background-color: #fff;
-    padding: 300px 0;
-    text-align: center;
-  }
-  
-  .hero h1 {
-    font-size: 30px;
-    margin-bottom: 25px;
-    font-weight: normal;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 30px;
-    background-color: #1E5573;
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
-    transition: background-color 0.5s ease;
-  }
-  
-  .btn:hover {
-    background-color: #0b0b0b;
-  }
+  background-color: #fff;
+  padding: 190px 0;
+  text-align: center;
+  flex: 1;
+}
 
-  #country {
-    width: 300px; 
-    margin: 0 auto; 
-    border: 2px solid #2c7188; 
-    padding: 10px; 
-    text-align: center; 
-    font-size: 16px; 
-    border-radius: 20px;
+.hero h1 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #1E5573;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.5s ease;
+}
+
+.btn:hover {
+  background-color: #0b0b0b;
+}
+
+#city {
+  width: 300px; 
+  margin: 0 auto; 
+  border: 2px solid #2c7188; 
+  padding: 10px; 
+  text-align: center; 
+  font-size: 16px; 
+  border-radius: 20px;
+}
+
+#country {
+  width: 350px; 
+  margin: 0 auto; 
+  border: 2px solid #2c7188; 
+  padding: 10px; 
+  text-align: center; 
+  font-size: 16px; 
+  border-radius: 20px;
 }
 
 button[type="submit"] {
-    background-color: #FFB6C1; 
-    color: white; 
-    padding: 10px 20px; 
-    border: none;
-    border-radius: 10px; 
-    font-size: 16px; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
+  background-color: #FFB6C1; 
+  color: white; 
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 10px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
 }
 
 button[type="submit"]:hover {
-    background-color: #bc7a9a; 
+  background-color: #bc7a9a; 
 }
 
 .left-section {
-    float: left;
-    width: 50%; 
+  float: left;
+  width: 50%; 
 }
 
 .right-section {
-    float: right;
-    width: 50%;
+  float: right;
+  width: 50%;
 }
-
 
 .right-section img {
-    width: 100%; 
+  width: 100%; 
 }
 
+.text {
+  margin-bottom: 40px;
+}
 
-.text{
-    margin-bottom: 40px;
+#beneficiaries-toggle {
+  margin-right: 10px;
 }
 
 #create {
-    text-align: center; 
-    
+  text-align: center; 
+  flex: 1;
 }
 
 #create h2 {
-    margin-bottom: 20px; 
+  margin-bottom: 20px; 
 }
 
-.text h2{
-    font-weight: normal;
+.text h2 {
+  font-weight: normal;
 }
 
 #create button[type="submit"] {
-    display: block; 
-    margin: 0 auto; 
+  display: block; 
+  margin: 0 auto; 
 }
 
 .styled-button {
@@ -180,10 +196,15 @@ button[type="submit"]:hover {
   background-color: #0b0b0b;
 }
 
+#beneficiaries-toggle {
+  display: block;
+}
+
 .checkbox-options {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  text-align: center;
 }
 
 .checkbox-options input[type="checkbox"] {
@@ -193,7 +214,6 @@ button[type="submit"]:hover {
 .main-section {
   text-align: center;
   margin-bottom: 20px; 
-
 }
 
 .main-section h2 {
@@ -202,7 +222,6 @@ button[type="submit"]:hover {
 }
 
 #beneficiaries-toggle {
-  /* Stilurile definite pentru clasa .btn */
   display: inline-block;
   padding: 10px 30px;
   background-color: #FFB6C1;
@@ -235,78 +254,141 @@ button[type="submit"]:hover {
   border-radius: 50%; 
 }
 
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-image {
+  width: 100px; 
+  height: auto; 
+  margin-right: 10px; 
+}
+
+footer {
+  background-image: url('../img/chestii2.png'); 
+  height: 900px;
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  flex-shrink: 0;
+  padding: 50px 0;
+  position: relative;
+}
+
+
+.create-section {
+  background-color: white; 
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;         /* Ajustează această valoare pentru poziționarea dorită */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrează secțiunea */
+}
+
+button[type="submit"] {
+  background-color: #FFB6C1; 
+  color: white; 
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 10px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+button[type="submit"]:hover {
+  background-color: #bc7a9a; 
+}
+
+input[type="date"] {
+  padding: 5px;
+  border: 1px solid #ccc; 
+  border-radius: 5px;     
+  font-size: 14px;      
+}
+
+input[type="date"]:focus {
+  outline: none;         
+  border-color: #1E5573; 
+}
 
 /* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
   .logo .name {
-    font-size: 30px;
+      font-size: 30px;
   }
   
   .logo .subtitle {
-    font-size: 20px;
+      font-size: 20px;
   }
   
   nav ul li {
-    margin-right: 10px;
+      margin-right: 10px;
   }
   
   nav a {
-    font-size: 14px;
+      font-size: 14px;
   }
   
   .title {
-    padding-top: 5%;
-    padding-bottom: 2%;
+      padding-top: 5%;
+      padding-bottom: 2%;
   }
   
   .left-section,
   .right-section {
-    width: 100%;
+      width: 100%;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .logo .name {
-    font-size: 24px;
+      font-size: 24px;
   }
   
   .logo .subtitle {
-    font-size: 16px;
+      font-size: 16px;
   }
   
   nav ul li {
-    margin-right: 5px;
+      margin-right: 5px;
   }
   
   nav a {
-    font-size: 12px;
+      font-size: 12px;
   }
 }
 
 @media only screen and (max-width: 280px) {
   .logo .name {
-    font-size: 20px;
+      font-size: 20px;
   }
   
   .logo .subtitle {
-    font-size: 14px;
+      font-size: 14px;
   }
   
   nav ul li {
-    margin-right: 3px;
+      margin-right: 3px;
   }
   
   nav a {
-    font-size: 10px;
+      font-size: 10px;
   }
   
   .title {
-    padding-top: 3%;
-    padding-bottom: 1%;
+      padding-top: 3%;
+      padding-bottom: 1%;
   }
   
   .left-section,
   .right-section {
-    width: 100%;
+      width: 100%;
   }
 }

@@ -44,36 +44,37 @@
         <h1>Where do you want to go ?</h1>
         <form action="/submit-destination" method="post">
             <label for="country"></label>
-            <input type="text" id="country" name="country" placeholder="Select a City" required><br><br>
-
+            <input type="text" id="country" name="country" placeholder="Select a Country" required><br><br>
+            
+            <label for="city"></label>
+            <input type="text" id="city" name="city" placeholder="Select a City" required><br><br>
+        
             <label for="start">Starting day : </label>
             <input type="date" id="start" name="trip-start" required><br><br>
-
+        
             <label for="end">Final day : </label>
             <input type="date" id="end" name="trip-end" required><br><br>
-
-            <button type="submit">+ Add destination</button>
-
+        
+            <div class="form-actions">
+                <img src="../public/img/suitcase.png" alt="Image Description" id="add-image">
+                <button type="submit">+ Add destination</button>
+            </div>
         </form>
+        
     </section>
 
 
-    <section id="new-section">
-        <div class="main-section">
-            <h2>Don't forget to create the trip !</h2>
-            <button type="button" id="beneficiaries-toggle" class="btn">+ Beneficiaries</button>
-            <button type="submit" id="submit-trip" class="btn">Create Trip</button>
+    <section id="create">
+        <div class="text">
+            <h2>Don't forget to choose the beneficiries !</h2>
+            <button type="button" id="beneficiaries-toggle" class="btn styled-button">+ Beneficiaries</button>
             <div class="checkbox-options" id="checkbox-options" style="display: none;">
-                <input type="checkbox" id="option1" name="option1" value="option1">
-                <label for="option1">Family member</label><br>
-                <input type="checkbox" id="option2" name="option2" value="option2">
-                <label for="option2">Close friend</label><br>
-                <input type="checkbox" id="option3" name="option3" value="option3">
-                <label for="option3">Co-worker</label><br>
-                <input type="checkbox" id="option4" name="option4" value="option4">
-                <label for="option3">*These are just for testing*</label><br>
             </div>
         </div>
+        <div class="main-section">
+            <button type="submit" id="submit-trip" class="btn styled-button">Create Trip</button>
+        </div>
     </section>
+
 </body>
 </html>
