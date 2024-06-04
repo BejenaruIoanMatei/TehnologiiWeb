@@ -1,25 +1,48 @@
-// Import Firebase modules
-const { initializeApp } = require('firebase/app');
+// Import Firestore database from firebaseInit.js
+const { db } = require('../firebaseInit');
+const { collection, query, where, getDocs } = require('firebase/firestore');
 
-const firebaseConfig = {
-  apiKey: "AIzaSyAlbteuD8V2X0lh1j6UnX01Ib6JV_lgL0k",
-  authDomain: "sore-ff367.firebaseapp.com",
-  projectId: "sore-ff367",
-  storageBucket: "sore-ff367.appspot.com",
-  messagingSenderId: "434942575310",
-  appId: "1:434942575310:web:9e766a0e95a4f5b023069f",
-  measurementId: "G-GCV4W3XF8M"
+const loginComponent = async (req, res) => {
+  let body = '';
+  req.on('data', chunk => {
+    body += chunk.toString();
+  });
+
+  req.on('end', async () => {
+    const { email, password } = JSON.parse(body);
+
+    try {
+      const usersRef = collection(db, 'users');
+      const q = query(usersRef, where('email', '==', email));
+      const querySnapshot = await getDocs(q);
+
+      if (querySnapshot.empty) {
+        // No user found with the given email
+        res.writeHead(401, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ message: 'Invalid email or password' }));
+        return;
+      }
+
+      // Assuming email is unique, so we can just take the first document
+      const userDoc = querySnapshot.docs[0];
+      const user = userDoc.data();
+
+      // Directly compare the provided password with the stored password
+      if (password !== user.password) {
+        res.writeHead(401, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ message: 'Invalid email or password' }));
+        return;
+      }
+
+      // If login is successful
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ message: 'Login successful', user }));
+    } catch (error) {
+      console.error('Error logging in:', error);
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ message: 'Server error' }));
+    }
+  });
 };
-
-// Initialize Firebase app
-const app = initializeApp(firebaseConfig);
-
-const loginComponent = (req, res) => {
-  // Always return success for now
-  res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.end(JSON.stringify({ message: 'Login successful' }));
-};
-// Set the tenant ID on Auth instance.
-
 
 module.exports = loginComponent;
