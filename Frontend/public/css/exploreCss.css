@@ -312,23 +312,24 @@ button[type="submit"]:hover {
 }
 
 button[type="submit"] {
-  background-color: #FFB6C1;
-  color: white;
+  background-color: white; /* White background */
+  color: black; /* Black text color for better contrast */
   padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
+  border: 2px solid #2c7188; /* Gray border */
+  border-radius: 20px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
 }
 
 button[type="submit"]:hover {
-  background-color: #bc7a9a;
+  background-color: #E8F0FE; /* Light gray background on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
 }
 
 input[type="date"] {
   padding: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #2c7188;
   border-radius: 5px;
   font-size: 14px;
 }
