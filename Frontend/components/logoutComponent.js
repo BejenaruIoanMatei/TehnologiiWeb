@@ -16,15 +16,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Login function
-async function login(email, password) {
+// Logout function
+async function logout() {
   try {
-    const userCredential = await signInWithEmailAndPassword(auth, email, password);
-    return userCredential.user;
+    await signOut(auth);
   } catch (error) {
     throw error;
   }
 }
 
-
-module.exports = { login };
+module.exports = { logout };
