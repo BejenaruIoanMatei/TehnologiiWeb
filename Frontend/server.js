@@ -3,7 +3,6 @@ const fs = require('fs');
 const path = require('path');
 
 const loginRoute = require('./components/loginComponent');
-const logoutRoute = require('./components/logoutComponent');
 const explorePageRoute = require('./routes/indexToExplorePageButtonRoute');
 const aboutUsRoute = require('./routes/indexToAboutButtonRoute');
 const helpRoute = require('./routes/indexToHelpRoute')
@@ -65,7 +64,7 @@ const server = http.createServer((req, res) => {
       explorePageRoute(req, res);
       return;
     } else if (req.url === '/aboutUs') {
-     // Call the about us route handler
+      // Call the about us route handler
       aboutUsRoute(req,res);
       return;
     }  else if( req.url === '/help')

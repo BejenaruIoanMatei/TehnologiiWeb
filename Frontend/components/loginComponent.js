@@ -1,6 +1,5 @@
 // Import Firebase modules
 const { initializeApp } = require('firebase/app');
-const { getAuth, signInWithEmailAndPassword, signOut } = require('firebase/auth');
 
 const firebaseConfig = {
   apiKey: "AIzaSyAlbteuD8V2X0lh1j6UnX01Ib6JV_lgL0k",
@@ -14,17 +13,13 @@ const firebaseConfig = {
 
 // Initialize Firebase app
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
 
-// Login function
-async function login(email, password) {
-  try {
-    const userCredential = await signInWithEmailAndPassword(auth, email, password);
-    return userCredential.user;
-  } catch (error) {
-    throw error;
-  }
-}
+const loginComponent = (req, res) => {
+  // Always return success for now
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({ message: 'Login successful' }));
+};
+// Set the tenant ID on Auth instance.
 
 
-module.exports = { login };
+module.exports = loginComponent;

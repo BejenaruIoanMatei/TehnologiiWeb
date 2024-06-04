@@ -1,6 +1,5 @@
 // Import Firebase modules
 const { initializeApp } = require('firebase/app');
-const { getAuth, signInWithEmailAndPassword, signOut } = require('firebase/auth');
 
 const firebaseConfig = {
   apiKey: "AIzaSyAlbteuD8V2X0lh1j6UnX01Ib6JV_lgL0k",
@@ -14,7 +13,6 @@ const firebaseConfig = {
 
 // Initialize Firebase app
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
 
 // Logout function
 async function logout() {
