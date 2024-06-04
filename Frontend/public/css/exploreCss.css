@@ -242,6 +242,7 @@ button[type="submit"]:hover {
 }
 
 .main-section {
+  margin-top: 20px;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -254,16 +255,21 @@ button[type="submit"]:hover {
 #beneficiaries-toggle {
   display: inline-block;
   padding: 10px 30px;
-  background-color: #FFB6C1;
+  background-color: white;
   border: none;
-  color: white;
+  color: black;
   border-radius: 10px;
   transition: background-color 0.5s ease;
   margin-bottom: 20px;
+  border: 2px solid #2c7188;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+
 }
 
+
 #beneficiaries-toggle:hover {
-  background-color: #bc7a9a;
+  background-color: #E8F0FE; /* Light gray background on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .checkbox-options {
@@ -315,7 +321,7 @@ button[type="submit"] {
   background-color: white; /* White background */
   color: black; /* Black text color for better contrast */
   padding: 10px 20px;
-  border: 2px solid #2c7188; /* Gray border */
+  border: 2px solid #2c7188; 
   border-radius: 20px;
   font-size: 16px;
   cursor: pointer;
