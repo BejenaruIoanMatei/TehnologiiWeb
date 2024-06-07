@@ -1,0 +1,1086 @@
+1. **France (FR)**
+   - Paris
+   - Nice
+   - Lyon
+   - Marseille
+   - Bordeaux
+   - Toulouse
+   - Strasbourg
+   - Lille
+   - Nantes
+   - Montpellier
+
+2. **United States (US)**
+   - New York City
+   - Los Angeles
+   - Orlando
+   - Las Vegas
+   - San Francisco
+   - Chicago
+   - Washington, D.C.
+   - Miami
+   - Boston
+   - Seattle
+
+3. **Italy (IT)**
+   - Rome
+   - Venice
+   - Florence
+   - Milan
+   - Naples
+   - Turin
+   - Bologna
+   - Genoa
+   - Verona
+   - Siena
+
+4. **Spain (ES)**
+   - Barcelona
+   - Madrid
+   - Seville
+   - Valencia
+   - Granada
+   - Malaga
+   - Bilbao
+   - Cordoba
+   - Palma de Mallorca
+   - Zaragoza
+
+5. **China (CN)**
+   - Beijing
+   - Shanghai
+   - Xi'an
+   - Guangzhou
+   - Shenzhen
+   - Hangzhou
+   - Chengdu
+   - Guilin
+   - Suzhou
+   - Hong Kong (while administratively distinct, it is often included in tourism lists for China)
+
+6. **Mexico (MX)**
+   - Mexico City
+   - Cancun
+   - Guadalajara
+   - Playa del Carmen
+   - Puerto Vallarta
+   - Tulum
+   - Cabo San Lucas
+   - Merida
+   - Oaxaca
+   - Puebla
+
+7. **Turkey (TR)**
+   - Istanbul
+   - Antalya
+   - Cappadocia
+   - Ankara
+   - Izmir
+   - Bursa
+   - Bodrum
+   - Fethiye
+   - Konya
+   - Marmaris
+
+8. **Germany (DE)**
+   - Berlin
+   - Munich
+   - Frankfurt
+   - Hamburg
+   - Cologne
+   - Stuttgart
+   - Dresden
+   - Leipzig
+   - Nuremberg
+   - Düsseldorf
+
+9. **United Kingdom (GB)**
+   - London
+   - Edinburgh
+   - Manchester
+   - Birmingham
+   - Glasgow
+   - Liverpool
+   - Bristol
+   - York
+   - Cambridge
+   - Oxford
+
+10. **Thailand (TH)**
+    - Bangkok
+    - Phuket
+    - Chiang Mai
+    - Pattaya
+    - Krabi
+    - Hua Hin
+    - Ayutthaya
+    - Koh Samui
+    - Chiang Rai
+    - Sukhothai
+
+11. **Japan (JP)**
+    - Tokyo
+    - Kyoto
+    - Osaka
+    - Hiroshima
+    - Sapporo
+    - Nara
+    - Fukuoka
+    - Nagoya
+    - Kanazawa
+    - Kobe
+
+12. **Canada (CA)**
+    - Toronto
+    - Vancouver
+    - Montreal
+    - Ottawa
+    - Quebec City
+    - Calgary
+    - Edmonton
+    - Winnipeg
+    - Halifax
+    - Victoria
+
+13. **Russia (RU)**
+    - Moscow
+    - St. Petersburg
+    - Kazan
+    - Sochi
+    - Vladivostok
+    - Yekaterinburg
+    - Novosibirsk
+    - Nizhny Novgorod
+    - Rostov-on-Don
+    - Kaliningrad
+
+14. **Malaysia (MY)**
+    - Kuala Lumpur
+    - George Town (Penang)
+    - Kota Kinabalu
+    - Malacca
+    - Langkawi
+    - Johor Bahru
+    - Ipoh
+    - Kuching
+    - Cameron Highlands
+    - Genting Highlands
+
+15. **Greece (GR)**
+    - Athens
+    - Santorini
+    - Mykonos
+    - Thessaloniki
+    - Crete (Heraklion)
+    - Rhodes
+    - Corfu
+    - Nafplio
+    - Meteora (Kalambaka)
+    - Delphi
+
+16. **Portugal (PT)**
+    - Lisbon
+    - Porto
+    - Faro
+    - Funchal (Madeira)
+    - Sintra
+    - Coimbra
+    - Aveiro
+    - Braga
+    - Cascais
+    - Evora
+
+17. **Austria (AT)**
+    - Vienna
+    - Salzburg
+    - Innsbruck
+    - Graz
+    - Hallstatt
+    - Linz
+    - Klagenfurt
+    - Bregenz
+    - Zell am See
+    - Villach
+
+18. **Australia (AU)**
+    - Sydney
+    - Melbourne
+    - Brisbane
+    - Perth
+    - Adelaide
+    - Gold Coast
+    - Cairns
+    - Canberra
+    - Hobart
+    - Darwin
+
+19. **Netherlands (NL)**
+    - Amsterdam
+    - Rotterdam
+    - The Hague
+    - Utrecht
+    - Maastricht
+    - Eindhoven
+    - Haarlem
+    - Groningen
+    - Leiden
+    - Delft
+
+20. **Switzerland (CH)**
+    - Zurich
+    - Geneva
+    - Lucerne
+    - Interlaken
+    - Basel
+    - Lausanne
+    - Zermatt
+    - Bern
+    - Lugano
+    - St. Moritz
+
+21. **Singapore (SG)**
+    - Singapore (city-state)
+
+22. **South Korea (KR)**
+    - Seoul
+    - Busan
+    - Jeju City
+    - Incheon
+    - Gyeongju
+    - Daegu
+    - Daejeon
+    - Suwon
+    - Chuncheon
+    - Sokcho
+
+23. **Hong Kong (HK)**
+    - Hong Kong (city-state)
+
+24. **Czech Republic (CZ)**
+    - Prague
+    - Brno
+    - Ostrava
+    - Plzen
+    - Karlovy Vary
+    - Cesky Krumlov
+    - Olomouc
+    - Liberec
+    - Hradec Kralove
+    - Zlin
+
+25. **Poland (PL)**
+    - Warsaw
+    - Krakow
+    - Wroclaw
+    - Gdansk
+    - Poznan
+    - Lublin
+    - Katowice
+    - Lodz
+    - Szczecin
+    - Torun
+
+26. **Sweden (SE)**
+    - Stockholm
+    - Gothenburg
+    - Malmo
+    - Uppsala
+    - Visby
+    - Helsingborg
+    - Lund
+    - Orebro
+    - Linkoping
+    - Karlstad
+
+27. **Denmark (DK)**
+    - Copenhagen
+    - Aarhus
+    - Odense
+    - Aalborg
+    - Esbjerg
+    - Roskilde
+    - Helsingor
+    - Kolding
+    - Viborg
+    - Randers
+
+28. **Egypt (EG)**
+    - Cairo
+    - Luxor
+    - Aswan
+    - Alexandria
+    - Sharm El Sheikh
+    - Hurghada
+    - Giza
+    - Dahab
+    - Marsa Alam
+    - El Gouna
+
+29. **Croatia (HR)**
+    - Dubrovnik
+    - Split
+    - Zagreb
+    - Zadar
+    - Rovinj
+    - Pula
+    - Sibenik
+    - Trogir
+    - Hvar
+    - Osijek
+
+30. **Norway (NO)**
+    - Oslo
+    - Bergen
+    - Stavanger
+    - Trondheim
+    - Tromso
+    - Alesund
+    - Kristiansand
+    - Drammen
+    - Bodo
+    - Lillehammer
+
+31. **Indonesia (ID)**
+    - Bali (Denpasar)
+    - Jakarta
+    - Yogyakarta
+    - Surabaya
+    - Bandung
+    - Medan
+    - Lombok
+    - Makassar
+    - Batam
+    - Semarang
+
+32. **Ireland (IE)**
+    - Dublin
+    - Galway
+    - Cork
+    - Killarney
+    - Limerick
+    - Waterford
+    - Kilkenny
+    - Sligo
+    - Dingle
+    - Westport
+
+33. **Romania (RO)**
+    - Bucharest
+    - Cluj-Napoca
+    - Brasov
+    - Sibiu
+    - Timisoara
+    - Iasi
+    - Constanta
+    - Oradea
+    - Sighisoara
+    - Arad
+
+34. **Belgium (BE)**
+    - Brussels
+    - Bruges
+    - Ghent
+    - Antwerp
+    - Leuven
+    - Liege
+    - Namur
+    - Mechelen
+    - Mons
+    - Oostende
+
+35. **Vietnam (VN)**
+    - Hanoi
+    - Ho Chi Minh City
+    - Hoi An
+    - Da Nang
+    - Ha Long
+    - Hue
+    - Nha Trang
+    - Phu Quoc
+    - Sapa
+    - Can Tho
+
+36. **Philippines (PH)**
+    - Manila
+    - Cebu
+    - Boracay
+    - Davao
+    - Baguio
+    - Bohol
+    - Palawan (Puerto Princesa)
+    - Vigan
+    - Iloilo
+    - Siargao
+
+37. **Argentina (AR)**
+    - Buenos
+
+ Aires
+    - Cordoba
+    - Mendoza
+    - Rosario
+    - Bariloche
+    - Ushuaia
+    - Salta
+    - Mar del Plata
+    - La Plata
+    - San Miguel de Tucuman
+
+38. **Finland (FI)**
+    - Helsinki
+    - Rovaniemi
+    - Turku
+    - Tampere
+    - Oulu
+    - Espoo
+    - Vantaa
+    - Porvoo
+    - Kuopio
+    - Lahti
+
+39. **Peru (PE)**
+    - Lima
+    - Cusco
+    - Arequipa
+    - Puno
+    - Trujillo
+    - Iquitos
+    - Paracas
+    - Huaraz
+    - Chiclayo
+    - Ayacucho
+
+40. **United Arab Emirates (AE)**
+    - Dubai
+    - Abu Dhabi
+    - Sharjah
+    - Al Ain
+    - Ras Al Khaimah
+    - Fujairah
+    - Ajman
+    - Umm Al Quwain
+    - Hatta
+    - Khor Fakkan
+
+41. **Morocco (MA)**
+    - Marrakech
+    - Casablanca
+    - Fes
+    - Tangier
+    - Rabat
+    - Agadir
+    - Chefchaouen
+    - Essaouira
+    - Meknes
+    - Ouarzazate
+
+42. **Israel (IL)**
+    - Jerusalem
+    - Tel Aviv
+    - Haifa
+    - Eilat
+    - Nazareth
+    - Tiberias
+    - Dead Sea
+    - Ashdod
+    - Acre (Akko)
+    - Netanya
+
+43. **New Zealand (NZ)**
+    - Auckland
+    - Wellington
+    - Christchurch
+    - Queenstown
+    - Rotorua
+    - Dunedin
+    - Tauranga
+    - Hamilton
+    - Napier
+    - Nelson
+44. **Colombia (CO)**
+    - Bogotá
+    - Medellín
+    - Cartagena
+    - Cali
+    - Barranquilla
+    - Santa Marta
+    - San Andrés
+    - Bucaramanga
+    - Pereira
+    - Manizales
+
+45. **Bulgaria (BG)**
+    - Sofia
+    - Plovdiv
+    - Varna
+    - Burgas
+    - Ruse
+    - Stara Zagora
+    - Pleven
+    - Veliko Tarnovo
+    - Blagoevgrad
+    - Bansko
+
+46. **Saudi Arabia (SA)**
+    - Riyadh
+    - Jeddah
+    - Mecca
+    - Medina
+    - Dammam
+    - Al Khobar
+    - Abha
+    - Taif
+    - Jubail
+    - Yanbu
+
+47. **Hungary (HU)**
+    - Budapest
+    - Debrecen
+    - Szeged
+    - Miskolc
+    - Pécs
+    - Győr
+    - Nyíregyháza
+    - Kecskemét
+    - Székesfehérvár
+    - Eger
+
+48. **Tunisia (TN)**
+    - Tunis
+    - Sousse
+    - Hammamet
+    - Monastir
+    - Djerba
+    - Carthage
+    - Tozeur
+    - Mahdia
+    - Bizerte
+    - Douz
+
+49. **Dominican Republic (DO)**
+    - Santo Domingo
+    - Punta Cana
+    - Puerto Plata
+    - La Romana
+    - Santiago de los Caballeros
+    - Boca Chica
+    - Juan Dolio
+    - Samana
+    - Cabarete
+    - Jarabacoa
+
+50. **Qatar (QA)**
+    - Doha
+    - Al Wakrah
+    - Al Khor
+    - Al Rayyan
+    - Al Shamal
+    - Mesaieed
+    - Dukhan
+    - Madinat ash Shamal
+    - Ras Laffan
+    - Umm Salal
+
+51. **Chile (CL)**
+    - Santiago
+    - Valparaíso
+    - Viña del Mar
+    - San Pedro de Atacama
+    - Puerto Varas
+    - Punta Arenas
+    - Puerto Montt
+    - La Serena
+    - Iquique
+    - Pucón
+
+52. **Slovakia (SK)**
+    - Bratislava
+    - Košice
+    - Prešov
+    - Žilina
+    - Nitra
+    - Banská Bystrica
+    - Trnava
+    - Trenčín
+    - Martin
+    - Poprad
+
+53. **Oman (OM)**
+    - Muscat
+    - Salalah
+    - Nizwa
+    - Sohar
+    - Sur
+    - Barka
+    - Al Rustaq
+    - Khasab
+    - Ibra
+    - Bahla
+
+54. **Belarus (BY)**
+    - Minsk
+    - Brest
+    - Hrodna
+    - Gomel
+    - Vitebsk
+    - Mogilev
+    - Pinsk
+    - Baranovichi
+    - Orsha
+    - Babruysk
+
+55. **Kazakhstan (KZ)**
+    - Almaty
+    - Nur-Sultan (Astana)
+    - Shymkent
+    - Aktobe
+    - Karaganda
+    - Taraz
+    - Pavlodar
+    - Ust-Kamenogorsk
+    - Kyzylorda
+    - Kostanay
+
+56. **Latvia (LV)**
+    - Riga
+    - Jurmala
+    - Liepaja
+    - Daugavpils
+    - Ventspils
+    - Sigulda
+    - Cesis
+    - Valmiera
+    - Rezekne
+    - Jelgava
+
+57. **Lithuania (LT)**
+    - Vilnius
+    - Kaunas
+    - Klaipeda
+    - Šiauliai
+    - Panevėžys
+    - Palanga
+    - Druskininkai
+    - Trakai
+    - Alytus
+    - Marijampolė
+
+58. **Azerbaijan (AZ)**
+    - Baku
+    - Ganja
+    - Sumqayit
+    - Quba
+    - Sheki
+    - Gabala
+    - Lankaran
+    - Nakhchivan
+    - Shamakhi
+    - Mingachevir
+
+59. **Estonia (EE)**
+    - Tallinn
+    - Tartu
+    - Pärnu
+    - Narva
+    - Kuressaare
+    - Haapsalu
+    - Viljandi
+    - Rakvere
+    - Võru
+    - Jõhvi
+
+60. **Uzbekistan (UZ)**
+    - Tashkent
+    - Samarkand
+    - Bukhara
+    - Khiva
+    - Nukus
+    - Andijan
+    - Fergana
+    - Namangan
+    - Urgench
+    - Termez
+
+61. **Lebanon (LB)**
+    - Beirut
+    - Byblos
+    - Baalbek
+    - Tripoli
+    - Sidon
+    - Tyre
+    - Zahle
+    - Harissa
+    - Jounieh
+    - Batroun
+
+62. **Georgia (GE)**
+    - Tbilisi
+    - Batumi
+    - Kutaisi
+    - Mtskheta
+    - Zugdidi
+    - Sighnaghi
+    - Borjomi
+    - Gori
+    - Telavi
+    - Poti
+
+63. **Iceland (IS)**
+    - Reykjavik
+    - Akureyri
+    - Selfoss
+    - Keflavik
+    - Vik
+    - Húsavík
+    - Egilsstaðir
+    - Ísafjörður
+    - Seyðisfjörður
+    - Grindavík
+
+64. **Jordan (JO)**
+    - Amman
+    - Petra
+    - Aqaba
+    - Jerash
+    - Madaba
+    - Irbid
+    - Ajloun
+    - Salt
+    - Karak
+    - Wadi Rum
+
+65. **North Macedonia (MK)**
+    - Skopje
+    - Ohrid
+    - Bitola
+    - Tetovo
+    - Prilep
+    - Kumanovo
+    - Veles
+    - Strumica
+    - Struga
+    - Kavadarci
+
+66. **Bosnia and Herzegovina (BA)**
+    - Sarajevo
+    - Mostar
+    - Banja Luka
+    - Tuzla
+    - Zenica
+    - Trebinje
+    - Bijeljina
+    - Jajce
+    - Neum
+    - Travnik
+
+67. **Mauritius (MU)**
+    - Port Louis
+    - Grand Baie
+    - Flic en Flac
+    - Belle Mare
+    - Mahebourg
+    - Le Morne
+    - Trou-aux-Biches
+    - Tamarin
+    - Blue Bay
+    - Curepipe
+
+68. **Armenia (AM)**
+    - Yerevan
+    - Gyumri
+    - Vanadzor
+    - Dilijan
+    - Jermuk
+    - Tsaghkadzor
+    - Goris
+    - Sevan
+    - Hrazdan
+    - Alaverdi
+
+69. **Myanmar (MM)**
+    - Yangon
+    - Mandalay
+    - Bagan
+    - Naypyidaw
+    - Inle Lake
+    - Ngapali
+    - Taunggyi
+    - Pyin Oo Lwin
+    - Mawlamyine
+    - Hpa-An
+
+70. **Panama (PA)**
+    - Panama City
+    - Boquete
+    - Bocas del Toro
+    - Colón
+    - David
+    - Gamboa
+    - El Valle de Anton
+    - Portobelo
+    - Santa Catalina
+    - Santiago
+
+71. **Costa Rica (CR)**
+    - San Jose
+    - Arenal
+    - Manuel Antonio
+    - Monteverde
+    - Tamarindo
+    - Jaco
+    - Puerto Viejo
+    - Liberia
+    - La Fortuna
+    - Tortuguero
+
+72. **Ghana (GH)**
+    - Accra
+    - Kumasi
+    - Cape Coast
+    - Takoradi
+    - Tamale
+    - Elmina
+    - Tema
+    - Koforidua
+    - Ho
+    - Sunyani
+
+73. **Senegal (SN)**
+    - Dakar
+    - Saint-Louis
+    - Ziguinchor
+    - Saly
+    - Touba
+    - Kaolack
+    - Toubab Dialao
+    - Popenguine
+    - Kedougou
+    - Cap Skirring
+
+74. **Kyrgyzstan (KG)**
+    - Bishkek
+    - Osh
+    - Karakol
+    - Naryn
+    - Cholpon-Ata
+    - Tokmok
+    - Talas
+    - Jalal-Abad
+    - Batken
+    - Kant
+
+83. **Sudan (SD)**
+    - Khartoum
+    - Omdurman
+    - Port Sudan
+    - Kassala
+    - El Obeid
+    - Nyala
+    - Wad Madani
+    - Atbara
+    - Dongola
+    - Merowe
+
+84. **Gabon (GA)**
+    - Libreville
+    - Port-Gentil
+    - Franceville
+    - Oyem
+    - Moanda
+    - Lambaréné
+    - Mouila
+    - Tchibanga
+    - Makokou
+    - Koulamoutou
+
+85. **Malawi (MW)**
+    - Lilongwe
+    - Blantyre
+    - Mzuzu
+    - Zomba
+    - Mangochi
+    - Kasungu
+    - Karonga
+    - Salima
+    - Nkhotakota
+    - Mzimba
+
+86. **Burkina Faso (BF)**
+    - Ouagadougou
+    - Bobo-Dioulasso
+    - Banfora
+    - Koudougou
+    - Ouahigouya
+    - Kaya
+    - Dédougou
+    - Tenkodogo
+    - Fada N'gourma
+    - Houndé
+
+87. **Guinea (GN)**
+    - Conakry
+    - Kankan
+    - Labé
+    - Kindia
+    - Mamou
+    - Boké
+    - Siguiri
+    - Nzérékoré
+    - Kamsar
+    - Kissidougou
+
+88. **Rwanda (RW)**
+    - Kigali
+    - Huye (Butare)
+    - Musanze
+    - Rubavu (Gisenyi)
+    - Nyagatare
+    - Muhanga
+    - Ruhengeri
+    - Byumba
+    - Kibuye
+    - Nyamata
+
+89. **Benin (BJ)**
+    - Cotonou
+    - Porto-Novo
+    - Parakou
+    - Abomey
+    - Bohicon
+    - Natitingou
+    - Ouidah
+    - Djougou
+    - Lokossa
+    - Kandi
+
+90. **Tanzania (TZ)**
+    - Dar es Salaam
+    - Zanzibar City (Stone Town)
+    - Arusha
+    - Mwanza
+    - Dodoma
+    - Mbeya
+    - Tanga
+    - Morogoro
+    - Moshi
+    - Kigoma
+
+91. **Niger (NE)**
+    - Niamey
+    - Zinder
+    - Maradi
+    - Agadez
+    - Tahoua
+    - Dosso
+    - Diffa
+    - Tillabéri
+    - Birni-N'Konni
+    - Arlit
+
+92. **Tajikistan (TJ)**
+    - Dushanbe
+    - Khujand
+    - Bokhtar
+    - Kulob
+    - Tursunzoda
+    - Isfara
+    - Panjakent
+    - Istaravshan
+    - Konibodom
+    - Danghara
+
+93. **Haiti (HT)**
+    - Port-au-Prince
+    - Cap-Haïtien
+    - Jacmel
+    - Les Cayes
+    - Gonaïves
+    - Hinche
+    - Port-de-Paix
+    - Saint-Marc
+    - Jérémie
+    - Miragoâne
+
+94. **Chad (TD)**
+    - N'Djamena
+    - Moundou
+    - Sarh
+    - Abéché
+    - Kélo
+    - Koumra
+    - Pala
+    - Am Timan
+    - Bongor
+    - Mongo
+
+95. **Moldova (MD)**
+    - Chișinău
+    - Tiraspol
+    - Bălți
+    - Bender (Tighina)
+    - Cahul
+    - Ungheni
+    - Soroca
+    - Orhei
+    - Rîbnița
+    - Comrat
+
+96. **Eswatini (SZ)**
+    - Mbabane
+    - Manzini
+    - Lobamba
+    - Siteki
+    - Piggs Peak
+    - Nhlangano
+    - Hlatikulu
+    - Mhlume
+    - Hluthi
+    - Matata
+
+97. **Timor-Leste (TL)**
+    - Dili
+    - Baucau
+    - Lospalos
+    - Maliana
+    - Suai
+    - Aileu
+    - Same
+    - Viqueque
+    - Ermera
+    - Liquiçá
+
+98. **Brunei (BN)**
+    - Bandar Seri Begawan
+    - Kuala Belait
+    - Seria
+    - Tutong
+    - Bangar
+    - Muara
+    - Jerudong
+    - Temburong
+    - Lumut
+    - Sukang
+
+99. **Gambia (GM)**
+    - Banjul
+    - Serrekunda
+    - Brikama
+    - Bakau
+    - Farafenni
+    - Lamin
+    - Gunjur
+    - Soma
+    - Basse Santa Su
+    - Sukuta
+
+100. **Sierra Leone (SL)**
+    - Freetown
+    - Bo
+    - Kenema
+    - Makeni
+    - Koidu
+    - Lunsar
+    - Port Loko
+    - Kabala
+    - Waterloo
+    - Magburaka
