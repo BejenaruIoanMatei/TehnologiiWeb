@@ -94,6 +94,13 @@ nav ul li a:hover {
   color: grey;
 }
 
+.hero h3{
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: normal;
+  color: grey;
+}
+
 .hero-content {
   display: flex;
   align-items: center;
@@ -242,6 +249,7 @@ button[type="submit"]:hover {
 }
 
 .main-section {
+  margin-top: 20px;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -254,16 +262,21 @@ button[type="submit"]:hover {
 #beneficiaries-toggle {
   display: inline-block;
   padding: 10px 30px;
-  background-color: #FFB6C1;
+  background-color: white;
   border: none;
-  color: white;
+  color: black;
   border-radius: 10px;
   transition: background-color 0.5s ease;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  border: 2px solid #2c7188;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+
 }
 
+
 #beneficiaries-toggle:hover {
-  background-color: #bc7a9a;
+  background-color: #E8F0FE; /* Light gray background on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .checkbox-options {
@@ -315,7 +328,7 @@ button[type="submit"] {
   background-color: white; /* White background */
   color: black; /* Black text color for better contrast */
   padding: 10px 20px;
-  border: 2px solid #2c7188; /* Gray border */
+  border: 2px solid #2c7188; 
   border-radius: 20px;
   font-size: 16px;
   cursor: pointer;
@@ -337,6 +350,79 @@ input[type="date"] {
 input[type="date"]:focus {
   outline: none;
   border-color: #1E5573;
+}
+
+#submit-trip.btn {
+  background-color: #006400; /* Verde închis (DarkGreen) */
+  border:none;
+  color: white;
+  margin-top: 100px; /* Margine superioară de 20px */
+  margin-bottom: 20px; /* Margine inferioară de 20px */
+}
+
+#submit-trip:hover {
+  background-color: #057b05; /* Verde închis (DarkGreen) */
+  color: white;
+}
+
+#create {
+  display: flex; /* Facem secțiunea un container flexibil */
+  flex-direction: column; /* Aranjăm elementele pe verticală */
+  min-height: 100vh; /* Asigurăm că secțiunea ocupă toată înălțimea ecranului */
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Permite conținutului să ocupe spațiul disponibil */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Centram imaginea pe orizontală */
+}
+
+.circle-image {
+  max-width: 100%; /* Imaginea se va redimensiona în funcție de lățimea containerului */
+  height: auto;  /* Menținem raportul de aspect al imaginii */
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+
+.overlay-container {
+  position: relative; /* Poziționare relativă pentru container */
+  width: 500px;
+  height: 500px; /* Sau alte dimensiuni dorite */
+  margin: 0 auto;
+  /*margin-top: 20px;*/
+}
+
+.image-container {
+  width: 100%; /* Imaginea ocupă toată lățimea containerului */
+  height: 100%;
+}
+
+.circle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-section {
+  position: absolute; /* Poziționare absolută pentru suprapunere */
+  top: 50%; /* Centrat vertical */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrat perfect */
+  z-index: 1; /* Deasupra imaginii */
+  text-align: center;
+}
+
+.main-section h2 {
+  margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 21px;
+
 }
 
 /* Media queries for responsiveness */
