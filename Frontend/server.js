@@ -11,6 +11,7 @@ const aboutUsRoute = require('./routes/indexToAboutButtonRoute');
 const helpRoute = require('./routes/indexToHelpRoute');
 const signInRoute = require('./routes/explorePageToSignInRoute');
 const registerRoute = require('./components/registerComponent');
+const signOut = require('./routes/signOutRoute');
 const PORT = process.env.PORT || 3000;
 
 // In-memory session store
@@ -112,6 +113,11 @@ const server = http.createServer((req, res) => {
     } else if (req.url === '/help') {
       // Call the help route handler
       helpRoute(req, res);
+      return;
+    } else if ( req.url === "/signOut" )
+    {
+      //Call the sign out route
+      signOut(req,res);
       return;
     } else if (req.url === '/signIn') {
       // Call the sign in route

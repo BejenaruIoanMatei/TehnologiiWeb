@@ -20,9 +20,9 @@ document.getElementById('signinForm').addEventListener('submit', async function(
       console.log(`Session ID: ${sessionId}`); // Log the session ID
 
       if (result.email === 'admin@sore.com') {
-        window.location.href = `/views/admin.html?sessionId=${sessionId}`;
+        window.location.href = `/views/admin.html`;
       } else {
-        window.location.href = `/views/explorePageLoggedIn.html?sessionId=${sessionId}`;
+        window.location.href = `/views/explorePageLoggedIn.html`;
       }
     } else {
       alert('Login failed: ' + result.message);
