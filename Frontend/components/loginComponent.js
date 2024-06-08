@@ -1,132 +1,62 @@
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
-const { db } = require('../firebaseInit'); // Adjust the path if needed
-const { collection, getDocs, updateDoc, doc } = require('firebase/firestore');
+// Import Firestore database and bcrypt from firebaseInit.js
+const { db } = require('../firebaseInit');
+const { collection, query, where, getDocs, updateDoc, doc } = require('firebase/firestore');
+const bcrypt = require('bcrypt');
 
-const loginRoute = require('../components/loginComponent');
-const explorePageRoute = require('../routes/indexToExplorePageButtonRoute');
-const aboutUsRoute = require('../routes/indexToAboutButtonRoute');
-const helpRoute = require('../routes/indexToHelpRoute');
-const signInRoute = require('../routes/explorePageToSignInRoute');
-const registerRoute = require('../components/registerComponent');
-// const adminHandler = require('../routes/adminRoute');
-// const userHandler = require('../routes/loggedUserRoute');
-const PORT = process.env.PORT || 3000;
+const loginComponent = async (req, res) => {
+  let body = '';
+  req.on('data', chunk => {
+    body += chunk.toString();
+  });
 
-// Helper function to determine content type based on file extension
-const getContentType = (extname) => {
-  switch (extname) {
-    case '.css':
-      return 'text/css';
-    case '.js':
-      return 'text/javascript';
-    case '.json':
-      return 'application/json';
-    case '.png':
-      return 'image/png';
-    case '.jpg':
-      return 'image/jpg';
-    case '.ico':
-      return 'image/x-icon';
-    default:
-      return 'text/html';
-  }
-};
+  req.on('end', async () => {
+    const { email, password } = JSON.parse(body);
 
-// Helper function to serve static files
-const serveStaticFile = (res, filePath, contentType) => {
-  fs.readFile(filePath, (err, content) => {
-    if (err) {
-      if (err.code === 'ENOENT') {
-        // File not found
-        fs.readFile(path.join(__dirname, 'views', '404.html'), (err, content) => {
-          res.writeHead(404, { 'Content-Type': 'text/html' });
-          res.end(content, 'utf8');
-        });
-      } else {
-        // Server error
-        res.writeHead(500);
-        res.end(`Server Error: ${err.code}`);
+    try {
+      const usersRef = collection(db, 'users');
+      const q = query(usersRef, where('email', '==', email));
+      const querySnapshot = await getDocs(q);
+
+      if (querySnapshot.empty) {
+        // No user found with the given email
+        res.writeHead(401, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ message: 'Invalid email or password' }));
+        return;
       }
-    } else {
-      // Serve file
-      res.writeHead(200, { 'Content-Type': contentType });
-      res.end(content, 'utf8');
+
+      // Assuming email is unique, so we can just take the first document
+      const userDoc = querySnapshot.docs[0];
+      const user = userDoc.data();
+
+      // Check if the user is already logged in
+      if (user.loggedIn) {
+        res.writeHead(403, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ message: 'User already logged in' }));
+        return;
+      }
+
+      // Compare the provided password with the stored hashed password
+      const passwordMatch = await bcrypt.compare(password, user.password);
+      if (!passwordMatch) {
+        res.writeHead(401, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ message: 'Invalid email or password' }));
+        return;
+      }
+
+      // Update the loggedIn field to true
+      await updateDoc(doc(db, 'users', userDoc.id), {
+        loggedIn: true
+      });
+
+      // If login is successful
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ message: 'Login successful', user }));
+    } catch (error) {
+      console.error('Error logging in:', error);
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ message: 'Server error' }));
     }
   });
 };
 
-// Function to set all users' loggedIn field to false
-const resetLoggedInStatus = async () => {
-  try {
-    const usersRef = collection(db, 'users');
-    const querySnapshot = await getDocs(usersRef);
-    querySnapshot.forEach(async (userDoc) => {
-      await updateDoc(doc(db, 'users', userDoc.id), { loggedIn: false });
-    });
-    console.log('All users loggedIn status set to false');
-  } catch (error) {
-    console.error('Error resetting loggedIn status:', error);
-  }
-};
-
-const server = http.createServer((req, res) => {
-  if (req.method === 'GET') {
-    let filePath;
-    const extname = path.extname(req.url);
-
-    if (req.url === '/') {
-      filePath = path.join(__dirname, 'views', 'index.html');
-    } else if (req.url === '/explore') {
-      // Call the explorePage route handler
-      explorePageRoute(req, res);
-      return;
-    } else if (req.url === '/aboutUs') {
-      // Call the about us route handler
-      aboutUsRoute(req, res);
-      return;
-    } else if (req.url === '/help') {
-      // Call the help route handler
-      helpRoute(req, res);
-      return;
-    } else if (req.url === '/signIn') {
-      // Call the sign in route
-      signInRoute(req, res);
-      return;
-    } else if (req.url === '/admin') {
-      adminHandler(req, res);
-      return;
-    } else if (req.url === '/user') {
-      userHandler(req, res);
-      return;
-    } else {
-      filePath = path.join(__dirname, req.url);
-      // If no extension, default to .html
-      if (!extname) {
-        filePath += '.html';
-      }
-    }
-
-    // Determine content type
-    const contentType = getContentType(extname);
-
-    // Serve the requested file
-    serveStaticFile(res, filePath, contentType);
-  } else if (req.method === 'POST' && req.url === '/loginComponent') {
-    // Call the login route handler
-    loginRoute(req, res);
-  } else if (req.method === 'POST' && req.url === '/registerComponent') {
-    // Call the register route handler
-    registerRoute(req, res);
-  } else {
-    // Method not allowed
-    res.writeHead(405, { 'Content-Type': 'text/html' });
-    res.end('<h1>405 Method Not Allowed</h1>', 'utf8');
-  }
-});
-
-server.listen(PORT, async () => {
-  console.log(`Server running on port ${PORT}`);
-  await resetLoggedInStatus(); // Reset loggedIn status when the server starts
-});
+module.exports = loginComponent;

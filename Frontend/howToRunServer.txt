@@ -6,7 +6,7 @@
 5. npm install firebase
 6.npm-install firebase-admin
 7. npm install bcrypt
-8. restart pc
-9. pm2 start server.js
-10. in broswer put localhost:3000
+
+5. pm2 start server.js
+6. in broswer put localhost:3000
 
