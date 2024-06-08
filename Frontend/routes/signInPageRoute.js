@@ -16,7 +16,14 @@ document.getElementById('signinForm').addEventListener('submit', async function(
     const result = await response.json();
     if (response.ok) {
       alert('Login successful');
-      window.location.href = '../views/explorePage.html';  // Redirect to explorePage.html
+      const sessionId = result.sessionId;
+      console.log(`Session ID: ${sessionId}`); // Log the session ID
+
+      if (result.email === 'admin@sore.com') {
+        window.location.href = `/views/admin.html?sessionId=${sessionId}`;
+      } else {
+        window.location.href = `/views/explorePageLoggedIn.html?sessionId=${sessionId}`;
+      }
     } else {
       alert('Login failed: ' + result.message);
     }
@@ -27,5 +34,5 @@ document.getElementById('signinForm').addEventListener('submit', async function(
 });
 
 document.getElementById('submitRegisterFromSignIn').addEventListener('click', function() {
-  window.location.href = '../views/registerPage.html';  // Redirect to registerPage.html
+  window.location.href = '/views/registerPage.html';  // Redirect to registerPage.html
 });

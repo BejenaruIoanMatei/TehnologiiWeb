@@ -1,9 +1,9 @@
-// Import Firestore database and bcrypt from firebaseInit.js
 const { db } = require('../firebaseInit');
 const { collection, query, where, getDocs, updateDoc, doc } = require('firebase/firestore');
 const bcrypt = require('bcrypt');
+const { v4: uuidv4 } = require('uuid');
 
-const loginComponent = async (req, res) => {
+const loginComponent = async (req, res, sessions) => {
   let body = '';
   req.on('data', chunk => {
     body += chunk.toString();
@@ -18,24 +18,20 @@ const loginComponent = async (req, res) => {
       const querySnapshot = await getDocs(q);
 
       if (querySnapshot.empty) {
-        // No user found with the given email
         res.writeHead(401, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ message: 'Invalid email or password' }));
         return;
       }
 
-      // Assuming email is unique, so we can just take the first document
       const userDoc = querySnapshot.docs[0];
       const user = userDoc.data();
 
-      // Check if the user is already logged in
       if (user.loggedIn) {
         res.writeHead(403, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ message: 'User already logged in' }));
         return;
       }
 
-      // Compare the provided password with the stored hashed password
       const passwordMatch = await bcrypt.compare(password, user.password);
       if (!passwordMatch) {
         res.writeHead(401, { 'Content-Type': 'application/json' });
@@ -43,14 +39,15 @@ const loginComponent = async (req, res) => {
         return;
       }
 
-      // Update the loggedIn field to true
-      await updateDoc(doc(db, 'users', userDoc.id), {
-        loggedIn: true
-      });
+      await updateDoc(doc(db, 'users', userDoc.id), { loggedIn: true });
 
-      // If login is successful
+      const sessionId = uuidv4();
+      sessions[sessionId] = { userId: userDoc.id, email: user.email };
+
+      console.log(`Generated session ID: ${sessionId}`);
+
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ message: 'Login successful', user }));
+      res.end(JSON.stringify({ message: 'Login successful', sessionId, email: user.email }));
     } catch (error) {
       console.error('Error logging in:', error);
       res.writeHead(500, { 'Content-Type': 'application/json' });

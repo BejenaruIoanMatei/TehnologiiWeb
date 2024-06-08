@@ -1,14 +1,32 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const { v4: uuidv4 } = require('uuid');
+const { db } = require('./firebaseInit'); // Adjust the path if needed
+const { collection, getDocs, updateDoc, doc } = require('firebase/firestore');
 
 const loginRoute = require('./components/loginComponent');
 const explorePageRoute = require('./routes/indexToExplorePageButtonRoute');
 const aboutUsRoute = require('./routes/indexToAboutButtonRoute');
-const helpRoute = require('./routes/indexToHelpRoute')
-const signInRoute= require('./routes/explorePageToSignInRoute')
-const registerRoute = require('./components/registerComponent')
+const helpRoute = require('./routes/indexToHelpRoute');
+const signInRoute = require('./routes/explorePageToSignInRoute');
+const registerRoute = require('./components/registerComponent');
 const PORT = process.env.PORT || 3000;
+
+// In-memory session store
+const sessions = {};
+
+// Helper function to generate a new session token
+const generateSession = () => {
+  const sessionId = uuidv4();
+  sessions[sessionId] = { loggedIn: false };
+  return sessionId;
+};
+
+// Helper function to get session ID from headers
+const getSessionIdFromHeaders = (headers) => {
+  return headers['x-session-id'];
+};
 
 // Helper function to determine content type based on file extension
 const getContentType = (extname) => {
@@ -52,7 +70,31 @@ const serveStaticFile = (res, filePath, contentType) => {
     }
   });
 };
+
+// Function to reset all users' loggedIn field to false
+const resetLoggedInStatus = async () => {
+  try {
+    const usersRef = collection(db, 'users');
+    const querySnapshot = await getDocs(usersRef);
+    querySnapshot.forEach(async (userDoc) => {
+      await updateDoc(doc(db, 'users', userDoc.id), { loggedIn: false });
+    });
+    console.log('All users\' loggedIn status set to false');
+  } catch (error) {
+    console.error('Error resetting loggedIn status:', error);
+  }
+};
+
+// Main server code
 const server = http.createServer((req, res) => {
+  let sessionId = getSessionIdFromHeaders(req.headers);
+
+  if (!sessionId || !sessions[sessionId]) {
+    sessionId = generateSession();
+    res.setHeader('X-Session-Id', sessionId);
+  }
+  console.log(sessionId);
+
   if (req.method === 'GET') {
     let filePath;
     const extname = path.extname(req.url);
@@ -65,17 +107,15 @@ const server = http.createServer((req, res) => {
       return;
     } else if (req.url === '/aboutUs') {
       // Call the about us route handler
-      aboutUsRoute(req,res);
+      aboutUsRoute(req, res);
       return;
-    }  else if( req.url === '/help')
-    {
+    } else if (req.url === '/help') {
       // Call the help route handler
-      helpRoute(req,res);
+      helpRoute(req, res);
       return;
-    } else if( req.url === '/signIn')
-    {
-      //Call the sign in route
-      signInRoute(req,res);
+    } else if (req.url === '/signIn') {
+      // Call the sign in route
+      signInRoute(req, res);
       return;
     } else {
       filePath = path.join(__dirname, req.url);
@@ -90,10 +130,9 @@ const server = http.createServer((req, res) => {
 
     // Serve the requested file
     serveStaticFile(res, filePath, contentType);
-  }
-  else if (req.method === 'POST' && req.url === '/loginComponent') {
+  } else if (req.method === 'POST' && req.url === '/loginComponent') {
     // Call the login route handler
-    loginRoute(req, res);
+    loginRoute(req, res, sessions, sessionId);
   } else if (req.method === 'POST' && req.url === '/registerComponent') {
     // Call the register route handler
     registerRoute(req, res);
@@ -104,7 +143,7 @@ const server = http.createServer((req, res) => {
   }
 });
 
-
-server.listen(PORT, () => {
+server.listen(PORT, async () => {
   console.log(`Server running on port ${PORT}`);
+  await resetLoggedInStatus();
 });
