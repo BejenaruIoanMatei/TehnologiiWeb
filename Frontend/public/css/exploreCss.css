@@ -386,7 +386,6 @@ input[type="date"]:focus {
   max-width: 100%; /* Imaginea se va redimensiona în funcție de lățimea containerului */
   height: auto;  /* Menținem raportul de aspect al imaginii */
   object-fit: contain;
-  margin-bottom: 20px;
 }
 
 
@@ -411,11 +410,16 @@ input[type="date"]:focus {
 
 .main-section {
   position: absolute; /* Poziționare absolută pentru suprapunere */
-  top: 50%; /* Centrat vertical */
-  left: 50%;
+  top: calc(50% - 5px); /* Centrat vertical */
+  left: calc(50% - 7px); /* Ajustăm poziția cu 5px mai la stânga */
   transform: translate(-50%, -50%); /* Centrat perfect */
   z-index: 1; /* Deasupra imaginii */
   text-align: center;
+  background-color: white; /* Background alb */
+  border: 2px solid #ccc; /* Border gri */
+  padding: 20px; /* Padding pentru a adăuga spațiu în interiorul secțiunii */
+  border-radius: 70px; /* Colțuri rotunjite */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow pentru un efect de adâncime */
 }
 
 .main-section h2 {
