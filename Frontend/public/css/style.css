@@ -314,8 +314,13 @@ footer {
 
 
 .contact-container {
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 80%), url('../img/gate.jpg');
-  background-size: cover;
+  background: 
+    linear-gradient(to top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 25%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 25%),
+    linear-gradient(to left, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 25%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 25%),
+    url('../img/gate.jpg'); 
+    background-size: cover;
     background-position: center;
     display: flex;
     justify-content: space-between;
@@ -330,16 +335,26 @@ footer {
 }
 
 .left-section, .right-section {
-    width: 48%;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.left-section {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
+.left-section h1 {
+  font-family: 'Poppins', sans-serif; /* Ensure the font matches */
+  text-align: center; /* Center the text horizontally */
+  font-size: 24px; /* Adjust the font size if necessary */
+  color: rgba(51, 51, 51, 0.6); /* Lighten the text color for a faded effect */
+  margin-bottom: 20px; /* Add some margin at the bottom for spacing */
+  padding-top: 80px; /* Move the text down by 80 pixels */
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Add a white shadow for a blending effect */
 }
 
 .right-section {
-    padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 20px;
+  border: 0.5px solid gray; /* Add 1px gray border */
+
 }
 
 /* Media queries for responsiveness */
@@ -369,6 +384,17 @@ footer {
   .right-section {
     width: 100%;
   }
+
+  .left-section h1 {
+    font-family: 'Poppins', sans-serif; /* Ensure the font matches */
+    text-align: center; /* Center the text horizontally */
+    font-size: 24px; /* Adjust the font size if necessary */
+    color: black; /* Lighten the text color for a faded effect */
+    margin-bottom: 20px; /* Add some margin at the bottom for spacing */
+    padding-top: 80px; /* Move the text down by 80 pixels */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 1); /* Add a white shadow for a blending effect */
+  }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -387,6 +413,7 @@ footer {
   nav a {
     font-size: 12px;
   }
+
 }
 
 @media only screen and (max-width: 280px) {
