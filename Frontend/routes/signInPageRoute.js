@@ -16,8 +16,6 @@ document.getElementById('signinForm').addEventListener('submit', async function(
     const result = await response.json();
     if (response.ok) {
       alert('Login successful');
-      const sessionId = result.sessionId;
-      console.log(`Session ID: ${sessionId}`); // Log the session ID
 
       if (result.email === 'admin@sore.com') {
         window.location.href = `/views/admin.html`;

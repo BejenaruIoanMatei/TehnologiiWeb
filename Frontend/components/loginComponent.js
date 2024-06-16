@@ -1,9 +1,8 @@
 const { db } = require('../firebaseInit');
 const { collection, query, where, getDocs, updateDoc, doc } = require('firebase/firestore');
 const bcrypt = require('bcrypt');
-const { v4: uuidv4 } = require('uuid');
 
-const loginComponent = async (req, res, sessions) => {
+const loginComponent = async (req, res) => {
   let body = '';
   req.on('data', chunk => {
     body += chunk.toString();
@@ -41,13 +40,8 @@ const loginComponent = async (req, res, sessions) => {
 
       await updateDoc(doc(db, 'users', userDoc.id), { loggedIn: true });
 
-      const sessionId = uuidv4();
-      sessions[sessionId] = { userId: userDoc.id, email: user.email };
-
-      console.log(`Generated session ID: ${sessionId}`);
-
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ message: 'Login successful', sessionId, email: user.email }));
+      res.end(JSON.stringify({ message: 'Login successful', email: user.email }));
     } catch (error) {
       console.error('Error logging in:', error);
       res.writeHead(500, { 'Content-Type': 'application/json' });

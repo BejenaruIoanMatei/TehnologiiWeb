@@ -138,7 +138,7 @@ const server = http.createServer((req, res) => {
     serveStaticFile(res, filePath, contentType);
   } else if (req.method === 'POST' && req.url === '/loginComponent') {
     // Call the login route handler
-    loginRoute(req, res, sessions, sessionId);
+    loginRoute(req, res);
   } else if (req.method === 'POST' && req.url === '/registerComponent') {
     // Call the register route handler
     registerRoute(req, res);
