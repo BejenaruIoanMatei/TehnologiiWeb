@@ -56,7 +56,7 @@
    - Chengdu
    - Guilin
    - Suzhou
-   - Hong Kong (while administratively distinct, it is often included in tourism lists for China)
+   - Hong Kong 
 
 6. **Mexico (MX)**
    - Mexico City
@@ -413,9 +413,7 @@
     - Siargao
 
 37. **Argentina (AR)**
-    - Buenos
-
- Aires
+    - Buenos Aires
     - Cordoba
     - Mendoza
     - Rosario
@@ -497,6 +495,7 @@
     - Hamilton
     - Napier
     - Nelson
+    
 44. **Colombia (CO)**
     - Bogotá
     - Medellín
