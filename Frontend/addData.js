@@ -715,1615 +715,1620 @@ async function addTestData() {
 { tara: 'Greece (GR)', oras: 'Athens', suvenir: 'Acropolis Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
 { tara: 'Greece (GR)', oras: 'Athens', suvenir: 'Olive Oil Soap Set', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
 { tara: 'Greece (GR)', oras: 'Athens', suvenir: 'Greek Mythology Book', categorie: 'Books', destinatari: ['acquaintance', 'relative'] },
-
+//
+//
+//
+//
+//
+//
 // Santorini
 { tara: 'Greece (GR)', oras: 'Santorini', suvenir: 'Santorini Sunset Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Greece (GR)', oras: 'Santorini', suvenir: 'Volcano Ash Jewelry', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Greece (GR)', oras: 'Santorini', suvenir: 'Assorted Olives Jar', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Greece (GR)', oras: 'Santorini', suvenir: 'Volcano Ash Jewelry', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Greece (GR)', oras: 'Santorini', suvenir: 'Assorted Olives Jar', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Mykonos
 { tara: 'Greece (GR)', oras: 'Mykonos', suvenir: 'Mykonos Windmill Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Greece (GR)', oras: 'Mykonos', suvenir: 'Cycladic Figurine', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Greece (GR)', oras: 'Mykonos', suvenir: 'Greek Wine Assortment', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Greece (GR)', oras: 'Mykonos', suvenir: 'Cycladic Figurine', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Greece (GR)', oras: 'Mykonos', suvenir: 'Greek Wine Assortment', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Thessaloniki
 { tara: 'Greece (GR)', oras: 'Thessaloniki', suvenir: 'White Tower Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Greece (GR)', oras: 'Thessaloniki', suvenir: 'Byzantine Icon Print', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Greece (GR)', oras: 'Thessaloniki', suvenir: 'Thessaloniki Bougatsa', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Greece (GR)', oras: 'Thessaloniki', suvenir: 'Byzantine Icon Print', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Greece (GR)', oras: 'Thessaloniki', suvenir: 'Thessaloniki Bougatsa', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Crete (Heraklion)
 { tara: 'Greece (GR)', oras: 'Crete (Heraklion)', suvenir: 'Knossos Palace Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Greece (GR)', oras: 'Crete (Heraklion)', suvenir: 'Cretan Olive Oil', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Greece (GR)', oras: 'Crete (Heraklion)', suvenir: 'Minoan Pottery Reproduction', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Greece (GR)', oras: 'Crete (Heraklion)', suvenir: 'Cretan Olive Oil', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Greece (GR)', oras: 'Crete (Heraklion)', suvenir: 'Minoan Pottery Reproduction', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Rhodes
 { tara: 'Greece (GR)', oras: 'Rhodes', suvenir: 'Rhodes Colossus Figurine', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Greece (GR)', oras: 'Rhodes', suvenir: 'Rhodes Honey Soap', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Greece (GR)', oras: 'Rhodes', suvenir: 'Rhodes Wine Selection', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Greece (GR)', oras: 'Rhodes', suvenir: 'Rhodes Honey Soap', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Greece (GR)', oras: 'Rhodes', suvenir: 'Rhodes Wine Selection', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Corfu
 { tara: 'Greece (GR)', oras: 'Corfu', suvenir: 'Corfu Venetian Fortress Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Greece (GR)', oras: 'Corfu', suvenir: 'Kumquat Liqueur', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Greece (GR)', oras: 'Corfu', suvenir: 'Corfu Embroidery Kit', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Greece (GR)', oras: 'Corfu', suvenir: 'Kumquat Liqueur', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Greece (GR)', oras: 'Corfu', suvenir: 'Corfu Embroidery Kit', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Nafplio
 { tara: 'Greece (GR)', oras: 'Nafplio', suvenir: 'Bourtzi Fortress Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Greece (GR)', oras: 'Nafplio', suvenir: 'Nafplio Figurine', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Greece (GR)', oras: 'Nafplio', suvenir: 'Olive Wood Kitchen Utensils', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Greece (GR)', oras: 'Nafplio', suvenir: 'Nafplio Figurine', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Greece (GR)', oras: 'Nafplio', suvenir: 'Olive Wood Kitchen Utensils', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Meteora (Kalambaka)
 { tara: 'Greece (GR)', oras: 'Meteora (Kalambaka)', suvenir: 'Meteora Monastery Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Greece (GR)', oras: 'Meteora (Kalambaka)', suvenir: 'Meteora Landscape Painting', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Greece (GR)', oras: 'Meteora (Kalambaka)', suvenir: 'Greek Mountain Tea Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Greece (GR)', oras: 'Meteora (Kalambaka)', suvenir: 'Meteora Landscape Painting', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Greece (GR)', oras: 'Meteora (Kalambaka)', suvenir: 'Greek Mountain Tea Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Delphi
 { tara: 'Greece (GR)', oras: 'Delphi', suvenir: 'Delphi Ruins Sketch', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Greece (GR)', oras: 'Delphi', suvenir: 'Olive Wood Salad Servers', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Greece (GR)', oras: 'Delphi', suvenir: 'Oracle of Delphi Book', categorie: 'Books', destinatari: ['family', 'lover'] },
+{ tara: 'Greece (GR)', oras: 'Delphi', suvenir: 'Olive Wood Salad Servers', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Greece (GR)', oras: 'Delphi', suvenir: 'Oracle of Delphi Book', categorie: 'Books', destinatari: ['acquaintance', 'relative'] },
 
 // Lisbon
 { tara: 'Portugal (PT)', oras: 'Lisbon', suvenir: 'Lisbon Tile Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Portugal (PT)', oras: 'Lisbon', suvenir: 'Portuguese Wine Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Portugal (PT)', oras: 'Lisbon', suvenir: 'Cork Wallet', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Portugal (PT)', oras: 'Lisbon', suvenir: 'Portuguese Wine Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Portugal (PT)', oras: 'Lisbon', suvenir: 'Cork Wallet', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Porto
 { tara: 'Portugal (PT)', oras: 'Porto', suvenir: 'Porto Cathedral Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Portugal (PT)', oras: 'Porto', suvenir: 'Port Wine Assortment', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Portugal (PT)', oras: 'Porto', suvenir: 'Traditional Portuguese Shawl', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Portugal (PT)', oras: 'Porto', suvenir: 'Port Wine Assortment', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Portugal (PT)', oras: 'Porto', suvenir: 'Traditional Portuguese Shawl', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Faro
 { tara: 'Portugal (PT)', oras: 'Faro', suvenir: 'Faro Lighthouse Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Portugal (PT)', oras: 'Faro', suvenir: 'Algarve Beach Sand Globe', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Portugal (PT)', oras: 'Faro', suvenir: 'Ceramic Sardine Plate', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Portugal (PT)', oras: 'Faro', suvenir: 'Algarve Beach Sand Globe', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Portugal (PT)', oras: 'Faro', suvenir: 'Ceramic Sardine Plate', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Funchal (Madeira)
 { tara: 'Portugal (PT)', oras: 'Funchal (Madeira)', suvenir: 'Madeira Embroidery Kit', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Portugal (PT)', oras: 'Funchal (Madeira)', suvenir: 'Madeira Wine Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Portugal (PT)', oras: 'Funchal (Madeira)', suvenir: 'Funchal Traditional Hat', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Portugal (PT)', oras: 'Funchal (Madeira)', suvenir: 'Madeira Wine Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Portugal (PT)', oras: 'Funchal (Madeira)', suvenir: 'Funchal Traditional Hat', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Sintra
 { tara: 'Portugal (PT)', oras: 'Sintra', suvenir: 'Pena Palace Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Portugal (PT)', oras: 'Sintra', suvenir: 'Sintra Tile Coaster Set', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Portugal (PT)', oras: 'Sintra', suvenir: 'Sintra Castle Keychain', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Portugal (PT)', oras: 'Sintra', suvenir: 'Sintra Tile Coaster Set', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Portugal (PT)', oras: 'Sintra', suvenir: 'Sintra Castle Keychain', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Coimbra
 { tara: 'Portugal (PT)', oras: 'Coimbra', suvenir: 'Coimbra University Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Portugal (PT)', oras: 'Coimbra', suvenir: 'Coimbra Ceramic Tile', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Portugal (PT)', oras: 'Coimbra', suvenir: 'Portuguese Guitar Miniature', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Portugal (PT)', oras: 'Coimbra', suvenir: 'Coimbra Ceramic Tile', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Portugal (PT)', oras: 'Coimbra', suvenir: 'Portuguese Guitar Miniature', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Aveiro
 { tara: 'Portugal (PT)', oras: 'Aveiro', suvenir: 'Aveiro Canal Boat Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Portugal (PT)', oras: 'Aveiro', suvenir: 'Salt Flower Box', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Portugal (PT)', oras: 'Aveiro', suvenir: 'Traditional Ceramic Rooster', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Portugal (PT)', oras: 'Aveiro', suvenir: 'Salt Flower Box', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Portugal (PT)', oras: 'Aveiro', suvenir: 'Traditional Ceramic Rooster', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Braga
 { tara: 'Portugal (PT)', oras: 'Braga', suvenir: 'Braga Cathedral Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Portugal (PT)', oras: 'Braga', suvenir: 'Braga Pottery', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Portugal (PT)', oras: 'Braga', suvenir: 'Braga Embroidered Handkerchief', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Portugal (PT)', oras: 'Braga', suvenir: 'Braga Pottery', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Portugal (PT)', oras: 'Braga', suvenir: 'Braga Embroidered Handkerchief', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Cascais
 { tara: 'Portugal (PT)', oras: 'Cascais', suvenir: 'Cascais Beach Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Portugal (PT)', oras: 'Cascais', suvenir: 'Cascais Wine Cork Keychain', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Portugal (PT)', oras: 'Cascais', suvenir: 'Cascais Seashell Necklace', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Portugal (PT)', oras: 'Cascais', suvenir: 'Cascais Wine Cork Keychain', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Portugal (PT)', oras: 'Cascais', suvenir: 'Cascais Seashell Necklace', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Evora
 { tara: 'Portugal (PT)', oras: 'Evora', suvenir: 'Evora Roman Temple Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Portugal (PT)', oras: 'Evora', suvenir: 'Alentejo Olive Oil', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Portugal (PT)', oras: 'Evora', suvenir: 'Cork Handbag', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Portugal (PT)', oras: 'Evora', suvenir: 'Alentejo Olive Oil', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Portugal (PT)', oras: 'Evora', suvenir: 'Cork Handbag', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Vienna
 { tara: 'Austria (AT)', oras: 'Vienna', suvenir: 'Vienna Opera House Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Austria (AT)', oras: 'Vienna', suvenir: 'Sachertorte Chocolate Box', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Austria (AT)', oras: 'Vienna', suvenir: 'Viennese Porcelain Figurine', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Austria (AT)', oras: 'Vienna', suvenir: 'Sachertorte Chocolate Box', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Austria (AT)', oras: 'Vienna', suvenir: 'Viennese Porcelain Figurine', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Salzburg
 { tara: 'Austria (AT)', oras: 'Salzburg', suvenir: 'Salzburg Castle Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Austria (AT)', oras: 'Salzburg', suvenir: 'Mozart Chocolate Pralines', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Austria (AT)', oras: 'Salzburg', suvenir: 'Edelweiss Music Box', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Austria (AT)', oras: 'Salzburg', suvenir: 'Mozart Chocolate Pralines', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Austria (AT)', oras: 'Salzburg', suvenir: 'Edelweiss Music Box', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Innsbruck
 { tara: 'Austria (AT)', oras: 'Innsbruck', suvenir: 'Innsbruck Golden Roof Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Austria (AT)', oras: 'Innsbruck', suvenir: 'Tyrolean Alps Honey', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Austria (AT)', oras: 'Innsbruck', suvenir: 'Swarovski Crystal Necklace', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Austria (AT)', oras: 'Innsbruck', suvenir: 'Tyrolean Alps Honey', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Austria (AT)', oras: 'Innsbruck', suvenir: 'Swarovski Crystal Necklace', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Graz
 { tara: 'Austria (AT)', oras: 'Graz', suvenir: 'Graz Clock Tower Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Austria (AT)', oras: 'Graz', suvenir: 'Styrian Pumpkin Seed Oil', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Austria (AT)', oras: 'Graz', suvenir: 'Styrian Tracht Doll', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Austria (AT)', oras: 'Graz', suvenir: 'Styrian Pumpkin Seed Oil', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Austria (AT)', oras: 'Graz', suvenir: 'Styrian Tracht Doll', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Hallstatt
 { tara: 'Austria (AT)', oras: 'Hallstatt', suvenir: 'Hallstatt Alpine House Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Austria (AT)', oras: 'Hallstatt', suvenir: 'Hallstatt Salt Crystals', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Austria (AT)', oras: 'Hallstatt', suvenir: 'Traditional Austrian Hat', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Austria (AT)', oras: 'Hallstatt', suvenir: 'Hallstatt Salt Crystals', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Austria (AT)', oras: 'Hallstatt', suvenir: 'Traditional Austrian Hat', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Linz
 { tara: 'Austria (AT)', oras: 'Linz', suvenir: 'Linz Cathedral Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Austria (AT)', oras: 'Linz', suvenir: 'Linz Linzer Torte', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Austria (AT)', oras: 'Linz', suvenir: 'Linz Chocolate Box', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Austria (AT)', oras: 'Linz', suvenir: 'Linz Linzer Torte', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Austria (AT)', oras: 'Linz', suvenir: 'Linz Chocolate Box', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Klagenfurt
 { tara: 'Austria (AT)', oras: 'Klagenfurt', suvenir: 'Klagenfurt Dragon Fountain Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Austria (AT)', oras: 'Klagenfurt', suvenir: 'Carinthian Herbal Liqueur', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Austria (AT)', oras: 'Klagenfurt', suvenir: 'Carinthian Doll', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Austria (AT)', oras: 'Klagenfurt', suvenir: 'Carinthian Herbal Liqueur', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Austria (AT)', oras: 'Klagenfurt', suvenir: 'Carinthian Doll', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Bregenz
 { tara: 'Austria (AT)', oras: 'Bregenz', suvenir: 'Bregenz Seebühne Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Austria (AT)', oras: 'Bregenz', suvenir: 'Lake Constance Wine Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Austria (AT)', oras: 'Bregenz', suvenir: 'Bregenz Opera Glasses', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Austria (AT)', oras: 'Bregenz', suvenir: 'Lake Constance Wine Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Austria (AT)', oras: 'Bregenz', suvenir: 'Bregenz Opera Glasses', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Zell am See
 { tara: 'Austria (AT)', oras: 'Zell am See', suvenir: 'Zell am See Lake Crystal', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Austria (AT)', oras: 'Zell am See', suvenir: 'Austrian Alpine Wool Blanket', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Austria (AT)', oras: 'Zell am See', suvenir: 'Zell am See Ski Hat', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Austria (AT)', oras: 'Zell am See', suvenir: 'Austrian Alpine Wool Blanket', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Austria (AT)', oras: 'Zell am See', suvenir: 'Zell am See Ski Hat', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Villach
 { tara: 'Austria (AT)', oras: 'Villach', suvenir: 'Villach Castle Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Austria (AT)', oras: 'Villach', suvenir: 'Carinthian Mineral Water', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Austria (AT)', oras: 'Villach', suvenir: 'Traditional Austrian Dirndl', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Austria (AT)', oras: 'Villach', suvenir: 'Carinthian Mineral Water', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Austria (AT)', oras: 'Villach', suvenir: 'Traditional Austrian Dirndl', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Sydney
 { tara: 'Australia (AU)', oras: 'Sydney', suvenir: 'Sydney Opera House Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Australia (AU)', oras: 'Sydney', suvenir: 'Australian Aboriginal Art Print', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Australia (AU)', oras: 'Sydney', suvenir: 'Sydney Harbour Bridge Climb Certificate', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Australia (AU)', oras: 'Sydney', suvenir: 'Australian Aboriginal Art Print', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Australia (AU)', oras: 'Sydney', suvenir: 'Sydney Harbour Bridge Climb Certificate', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Melbourne
 { tara: 'Australia (AU)', oras: 'Melbourne', suvenir: 'Melbourne Tram Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Australia (AU)', oras: 'Melbourne', suvenir: 'Australian Made Chocolate Box', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Australia (AU)', oras: 'Melbourne', suvenir: 'Melbourne Laneway Art Print', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Australia (AU)', oras: 'Melbourne', suvenir: 'Australian Made Chocolate Box', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Australia (AU)', oras: 'Melbourne', suvenir: 'Melbourne Laneway Art Print', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Brisbane
 { tara: 'Australia (AU)', oras: 'Brisbane', suvenir: 'Brisbane River Cruise Ticket', categorie: 'Experience', destinatari: ['family', 'friend'] },
-{ tara: 'Australia (AU)', oras: 'Brisbane', suvenir: 'Queensland Made Macadamia Nuts', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Australia (AU)', oras: 'Brisbane', suvenir: 'Brisbane Koala Plush Toy', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Australia (AU)', oras: 'Brisbane', suvenir: 'Queensland Made Macadamia Nuts', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Australia (AU)', oras: 'Brisbane', suvenir: 'Brisbane Koala Plush Toy', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Perth
 { tara: 'Australia (AU)', oras: 'Perth', suvenir: 'Perth Mint Gold Bullion Bar', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Australia (AU)', oras: 'Perth', suvenir: 'Swan River Cruise Ticket', categorie: 'Experience', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Australia (AU)', oras: 'Perth', suvenir: 'Australian Made Wine Selection', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Australia (AU)', oras: 'Perth', suvenir: 'Swan River Cruise Ticket', categorie: 'Experience', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Australia (AU)', oras: 'Perth', suvenir: 'Australian Made Wine Selection', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Adelaide
 { tara: 'Australia (AU)', oras: 'Adelaide', suvenir: 'Adelaide Oval Tour Ticket', categorie: 'Experience', destinatari: ['family', 'friend'] },
-{ tara: 'Australia (AU)', oras: 'Adelaide', suvenir: 'South Australian Honey', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Australia (AU)', oras: 'Adelaide', suvenir: 'Adelaide Hills Wine Selection', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Australia (AU)', oras: 'Adelaide', suvenir: 'South Australian Honey', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Australia (AU)', oras: 'Adelaide', suvenir: 'Adelaide Hills Wine Selection', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Gold Coast
 { tara: 'Australia (AU)', oras: 'Gold Coast', suvenir: 'Gold Coast Theme Park Pass', categorie: 'Experience', destinatari: ['family', 'friend'] },
-{ tara: 'Australia (AU)', oras: 'Gold Coast', suvenir: 'Surfers Paradise Beach Towel', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Australia (AU)', oras: 'Gold Coast', suvenir: 'Australian Made Surfboard Keychain', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Australia (AU)', oras: 'Gold Coast', suvenir: 'Surfers Paradise Beach Towel', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Australia (AU)', oras: 'Gold Coast', suvenir: 'Australian Made Surfboard Keychain', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Cairns
 { tara: 'Australia (AU)', oras: 'Cairns', suvenir: 'Great Barrier Reef Snorkel Tour Ticket', categorie: 'Experience', destinatari: ['family', 'friend'] },
-{ tara: 'Australia (AU)', oras: 'Cairns', suvenir: 'Queensland Tropical Fruit Basket', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Australia (AU)', oras: 'Cairns', suvenir: 'Cairns Coral Necklace', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Australia (AU)', oras: 'Cairns', suvenir: 'Queensland Tropical Fruit Basket', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Australia (AU)', oras: 'Cairns', suvenir: 'Cairns Coral Necklace', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Canberra
 { tara: 'Australia (AU)', oras: 'Canberra', suvenir: 'Parliament House Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Australia (AU)', oras: 'Canberra', suvenir: 'Australian Made Olive Oil Set', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Australia (AU)', oras: 'Canberra', suvenir: 'National Gallery Art Print', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Australia (AU)', oras: 'Canberra', suvenir: 'Australian Made Olive Oil Set', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Australia (AU)', oras: 'Canberra', suvenir: 'National Gallery Art Print', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Hobart
 { tara: 'Australia (AU)', oras: 'Hobart', suvenir: 'Tasmanian Devil Plush Toy', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Australia (AU)', oras: 'Hobart', suvenir: 'Tasmanian Whisky Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Australia (AU)', oras: 'Hobart', suvenir: 'Tasmanian Craft Beer Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Australia (AU)', oras: 'Hobart', suvenir: 'Tasmanian Whisky Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Australia (AU)', oras: 'Hobart', suvenir: 'Tasmanian Craft Beer Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Darwin
 { tara: 'Australia (AU)', oras: 'Darwin', suvenir: 'Crocodile Leather Wallet', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Australia (AU)', oras: 'Darwin', suvenir: 'Northern Territory Aboriginal Art Print', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Australia (AU)', oras: 'Darwin', suvenir: 'Didgeridoo', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Australia (AU)', oras: 'Darwin', suvenir: 'Northern Territory Aboriginal Art Print', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Australia (AU)', oras: 'Darwin', suvenir: 'Didgeridoo', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Amsterdam
 { tara: 'Netherlands (NL)', oras: 'Amsterdam', suvenir: 'Amsterdam Canal Houses Miniature Set', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Netherlands (NL)', oras: 'Amsterdam', suvenir: 'Delft Blue Pottery', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Netherlands (NL)', oras: 'Amsterdam', suvenir: 'Amsterdam Bike Keychain', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Netherlands (NL)', oras: 'Amsterdam', suvenir: 'Delft Blue Pottery', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Netherlands (NL)', oras: 'Amsterdam', suvenir: 'Amsterdam Bike Keychain', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Rotterdam
 { tara: 'Netherlands (NL)', oras: 'Rotterdam', suvenir: 'Rotterdam Skyline Poster', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Netherlands (NL)', oras: 'Rotterdam', suvenir: 'Dutch Cheese Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Netherlands (NL)', oras: 'Rotterdam', suvenir: 'Rotterdam Harbour Model', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Netherlands (NL)', oras: 'Rotterdam', suvenir: 'Dutch Cheese Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Netherlands (NL)', oras: 'Rotterdam', suvenir: 'Rotterdam Harbour Model', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // The Hague
 { tara: 'Netherlands (NL)', oras: 'The Hague', suvenir: 'Peace Palace Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Netherlands (NL)', oras: 'The Hague', suvenir: 'Dutch Royal Family Tea Set', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Netherlands (NL)', oras: 'The Hague', suvenir: 'The Hague Cityscape Painting', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Netherlands (NL)', oras: 'The Hague', suvenir: 'Dutch Royal Family Tea Set', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Netherlands (NL)', oras: 'The Hague', suvenir: 'The Hague Cityscape Painting', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Utrecht
 { tara: 'Netherlands (NL)', oras: 'Utrecht', suvenir: 'Utrecht Cathedral Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Netherlands (NL)', oras: 'Utrecht', suvenir: 'Dutch Bicycles Puzzle', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Netherlands (NL)', oras: 'Utrecht', suvenir: 'Utrecht Honey Jar', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Netherlands (NL)', oras: 'Utrecht', suvenir: 'Dutch Bicycles Puzzle', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Netherlands (NL)', oras: 'Utrecht', suvenir: 'Utrecht Honey Jar', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Maastricht
 { tara: 'Netherlands (NL)', oras: 'Maastricht', suvenir: 'Maastricht Vase', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Netherlands (NL)', oras: 'Maastricht', suvenir: 'Limburgian Pie Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Netherlands (NL)', oras: 'Maastricht', suvenir: 'Maastricht Caves Tour Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Netherlands (NL)', oras: 'Maastricht', suvenir: 'Limburgian Pie Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Netherlands (NL)', oras: 'Maastricht', suvenir: 'Maastricht Caves Tour Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Eindhoven
 { tara: 'Netherlands (NL)', oras: 'Eindhoven', suvenir: 'Eindhoven Philips Museum Ticket', categorie: 'Experience', destinatari: ['family', 'friend'] },
-{ tara: 'Netherlands (NL)', oras: 'Eindhoven', suvenir: 'Eindhoven Technological Gadgets', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Netherlands (NL)', oras: 'Eindhoven', suvenir: 'Eindhoven Light Bulb Keychain', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Netherlands (NL)', oras: 'Eindhoven', suvenir: 'Eindhoven Technological Gadgets', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Netherlands (NL)', oras: 'Eindhoven', suvenir: 'Eindhoven Light Bulb Keychain', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Haarlem
 { tara: 'Netherlands (NL)', oras: 'Haarlem', suvenir: 'Haarlem Windmill Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Netherlands (NL)', oras: 'Haarlem', suvenir: 'Haarlem Flower Bulb Set', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Netherlands (NL)', oras: 'Haarlem', suvenir: 'Haarlem Dutch Masters Art Print', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Netherlands (NL)', oras: 'Haarlem', suvenir: 'Haarlem Flower Bulb Set', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Netherlands (NL)', oras: 'Haarlem', suvenir: 'Haarlem Dutch Masters Art Print', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Groningen
 { tara: 'Netherlands (NL)', oras: 'Groningen', suvenir: 'Groningen University Hoodie', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Netherlands (NL)', oras: 'Groningen', suvenir: 'Groningen Bicycle Bell', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Netherlands (NL)', oras: 'Groningen', suvenir: 'Groningen Cheese Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Netherlands (NL)', oras: 'Groningen', suvenir: 'Groningen Bicycle Bell', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Netherlands (NL)', oras: 'Groningen', suvenir: 'Groningen Cheese Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Leiden
 { tara: 'Netherlands (NL)', oras: 'Leiden', suvenir: 'Leiden University Scarf', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Netherlands (NL)', oras: 'Leiden', suvenir: 'Leiden Botanical Garden Poster', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Netherlands (NL)', oras: 'Leiden', suvenir: 'Leiden Museum Pass', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Netherlands (NL)', oras: 'Leiden', suvenir: 'Leiden Botanical Garden Poster', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Netherlands (NL)', oras: 'Leiden', suvenir: 'Leiden Museum Pass', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Delft
 { tara: 'Netherlands (NL)', oras: 'Delft', suvenir: 'Delft Blue Tile Set', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Netherlands (NL)', oras: 'Delft', suvenir: 'Delft Pottery Tea Set', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Netherlands (NL)', oras: 'Delft', suvenir: 'Delft Windmill Keychain', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Netherlands (NL)', oras: 'Delft', suvenir: 'Delft Pottery Tea Set', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Netherlands (NL)', oras: 'Delft', suvenir: 'Delft Windmill Keychain', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Zurich
 { tara: 'Switzerland (CH)', oras: 'Zurich', suvenir: 'Zurich Clock Tower Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Switzerland (CH)', oras: 'Zurich', suvenir: 'Swiss Chocolate Assortment', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Switzerland (CH)', oras: 'Zurich', suvenir: 'Zurich Lake Cruise Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Switzerland (CH)', oras: 'Zurich', suvenir: 'Swiss Chocolate Assortment', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Switzerland (CH)', oras: 'Zurich', suvenir: 'Zurich Lake Cruise Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Geneva
 { tara: 'Switzerland (CH)', oras: 'Geneva', suvenir: 'Geneva Jet d\'Eau Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Switzerland (CH)', oras: 'Geneva', suvenir: 'Swiss Watch Keychain', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Switzerland (CH)', oras: 'Geneva', suvenir: 'Geneva Gourmet Chocolate Box', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Switzerland (CH)', oras: 'Geneva', suvenir: 'Swiss Watch Keychain', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Switzerland (CH)', oras: 'Geneva', suvenir: 'Geneva Gourmet Chocolate Box', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Lucerne
 { tara: 'Switzerland (CH)', oras: 'Lucerne', suvenir: 'Lucerne Chapel Bridge Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Switzerland (CH)', oras: 'Lucerne', suvenir: 'Swiss Army Knife', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Switzerland (CH)', oras: 'Lucerne', suvenir: 'Lucerne Alpine Cheese Selection', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Switzerland (CH)', oras: 'Lucerne', suvenir: 'Swiss Army Knife', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Switzerland (CH)', oras: 'Lucerne', suvenir: 'Lucerne Alpine Cheese Selection', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Interlaken
 { tara: 'Switzerland (CH)', oras: 'Interlaken', suvenir: 'Interlaken Jungfrau Mountain Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Switzerland (CH)', oras: 'Interlaken', suvenir: 'Swiss Cuckoo Clock', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Switzerland (CH)', oras: 'Interlaken', suvenir: 'Interlaken Swiss Fondue Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Switzerland (CH)', oras: 'Interlaken', suvenir: 'Swiss Cuckoo Clock', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Switzerland (CH)', oras: 'Interlaken', suvenir: 'Interlaken Swiss Fondue Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Basel
 { tara: 'Switzerland (CH)', oras: 'Basel', suvenir: 'Basel Minster Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Switzerland (CH)', oras: 'Basel', suvenir: 'Basel Swiss Chocolate Truffles', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Switzerland (CH)', oras: 'Basel', suvenir: 'Basel Art Museum Pass', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Switzerland (CH)', oras: 'Basel', suvenir: 'Basel Swiss Chocolate Truffles', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Switzerland (CH)', oras: 'Basel', suvenir: 'Basel Art Museum Pass', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Lausanne
 { tara: 'Switzerland (CH)', oras: 'Lausanne', suvenir: 'Lausanne Olympic Museum Ticket', categorie: 'Experience', destinatari: ['family', 'friend'] },
-{ tara: 'Switzerland (CH)', oras: 'Lausanne', suvenir: 'Swiss Wine Assortment', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Switzerland (CH)', oras: 'Lausanne', suvenir: 'Lausanne Lakeside Painting', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Switzerland (CH)', oras: 'Lausanne', suvenir: 'Swiss Wine Assortment', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Switzerland (CH)', oras: 'Lausanne', suvenir: 'Lausanne Lakeside Painting', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Zermatt
 { tara: 'Switzerland (CH)', oras: 'Zermatt', suvenir: 'Matterhorn Mountain Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Switzerland (CH)', oras: 'Zermatt', suvenir: 'Swiss Wool Sweater', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Switzerland (CH)', oras: 'Zermatt', suvenir: 'Zermatt Swiss Chocolate Fondue Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Switzerland (CH)', oras: 'Zermatt', suvenir: 'Swiss Wool Sweater', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Switzerland (CH)', oras: 'Zermatt', suvenir: 'Zermatt Swiss Chocolate Fondue Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Bern
 { tara: 'Switzerland (CH)', oras: 'Bern', suvenir: 'Bern Clock Tower Keychain', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Switzerland (CH)', oras: 'Bern', suvenir: 'Swiss Bernese Alps Calendar', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Switzerland (CH)', oras: 'Bern', suvenir: 'Bernese Chocolate Truffle Box', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Switzerland (CH)', oras: 'Bern', suvenir: 'Swiss Bernese Alps Calendar', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Switzerland (CH)', oras: 'Bern', suvenir: 'Bernese Chocolate Truffle Box', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Lugano
 { tara: 'Switzerland (CH)', oras: 'Lugano', suvenir: 'Lugano Lakeside Landscape Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Switzerland (CH)', oras: 'Lugano', suvenir: 'Swiss Italian Cuisine Cookbook', categorie: 'Books', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Switzerland (CH)', oras: 'Lugano', suvenir: 'Lugano Swiss Watch', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Switzerland (CH)', oras: 'Lugano', suvenir: 'Swiss Italian Cuisine Cookbook', categorie: 'Books', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Switzerland (CH)', oras: 'Lugano', suvenir: 'Lugano Swiss Watch', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // St. Moritz
 { tara: 'Switzerland (CH)', oras: 'St. Moritz', suvenir: 'St. Moritz Ski Resort Poster', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Switzerland (CH)', oras: 'St. Moritz', suvenir: 'Swiss Alpine Cheese Fondue Set', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Switzerland (CH)', oras: 'St. Moritz', suvenir: 'St. Moritz Snow Globe', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Switzerland (CH)', oras: 'St. Moritz', suvenir: 'Swiss Alpine Cheese Fondue Set', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Switzerland (CH)', oras: 'St. Moritz', suvenir: 'St. Moritz Snow Globe', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Singapore (city-state)
 { tara: 'Singapore (SG)', oras: 'Singapore (city-state)', suvenir: 'Merlion Statue Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Singapore (SG)', oras: 'Singapore (city-state)', suvenir: 'Merlion Statue Replica', categorie: 'Art', destinatari: ['unspecified', 'lover'] },
-{ tara: 'Singapore (SG)', oras: 'Singapore (city-state)', suvenir: 'Orchid Perfume', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Singapore (SG)', oras: 'Singapore (city-state)', suvenir: 'Orchid Perfume', categorie: 'Beauty', destinatari: ['lover', 'relative'] },
-{ tara: 'Singapore (SG)', oras: 'Singapore (city-state)', suvenir: 'Singapore Sling Mix', categorie: 'Food', destinatari: ['family', 'lover'] },
-{ tara: 'Singapore (SG)', oras: 'Singapore (city-state)', suvenir: 'Singapore Sling Mix', categorie: 'Food', destinatari: ['co-worker', 'unspecified'] },
+{ tara: 'Singapore (SG)', oras: 'Singapore (city-state)', suvenir: 'Orchid Perfume', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Singapore (SG)', oras: 'Singapore (city-state)', suvenir: 'Orchid Perfume', categorie: 'Beauty', destinatari: ['acquaintance', 'relative'] },
 
 // Seoul
 { tara: 'South Korea (KR)', oras: 'Seoul', suvenir: 'Seoul Skyline Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'South Korea (KR)', oras: 'Seoul', suvenir: 'Korean Ginseng Tea Set', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'South Korea (KR)', oras: 'Seoul', suvenir: 'K-Pop Dance Class Voucher', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'South Korea (KR)', oras: 'Seoul', suvenir: 'Korean Ginseng Tea Set', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'South Korea (KR)', oras: 'Seoul', suvenir: 'K-Pop Dance Class Voucher', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Busan
 { tara: 'South Korea (KR)', oras: 'Busan', suvenir: 'Busan Beach Scene Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'South Korea (KR)', oras: 'Busan', suvenir: 'Korean Seafood Gift Basket', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'South Korea (KR)', oras: 'Busan', suvenir: 'Busan Hanbok Rental Voucher', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'South Korea (KR)', oras: 'Busan', suvenir: 'Korean Seafood Gift Basket', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'South Korea (KR)', oras: 'Busan', suvenir: 'Busan Hanbok Rental Voucher', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Jeju City
 { tara: 'South Korea (KR)', oras: 'Jeju City', suvenir: 'Jeju Island Landscape Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'South Korea (KR)', oras: 'Jeju City', suvenir: 'Jeju Tangerine Gift Box', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'South Korea (KR)', oras: 'Jeju City', suvenir: 'Jeju Glass Castle Admission Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'South Korea (KR)', oras: 'Jeju City', suvenir: 'Jeju Tangerine Gift Box', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'South Korea (KR)', oras: 'Jeju City', suvenir: 'Jeju Glass Castle Admission Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Incheon
 { tara: 'South Korea (KR)', oras: 'Incheon', suvenir: 'Incheon Port Scene Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'South Korea (KR)', oras: 'Incheon', suvenir: 'Incheon Rice Cake Sampler', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'South Korea (KR)', oras: 'Incheon', suvenir: 'Incheon Traditional Hanji Crafts', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'South Korea (KR)', oras: 'Incheon', suvenir: 'Incheon Rice Cake Sampler', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'South Korea (KR)', oras: 'Incheon', suvenir: 'Incheon Traditional Hanji Crafts', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Gyeongju
 { tara: 'South Korea (KR)', oras: 'Gyeongju', suvenir: 'Gyeongju Silla Kingdom Artifact Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'South Korea (KR)', oras: 'Gyeongju', suvenir: 'Gyeongju Rice Wine Set', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'South Korea (KR)', oras: 'Gyeongju', suvenir: 'Gyeongju Bulguksa Temple Tour Pass', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'South Korea (KR)', oras: 'Gyeongju', suvenir: 'Gyeongju Rice Wine Set', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'South Korea (KR)', oras: 'Gyeongju', suvenir: 'Gyeongju Bulguksa Temple Tour Pass', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Daegu
 { tara: 'South Korea (KR)', oras: 'Daegu', suvenir: 'Daegu Modern Art Museum Poster', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'South Korea (KR)', oras: 'Daegu', suvenir: 'Daegu Spicy Chicken Gift Set', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'South Korea (KR)', oras: 'Daegu', suvenir: 'Daegu Kim Gwangseok Street Performance Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'South Korea (KR)', oras: 'Daegu', suvenir: 'Daegu Spicy Chicken Gift Set', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'South Korea (KR)', oras: 'Daegu', suvenir: 'Daegu Kim Gwangseok Street Performance Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Daejeon
 { tara: 'South Korea (KR)', oras: 'Daejeon', suvenir: 'Daejeon Expo Park Memorabilia', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'South Korea (KR)', oras: 'Daejeon', suvenir: 'Daejeon Bibimbap Cooking Class Voucher', categorie: 'Experience', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'South Korea (KR)', oras: 'Daejeon', suvenir: 'Daejeon Ginseng Chicken Soup Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'South Korea (KR)', oras: 'Daejeon', suvenir: 'Daejeon Bibimbap Cooking Class Voucher', categorie: 'Experience', destinatari: ['lover', 'co-worker'] },
+{ tara: 'South Korea (KR)', oras: 'Daejeon', suvenir: 'Daejeon Ginseng Chicken Soup Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Suwon
 { tara: 'South Korea (KR)', oras: 'Suwon', suvenir: 'Suwon Hwaseong Fortress Model Kit', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'South Korea (KR)', oras: 'Suwon', suvenir: 'Suwon Traditional Hanbok Rental Voucher', categorie: 'Experience', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'South Korea (KR)', oras: 'Suwon', suvenir: 'Suwon Makgeolli Brewing Kit', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'South Korea (KR)', oras: 'Suwon', suvenir: 'Suwon Traditional Hanbok Rental Voucher', categorie: 'Experience', destinatari: ['lover', 'co-worker'] },
+{ tara: 'South Korea (KR)', oras: 'Suwon', suvenir: 'Suwon Makgeolli Brewing Kit', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Chuncheon
 { tara: 'South Korea (KR)', oras: 'Chuncheon', suvenir: 'Chuncheon Dakgalbi Cooking Set', categorie: 'Food', destinatari: ['family', 'friend'] },
-{ tara: 'South Korea (KR)', oras: 'Chuncheon', suvenir: 'Chuncheon Nami Island Ferry Ticket', categorie: 'Experience', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'South Korea (KR)', oras: 'Chuncheon', suvenir: 'Chuncheon Ceramic Tea Set', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'South Korea (KR)', oras: 'Chuncheon', suvenir: 'Chuncheon Nami Island Ferry Ticket', categorie: 'Experience', destinatari: ['lover', 'co-worker'] },
+{ tara: 'South Korea (KR)', oras: 'Chuncheon', suvenir: 'Chuncheon Ceramic Tea Set', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Sokcho
 { tara: 'South Korea (KR)', oras: 'Sokcho', suvenir: 'Sokcho Seoraksan National Park Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'South Korea (KR)', oras: 'Sokcho', suvenir: 'Sokcho Abai Village Trout Set', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'South Korea (KR)', oras: 'Sokcho', suvenir: 'Sokcho Beach Shell Collection', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'South Korea (KR)', oras: 'Sokcho', suvenir: 'Sokcho Abai Village Trout Set', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'South Korea (KR)', oras: 'Sokcho', suvenir: 'Sokcho Beach Shell Collection', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Hong Kong
 { tara: 'Hong Kong (HK)', oras: 'Hong Kong (city-state)', suvenir: 'Hong Kong Skyline Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Hong Kong (HK)', oras: 'Hong Kong (city-state)', suvenir: 'Dim Sum Cooking Class Voucher', categorie: 'Experience', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Hong Kong (HK)', oras: 'Hong Kong (city-state)', suvenir: 'Hong Kong Egg Waffles Mix', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Hong Kong (HK)', oras: 'Hong Kong (city-state)', suvenir: 'Dim Sum Cooking Class Voucher', categorie: 'Experience', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Hong Kong (HK)', oras: 'Hong Kong (city-state)', suvenir: 'Hong Kong Egg Waffles Mix', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Prague
 { tara: 'Czech Republic (CZ)', oras: 'Prague', suvenir: 'Prague Astronomical Clock Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Prague', suvenir: 'Bohemian Crystal Vase', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Prague', suvenir: 'Czech Beer Selection', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Prague', suvenir: 'Bohemian Crystal Vase', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Prague', suvenir: 'Czech Beer Selection', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Brno
 { tara: 'Czech Republic (CZ)', oras: 'Brno', suvenir: 'Brno Villa Tugendhat Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Brno', suvenir: 'Moravian Wine Collection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Brno', suvenir: 'Brno Spilberk Castle Keychain', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Brno', suvenir: 'Moravian Wine Collection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Brno', suvenir: 'Brno Spilberk Castle Keychain', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Ostrava
 { tara: 'Czech Republic (CZ)', oras: 'Ostrava', suvenir: 'Ostrava Industrial Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Ostrava', suvenir: 'Moravian Folk Art Painting', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Ostrava', suvenir: 'Ostrava Coal Mining History Book', categorie: 'Books', destinatari: ['family', 'lover'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Ostrava', suvenir: 'Moravian Folk Art Painting', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Ostrava', suvenir: 'Ostrava Coal Mining History Book', categorie: 'Books', destinatari: ['acquaintance', 'relative'] },
 
 // Plzen
 { tara: 'Czech Republic (CZ)', oras: 'Plzen', suvenir: 'Plzen Pilsner Brewery Tour Ticket', categorie: 'Experience', destinatari: ['family', 'friend'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Plzen', suvenir: 'Bohemian Glass Beer Mug', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Plzen', suvenir: 'Plzen Historical Walking Map', categorie: 'Books', destinatari: ['family', 'lover'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Plzen', suvenir: 'Bohemian Glass Beer Mug', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Plzen', suvenir: 'Plzen Historical Walking Map', categorie: 'Books', destinatari: ['acquaintance', 'relative'] },
 
 // Karlovy Vary
 { tara: 'Czech Republic (CZ)', oras: 'Karlovy Vary', suvenir: 'Karlovy Vary Thermal Spa Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Karlovy Vary', suvenir: 'Czech Herbal Liquor Set', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Karlovy Vary', suvenir: 'Karlovy Vary Porcelain Teapot', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Karlovy Vary', suvenir: 'Czech Herbal Liquor Set', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Karlovy Vary', suvenir: 'Karlovy Vary Porcelain Teapot', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Cesky Krumlov
 { tara: 'Czech Republic (CZ)', oras: 'Cesky Krumlov', suvenir: 'Cesky Krumlov Castle Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Cesky Krumlov', suvenir: 'Bohemian Crystal Wine Glasses', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Cesky Krumlov', suvenir: 'Cesky Krumlov Marionette Puppet', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Cesky Krumlov', suvenir: 'Bohemian Crystal Wine Glasses', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Cesky Krumlov', suvenir: 'Cesky Krumlov Marionette Puppet', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Olomouc
 { tara: 'Czech Republic (CZ)', oras: 'Olomouc', suvenir: 'Olomouc Holy Trinity Column Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Olomouc', suvenir: 'Moravian Plum Brandy', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Olomouc', suvenir: 'Olomouc Cheese Selection', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Olomouc', suvenir: 'Moravian Plum Brandy', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Olomouc', suvenir: 'Olomouc Cheese Selection', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Liberec
 { tara: 'Czech Republic (CZ)', oras: 'Liberec', suvenir: 'Liberec Jested Tower Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Liberec', suvenir: 'Bohemian Crystal Jewelry', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Liberec', suvenir: 'Liberec Winter Sports Museum Pass', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Liberec', suvenir: 'Bohemian Crystal Jewelry', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Liberec', suvenir: 'Liberec Winter Sports Museum Pass', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Hradec Kralove
 { tara: 'Czech Republic (CZ)', oras: 'Hradec Kralove', suvenir: 'Hradec Kralove Old Town Map', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Hradec Kralove', suvenir: 'Bohemian Glass Vase', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Hradec Kralove', suvenir: 'Hradec Kralove Craft Beer Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Hradec Kralove', suvenir: 'Bohemian Glass Vase', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Hradec Kralove', suvenir: 'Hradec Kralove Craft Beer Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Zlin
 { tara: 'Czech Republic (CZ)', oras: 'Zlin', suvenir: 'Zlin Bata Shoe Museum Pass', categorie: 'Experience', destinatari: ['family', 'friend'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Zlin', suvenir: 'Moravian Folk Art Doll', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Czech Republic (CZ)', oras: 'Zlin', suvenir: 'Zlin Brewery Tour Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Zlin', suvenir: 'Moravian Folk Art Doll', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Czech Republic (CZ)', oras: 'Zlin', suvenir: 'Zlin Brewery Tour Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Warsaw
 { tara: 'Poland (PL)', oras: 'Warsaw', suvenir: 'Warsaw Royal Castle Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Poland (PL)', oras: 'Warsaw', suvenir: 'Polish Vodka Sampler', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Poland (PL)', oras: 'Warsaw', suvenir: 'Chopin Music Box', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Poland (PL)', oras: 'Warsaw', suvenir: 'Polish Vodka Sampler', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Poland (PL)', oras: 'Warsaw', suvenir: 'Chopin Music Box', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Krakow
 { tara: 'Poland (PL)', oras: 'Krakow', suvenir: 'Krakow Cloth Hall Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Poland (PL)', oras: 'Krakow', suvenir: 'Polish Amber Jewelry', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Poland (PL)', oras: 'Krakow', suvenir: 'Krakow Bagels (Obwarzanek Krakowski)', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Poland (PL)', oras: 'Krakow', suvenir: 'Polish Amber Jewelry', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Poland (PL)', oras: 'Krakow', suvenir: 'Krakow Bagels (Obwarzanek Krakowski)', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Wroclaw
 { tara: 'Poland (PL)', oras: 'Wroclaw', suvenir: 'Wroclaw Dwarfs Figurines', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Poland (PL)', oras: 'Wroclaw', suvenir: 'Polish Pottery Set', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Poland (PL)', oras: 'Wroclaw', suvenir: 'Wroclaw Salt & Honey Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Poland (PL)', oras: 'Wroclaw', suvenir: 'Polish Pottery Set', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Poland (PL)', oras: 'Wroclaw', suvenir: 'Wroclaw Salt & Honey Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Gdansk
 { tara: 'Poland (PL)', oras: 'Gdansk', suvenir: 'Gdansk Shipyard Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Poland (PL)', oras: 'Gdansk', suvenir: 'Amber Stone Necklace', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Poland (PL)', oras: 'Gdansk', suvenir: 'Gdansk Liqueur Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Poland (PL)', oras: 'Gdansk', suvenir: 'Amber Stone Necklace', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Poland (PL)', oras: 'Gdansk', suvenir: 'Gdansk Liqueur Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Poznan
 { tara: 'Poland (PL)', oras: 'Poznan', suvenir: 'Poznan Town Hall Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Poland (PL)', oras: 'Poznan', suvenir: 'St. Martin s Croissant', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Poland (PL)', oras: 'Poznan', suvenir: 'Poznan Beer Stein', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Poland (PL)', oras: 'Poznan', suvenir: 'St. Martin s Croissant', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Poland (PL)', oras: 'Poznan', suvenir: 'Poznan Beer Stein', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Lublin
 { tara: 'Poland (PL)', oras: 'Lublin', suvenir: 'Lublin Castle Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Poland (PL)', oras: 'Lublin', suvenir: 'Polish Linen Tablecloth', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Poland (PL)', oras: 'Lublin', suvenir: 'Lublin Honey and Jam Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Poland (PL)', oras: 'Lublin', suvenir: 'Polish Linen Tablecloth', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Poland (PL)', oras: 'Lublin', suvenir: 'Lublin Honey and Jam Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Katowice
 { tara: 'Poland (PL)', oras: 'Katowice', suvenir: 'Katowice Spodek Arena Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Poland (PL)', oras: 'Katowice', suvenir: 'Silesian Pottery', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Poland (PL)', oras: 'Katowice', suvenir: 'Katowice Sausage Selection', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Poland (PL)', oras: 'Katowice', suvenir: 'Silesian Pottery', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Poland (PL)', oras: 'Katowice', suvenir: 'Katowice Sausage Selection', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Lodz
 { tara: 'Poland (PL)', oras: 'Lodz', suvenir: 'Lodz Manufaktura Mall Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Poland (PL)', oras: 'Lodz', suvenir: 'Lodz Textile Art', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Poland (PL)', oras: 'Lodz', suvenir: 'Lodz Piotrkowska Street Coffee Blend', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Poland (PL)', oras: 'Lodz', suvenir: 'Lodz Textile Art', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Poland (PL)', oras: 'Lodz', suvenir: 'Lodz Piotrkowska Street Coffee Blend', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Szczecin
 { tara: 'Poland (PL)', oras: 'Szczecin', suvenir: 'Szczecin Pomeranian Dukes Castle Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Poland (PL)', oras: 'Szczecin', suvenir: 'Szczecin Maritime Museum Ticket', categorie: 'Experience', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Poland (PL)', oras: 'Szczecin', suvenir: 'Szczecin Baltic Sea Amber', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Poland (PL)', oras: 'Szczecin', suvenir: 'Szczecin Maritime Museum Ticket', categorie: 'Experience', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Poland (PL)', oras: 'Szczecin', suvenir: 'Szczecin Baltic Sea Amber', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Torun
 { tara: 'Poland (PL)', oras: 'Torun', suvenir: 'Torun Old Town Panoramic Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Poland (PL)', oras: 'Torun', suvenir: 'Torun Gingerbread Assortment', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Poland (PL)', oras: 'Torun', suvenir: 'Copernicus Observatory Pass', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Poland (PL)', oras: 'Torun', suvenir: 'Torun Gingerbread Assortment', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Poland (PL)', oras: 'Torun', suvenir: 'Copernicus Observatory Pass', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Stockholm
 { tara: 'Sweden (SE)', oras: 'Stockholm', suvenir: 'Stockholm Royal Palace Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Sweden (SE)', oras: 'Stockholm', suvenir: 'Swedish Fika Basket', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Sweden (SE)', oras: 'Stockholm', suvenir: 'Stockholm Archipelago Boat Tour Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Sweden (SE)', oras: 'Stockholm', suvenir: 'Swedish Fika Basket', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Sweden (SE)', oras: 'Stockholm', suvenir: 'Stockholm Archipelago Boat Tour Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Gothenburg
 { tara: 'Sweden (SE)', oras: 'Gothenburg', suvenir: 'Gothenburg Opera House Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Sweden (SE)', oras: 'Gothenburg', suvenir: 'Swedish Cinnamon Buns (Kanelbullar)', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Sweden (SE)', oras: 'Gothenburg', suvenir: 'Gothenburg Botanical Garden Poster', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Sweden (SE)', oras: 'Gothenburg', suvenir: 'Swedish Cinnamon Buns (Kanelbullar)', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Sweden (SE)', oras: 'Gothenburg', suvenir: 'Gothenburg Botanical Garden Poster', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Malmo
 { tara: 'Sweden (SE)', oras: 'Malmo', suvenir: 'Malmo Turning Torso Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Sweden (SE)', oras: 'Malmo', suvenir: 'Malmo Organic Coffee Blend', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Sweden (SE)', oras: 'Malmo', suvenir: 'Malmo Castle Garden Pass', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Sweden (SE)', oras: 'Malmo', suvenir: 'Malmo Organic Coffee Blend', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Sweden (SE)', oras: 'Malmo', suvenir: 'Malmo Castle Garden Pass', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Uppsala
 { tara: 'Sweden (SE)', oras: 'Uppsala', suvenir: 'Uppsala Cathedral Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Sweden (SE)', oras: 'Uppsala', suvenir: 'Swedish Glassware Set', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Sweden (SE)', oras: 'Uppsala', suvenir: 'Uppsala University Book', categorie: 'Books', destinatari: ['family', 'lover'] },
+{ tara: 'Sweden (SE)', oras: 'Uppsala', suvenir: 'Swedish Glassware Set', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Sweden (SE)', oras: 'Uppsala', suvenir: 'Uppsala University Book', categorie: 'Books', destinatari: ['acquaintance', 'relative'] },
 
 // Visby
 { tara: 'Sweden (SE)', oras: 'Visby', suvenir: 'Visby Medieval Wall Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Sweden (SE)', oras: 'Visby', suvenir: 'Gotland Sheepskin Rug', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Sweden (SE)', oras: 'Visby', suvenir: 'Visby Viking Artefact Replica', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Sweden (SE)', oras: 'Visby', suvenir: 'Gotland Sheepskin Rug', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Sweden (SE)', oras: 'Visby', suvenir: 'Visby Viking Artefact Replica', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Helsingborg
 { tara: 'Sweden (SE)', oras: 'Helsingborg', suvenir: 'Helsingborg Kärnan Tower Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Sweden (SE)', oras: 'Helsingborg', suvenir: 'Swedish Berry Jam Assortment', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Sweden (SE)', oras: 'Helsingborg', suvenir: 'Helsingborg Maritime Museum Pass', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Sweden (SE)', oras: 'Helsingborg', suvenir: 'Swedish Berry Jam Assortment', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Sweden (SE)', oras: 'Helsingborg', suvenir: 'Helsingborg Maritime Museum Pass', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Lund
 { tara: 'Sweden (SE)', oras: 'Lund', suvenir: 'Lund University Emblem Mug', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Sweden (SE)', oras: 'Lund', suvenir: 'Swedish Licorice Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Sweden (SE)', oras: 'Lund', suvenir: 'Lund Botanical Garden Seed Set', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Sweden (SE)', oras: 'Lund', suvenir: 'Swedish Licorice Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Sweden (SE)', oras: 'Lund', suvenir: 'Lund Botanical Garden Seed Set', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Orebro
 { tara: 'Sweden (SE)', oras: 'Orebro', suvenir: 'Orebro Castle Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Sweden (SE)', oras: 'Orebro', suvenir: 'Swedish Silver Jewelry', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Sweden (SE)', oras: 'Orebro', suvenir: 'Orebro Local Craft Beer Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Sweden (SE)', oras: 'Orebro', suvenir: 'Swedish Silver Jewelry', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Sweden (SE)', oras: 'Orebro', suvenir: 'Orebro Local Craft Beer Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Linkoping
 { tara: 'Sweden (SE)', oras: 'Linkoping', suvenir: 'Linkoping Cathedral Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Sweden (SE)', oras: 'Linkoping', suvenir: 'Swedish Dala Horse Figurine', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Sweden (SE)', oras: 'Linkoping', suvenir: 'Linkoping Aviation Museum Pass', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Sweden (SE)', oras: 'Linkoping', suvenir: 'Swedish Dala Horse Figurine', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Sweden (SE)', oras: 'Linkoping', suvenir: 'Linkoping Aviation Museum Pass', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Karlstad
 { tara: 'Sweden (SE)', oras: 'Karlstad', suvenir: 'Karlstad City Hall Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Sweden (SE)', oras: 'Karlstad', suvenir: 'Swedish Reindeer Antler Knife', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Sweden (SE)', oras: 'Karlstad', suvenir: 'Karlstad Lake Cruise Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Sweden (SE)', oras: 'Karlstad', suvenir: 'Swedish Reindeer Antler Knife', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Sweden (SE)', oras: 'Karlstad', suvenir: 'Karlstad Lake Cruise Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Copenhagen
 { tara: 'Denmark (DK)', oras: 'Copenhagen', suvenir: 'Copenhagen Little Mermaid Statue Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Denmark (DK)', oras: 'Copenhagen', suvenir: 'Danish Pastries Assortment', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Denmark (DK)', oras: 'Copenhagen', suvenir: 'Copenhagen Tivoli Gardens Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Denmark (DK)', oras: 'Copenhagen', suvenir: 'Danish Pastries Assortment', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Denmark (DK)', oras: 'Copenhagen', suvenir: 'Copenhagen Tivoli Gardens Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Aarhus
 { tara: 'Denmark (DK)', oras: 'Aarhus', suvenir: 'Aarhus Old Town Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Denmark (DK)', oras: 'Aarhus', suvenir: 'Danish Design Tea Set', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Denmark (DK)', oras: 'Aarhus', suvenir: 'Aarhus Viking Museum Pass', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Denmark (DK)', oras: 'Aarhus', suvenir: 'Danish Design Tea Set', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Denmark (DK)', oras: 'Aarhus', suvenir: 'Aarhus Viking Museum Pass', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Odense
 { tara: 'Denmark (DK)', oras: 'Odense', suvenir: 'Odense Hans Christian Andersen Book', categorie: 'Books', destinatari: ['family', 'friend'] },
-{ tara: 'Denmark (DK)', oras: 'Odense', suvenir: 'Danish Ceramic Tableware Set', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Denmark (DK)', oras: 'Odense', suvenir: 'Odense Funen Village Entrance Pass', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Denmark (DK)', oras: 'Odense', suvenir: 'Danish Ceramic Tableware Set', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Denmark (DK)', oras: 'Odense', suvenir: 'Odense Funen Village Entrance Pass', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Aalborg
 { tara: 'Denmark (DK)', oras: 'Aalborg', suvenir: 'Aalborg Historical Museum Ticket', categorie: 'Experience', destinatari: ['family', 'friend'] },
-{ tara: 'Denmark (DK)', oras: 'Aalborg', suvenir: 'Danish Craft Beer Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Denmark (DK)', oras: 'Aalborg', suvenir: 'Aalborg Viking Ship Model', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Denmark (DK)', oras: 'Aalborg', suvenir: 'Danish Craft Beer Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Denmark (DK)', oras: 'Aalborg', suvenir: 'Aalborg Viking Ship Model', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Esbjerg
 { tara: 'Denmark (DK)', oras: 'Esbjerg', suvenir: 'Esbjerg Fisheries and Maritime Museum Pass', categorie: 'Experience', destinatari: ['family', 'friend'] },
-{ tara: 'Denmark (DK)', oras: 'Esbjerg', suvenir: 'Danish Smoked Fish Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Denmark (DK)', oras: 'Esbjerg', suvenir: 'Esbjerg Windmill Model', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Denmark (DK)', oras: 'Esbjerg', suvenir: 'Danish Smoked Fish Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Denmark (DK)', oras: 'Esbjerg', suvenir: 'Esbjerg Windmill Model', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Roskilde
 { tara: 'Denmark (DK)', oras: 'Roskilde', suvenir: 'Roskilde Viking Ship Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Denmark (DK)', oras: 'Roskilde', suvenir: 'Danish Cheese Assortment', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Denmark (DK)', oras: 'Roskilde', suvenir: 'Roskilde Cathedral Model', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Denmark (DK)', oras: 'Roskilde', suvenir: 'Danish Cheese Assortment', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Denmark (DK)', oras: 'Roskilde', suvenir: 'Roskilde Cathedral Model', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Helsingor
 { tara: 'Denmark (DK)', oras: 'Helsingor', suvenir: 'Helsingor Kronborg Castle Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Denmark (DK)', oras: 'Helsingor', suvenir: 'Danish Liquorice Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Denmark (DK)', oras: 'Helsingor', suvenir: 'Helsingor Maritime Museum Pass', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Denmark (DK)', oras: 'Helsingor', suvenir: 'Danish Liquorice Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Denmark (DK)', oras: 'Helsingor', suvenir: 'Helsingor Maritime Museum Pass', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Kolding
 { tara: 'Denmark (DK)', oras: 'Kolding', suvenir: 'Koldinghus Castle Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Denmark (DK)', oras: 'Kolding', suvenir: 'Danish Glassware Set', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Denmark (DK)', oras: 'Kolding', suvenir: 'Kolding Scandinavian Design Book', categorie: 'Books', destinatari: ['family', 'lover'] },
+{ tara: 'Denmark (DK)', oras: 'Kolding', suvenir: 'Danish Glassware Set', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Denmark (DK)', oras: 'Kolding', suvenir: 'Kolding Scandinavian Design Book', categorie: 'Books', destinatari: ['acquaintance', 'relative'] },
 
 // Viborg
 { tara: 'Denmark (DK)', oras: 'Viborg', suvenir: 'Viborg Cathedral Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Denmark (DK)', oras: 'Viborg', suvenir: 'Danish Viking Ship Figurine', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Denmark (DK)', oras: 'Viborg', suvenir: 'Viborg Historical Museum Pass', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Denmark (DK)', oras: 'Viborg', suvenir: 'Danish Viking Ship Figurine', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Denmark (DK)', oras: 'Viborg', suvenir: 'Viborg Historical Museum Pass', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Randers
 { tara: 'Denmark (DK)', oras: 'Randers', suvenir: 'Randers Rainforest Zoo Pass', categorie: 'Experience', destinatari: ['family', 'friend'] },
-{ tara: 'Denmark (DK)', oras: 'Randers', suvenir: 'Danish Organic Beer Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Denmark (DK)', oras: 'Randers', suvenir: 'Randers Viking Ship Model', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Denmark (DK)', oras: 'Randers', suvenir: 'Danish Organic Beer Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Denmark (DK)', oras: 'Randers', suvenir: 'Randers Viking Ship Model', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Cairo
 { tara: 'Egypt (EG)', oras: 'Cairo', suvenir: 'Pyramid Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Egypt (EG)', oras: 'Cairo', suvenir: 'Egyptian Papyrus Painting', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Egypt (EG)', oras: 'Cairo', suvenir: 'Cairo Spice Mix Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Egypt (EG)', oras: 'Cairo', suvenir: 'Egyptian Papyrus Painting', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Egypt (EG)', oras: 'Cairo', suvenir: 'Cairo Spice Mix Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Luxor
 { tara: 'Egypt (EG)', oras: 'Luxor', suvenir: 'Luxor Temple Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Egypt (EG)', oras: 'Luxor', suvenir: 'Egyptian Hieroglyphic Keychain', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Egypt (EG)', oras: 'Luxor', suvenir: 'Luxor Antiquities Book', categorie: 'Books', destinatari: ['family', 'lover'] },
+{ tara: 'Egypt (EG)', oras: 'Luxor', suvenir: 'Egyptian Hieroglyphic Keychain', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Egypt (EG)', oras: 'Luxor', suvenir: 'Luxor Antiquities Book', categorie: 'Books', destinatari: ['acquaintance', 'relative'] },
 
 // Aswan
 { tara: 'Egypt (EG)', oras: 'Aswan', suvenir: 'Aswan Dam Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Egypt (EG)', oras: 'Aswan', suvenir: 'Nubian Jewelry Set', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Egypt (EG)', oras: 'Aswan', suvenir: 'Aswan Tea Blend', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Egypt (EG)', oras: 'Aswan', suvenir: 'Nubian Jewelry Set', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Egypt (EG)', oras: 'Aswan', suvenir: 'Aswan Tea Blend', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Alexandria
 { tara: 'Egypt (EG)', oras: 'Alexandria', suvenir: 'Alexandria Lighthouse Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Egypt (EG)', oras: 'Alexandria', suvenir: 'Egyptian Cotton Clothing', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Egypt (EG)', oras: 'Alexandria', suvenir: 'Alexandria Mediterranean Spice Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Egypt (EG)', oras: 'Alexandria', suvenir: 'Egyptian Cotton Clothing', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Egypt (EG)', oras: 'Alexandria', suvenir: 'Alexandria Mediterranean Spice Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Sharm El Sheikh
 { tara: 'Egypt (EG)', oras: 'Sharm El Sheikh', suvenir: 'Red Sea Coral Jewelry', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Egypt (EG)', oras: 'Sharm El Sheikh', suvenir: 'Bedouin Handcrafted Rug', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Egypt (EG)', oras: 'Sharm El Sheikh', suvenir: 'Sharm El Sheikh Resort Spa Package', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Egypt (EG)', oras: 'Sharm El Sheikh', suvenir: 'Bedouin Handcrafted Rug', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Egypt (EG)', oras: 'Sharm El Sheikh', suvenir: 'Sharm El Sheikh Resort Spa Package', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Hurghada
 { tara: 'Egypt (EG)', oras: 'Hurghada', suvenir: 'Red Sea Shell Necklace', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Egypt (EG)', oras: 'Hurghada', suvenir: 'Hurghada Coral Reef Poster', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Egypt (EG)', oras: 'Hurghada', suvenir: 'Egyptian Sandalwood Incense', categorie: 'Home', destinatari: ['family', 'lover'] },
+{ tara: 'Egypt (EG)', oras: 'Hurghada', suvenir: 'Hurghada Coral Reef Poster', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Egypt (EG)', oras: 'Hurghada', suvenir: 'Egyptian Sandalwood Incense', categorie: 'Home', destinatari: ['acquaintance', 'relative'] },
 
 // Giza
 { tara: 'Egypt (EG)', oras: 'Giza', suvenir: 'Giza Pyramids Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Egypt (EG)', oras: 'Giza', suvenir: 'Egyptian Scarab Beetle Pendant', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Egypt (EG)', oras: 'Giza', suvenir: 'Giza Egyptian Cotton Bedding Set', categorie: 'Home', destinatari: ['family', 'lover'] },
+{ tara: 'Egypt (EG)', oras: 'Giza', suvenir: 'Egyptian Scarab Beetle Pendant', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Egypt (EG)', oras: 'Giza', suvenir: 'Giza Egyptian Cotton Bedding Set', categorie: 'Home', destinatari: ['acquaintance', 'relative'] },
 
 // Dahab
 { tara: 'Egypt (EG)', oras: 'Dahab', suvenir: 'Dahab Desert Sand Bottle', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Egypt (EG)', oras: 'Dahab', suvenir: 'Bedouin Handwoven Shawl', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Egypt (EG)', oras: 'Dahab', suvenir: 'Dahab Diving Safari Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Egypt (EG)', oras: 'Dahab', suvenir: 'Bedouin Handwoven Shawl', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Egypt (EG)', oras: 'Dahab', suvenir: 'Dahab Diving Safari Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Marsa Alam
 { tara: 'Egypt (EG)', oras: 'Marsa Alam', suvenir: 'Marsa Alam Dolphin Encounter', categorie: 'Experience', destinatari: ['family', 'friend'] },
-{ tara: 'Egypt (EG)', oras: 'Marsa Alam', suvenir: 'Red Sea Coral Reef Painting', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Egypt (EG)', oras: 'Marsa Alam', suvenir: 'Marsa Alam Sea Salt Scrub', categorie: 'Beauty', destinatari: ['family', 'lover'] },
+{ tara: 'Egypt (EG)', oras: 'Marsa Alam', suvenir: 'Red Sea Coral Reef Painting', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Egypt (EG)', oras: 'Marsa Alam', suvenir: 'Marsa Alam Sea Salt Scrub', categorie: 'Beauty', destinatari: ['acquaintance', 'relative'] },
 
 // El Gouna
 { tara: 'Egypt (EG)', oras: 'El Gouna', suvenir: 'El Gouna Resort Beach Towel', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Egypt (EG)', oras: 'El Gouna', suvenir: 'El Gouna Glass Bottom Boat Tour', categorie: 'Experience', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Egypt (EG)', oras: 'El Gouna', suvenir: 'Red Sea Fish Identification Guide', categorie: 'Books', destinatari: ['family', 'lover'] },
+{ tara: 'Egypt (EG)', oras: 'El Gouna', suvenir: 'El Gouna Glass Bottom Boat Tour', categorie: 'Experience', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Egypt (EG)', oras: 'El Gouna', suvenir: 'Red Sea Fish Identification Guide', categorie: 'Books', destinatari: ['acquaintance', 'relative'] },
 
 // Dubrovnik
 { tara: 'Croatia (HR)', oras: 'Dubrovnik', suvenir: 'Dubrovnik Old Town Map', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Croatia (HR)', oras: 'Dubrovnik', suvenir: 'Dubrovnik Game of Thrones Tour Ticket', categorie: 'Experience', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Croatia (HR)', oras: 'Dubrovnik', suvenir: 'Dalmatian Fig Spread', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Croatia (HR)', oras: 'Dubrovnik', suvenir: 'Dubrovnik Game of Thrones Tour Ticket', categorie: 'Experience', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Croatia (HR)', oras: 'Dubrovnik', suvenir: 'Dalmatian Fig Spread', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Split
 { tara: 'Croatia (HR)', oras: 'Split', suvenir: 'Diocletian s Palace Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Croatia (HR)', oras: 'Split', suvenir: 'Split Marjan Hill Hiking Guide', categorie: 'Books', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Croatia (HR)', oras: 'Split', suvenir: 'Dalmatian Olive Oil Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Croatia (HR)', oras: 'Split', suvenir: 'Split Marjan Hill Hiking Guide', categorie: 'Books', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Croatia (HR)', oras: 'Split', suvenir: 'Dalmatian Olive Oil Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Zagreb
 { tara: 'Croatia (HR)', oras: 'Zagreb', suvenir: 'Zagreb Upper Town Sketch', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Croatia (HR)', oras: 'Zagreb', suvenir: 'Zagreb Dolac Market Cookbook', categorie: 'Books', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Croatia (HR)', oras: 'Zagreb', suvenir: 'Zagreb Licitar Heart', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Croatia (HR)', oras: 'Zagreb', suvenir: 'Zagreb Dolac Market Cookbook', categorie: 'Books', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Croatia (HR)', oras: 'Zagreb', suvenir: 'Zagreb Licitar Heart', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Zadar
 { tara: 'Croatia (HR)', oras: 'Zadar', suvenir: 'Zadar Sea Organ Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Croatia (HR)', oras: 'Zadar', suvenir: 'Maraschino Cherry Liqueur', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Croatia (HR)', oras: 'Zadar', suvenir: 'Zadar Sunset Painting', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Croatia (HR)', oras: 'Zadar', suvenir: 'Maraschino Cherry Liqueur', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Croatia (HR)', oras: 'Zadar', suvenir: 'Zadar Sunset Painting', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Rovinj
 { tara: 'Croatia (HR)', oras: 'Rovinj', suvenir: 'Rovinj Old Town Canvas Print', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Croatia (HR)', oras: 'Rovinj', suvenir: 'Istrian Truffle Oil', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Croatia (HR)', oras: 'Rovinj', suvenir: 'Rovinj Seaside Ceramic Plate', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Croatia (HR)', oras: 'Rovinj', suvenir: 'Istrian Truffle Oil', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Croatia (HR)', oras: 'Rovinj', suvenir: 'Rovinj Seaside Ceramic Plate', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Pula
 { tara: 'Croatia (HR)', oras: 'Pula', suvenir: 'Pula Roman Amphitheatre Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Croatia (HR)', oras: 'Pula', suvenir: 'Istrian Olive Wood Cutting Board', categorie: 'Home', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Croatia (HR)', oras: 'Pula', suvenir: 'Pula Arena Postcard Set', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Croatia (HR)', oras: 'Pula', suvenir: 'Istrian Olive Wood Cutting Board', categorie: 'Home', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Croatia (HR)', oras: 'Pula', suvenir: 'Pula Arena Postcard Set', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Sibenik
 { tara: 'Croatia (HR)', oras: 'Sibenik', suvenir: 'Sibenik Cathedral Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Croatia (HR)', oras: 'Sibenik', suvenir: 'Dalmatian Prosciutto Gift Box', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Croatia (HR)', oras: 'Sibenik', suvenir: 'Sibenik Seafront Painting', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Croatia (HR)', oras: 'Sibenik', suvenir: 'Dalmatian Prosciutto Gift Box', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Croatia (HR)', oras: 'Sibenik', suvenir: 'Sibenik Seafront Painting', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Trogir
 { tara: 'Croatia (HR)', oras: 'Trogir', suvenir: 'Trogir Old Town Sketch', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Croatia (HR)', oras: 'Trogir', suvenir: 'Dalmatian Red Wine Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Croatia (HR)', oras: 'Trogir', suvenir: 'Trogir Historic Buildings Calendar', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Croatia (HR)', oras: 'Trogir', suvenir: 'Dalmatian Red Wine Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Croatia (HR)', oras: 'Trogir', suvenir: 'Trogir Historic Buildings Calendar', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Hvar
 { tara: 'Croatia (HR)', oras: 'Hvar', suvenir: 'Hvar Lavender Soap Set', categorie: 'Beauty', destinatari: ['family', 'friend'] },
-{ tara: 'Croatia (HR)', oras: 'Hvar', suvenir: 'Hvar Island Olive Oil', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Croatia (HR)', oras: 'Hvar', suvenir: 'Hvar Vineyard Tour Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Croatia (HR)', oras: 'Hvar', suvenir: 'Hvar Island Olive Oil', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Croatia (HR)', oras: 'Hvar', suvenir: 'Hvar Vineyard Tour Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Osijek
 { tara: 'Croatia (HR)', oras: 'Osijek', suvenir: 'Osijek Fortress Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Croatia (HR)', oras: 'Osijek', suvenir: 'Slavonian Honey Wine', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Croatia (HR)', oras: 'Osijek', suvenir: 'Osijek Traditional Embroidery', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Croatia (HR)', oras: 'Osijek', suvenir: 'Slavonian Honey Wine', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Croatia (HR)', oras: 'Osijek', suvenir: 'Osijek Traditional Embroidery', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Oslo
 { tara: 'Norway (NO)', oras: 'Oslo', suvenir: 'Oslo Opera House Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Norway (NO)', oras: 'Oslo', suvenir: 'Norwegian Salmon Sampler', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Norway (NO)', oras: 'Oslo', suvenir: 'Viking Ship Museum Poster', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Norway (NO)', oras: 'Oslo', suvenir: 'Norwegian Salmon Sampler', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Norway (NO)', oras: 'Oslo', suvenir: 'Viking Ship Museum Poster', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Bergen
 { tara: 'Norway (NO)', oras: 'Bergen', suvenir: 'Bryggen Hanseatic Wharf Sketch', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Norway (NO)', oras: 'Bergen', suvenir: 'Norwegian Seafood Cookbook', categorie: 'Books', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Norway (NO)', oras: 'Bergen', suvenir: 'Bergen Rain Poncho', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Norway (NO)', oras: 'Bergen', suvenir: 'Norwegian Seafood Cookbook', categorie: 'Books', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Norway (NO)', oras: 'Bergen', suvenir: 'Bergen Rain Poncho', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Stavanger
 { tara: 'Norway (NO)', oras: 'Stavanger', suvenir: 'Stavanger Old Town Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Norway (NO)', oras: 'Stavanger', suvenir: 'Norwegian Knit Sweater', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Norway (NO)', oras: 'Stavanger', suvenir: 'Stavanger Sardines Tin', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Norway (NO)', oras: 'Stavanger', suvenir: 'Norwegian Knit Sweater', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Norway (NO)', oras: 'Stavanger', suvenir: 'Stavanger Sardines Tin', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Trondheim
 { tara: 'Norway (NO)', oras: 'Trondheim', suvenir: 'Trondheim Nidaros Cathedral Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Norway (NO)', oras: 'Trondheim', suvenir: 'Norwegian Forest Berries Jam', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Norway (NO)', oras: 'Trondheim', suvenir: 'Trondheim Fjord Cruise Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Norway (NO)', oras: 'Trondheim', suvenir: 'Norwegian Forest Berries Jam', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Norway (NO)', oras: 'Trondheim', suvenir: 'Trondheim Fjord Cruise Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Tromso
 { tara: 'Norway (NO)', oras: 'Tromso', suvenir: 'Tromso Northern Lights Art Print', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Norway (NO)', oras: 'Tromso', suvenir: 'Tromso Arctic Snow Globe', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Norway (NO)', oras: 'Tromso', suvenir: 'Norwegian Reindeer Salami', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Norway (NO)', oras: 'Tromso', suvenir: 'Tromso Arctic Snow Globe', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Norway (NO)', oras: 'Tromso', suvenir: 'Norwegian Reindeer Salami', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Alesund
 { tara: 'Norway (NO)', oras: 'Alesund', suvenir: 'Alesund Art Nouveau Architecture Poster', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Norway (NO)', oras: 'Alesund', suvenir: 'Norwegian Aquavit Set', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Norway (NO)', oras: 'Alesund', suvenir: 'Alesund Lighthouse Miniature', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Norway (NO)', oras: 'Alesund', suvenir: 'Norwegian Aquavit Set', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Norway (NO)', oras: 'Alesund', suvenir: 'Alesund Lighthouse Miniature', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Kristiansand
 { tara: 'Norway (NO)', oras: 'Kristiansand', suvenir: 'Kristiansand Sailboat Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Norway (NO)', oras: 'Kristiansand', suvenir: 'Norwegian Salmon Jerky', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Norway (NO)', oras: 'Kristiansand', suvenir: 'Kristiansand Maritime Museum Pass', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Norway (NO)', oras: 'Kristiansand', suvenir: 'Norwegian Salmon Jerky', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Norway (NO)', oras: 'Kristiansand', suvenir: 'Kristiansand Maritime Museum Pass', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Drammen
 { tara: 'Norway (NO)', oras: 'Drammen', suvenir: 'Drammen Glassworks Art Piece', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Norway (NO)', oras: 'Drammen', suvenir: 'Norwegian Aquavit Glass Set', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Norway (NO)', oras: 'Drammen', suvenir: 'Drammen Riverfront Painting', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Norway (NO)', oras: 'Drammen', suvenir: 'Norwegian Aquavit Glass Set', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Norway (NO)', oras: 'Drammen', suvenir: 'Drammen Riverfront Painting', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Bodo
 { tara: 'Norway (NO)', oras: 'Bodo', suvenir: 'Bodo Northern Lights Canvas', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Norway (NO)', oras: 'Bodo', suvenir: 'Bodo Arctic Char Fillet', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Norway (NO)', oras: 'Bodo', suvenir: 'Bodo Polar Bear Plush Toy', categorie: 'Toys', destinatari: ['family', 'lover'] },
+{ tara: 'Norway (NO)', oras: 'Bodo', suvenir: 'Bodo Arctic Char Fillet', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Norway (NO)', oras: 'Bodo', suvenir: 'Bodo Polar Bear Plush Toy', categorie: 'Toys', destinatari: ['acquaintance', 'relative'] },
 
 // Lillehammer
 { tara: 'Norway (NO)', oras: 'Lillehammer', suvenir: 'Lillehammer Ski Jump Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Norway (NO)', oras: 'Lillehammer', suvenir: 'Norwegian Elk Jerky', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Norway (NO)', oras: 'Lillehammer', suvenir: 'Lillehammer Winter Sports Museum Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Norway (NO)', oras: 'Lillehammer', suvenir: 'Norwegian Elk Jerky', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Norway (NO)', oras: 'Lillehammer', suvenir: 'Lillehammer Winter Sports Museum Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Bali (Denpasar)
 { tara: 'Indonesia (ID)', oras: 'Bali (Denpasar)', suvenir: 'Balinese Batik Fabric', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Indonesia (ID)', oras: 'Bali (Denpasar)', suvenir: 'Ubud Hand-carved Mask', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Indonesia (ID)', oras: 'Bali (Denpasar)', suvenir: 'Bali Coffee Beans', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Indonesia (ID)', oras: 'Bali (Denpasar)', suvenir: 'Ubud Hand-carved Mask', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Indonesia (ID)', oras: 'Bali (Denpasar)', suvenir: 'Bali Coffee Beans', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Jakarta
 { tara: 'Indonesia (ID)', oras: 'Jakarta', suvenir: 'Jakarta Skyline Poster', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Indonesia (ID)', oras: 'Jakarta', suvenir: 'Indonesian Batik Scarf', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Indonesia (ID)', oras: 'Jakarta', suvenir: 'Jakarta Street Food Sampler', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Indonesia (ID)', oras: 'Jakarta', suvenir: 'Indonesian Batik Scarf', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Indonesia (ID)', oras: 'Jakarta', suvenir: 'Jakarta Street Food Sampler', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Yogyakarta
 { tara: 'Indonesia (ID)', oras: 'Yogyakarta', suvenir: 'Borobudur Temple Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Indonesia (ID)', oras: 'Yogyakarta', suvenir: 'Wayang Kulit (Shadow Puppet)', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Indonesia (ID)', oras: 'Yogyakarta', suvenir: 'Yogyakarta Batik Painting', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Indonesia (ID)', oras: 'Yogyakarta', suvenir: 'Wayang Kulit (Shadow Puppet)', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Indonesia (ID)', oras: 'Yogyakarta', suvenir: 'Yogyakarta Batik Painting', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Surabaya
 { tara: 'Indonesia (ID)', oras: 'Surabaya', suvenir: 'Surabaya Ceramic Vase', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Indonesia (ID)', oras: 'Surabaya', suvenir: 'Madura Batik Shirt', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Indonesia (ID)', oras: 'Surabaya', suvenir: 'East Javanese Snacks Assortment', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Indonesia (ID)', oras: 'Surabaya', suvenir: 'Madura Batik Shirt', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Indonesia (ID)', oras: 'Surabaya', suvenir: 'East Javanese Snacks Assortment', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Bandung
 { tara: 'Indonesia (ID)', oras: 'Bandung', suvenir: 'Bandung Geometric Art Print', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Indonesia (ID)', oras: 'Bandung', suvenir: 'Bandung Traditional Shawl', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Indonesia (ID)', oras: 'Bandung', suvenir: 'Bandung Tea Sampler', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Indonesia (ID)', oras: 'Bandung', suvenir: 'Bandung Traditional Shawl', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Indonesia (ID)', oras: 'Bandung', suvenir: 'Bandung Tea Sampler', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Medan
 { tara: 'Indonesia (ID)', oras: 'Medan', suvenir: 'Medan Toba Lake Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Indonesia (ID)', oras: 'Medan', suvenir: 'Batak Hand-carved Mask', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Indonesia (ID)', oras: 'Medan', suvenir: 'Medan Durian Chocolate Box', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Indonesia (ID)', oras: 'Medan', suvenir: 'Batak Hand-carved Mask', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Indonesia (ID)', oras: 'Medan', suvenir: 'Medan Durian Chocolate Box', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Lombok
 { tara: 'Indonesia (ID)', oras: 'Lombok', suvenir: 'Lombok Beach Sand Bottle', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Indonesia (ID)', oras: 'Lombok', suvenir: 'Sasak Hand-woven Textile', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Indonesia (ID)', oras: 'Lombok', suvenir: 'Lombok Sea Salt', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Indonesia (ID)', oras: 'Lombok', suvenir: 'Sasak Hand-woven Textile', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Indonesia (ID)', oras: 'Lombok', suvenir: 'Lombok Sea Salt', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Makassar
 { tara: 'Indonesia (ID)', oras: 'Makassar', suvenir: 'Makassar Traditional Boat Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Indonesia (ID)', oras: 'Makassar', suvenir: 'South Sulawesi Batik Pillow Case', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Indonesia (ID)', oras: 'Makassar', suvenir: 'Makassar Spices Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Indonesia (ID)', oras: 'Makassar', suvenir: 'South Sulawesi Batik Pillow Case', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Indonesia (ID)', oras: 'Makassar', suvenir: 'Makassar Spices Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Batam
 { tara: 'Indonesia (ID)', oras: 'Batam', suvenir: 'Batam Local Handicraft', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Indonesia (ID)', oras: 'Batam', suvenir: 'Batam Handmade Batik Scarf', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Indonesia (ID)', oras: 'Batam', suvenir: 'Batam Pineapple Tarts', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Indonesia (ID)', oras: 'Batam', suvenir: 'Batam Handmade Batik Scarf', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Indonesia (ID)', oras: 'Batam', suvenir: 'Batam Pineapple Tarts', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Semarang
 { tara: 'Indonesia (ID)', oras: 'Semarang', suvenir: 'Semarang Old Town Sketch', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Indonesia (ID)', oras: 'Semarang', suvenir: 'Javanese Batik Table Runner', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Indonesia (ID)', oras: 'Semarang', suvenir: 'Semarang Kopi Luwak Coffee', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Indonesia (ID)', oras: 'Semarang', suvenir: 'Javanese Batik Table Runner', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Indonesia (ID)', oras: 'Semarang', suvenir: 'Semarang Kopi Luwak Coffee', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Dublin
 { tara: 'Ireland (IE)', oras: 'Dublin', suvenir: 'Dublin Guinness Storehouse Mug', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Ireland (IE)', oras: 'Dublin', suvenir: 'Irish Wool Sweater', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Ireland (IE)', oras: 'Dublin', suvenir: 'Irish Whiskey Selection', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Ireland (IE)', oras: 'Dublin', suvenir: 'Irish Wool Sweater', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Ireland (IE)', oras: 'Dublin', suvenir: 'Irish Whiskey Selection', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Galway
 { tara: 'Ireland (IE)', oras: 'Galway', suvenir: 'Galway Claddagh Ring', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Ireland (IE)', oras: 'Galway', suvenir: 'Connemara Marble Necklace', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Ireland (IE)', oras: 'Galway', suvenir: 'Galway Bay Smoked Salmon', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Ireland (IE)', oras: 'Galway', suvenir: 'Connemara Marble Necklace', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Ireland (IE)', oras: 'Galway', suvenir: 'Galway Bay Smoked Salmon', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Cork
 { tara: 'Ireland (IE)', oras: 'Cork', suvenir: 'Cork Cityscape Print', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Ireland (IE)', oras: 'Cork', suvenir: 'Cork Crystal Wine Glasses', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Ireland (IE)', oras: 'Cork', suvenir: 'Cork Whiskey Cake', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Ireland (IE)', oras: 'Cork', suvenir: 'Cork Crystal Wine Glasses', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Ireland (IE)', oras: 'Cork', suvenir: 'Cork Whiskey Cake', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Killarney
 { tara: 'Ireland (IE)', oras: 'Killarney', suvenir: 'Killarney National Park Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Ireland (IE)', oras: 'Killarney', suvenir: 'Irish Linen Scarf', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Ireland (IE)', oras: 'Killarney', suvenir: 'Killarney Chocolate Truffles', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Ireland (IE)', oras: 'Killarney', suvenir: 'Irish Linen Scarf', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Ireland (IE)', oras: 'Killarney', suvenir: 'Killarney Chocolate Truffles', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Limerick
 { tara: 'Ireland (IE)', oras: 'Limerick', suvenir: 'Limerick Georgian Architecture Print', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Ireland (IE)', oras: 'Limerick', suvenir: 'Limerick Lace Handkerchief', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Ireland (IE)', oras: 'Limerick', suvenir: 'Limerick Hamper with Irish Cheese', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Ireland (IE)', oras: 'Limerick', suvenir: 'Limerick Lace Handkerchief', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Ireland (IE)', oras: 'Limerick', suvenir: 'Limerick Hamper with Irish Cheese', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Waterford
 { tara: 'Ireland (IE)', oras: 'Waterford', suvenir: 'Waterford Crystal Vase', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Ireland (IE)', oras: 'Waterford', suvenir: 'Waterford Crystal Jewelry', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Ireland (IE)', oras: 'Waterford', suvenir: 'Waterford Blaa Bread Mix', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Ireland (IE)', oras: 'Waterford', suvenir: 'Waterford Crystal Jewelry', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Ireland (IE)', oras: 'Waterford', suvenir: 'Waterford Blaa Bread Mix', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Kilkenny
 { tara: 'Ireland (IE)', oras: 'Kilkenny', suvenir: 'Kilkenny Castle Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Ireland (IE)', oras: 'Kilkenny', suvenir: 'Irish Craft Beer Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Ireland (IE)', oras: 'Kilkenny', suvenir: 'Kilkenny Traditional Hurling Ball', categorie: 'Sport', destinatari: ['family', 'lover'] },
+{ tara: 'Ireland (IE)', oras: 'Kilkenny', suvenir: 'Irish Craft Beer Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Ireland (IE)', oras: 'Kilkenny', suvenir: 'Kilkenny Traditional Hurling Ball', categorie: 'Sport', destinatari: ['acquaintance', 'relative'] },
 
 // Sligo
 { tara: 'Ireland (IE)', oras: 'Sligo', suvenir: 'Sligo Landscape Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Ireland (IE)', oras: 'Sligo', suvenir: 'Sligo Handcrafted Pottery', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Ireland (IE)', oras: 'Sligo', suvenir: 'Sligo Irish Seaweed Bath Set', categorie: 'Beauty', destinatari: ['family', 'lover'] },
+{ tara: 'Ireland (IE)', oras: 'Sligo', suvenir: 'Sligo Handcrafted Pottery', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Ireland (IE)', oras: 'Sligo', suvenir: 'Sligo Irish Seaweed Bath Set', categorie: 'Beauty', destinatari: ['acquaintance', 'relative'] },
 
 // Dingle
 { tara: 'Ireland (IE)', oras: 'Dingle', suvenir: 'Dingle Peninsula Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Ireland (IE)', oras: 'Dingle', suvenir: 'Dingle Sheep Wool Throw', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Ireland (IE)', oras: 'Dingle', suvenir: 'Dingle Peninsula Sea Salt', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Ireland (IE)', oras: 'Dingle', suvenir: 'Dingle Sheep Wool Throw', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Ireland (IE)', oras: 'Dingle', suvenir: 'Dingle Peninsula Sea Salt', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Westport
 { tara: 'Ireland (IE)', oras: 'Westport', suvenir: 'Westport Harbour Watercolor Print', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Ireland (IE)', oras: 'Westport', suvenir: 'Westport Hand-knit Aran Sweater', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Ireland (IE)', oras: 'Westport', suvenir: 'Westport Whiskey Tasting Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Ireland (IE)', oras: 'Westport', suvenir: 'Westport Hand-knit Aran Sweater', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Ireland (IE)', oras: 'Westport', suvenir: 'Westport Whiskey Tasting Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Bucharest
 { tara: 'Romania (RO)', oras: 'Bucharest', suvenir: 'Bucharest Old Town Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Romania (RO)', oras: 'Bucharest', suvenir: 'Romanian Traditional Blouse', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Romania (RO)', oras: 'Bucharest', suvenir: 'Romanian Wine Selection', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Romania (RO)', oras: 'Bucharest', suvenir: 'Romanian Traditional Blouse', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Romania (RO)', oras: 'Bucharest', suvenir: 'Romanian Wine Selection', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Cluj-Napoca
 { tara: 'Romania (RO)', oras: 'Cluj-Napoca', suvenir: 'Cluj-Napoca Botanical Garden Print', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Romania (RO)', oras: 'Cluj-Napoca', suvenir: 'Transylvanian Wooden Spoon Set', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Romania (RO)', oras: 'Cluj-Napoca', suvenir: 'Cluj-Napoca Cheese Platter', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Romania (RO)', oras: 'Cluj-Napoca', suvenir: 'Transylvanian Wooden Spoon Set', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Romania (RO)', oras: 'Cluj-Napoca', suvenir: 'Cluj-Napoca Cheese Platter', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Brasov
 { tara: 'Romania (RO)', oras: 'Brasov', suvenir: 'Brasov Black Church Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Romania (RO)', oras: 'Brasov', suvenir: 'Romanian Dracula T-shirt', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Romania (RO)', oras: 'Brasov', suvenir: 'Brasov Chocolate Box', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Romania (RO)', oras: 'Brasov', suvenir: 'Romanian Dracula T-shirt', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Romania (RO)', oras: 'Brasov', suvenir: 'Brasov Chocolate Box', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Sibiu
 { tara: 'Romania (RO)', oras: 'Sibiu', suvenir: 'Sibiu Bridge of Lies Art Print', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Romania (RO)', oras: 'Sibiu', suvenir: 'Saxon Transylvanian Cuckoo Clock', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Romania (RO)', oras: 'Sibiu', suvenir: 'Sibiu Transylvanian Wine Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Romania (RO)', oras: 'Sibiu', suvenir: 'Saxon Transylvanian Cuckoo Clock', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Romania (RO)', oras: 'Sibiu', suvenir: 'Sibiu Transylvanian Wine Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Timisoara
 { tara: 'Romania (RO)', oras: 'Timisoara', suvenir: 'Timisoara Opera House Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Romania (RO)', oras: 'Timisoara', suvenir: 'Banat Traditional Ceramic Plate', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Romania (RO)', oras: 'Timisoara', suvenir: 'Timisoara Paprika Spice Blend', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Romania (RO)', oras: 'Timisoara', suvenir: 'Banat Traditional Ceramic Plate', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Romania (RO)', oras: 'Timisoara', suvenir: 'Timisoara Paprika Spice Blend', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Iasi
 { tara: 'Romania (RO)', oras: 'Iasi', suvenir: 'Iasi Palace of Culture Sketch', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Romania (RO)', oras: 'Iasi', suvenir: 'Moldavian Traditional Embroidery', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Romania (RO)', oras: 'Iasi', suvenir: 'Iasi Sweets Assortment', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Romania (RO)', oras: 'Iasi', suvenir: 'Moldavian Traditional Embroidery', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Romania (RO)', oras: 'Iasi', suvenir: 'Iasi Sweets Assortment', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Constanta
 { tara: 'Romania (RO)', oras: 'Constanta', suvenir: 'Constanta Black Sea Coastline Print', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Romania (RO)', oras: 'Constanta', suvenir: 'Romanian Seashell Jewelry', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Romania (RO)', oras: 'Constanta', suvenir: 'Constanta Sea Salt', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Romania (RO)', oras: 'Constanta', suvenir: 'Romanian Seashell Jewelry', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Romania (RO)', oras: 'Constanta', suvenir: 'Constanta Sea Salt', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Oradea
 { tara: 'Romania (RO)', oras: 'Oradea', suvenir: 'Oradea Art Nouveau Architecture Print', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Romania (RO)', oras: 'Oradea', suvenir: 'Oradea Thermal Bath Soap Set', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Romania (RO)', oras: 'Oradea', suvenir: 'Oradea Mineral Water Collection', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Romania (RO)', oras: 'Oradea', suvenir: 'Oradea Thermal Bath Soap Set', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Romania (RO)', oras: 'Oradea', suvenir: 'Oradea Mineral Water Collection', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Sighisoara
 { tara: 'Romania (RO)', oras: 'Sighisoara', suvenir: 'Sighisoara Clock Tower Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Romania (RO)', oras: 'Sighisoara', suvenir: 'Transylvanian Herbal Tea Sampler', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Romania (RO)', oras: 'Sighisoara', suvenir: 'Sighisoara Medieval Ceramic Mug', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Romania (RO)', oras: 'Sighisoara', suvenir: 'Transylvanian Herbal Tea Sampler', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Romania (RO)', oras: 'Sighisoara', suvenir: 'Sighisoara Medieval Ceramic Mug', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Arad
 { tara: 'Romania (RO)', oras: 'Arad', suvenir: 'Arad Cityscape Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Romania (RO)', oras: 'Arad', suvenir: 'Banat Regional Wine Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Romania (RO)', oras: 'Arad', suvenir: 'Arad Paprika Spice Blend', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Romania (RO)', oras: 'Arad', suvenir: 'Banat Regional Wine Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Romania (RO)', oras: 'Arad', suvenir: 'Arad Paprika Spice Blend', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Brussels
 { tara: 'Belgium (BE)', oras: 'Brussels', suvenir: 'Atomium Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Belgium (BE)', oras: 'Brussels', suvenir: 'Belgian Chocolate Assortment', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Belgium (BE)', oras: 'Brussels', suvenir: 'Manneken Pis Keychain', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Belgium (BE)', oras: 'Brussels', suvenir: 'Belgian Chocolate Assortment', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Belgium (BE)', oras: 'Brussels', suvenir: 'Manneken Pis Keychain', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Bruges
 { tara: 'Belgium (BE)', oras: 'Bruges', suvenir: 'Bruges Canal Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Belgium (BE)', oras: 'Bruges', suvenir: 'Bruges Lace Handkerchief', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Belgium (BE)', oras: 'Bruges', suvenir: 'Bruges Beer Selection', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Belgium (BE)', oras: 'Bruges', suvenir: 'Bruges Lace Handkerchief', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Belgium (BE)', oras: 'Bruges', suvenir: 'Bruges Beer Selection', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Ghent
 { tara: 'Belgium (BE)', oras: 'Ghent', suvenir: 'Ghent Altarpiece Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Belgium (BE)', oras: 'Ghent', suvenir: 'Ghent Floral Arrangement', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Belgium (BE)', oras: 'Ghent', suvenir: 'Ghent Cuberdon Candies', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Belgium (BE)', oras: 'Ghent', suvenir: 'Ghent Floral Arrangement', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Belgium (BE)', oras: 'Ghent', suvenir: 'Ghent Cuberdon Candies', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Antwerp
 { tara: 'Belgium (BE)', oras: 'Antwerp', suvenir: 'Antwerp Diamond Paperweight', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Belgium (BE)', oras: 'Antwerp', suvenir: 'Antwerp Fashion Magazine', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Belgium (BE)', oras: 'Antwerp', suvenir: 'Antwerp Belgian Waffles Mix', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Belgium (BE)', oras: 'Antwerp', suvenir: 'Antwerp Fashion Magazine', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Belgium (BE)', oras: 'Antwerp', suvenir: 'Antwerp Belgian Waffles Mix', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Leuven
 { tara: 'Belgium (BE)', oras: 'Leuven', suvenir: 'Leuven University Hoodie', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Belgium (BE)', oras: 'Leuven', suvenir: 'Leuven Abbey Beer Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Belgium (BE)', oras: 'Leuven', suvenir: 'Leuven Library Poster', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Belgium (BE)', oras: 'Leuven', suvenir: 'Leuven Abbey Beer Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Belgium (BE)', oras: 'Leuven', suvenir: 'Leuven Library Poster', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Liege
 { tara: 'Belgium (BE)', oras: 'Liege', suvenir: 'Liege Cathedral Sketch', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Belgium (BE)', oras: 'Liege', suvenir: 'Liege Pâté Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Belgium (BE)', oras: 'Liege', suvenir: 'Liege Belgian Chocolate Box', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Belgium (BE)', oras: 'Liege', suvenir: 'Liege Pâté Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Belgium (BE)', oras: 'Liege', suvenir: 'Liege Belgian Chocolate Box', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Namur
 { tara: 'Belgium (BE)', oras: 'Namur', suvenir: 'Namur Castle Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Belgium (BE)', oras: 'Namur', suvenir: 'Namur River Cruise Ticket', categorie: 'Experience', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Belgium (BE)', oras: 'Namur', suvenir: 'Namur Beer Sampler', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Belgium (BE)', oras: 'Namur', suvenir: 'Namur River Cruise Ticket', categorie: 'Experience', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Belgium (BE)', oras: 'Namur', suvenir: 'Namur Beer Sampler', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Mechelen
 { tara: 'Belgium (BE)', oras: 'Mechelen', suvenir: 'Mechelen Brewery Glass Set', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Belgium (BE)', oras: 'Mechelen', suvenir: 'Mechelen Lace Tablecloth', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Belgium (BE)', oras: 'Mechelen', suvenir: 'Mechelen Beer and Cheese Pairing Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Belgium (BE)', oras: 'Mechelen', suvenir: 'Mechelen Lace Tablecloth', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Belgium (BE)', oras: 'Mechelen', suvenir: 'Mechelen Beer and Cheese Pairing Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Mons
 { tara: 'Belgium (BE)', oras: 'Mons', suvenir: 'Mons Grand Place Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Belgium (BE)', oras: 'Mons', suvenir: 'Mons Craft Beer Set', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Belgium (BE)', oras: 'Mons', suvenir: 'Mons Chocolate Truffle Box', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Belgium (BE)', oras: 'Mons', suvenir: 'Mons Craft Beer Set', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Belgium (BE)', oras: 'Mons', suvenir: 'Mons Chocolate Truffle Box', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Oostende
 { tara: 'Belgium (BE)', oras: 'Oostende', suvenir: 'Oostende Beach Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Belgium (BE)', oras: 'Oostende', suvenir: 'Oostende Fishermen s Hat', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Belgium (BE)', oras: 'Oostende', suvenir: 'Oostende Seafood Assortment', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Belgium (BE)', oras: 'Oostende', suvenir: 'Oostende Fishermen s Hat', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Belgium (BE)', oras: 'Oostende', suvenir: 'Oostende Seafood Assortment', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Hanoi
 { tara: 'Vietnam (VN)', oras: 'Hanoi', suvenir: 'Hanoi Ceramic Water Puppet', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Vietnam (VN)', oras: 'Hanoi', suvenir: 'Vietnamese Silk Scarf', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Vietnam (VN)', oras: 'Hanoi', suvenir: 'Hanoi Street Food Spice Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Vietnam (VN)', oras: 'Hanoi', suvenir: 'Vietnamese Silk Scarf', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Vietnam (VN)', oras: 'Hanoi', suvenir: 'Hanoi Street Food Spice Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Ho Chi Minh City
 { tara: 'Vietnam (VN)', oras: 'Ho Chi Minh City', suvenir: 'Ho Chi Minh City Skyline Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Vietnam (VN)', oras: 'Ho Chi Minh City', suvenir: 'Vietnamese Coffee Beans', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Vietnam (VN)', oras: 'Ho Chi Minh City', suvenir: 'Ho Chi Minh City Ao Dai (Traditional Dress)', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Vietnam (VN)', oras: 'Ho Chi Minh City', suvenir: 'Vietnamese Coffee Beans', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Vietnam (VN)', oras: 'Ho Chi Minh City', suvenir: 'Ho Chi Minh City Ao Dai (Traditional Dress)', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Hoi An
 { tara: 'Vietnam (VN)', oras: 'Hoi An', suvenir: 'Hoi An Lantern', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Vietnam (VN)', oras: 'Hoi An', suvenir: 'Hoi An Tailored Silk Shirt', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Vietnam (VN)', oras: 'Hoi An', suvenir: 'Hoi An Rice Noodle Basket', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Vietnam (VN)', oras: 'Hoi An', suvenir: 'Hoi An Tailored Silk Shirt', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Vietnam (VN)', oras: 'Hoi An', suvenir: 'Hoi An Rice Noodle Basket', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Da Nang
 { tara: 'Vietnam (VN)', oras: 'Da Nang', suvenir: 'Da Nang Marble Mountain Sculpture', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Vietnam (VN)', oras: 'Da Nang', suvenir: 'Da Nang Sea Shell Jewelry', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Vietnam (VN)', oras: 'Da Nang', suvenir: 'Da Nang Fish Sauce Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Vietnam (VN)', oras: 'Da Nang', suvenir: 'Da Nang Sea Shell Jewelry', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Vietnam (VN)', oras: 'Da Nang', suvenir: 'Da Nang Fish Sauce Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Ha Long
 { tara: 'Vietnam (VN)', oras: 'Ha Long', suvenir: 'Ha Long Bay Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Vietnam (VN)', oras: 'Ha Long', suvenir: 'Ha Long Pearl Jewelry', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Vietnam (VN)', oras: 'Ha Long', suvenir: 'Ha Long Seafood Sampler', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Vietnam (VN)', oras: 'Ha Long', suvenir: 'Ha Long Pearl Jewelry', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Vietnam (VN)', oras: 'Ha Long', suvenir: 'Ha Long Seafood Sampler', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Hue
 { tara: 'Vietnam (VN)', oras: 'Hue', suvenir: 'Hue Imperial Citadel Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Vietnam (VN)', oras: 'Hue', suvenir: 'Hue Conical Hat', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Vietnam (VN)', oras: 'Hue', suvenir: 'Hue Royal Tea Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Vietnam (VN)', oras: 'Hue', suvenir: 'Hue Conical Hat', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Vietnam (VN)', oras: 'Hue', suvenir: 'Hue Royal Tea Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Nha Trang
 { tara: 'Vietnam (VN)', oras: 'Nha Trang', suvenir: 'Nha Trang Beach Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Vietnam (VN)', oras: 'Nha Trang', suvenir: 'Nha Trang Pearl Necklace', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Vietnam (VN)', oras: 'Nha Trang', suvenir: 'Nha Trang Dried Seafood Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Vietnam (VN)', oras: 'Nha Trang', suvenir: 'Nha Trang Pearl Necklace', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Vietnam (VN)', oras: 'Nha Trang', suvenir: 'Nha Trang Dried Seafood Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Phu Quoc
 { tara: 'Vietnam (VN)', oras: 'Phu Quoc', suvenir: 'Phu Quoc Coconut Candle', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Vietnam (VN)', oras: 'Phu Quoc', suvenir: 'Phu Quoc Fish Sauce', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Vietnam (VN)', oras: 'Phu Quoc', suvenir: 'Phu Quoc Pearl Earrings', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Vietnam (VN)', oras: 'Phu Quoc', suvenir: 'Phu Quoc Fish Sauce', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Vietnam (VN)', oras: 'Phu Quoc', suvenir: 'Phu Quoc Pearl Earrings', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Sapa
 { tara: 'Vietnam (VN)', oras: 'Sapa', suvenir: 'Sapa Embroidered Bag', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Vietnam (VN)', oras: 'Sapa', suvenir: 'Sapa Handwoven Blanket', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Vietnam (VN)', oras: 'Sapa', suvenir: 'Sapa Herbal Tea Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Vietnam (VN)', oras: 'Sapa', suvenir: 'Sapa Handwoven Blanket', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Vietnam (VN)', oras: 'Sapa', suvenir: 'Sapa Herbal Tea Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Can Tho
 { tara: 'Vietnam (VN)', oras: 'Can Tho', suvenir: 'Can Tho Floating Market Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Vietnam (VN)', oras: 'Can Tho', suvenir: 'Can Tho Rice Wine', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Vietnam (VN)', oras: 'Can Tho', suvenir: 'Can Tho Rice Noodle Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Vietnam (VN)', oras: 'Can Tho', suvenir: 'Can Tho Rice Wine', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Vietnam (VN)', oras: 'Can Tho', suvenir: 'Can Tho Rice Noodle Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Manila
 { tara: 'Philippines (PH)', oras: 'Manila', suvenir: 'Manila Jeepney Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Philippines (PH)', oras: 'Manila', suvenir: 'Barong Tagalog (Traditional Filipino Shirt)', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Philippines (PH)', oras: 'Manila', suvenir: 'Dried Mangoes', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Philippines (PH)', oras: 'Manila', suvenir: 'Barong Tagalog (Traditional Filipino Shirt)', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Philippines (PH)', oras: 'Manila', suvenir: 'Dried Mangoes', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Cebu
 { tara: 'Philippines (PH)', oras: 'Cebu', suvenir: 'Cebu Guitar', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Philippines (PH)', oras: 'Cebu', suvenir: 'Taal Woven Shawl', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Philippines (PH)', oras: 'Cebu', suvenir: 'Danggit (Dried Fish)', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Philippines (PH)', oras: 'Cebu', suvenir: 'Taal Woven Shawl', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Philippines (PH)', oras: 'Cebu', suvenir: 'Danggit (Dried Fish)', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Boracay
 { tara: 'Philippines (PH)', oras: 'Boracay', suvenir: 'Boracay Beach Sand Bottle', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Philippines (PH)', oras: 'Boracay', suvenir: 'Boracay Island T-Shirt', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Philippines (PH)', oras: 'Boracay', suvenir: 'Calamansi Marmalade', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Philippines (PH)', oras: 'Boracay', suvenir: 'Boracay Island T-Shirt', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Philippines (PH)', oras: 'Boracay', suvenir: 'Calamansi Marmalade', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Davao
 { tara: 'Philippines (PH)', oras: 'Davao', suvenir: 'Durian Chocolates', categorie: 'Food', destinatari: ['family', 'friend'] },
-{ tara: 'Philippines (PH)', oras: 'Davao', suvenir: 'Malong (Traditional Filipino Wrap)', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Philippines (PH)', oras: 'Davao', suvenir: 'Davao Pomelo', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Philippines (PH)', oras: 'Davao', suvenir: 'Malong (Traditional Filipino Wrap)', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Philippines (PH)', oras: 'Davao', suvenir: 'Davao Pomelo', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Baguio
 { tara: 'Philippines (PH)', oras: 'Baguio', suvenir: 'Baguio Handwoven Blanket', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Philippines (PH)', oras: 'Baguio', suvenir: 'Strawberry Jam', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Philippines (PH)', oras: 'Baguio', suvenir: 'Baguio Native Handicrafts', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Philippines (PH)', oras: 'Baguio', suvenir: 'Strawberry Jam', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Philippines (PH)', oras: 'Baguio', suvenir: 'Baguio Native Handicrafts', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Bohol
 { tara: 'Philippines (PH)', oras: 'Bohol', suvenir: 'Bohol Chocolate Hills Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Philippines (PH)', oras: 'Bohol', suvenir: 'Peanut Kisses', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Philippines (PH)', oras: 'Bohol', suvenir: 'Bohol Shell Necklace', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Philippines (PH)', oras: 'Bohol', suvenir: 'Peanut Kisses', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Philippines (PH)', oras: 'Bohol', suvenir: 'Bohol Shell Necklace', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Palawan (Puerto Princesa)
 { tara: 'Philippines (PH)', oras: 'Palawan (Puerto Princesa)', suvenir: 'Palawan Handwoven Bag', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Philippines (PH)', oras: 'Palawan (Puerto Princesa)', suvenir: 'Cashew Nuts', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Philippines (PH)', oras: 'Palawan (Puerto Princesa)', suvenir: 'Palawan Sea Shell Crafts', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Philippines (PH)', oras: 'Palawan (Puerto Princesa)', suvenir: 'Cashew Nuts', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Philippines (PH)', oras: 'Palawan (Puerto Princesa)', suvenir: 'Palawan Sea Shell Crafts', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Vigan
 { tara: 'Philippines (PH)', oras: 'Vigan', suvenir: 'Vigan Heritage Village Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Philippines (PH)', oras: 'Vigan', suvenir: 'Vigan Empanada', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Philippines (PH)', oras: 'Vigan', suvenir: 'Abel Iloco Weaving', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Philippines (PH)', oras: 'Vigan', suvenir: 'Vigan Empanada', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Philippines (PH)', oras: 'Vigan', suvenir: 'Abel Iloco Weaving', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Iloilo
 { tara: 'Philippines (PH)', oras: 'Iloilo', suvenir: 'Iloilo La Paz Batchoy Mix', categorie: 'Food', destinatari: ['family', 'friend'] },
-{ tara: 'Philippines (PH)', oras: 'Iloilo', suvenir: 'Hablon Fabric', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Philippines (PH)', oras: 'Iloilo', suvenir: 'Iloilo Tinikling Dance Figurine', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Philippines (PH)', oras: 'Iloilo', suvenir: 'Hablon Fabric', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Philippines (PH)', oras: 'Iloilo', suvenir: 'Iloilo Tinikling Dance Figurine', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Siargao
 { tara: 'Philippines (PH)', oras: 'Siargao', suvenir: 'Siargao Surfboard Keychain', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Philippines (PH)', oras: 'Siargao', suvenir: 'Dried Mango Rum Balls', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Philippines (PH)', oras: 'Siargao', suvenir: 'Siargao Island Painting', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Philippines (PH)', oras: 'Siargao', suvenir: 'Dried Mango Rum Balls', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Philippines (PH)', oras: 'Siargao', suvenir: 'Siargao Island Painting', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Buenos Aires
 { tara: 'Argentina (AR)', oras: 'Buenos Aires', suvenir: 'Tango Dancer Figurine', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Argentina (AR)', oras: 'Buenos Aires', suvenir: 'Mate Gourd and Bombilla Set', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Argentina (AR)', oras: 'Buenos Aires', suvenir: 'Leather Wallet', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Argentina (AR)', oras: 'Buenos Aires', suvenir: 'Mate Gourd and Bombilla Set', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Argentina (AR)', oras: 'Buenos Aires', suvenir: 'Leather Wallet', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Cordoba
 { tara: 'Argentina (AR)', oras: 'Cordoba', suvenir: 'Cordoba Jesuit Estancia Tour', categorie: 'Experience', destinatari: ['family', 'friend'] },
-{ tara: 'Argentina (AR)', oras: 'Cordoba', suvenir: 'Alfajores (Dulce de Leche Cookies)', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Argentina (AR)', oras: 'Cordoba', suvenir: 'Handcrafted Leather Bag', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Argentina (AR)', oras: 'Cordoba', suvenir: 'Alfajores (Dulce de Leche Cookies)', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Argentina (AR)', oras: 'Cordoba', suvenir: 'Handcrafted Leather Bag', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Mendoza
 { tara: 'Argentina (AR)', oras: 'Mendoza', suvenir: 'Malbec Wine Bottle', categorie: 'Food', destinatari: ['family', 'friend'] },
-{ tara: 'Argentina (AR)', oras: 'Mendoza', suvenir: 'Mendoza Wine Tour', categorie: 'Experience', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Argentina (AR)', oras: 'Mendoza', suvenir: 'Handcrafted Mate Gourd', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Argentina (AR)', oras: 'Mendoza', suvenir: 'Mendoza Wine Tour', categorie: 'Experience', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Argentina (AR)', oras: 'Mendoza', suvenir: 'Handcrafted Mate Gourd', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Rosario
 { tara: 'Argentina (AR)', oras: 'Rosario', suvenir: 'Rosario Football Jersey', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Argentina (AR)', oras: 'Rosario', suvenir: 'Rosario Ceramic Mate Cup', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Argentina (AR)', oras: 'Rosario', suvenir: 'Rosario Alfajores', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Argentina (AR)', oras: 'Rosario', suvenir: 'Rosario Ceramic Mate Cup', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Argentina (AR)', oras: 'Rosario', suvenir: 'Rosario Alfajores', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Bariloche
 { tara: 'Argentina (AR)', oras: 'Bariloche', suvenir: 'Bariloche Chocolate Box', categorie: 'Food', destinatari: ['family', 'friend'] },
-{ tara: 'Argentina (AR)', oras: 'Bariloche', suvenir: 'Mapuche Handcrafted Woolen Poncho', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Argentina (AR)', oras: 'Bariloche', suvenir: 'Bariloche Snow Globe', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Argentina (AR)', oras: 'Bariloche', suvenir: 'Mapuche Handcrafted Woolen Poncho', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Argentina (AR)', oras: 'Bariloche', suvenir: 'Bariloche Snow Globe', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Ushuaia
 { tara: 'Argentina (AR)', oras: 'Ushuaia', suvenir: 'Ushuaia Penguin Figurine', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Argentina (AR)', oras: 'Ushuaia', suvenir: 'Tierra del Fuego Postcard Set', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Argentina (AR)', oras: 'Ushuaia', suvenir: 'Ushuaia Snow Globe', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Argentina (AR)', oras: 'Ushuaia', suvenir: 'Tierra del Fuego Postcard Set', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Argentina (AR)', oras: 'Ushuaia', suvenir: 'Ushuaia Snow Globe', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Salta
 { tara: 'Argentina (AR)', oras: 'Salta', suvenir: 'Salta Poncho', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Argentina (AR)', oras: 'Salta', suvenir: 'Salta Handcrafted Andean Jewelry', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Argentina (AR)', oras: 'Salta', suvenir: 'Empanadas Saltenas', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Argentina (AR)', oras: 'Salta', suvenir: 'Salta Handcrafted Andean Jewelry', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Argentina (AR)', oras: 'Salta', suvenir: 'Empanadas Saltenas', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Mar del Plata
 { tara: 'Argentina (AR)', oras: 'Mar del Plata', suvenir: 'Mar del Plata Beach Towel', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Argentina (AR)', oras: 'Mar del Plata', suvenir: 'Mar del Plata Sea Shell Necklace', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Argentina (AR)', oras: 'Mar del Plata', suvenir: 'Dulce de Leche Mar del Plata', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Argentina (AR)', oras: 'Mar del Plata', suvenir: 'Mar del Plata Sea Shell Necklace', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Argentina (AR)', oras: 'Mar del Plata', suvenir: 'Dulce de Leche Mar del Plata', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // La Plata
 { tara: 'Argentina (AR)', oras: 'La Plata', suvenir: 'La Plata Botanical Garden Poster', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Argentina (AR)', oras: 'La Plata', suvenir: 'La Plata Leather Notebook', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Argentina (AR)', oras: 'La Plata', suvenir: 'La Plata Handcrafted Pottery', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Argentina (AR)', oras: 'La Plata', suvenir: 'La Plata Leather Notebook', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Argentina (AR)', oras: 'La Plata', suvenir: 'La Plata Handcrafted Pottery', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // San Miguel de Tucuman
 { tara: 'Argentina (AR)', oras: 'San Miguel de Tucuman', suvenir: 'San Miguel de Tucuman Handcrafted Textiles', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Argentina (AR)', oras: 'San Miguel de Tucuman', suvenir: 'Tucuman Local Craft Beer', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Argentina (AR)', oras: 'San Miguel de Tucuman', suvenir: 'Tucuman Leather Wallet', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Argentina (AR)', oras: 'San Miguel de Tucuman', suvenir: 'Tucuman Local Craft Beer', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Argentina (AR)', oras: 'San Miguel de Tucuman', suvenir: 'Tucuman Leather Wallet', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Helsinki
 { tara: 'Finland (FI)', oras: 'Helsinki', suvenir: 'Helsinki Design Mug', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Finland (FI)', oras: 'Helsinki', suvenir: 'Finnish Licorice Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Finland (FI)', oras: 'Helsinki', suvenir: 'Marimekko Handbag', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Finland (FI)', oras: 'Helsinki', suvenir: 'Finnish Licorice Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Finland (FI)', oras: 'Helsinki', suvenir: 'Marimekko Handbag', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Rovaniemi
 { tara: 'Finland (FI)', oras: 'Rovaniemi', suvenir: 'Rovaniemi Santa Claus Postcard', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Finland (FI)', oras: 'Rovaniemi', suvenir: 'Reindeer Antler Jewelry', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Finland (FI)', oras: 'Rovaniemi', suvenir: 'Lapland Berry Jam', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Finland (FI)', oras: 'Rovaniemi', suvenir: 'Reindeer Antler Jewelry', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Finland (FI)', oras: 'Rovaniemi', suvenir: 'Lapland Berry Jam', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Turku
 { tara: 'Finland (FI)', oras: 'Turku', suvenir: 'Turku Castle Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Finland (FI)', oras: 'Turku', suvenir: 'Finnish Birch Sauna Whisk', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Finland (FI)', oras: 'Turku', suvenir: 'Turku Archipelago Smoked Salmon', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Finland (FI)', oras: 'Turku', suvenir: 'Finnish Birch Sauna Whisk', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Finland (FI)', oras: 'Turku', suvenir: 'Turku Archipelago Smoked Salmon', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Tampere
 { tara: 'Finland (FI)', oras: 'Tampere', suvenir: 'Tampere Moomin Mug', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Finland (FI)', oras: 'Tampere', suvenir: 'Finnish Salmiakki Assortment', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Finland (FI)', oras: 'Tampere', suvenir: 'Tampere Sarkanniemi Amusement Park Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Finland (FI)', oras: 'Tampere', suvenir: 'Finnish Salmiakki Assortment', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Finland (FI)', oras: 'Tampere', suvenir: 'Tampere Sarkanniemi Amusement Park Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Oulu
 { tara: 'Finland (FI)', oras: 'Oulu', suvenir: 'Oulu Glassware', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Finland (FI)', oras: 'Oulu', suvenir: 'Finnish Cloudberry Liqueur', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Finland (FI)', oras: 'Oulu', suvenir: 'Oulu Woolen Socks', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Finland (FI)', oras: 'Oulu', suvenir: 'Finnish Cloudberry Liqueur', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Finland (FI)', oras: 'Oulu', suvenir: 'Oulu Woolen Socks', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Espoo
 { tara: 'Finland (FI)', oras: 'Espoo', suvenir: 'Espoo Cityscape Art Print', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Finland (FI)', oras: 'Espoo', suvenir: 'Finnish Blueberry Jam', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Finland (FI)', oras: 'Espoo', suvenir: 'Espoo Handcrafted Ceramic Bowl', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Finland (FI)', oras: 'Espoo', suvenir: 'Finnish Blueberry Jam', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Finland (FI)', oras: 'Espoo', suvenir: 'Espoo Handcrafted Ceramic Bowl', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Vantaa
 { tara: 'Finland (FI)', oras: 'Vantaa', suvenir: 'Vantaa Glass Bird Figurine', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Finland (FI)', oras: 'Vantaa', suvenir: 'Finnish Rye Bread', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Finland (FI)', oras: 'Vantaa', suvenir: 'Vantaa Handcrafted Wooden Bowl', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Finland (FI)', oras: 'Vantaa', suvenir: 'Finnish Rye Bread', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Finland (FI)', oras: 'Vantaa', suvenir: 'Vantaa Handcrafted Wooden Bowl', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Porvoo
 { tara: 'Finland (FI)', oras: 'Porvoo', suvenir: 'Porvoo Old Town Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Finland (FI)', oras: 'Porvoo', suvenir: 'Finnish Cinnamon Rolls (Korvapuusti)', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Finland (FI)', oras: 'Porvoo', suvenir: 'Porvoo Handcrafted Soap', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Finland (FI)', oras: 'Porvoo', suvenir: 'Finnish Cinnamon Rolls (Korvapuusti)', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Finland (FI)', oras: 'Porvoo', suvenir: 'Porvoo Handcrafted Soap', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Kuopio
 { tara: 'Finland (FI)', oras: 'Kuopio', suvenir: 'Kuopio Kalakukko (Fish and Meat Pie)', categorie: 'Food', destinatari: ['family', 'friend'] },
-{ tara: 'Finland (FI)', oras: 'Kuopio', suvenir: 'Kuopio Wooden Spoon', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Finland (FI)', oras: 'Kuopio', suvenir: 'Kuopio Handwoven Rug', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Finland (FI)', oras: 'Kuopio', suvenir: 'Kuopio Wooden Spoon', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Finland (FI)', oras: 'Kuopio', suvenir: 'Kuopio Handwoven Rug', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Lahti
 { tara: 'Finland (FI)', oras: 'Lahti', suvenir: 'Lahti Sibelius Hall Poster', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Finland (FI)', oras: 'Lahti', suvenir: 'Finnish Licorice Pipes', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Finland (FI)', oras: 'Lahti', suvenir: 'Lahti Wooden Kuksa Cup', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Finland (FI)', oras: 'Lahti', suvenir: 'Finnish Licorice Pipes', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Finland (FI)', oras: 'Lahti', suvenir: 'Lahti Wooden Kuksa Cup', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Lima
 { tara: 'Peru (PE)', oras: 'Lima', suvenir: 'Lima Cityscape Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Peru (PE)', oras: 'Lima', suvenir: 'Peruvian Pisco Bottle', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Peru (PE)', oras: 'Lima', suvenir: 'Lima Handcrafted Jewelry', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Peru (PE)', oras: 'Lima', suvenir: 'Peruvian Pisco Bottle', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Peru (PE)', oras: 'Lima', suvenir: 'Lima Handcrafted Jewelry', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Cusco
 { tara: 'Peru (PE)', oras: 'Cusco', suvenir: 'Cusco Inca Mask Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Peru (PE)', oras: 'Cusco', suvenir: 'Peruvian Alpaca Wool Blanket', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Peru (PE)', oras: 'Cusco', suvenir: 'Cusco Coca Tea', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Peru (PE)', oras: 'Cusco', suvenir: 'Peruvian Alpaca Wool Blanket', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Peru (PE)', oras: 'Cusco', suvenir: 'Cusco Coca Tea', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Arequipa
 { tara: 'Peru (PE)', oras: 'Arequipa', suvenir: 'Arequipa Volcano Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Peru (PE)', oras: 'Arequipa', suvenir: 'Peruvian Ceramic Vase', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Peru (PE)', oras: 'Arequipa', suvenir: 'Arequipa Rocoto Pepper Sauce', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Peru (PE)', oras: 'Arequipa', suvenir: 'Peruvian Ceramic Vase', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Peru (PE)', oras: 'Arequipa', suvenir: 'Arequipa Rocoto Pepper Sauce', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Puno
 { tara: 'Peru (PE)', oras: 'Puno', suvenir: 'Puno Textile Wall Hanging', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Peru (PE)', oras: 'Puno', suvenir: 'Peruvian Silver Jewelry', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Peru (PE)', oras: 'Puno', suvenir: 'Puno Totora Reed Handicraft', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Peru (PE)', oras: 'Puno', suvenir: 'Peruvian Silver Jewelry', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Peru (PE)', oras: 'Puno', suvenir: 'Puno Totora Reed Handicraft', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Trujillo
 { tara: 'Peru (PE)', oras: 'Trujillo', suvenir: 'Trujillo Colonial Architecture Photo Book', categorie: 'Books', destinatari: ['family', 'friend'] },
-{ tara: 'Peru (PE)', oras: 'Trujillo', suvenir: 'Peruvian Gold Filigree Earrings', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Peru (PE)', oras: 'Trujillo', suvenir: 'Trujillo Moche Pottery Replica', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Peru (PE)', oras: 'Trujillo', suvenir: 'Peruvian Gold Filigree Earrings', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Peru (PE)', oras: 'Trujillo', suvenir: 'Trujillo Moche Pottery Replica', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Iquitos
 { tara: 'Peru (PE)', oras: 'Iquitos', suvenir: 'Iquitos Amazon Rainforest Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Peru (PE)', oras: 'Iquitos', suvenir: 'Peruvian Jungle Crafted Necklace', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Peru (PE)', oras: 'Iquitos', suvenir: 'Iquitos Amazon Chocolate', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Peru (PE)', oras: 'Iquitos', suvenir: 'Peruvian Jungle Crafted Necklace', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Peru (PE)', oras: 'Iquitos', suvenir: 'Iquitos Amazon Chocolate', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Paracas
 { tara: 'Peru (PE)', oras: 'Paracas', suvenir: 'Paracas National Reserve Photo Book', categorie: 'Books', destinatari: ['family', 'friend'] },
-{ tara: 'Peru (PE)', oras: 'Paracas', suvenir: 'Peruvian Pisco Sour Kit', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Peru (PE)', oras: 'Paracas', suvenir: 'Paracas Handcrafted Shell Necklace', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Peru (PE)', oras: 'Paracas', suvenir: 'Peruvian Pisco Sour Kit', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Peru (PE)', oras: 'Paracas', suvenir: 'Paracas Handcrafted Shell Necklace', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Huaraz
 { tara: 'Peru (PE)', oras: 'Huaraz', suvenir: 'Huaraz Andean Mountain Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Peru (PE)', oras: 'Huaraz', suvenir: 'Peruvian Woolen Scarf', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Peru (PE)', oras: 'Huaraz', suvenir: 'Huaraz Quinoa Superfood', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Peru (PE)', oras: 'Huaraz', suvenir: 'Peruvian Woolen Scarf', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Peru (PE)', oras: 'Huaraz', suvenir: 'Huaraz Quinoa Superfood', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Chiclayo
 { tara: 'Peru (PE)', oras: 'Chiclayo', suvenir: 'Chiclayo Moche Pottery Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Peru (PE)', oras: 'Chiclayo', suvenir: 'Peruvian Marinera Dance Doll', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Peru (PE)', oras: 'Chiclayo', suvenir: 'Chiclayo Ceviche Seasoning Mix', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Peru (PE)', oras: 'Chiclayo', suvenir: 'Peruvian Marinera Dance Doll', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Peru (PE)', oras: 'Chiclayo', suvenir: 'Chiclayo Ceviche Seasoning Mix', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Ayacucho
 { tara: 'Peru (PE)', oras: 'Ayacucho', suvenir: 'Ayacucho Huamanga Stone Sculpture', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Peru (PE)', oras: 'Ayacucho', suvenir: 'Peruvian Andean Textile Tapestry', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Peru (PE)', oras: 'Ayacucho', suvenir: 'Ayacucho Quinua Bread', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Peru (PE)', oras: 'Ayacucho', suvenir: 'Peruvian Andean Textile Tapestry', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Peru (PE)', oras: 'Ayacucho', suvenir: 'Ayacucho Quinua Bread', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Dubai
 { tara: 'United Arab Emirates (AE)', oras: 'Dubai', suvenir: 'Burj Khalifa Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Dubai', suvenir: 'Dubai Dates', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Dubai', suvenir: 'Dubai Camel Milk Chocolate', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Dubai', suvenir: 'Dubai Dates', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Dubai', suvenir: 'Dubai Camel Milk Chocolate', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Abu Dhabi
 { tara: 'United Arab Emirates (AE)', oras: 'Abu Dhabi', suvenir: 'Sheikh Zayed Mosque Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Abu Dhabi', suvenir: 'Arabian Coffee Set', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Abu Dhabi', suvenir: 'Abu Dhabi Falcon Souvenir', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Abu Dhabi', suvenir: 'Arabian Coffee Set', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Abu Dhabi', suvenir: 'Abu Dhabi Falcon Souvenir', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Sharjah
 { tara: 'United Arab Emirates (AE)', oras: 'Sharjah', suvenir: 'Sharjah Heritage Book', categorie: 'Books', destinatari: ['family', 'friend'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Sharjah', suvenir: 'Sharjah Traditional Handicrafts', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Sharjah', suvenir: 'Sharjah Date Palm Products', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Sharjah', suvenir: 'Sharjah Traditional Handicrafts', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Sharjah', suvenir: 'Sharjah Date Palm Products', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Al Ain
 { tara: 'United Arab Emirates (AE)', oras: 'Al Ain', suvenir: 'Al Ain Camel Figurine', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Al Ain', suvenir: 'Al Ain Date Honey', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Al Ain', suvenir: 'Al Ain Sand Art Bottle', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Al Ain', suvenir: 'Al Ain Date Honey', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Al Ain', suvenir: 'Al Ain Sand Art Bottle', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Ras Al Khaimah
 { tara: 'United Arab Emirates (AE)', oras: 'Ras Al Khaimah', suvenir: 'Ras Al Khaimah Dhow Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Ras Al Khaimah', suvenir: 'Ras Al Khaimah Saffron', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Ras Al Khaimah', suvenir: 'Ras Al Khaimah Traditional Pottery', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Ras Al Khaimah', suvenir: 'Ras Al Khaimah Saffron', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Ras Al Khaimah', suvenir: 'Ras Al Khaimah Traditional Pottery', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Fujairah
 { tara: 'United Arab Emirates (AE)', oras: 'Fujairah', suvenir: 'Fujairah Fort Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Fujairah', suvenir: 'Fujairah Dried Fruits', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Fujairah', suvenir: 'Fujairah Pearl Jewelry', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Fujairah', suvenir: 'Fujairah Dried Fruits', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Fujairah', suvenir: 'Fujairah Pearl Jewelry', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Ajman
 { tara: 'United Arab Emirates (AE)', oras: 'Ajman', suvenir: 'Ajman Souq Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Ajman', suvenir: 'Ajman Halwa', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Ajman', suvenir: 'Ajman Pearl Diving Art', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Ajman', suvenir: 'Ajman Halwa', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Ajman', suvenir: 'Ajman Pearl Diving Art', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Umm Al Quwain
 { tara: 'United Arab Emirates (AE)', oras: 'Umm Al Quwain', suvenir: 'Umm Al Quwain Pottery', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Umm Al Quwain', suvenir: 'Umm Al Quwain Date Syrup', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Umm Al Quwain', suvenir: 'Umm Al Quwain Traditional Textile', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Umm Al Quwain', suvenir: 'Umm Al Quwain Date Syrup', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Umm Al Quwain', suvenir: 'Umm Al Quwain Traditional Textile', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Hatta
 { tara: 'United Arab Emirates (AE)', oras: 'Hatta', suvenir: 'Hatta Dam Landscape Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Hatta', suvenir: 'Hatta Mountain Honey', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Hatta', suvenir: 'Hatta Desert Sand Bottle', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Hatta', suvenir: 'Hatta Mountain Honey', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Hatta', suvenir: 'Hatta Desert Sand Bottle', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Khor Fakkan
 { tara: 'United Arab Emirates (AE)', oras: 'Khor Fakkan', suvenir: 'Khor Fakkan Coral Reef Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Khor Fakkan', suvenir: 'Khor Fakkan Date Palm Products', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'United Arab Emirates (AE)', oras: 'Khor Fakkan', suvenir: 'Khor Fakkan Maritime Art', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Khor Fakkan', suvenir: 'Khor Fakkan Date Palm Products', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'United Arab Emirates (AE)', oras: 'Khor Fakkan', suvenir: 'Khor Fakkan Maritime Art', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Marrakech
 { tara: 'Morocco (MA)', oras: 'Marrakech', suvenir: 'Marrakech Medina Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Morocco (MA)', oras: 'Marrakech', suvenir: 'Moroccan Tea Set', categorie: 'Home', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Morocco (MA)', oras: 'Marrakech', suvenir: 'Marrakech Spices', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Morocco (MA)', oras: 'Marrakech', suvenir: 'Moroccan Tea Set', categorie: 'Home', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Morocco (MA)', oras: 'Marrakech', suvenir: 'Marrakech Spices', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Casablanca
 { tara: 'Morocco (MA)', oras: 'Casablanca', suvenir: 'Hassan II Mosque Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Morocco (MA)', oras: 'Casablanca', suvenir: 'Casablanca Argan Oil', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Morocco (MA)', oras: 'Casablanca', suvenir: 'Casablanca Leather Goods', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Morocco (MA)', oras: 'Casablanca', suvenir: 'Casablanca Argan Oil', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Morocco (MA)', oras: 'Casablanca', suvenir: 'Casablanca Leather Goods', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Fes
 { tara: 'Morocco (MA)', oras: 'Fes', suvenir: 'Fes Ceramic Plate', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Morocco (MA)', oras: 'Fes', suvenir: 'Fes Pottery', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Morocco (MA)', oras: 'Fes', suvenir: 'Fes Dates', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Morocco (MA)', oras: 'Fes', suvenir: 'Fes Pottery', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Morocco (MA)', oras: 'Fes', suvenir: 'Fes Dates', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Tangier
 { tara: 'Morocco (MA)', oras: 'Tangier', suvenir: 'Tangier Kasbah Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Morocco (MA)', oras: 'Tangier', suvenir: 'Tangier Mint Tea Set', categorie: 'Home', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Morocco (MA)', oras: 'Tangier', suvenir: 'Tangier Almond Cookies', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Morocco (MA)', oras: 'Tangier', suvenir: 'Tangier Mint Tea Set', categorie: 'Home', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Morocco (MA)', oras: 'Tangier', suvenir: 'Tangier Almond Cookies', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Rabat
 { tara: 'Morocco (MA)', oras: 'Rabat', suvenir: 'Rabat Royal Palace Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Morocco (MA)', oras: 'Rabat', suvenir: 'Rabat Souk Crafts', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Morocco (MA)', oras: 'Rabat', suvenir: 'Rabat Pastries', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Morocco (MA)', oras: 'Rabat', suvenir: 'Rabat Souk Crafts', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Morocco (MA)', oras: 'Rabat', suvenir: 'Rabat Pastries', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Agadir
 { tara: 'Morocco (MA)', oras: 'Agadir', suvenir: 'Agadir Beach Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Morocco (MA)', oras: 'Agadir', suvenir: 'Agadir Argan Oil Soap', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Morocco (MA)', oras: 'Agadir', suvenir: 'Agadir Spiced Nuts', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Morocco (MA)', oras: 'Agadir', suvenir: 'Agadir Argan Oil Soap', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Morocco (MA)', oras: 'Agadir', suvenir: 'Agadir Spiced Nuts', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Chefchaouen
 { tara: 'Morocco (MA)', oras: 'Chefchaouen', suvenir: 'Chefchaouen Blue Pottery', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Morocco (MA)', oras: 'Chefchaouen', suvenir: 'Chefchaouen Wool Blanket', categorie: 'Home', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Morocco (MA)', oras: 'Chefchaouen', suvenir: 'Chefchaouen Almond Sweets', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Morocco (MA)', oras: 'Chefchaouen', suvenir: 'Chefchaouen Wool Blanket', categorie: 'Home', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Morocco (MA)', oras: 'Chefchaouen', suvenir: 'Chefchaouen Almond Sweets', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Essaouira
 { tara: 'Morocco (MA)', oras: 'Essaouira', suvenir: 'Essaouira Wind Chimes', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Morocco (MA)', oras: 'Essaouira', suvenir: 'Essaouira Argan Oil Cosmetics', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Morocco (MA)', oras: 'Essaouira', suvenir: 'Essaouira Salted Caramel', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Morocco (MA)', oras: 'Essaouira', suvenir: 'Essaouira Argan Oil Cosmetics', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Morocco (MA)', oras: 'Essaouira', suvenir: 'Essaouira Salted Caramel', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Meknes
 { tara: 'Morocco (MA)', oras: 'Meknes', suvenir: 'Meknes Berber Rug', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Morocco (MA)', oras: 'Meknes', suvenir: 'Meknes Olive Oil Soap', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Morocco (MA)', oras: 'Meknes', suvenir: 'Meknes Preserved Lemons', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Morocco (MA)', oras: 'Meknes', suvenir: 'Meknes Olive Oil Soap', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Morocco (MA)', oras: 'Meknes', suvenir: 'Meknes Preserved Lemons', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Ouarzazate
 { tara: 'Morocco (MA)', oras: 'Ouarzazate', suvenir: 'Ouarzazate Kasbah Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Morocco (MA)', oras: 'Ouarzazate', suvenir: 'Ouarzazate Argan Oil Soap', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Morocco (MA)', oras: 'Ouarzazate', suvenir: 'Ouarzazate Spiced Tea Blend', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Morocco (MA)', oras: 'Ouarzazate', suvenir: 'Ouarzazate Argan Oil Soap', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Morocco (MA)', oras: 'Ouarzazate', suvenir: 'Ouarzazate Spiced Tea Blend', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Jerusalem
 { tara: 'Israel (IL)', oras: 'Jerusalem', suvenir: 'Jerusalem Cross Pendant', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Israel (IL)', oras: 'Jerusalem', suvenir: 'Dead Sea Salt Scrub', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Israel (IL)', oras: 'Jerusalem', suvenir: 'Jerusalem Ceramic Plate', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Israel (IL)', oras: 'Jerusalem', suvenir: 'Dead Sea Salt Scrub', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Israel (IL)', oras: 'Jerusalem', suvenir: 'Jerusalem Ceramic Plate', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Tel Aviv
 { tara: 'Israel (IL)', oras: 'Tel Aviv', suvenir: 'Tel Aviv Beach Towel', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Israel (IL)', oras: 'Tel Aviv', suvenir: 'Tel Aviv Coffee Blend', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Israel (IL)', oras: 'Tel Aviv', suvenir: 'Tel Aviv Skyline Art Print', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Israel (IL)', oras: 'Tel Aviv', suvenir: 'Tel Aviv Coffee Blend', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Israel (IL)', oras: 'Tel Aviv', suvenir: 'Tel Aviv Skyline Art Print', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Haifa
 { tara: 'Israel (IL)', oras: 'Haifa', suvenir: 'Haifa Olive Oil Soap', categorie: 'Beauty', destinatari: ['family', 'friend'] },
-{ tara: 'Israel (IL)', oras: 'Haifa', suvenir: 'Haifa Ceramic Tile', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Israel (IL)', oras: 'Haifa', suvenir: 'Haifa Dried Fruit Assortment', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Israel (IL)', oras: 'Haifa', suvenir: 'Haifa Ceramic Tile', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Israel (IL)', oras: 'Haifa', suvenir: 'Haifa Dried Fruit Assortment', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Eilat
 { tara: 'Israel (IL)', oras: 'Eilat', suvenir: 'Eilat Red Sea Coral Jewelry', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Israel (IL)', oras: 'Eilat', suvenir: 'Eilat Salt Scrub', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Israel (IL)', oras: 'Eilat', suvenir: 'Eilat Date Honey', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Israel (IL)', oras: 'Eilat', suvenir: 'Eilat Salt Scrub', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Israel (IL)', oras: 'Eilat', suvenir: 'Eilat Date Honey', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Nazareth
 { tara: 'Israel (IL)', oras: 'Nazareth', suvenir: 'Nazareth Handmade Olive Wood Cross', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Israel (IL)', oras: 'Nazareth', suvenir: 'Nazareth Holy Water', categorie: 'Religious', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Israel (IL)', oras: 'Nazareth', suvenir: 'Nazareth Spices Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Israel (IL)', oras: 'Nazareth', suvenir: 'Nazareth Holy Water', categorie: 'Religious', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Israel (IL)', oras: 'Nazareth', suvenir: 'Nazareth Spices Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Tiberias
 { tara: 'Israel (IL)', oras: 'Tiberias', suvenir: 'Tiberias Sea of Galilee Photo Book', categorie: 'Books', destinatari: ['family', 'friend'] },
-{ tara: 'Israel (IL)', oras: 'Tiberias', suvenir: 'Tiberias Fisherman s Cap', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Israel (IL)', oras: 'Tiberias', suvenir: 'Tiberias Olive Oil', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Israel (IL)', oras: 'Tiberias', suvenir: 'Tiberias Fisherman s Cap', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Israel (IL)', oras: 'Tiberias', suvenir: 'Tiberias Olive Oil', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Dead Sea
 { tara: 'Israel (IL)', oras: 'Dead Sea', suvenir: 'Dead Sea Mud Mask', categorie: 'Beauty', destinatari: ['family', 'friend'] },
-{ tara: 'Israel (IL)', oras: 'Dead Sea', suvenir: 'Dead Sea Salt Scrub', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Israel (IL)', oras: 'Dead Sea', suvenir: 'Dead Sea Mineral Soap', categorie: 'Beauty', destinatari: ['family', 'lover'] },
+{ tara: 'Israel (IL)', oras: 'Dead Sea', suvenir: 'Dead Sea Salt Scrub', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Israel (IL)', oras: 'Dead Sea', suvenir: 'Dead Sea Mineral Soap', categorie: 'Beauty', destinatari: ['acquaintance', 'relative'] },
 
 // Ashdod
 { tara: 'Israel (IL)', oras: 'Ashdod', suvenir: 'Ashdod Beach Sand Bottle', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Israel (IL)', oras: 'Ashdod', suvenir: 'Ashdod Pottery', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Israel (IL)', oras: 'Ashdod', suvenir: 'Ashdod Citrus Candies', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Israel (IL)', oras: 'Ashdod', suvenir: 'Ashdod Pottery', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Israel (IL)', oras: 'Ashdod', suvenir: 'Ashdod Citrus Candies', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Acre (Akko)
 { tara: 'Israel (IL)', oras: 'Acre (Akko)', suvenir: 'Acre Fortress Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Israel (IL)', oras: 'Acre (Akko)', suvenir: 'Acre Olive Oil Soap', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Israel (IL)', oras: 'Acre (Akko)', suvenir: 'Acre Baklava', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Israel (IL)', oras: 'Acre (Akko)', suvenir: 'Acre Olive Oil Soap', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Israel (IL)', oras: 'Acre (Akko)', suvenir: 'Acre Baklava', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Netanya
 { tara: 'Israel (IL)', oras: 'Netanya', suvenir: 'Netanya Beach Hat', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Israel (IL)', oras: 'Netanya', suvenir: 'Netanya Wine Bottle', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Israel (IL)', oras: 'Netanya', suvenir: 'Netanya Glass Art', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Israel (IL)', oras: 'Netanya', suvenir: 'Netanya Wine Bottle', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Israel (IL)', oras: 'Netanya', suvenir: 'Netanya Glass Art', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Auckland
 { tara: 'New Zealand (NZ)', oras: 'Auckland', suvenir: 'Auckland Sky Tower Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'New Zealand (NZ)', oras: 'Auckland', suvenir: 'Maori Carving', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'New Zealand (NZ)', oras: 'Auckland', suvenir: 'Manuka Honey', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'New Zealand (NZ)', oras: 'Auckland', suvenir: 'Maori Carving', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'New Zealand (NZ)', oras: 'Auckland', suvenir: 'Manuka Honey', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Wellington
 { tara: 'New Zealand (NZ)', oras: 'Wellington', suvenir: 'Wellington Cable Car Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'New Zealand (NZ)', oras: 'Wellington', suvenir: 'Lord of the Rings Memorabilia', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'New Zealand (NZ)', oras: 'Wellington', suvenir: 'Whittaker\'s Chocolate', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'New Zealand (NZ)', oras: 'Wellington', suvenir: 'Lord of the Rings Memorabilia', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'New Zealand (NZ)', oras: 'Wellington', suvenir: 'Whittaker\'s Chocolate', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Christchurch
 { tara: 'New Zealand (NZ)', oras: 'Christchurch', suvenir: 'Christchurch Cathedral Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'New Zealand (NZ)', oras: 'Christchurch', suvenir: 'Pounamu (Greenstone) Pendant', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'New Zealand (NZ)', oras: 'Christchurch', suvenir: 'New Zealand Wine', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'New Zealand (NZ)', oras: 'Christchurch', suvenir: 'Pounamu (Greenstone) Pendant', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'New Zealand (NZ)', oras: 'Christchurch', suvenir: 'New Zealand Wine', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Queenstown
 { tara: 'New Zealand (NZ)', oras: 'Queenstown', suvenir: 'Queenstown Adventure Photo Book', categorie: 'Books', destinatari: ['family', 'friend'] },
-{ tara: 'New Zealand (NZ)', oras: 'Queenstown', suvenir: 'New Zealand Merino Wool Sweater', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'New Zealand (NZ)', oras: 'Queenstown', suvenir: 'Kiwi Fruit Jam', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'New Zealand (NZ)', oras: 'Queenstown', suvenir: 'New Zealand Merino Wool Sweater', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'New Zealand (NZ)', oras: 'Queenstown', suvenir: 'Kiwi Fruit Jam', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Rotorua
 { tara: 'New Zealand (NZ)', oras: 'Rotorua', suvenir: 'Rotorua Thermal Mud Mask', categorie: 'Beauty', destinatari: ['family', 'friend'] },
-{ tara: 'New Zealand (NZ)', oras: 'Rotorua', suvenir: 'Maori Greenstone Necklace', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'New Zealand (NZ)', oras: 'Rotorua', suvenir: 'Rotorua Manuka Honey Soap', categorie: 'Beauty', destinatari: ['family', 'lover'] },
+{ tara: 'New Zealand (NZ)', oras: 'Rotorua', suvenir: 'Maori Greenstone Necklace', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'New Zealand (NZ)', oras: 'Rotorua', suvenir: 'Rotorua Manuka Honey Soap', categorie: 'Beauty', destinatari: ['acquaintance', 'relative'] },
 
 // Dunedin
 { tara: 'New Zealand (NZ)', oras: 'Dunedin', suvenir: 'Dunedin Scottish Tartan Scarf', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'New Zealand (NZ)', oras: 'Dunedin', suvenir: 'Otago Peninsula Wildlife Calendar', categorie: 'Books', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'New Zealand (NZ)', oras: 'Dunedin', suvenir: 'Dunedin Craft Beer', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'New Zealand (NZ)', oras: 'Dunedin', suvenir: 'Otago Peninsula Wildlife Calendar', categorie: 'Books', destinatari: ['lover', 'co-worker'] },
+{ tara: 'New Zealand (NZ)', oras: 'Dunedin', suvenir: 'Dunedin Craft Beer', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Tauranga
 { tara: 'New Zealand (NZ)', oras: 'Tauranga', suvenir: 'Tauranga Beach Hat', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'New Zealand (NZ)', oras: 'Tauranga', suvenir: 'Tauranga Avocado Oil', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'New Zealand (NZ)', oras: 'Tauranga', suvenir: 'Tauranga Arts & Crafts Book', categorie: 'Books', destinatari: ['family', 'lover'] },
+{ tara: 'New Zealand (NZ)', oras: 'Tauranga', suvenir: 'Tauranga Avocado Oil', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'New Zealand (NZ)', oras: 'Tauranga', suvenir: 'Tauranga Arts & Crafts Book', categorie: 'Books', destinatari: ['acquaintance', 'relative'] },
 
 // Hamilton
 { tara: 'New Zealand (NZ)', oras: 'Hamilton', suvenir: 'Hamilton Gardens Photo Album', categorie: 'Books', destinatari: ['family', 'friend'] },
-{ tara: 'New Zealand (NZ)', oras: 'Hamilton', suvenir: 'Waikato River Cruise Ticket', categorie: 'Experience', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'New Zealand (NZ)', oras: 'Hamilton', suvenir: 'Hamilton Honey', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'New Zealand (NZ)', oras: 'Hamilton', suvenir: 'Waikato River Cruise Ticket', categorie: 'Experience', destinatari: ['lover', 'co-worker'] },
+{ tara: 'New Zealand (NZ)', oras: 'Hamilton', suvenir: 'Hamilton Honey', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Napier
 { tara: 'New Zealand (NZ)', oras: 'Napier', suvenir: 'Art Deco Napier Postcards', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'New Zealand (NZ)', oras: 'Napier', suvenir: 'Hawke s Bay Wine Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'New Zealand (NZ)', oras: 'Napier', suvenir: 'Napier Marine Life Calendar', categorie: 'Books', destinatari: ['family', 'lover'] },
+{ tara: 'New Zealand (NZ)', oras: 'Napier', suvenir: 'Hawke s Bay Wine Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'New Zealand (NZ)', oras: 'Napier', suvenir: 'Napier Marine Life Calendar', categorie: 'Books', destinatari: ['acquaintance', 'relative'] },
 
 // Nelson
 { tara: 'New Zealand (NZ)', oras: 'Nelson', suvenir: 'Nelson Biking Trail Map', categorie: 'Books', destinatari: ['family', 'friend'] },
-{ tara: 'New Zealand (NZ)', oras: 'Nelson', suvenir: 'Nelson Lavender Soap', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'New Zealand (NZ)', oras: 'Nelson', suvenir: 'Nelson Artisan Cheese', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'New Zealand (NZ)', oras: 'Nelson', suvenir: 'Nelson Lavender Soap', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'New Zealand (NZ)', oras: 'Nelson', suvenir: 'Nelson Artisan Cheese', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Bogotá
 { tara: 'Colombia (CO)', oras: 'Bogotá', suvenir: 'Bogotá Coffee Beans', categorie: 'Food', destinatari: ['family', 'friend'] },
-{ tara: 'Colombia (CO)', oras: 'Bogotá', suvenir: 'Botero Museum Poster', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Colombia (CO)', oras: 'Bogotá', suvenir: 'Emerald Jewelry', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Colombia (CO)', oras: 'Bogotá', suvenir: 'Botero Museum Poster', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Colombia (CO)', oras: 'Bogotá', suvenir: 'Emerald Jewelry', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Medellín
 { tara: 'Colombia (CO)', oras: 'Medellín', suvenir: 'Medellín Orchid Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Colombia (CO)', oras: 'Medellín', suvenir: 'Paisa Hat', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Colombia (CO)', oras: 'Medellín', suvenir: 'Coffee Tour Experience', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Colombia (CO)', oras: 'Medellín', suvenir: 'Paisa Hat', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Colombia (CO)', oras: 'Medellín', suvenir: 'Coffee Tour Experience', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Cartagena
 { tara: 'Colombia (CO)', oras: 'Cartagena', suvenir: 'Cartagena Handcrafted Hammock', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Colombia (CO)', oras: 'Cartagena', suvenir: 'Colombian Rum', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Colombia (CO)', oras: 'Cartagena', suvenir: 'Colonial Architecture Photo Book', categorie: 'Books', destinatari: ['family', 'lover'] },
+{ tara: 'Colombia (CO)', oras: 'Cartagena', suvenir: 'Colombian Rum', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Colombia (CO)', oras: 'Cartagena', suvenir: 'Colonial Architecture Photo Book', categorie: 'Books', destinatari: ['acquaintance', 'relative'] },
 
 // Cali
 { tara: 'Colombia (CO)', oras: 'Cali', suvenir: 'Cali Salsa Music CD', categorie: 'Music', destinatari: ['family', 'friend'] },
-{ tara: 'Colombia (CO)', oras: 'Cali', suvenir: 'Handcrafted Leather Wallet', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Colombia (CO)', oras: 'Cali', suvenir: 'Cali Carnival Mask', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Colombia (CO)', oras: 'Cali', suvenir: 'Handcrafted Leather Wallet', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Colombia (CO)', oras: 'Cali', suvenir: 'Cali Carnival Mask', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Barranquilla
 { tara: 'Colombia (CO)', oras: 'Barranquilla', suvenir: 'Barranquilla Carnival Poster', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Colombia (CO)', oras: 'Barranquilla', suvenir: 'Tayrona Beach Sand Bottle', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Colombia (CO)', oras: 'Barranquilla', suvenir: 'Barranquilla Tropical Fruit Basket', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Colombia (CO)', oras: 'Barranquilla', suvenir: 'Tayrona Beach Sand Bottle', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Colombia (CO)', oras: 'Barranquilla', suvenir: 'Barranquilla Tropical Fruit Basket', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Santa Marta
 { tara: 'Colombia (CO)', oras: 'Santa Marta', suvenir: 'Santa Marta Beach Towel', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Colombia (CO)', oras: 'Santa Marta', suvenir: 'Tayrona National Park Photo Book', categorie: 'Books', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Colombia (CO)', oras: 'Santa Marta', suvenir: 'Colombian Coffee Sampler', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Colombia (CO)', oras: 'Santa Marta', suvenir: 'Tayrona National Park Photo Book', categorie: 'Books', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Colombia (CO)', oras: 'Santa Marta', suvenir: 'Colombian Coffee Sampler', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // San Andrés
 { tara: 'Colombia (CO)', oras: 'San Andrés', suvenir: 'San Andrés Coral Necklace', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Colombia (CO)', oras: 'San Andrés', suvenir: 'San Andrés Sea Shell Art', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Colombia (CO)', oras: 'San Andrés', suvenir: 'San Andrés Rum Cake', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Colombia (CO)', oras: 'San Andrés', suvenir: 'San Andrés Sea Shell Art', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Colombia (CO)', oras: 'San Andrés', suvenir: 'San Andrés Rum Cake', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Bucaramanga
 { tara: 'Colombia (CO)', oras: 'Bucaramanga', suvenir: 'Bucaramanga Coffee Mug', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Colombia (CO)', oras: 'Bucaramanga', suvenir: 'Bucaramanga Handmade Shawl', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Colombia (CO)', oras: 'Bucaramanga', suvenir: 'Santander Cheese Assortment', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Colombia (CO)', oras: 'Bucaramanga', suvenir: 'Bucaramanga Handmade Shawl', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Colombia (CO)', oras: 'Bucaramanga', suvenir: 'Santander Cheese Assortment', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Pereira
 { tara: 'Colombia (CO)', oras: 'Pereira', suvenir: 'Pereira Botanical Garden Print', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Colombia (CO)', oras: 'Pereira', suvenir: 'Coffee Region Sampler', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Colombia (CO)', oras: 'Pereira', suvenir: 'Pereira Traditional Hat', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Colombia (CO)', oras: 'Pereira', suvenir: 'Coffee Region Sampler', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Colombia (CO)', oras: 'Pereira', suvenir: 'Pereira Traditional Hat', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Manizales
 { tara: 'Colombia (CO)', oras: 'Manizales', suvenir: 'Manizales Coffee Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Colombia (CO)', oras: 'Manizales', suvenir: 'Manizales Mountain Landscape Photo', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Colombia (CO)', oras: 'Manizales', suvenir: 'Coffee Aroma Candle', categorie: 'Home', destinatari: ['family', 'lover'] },
+{ tara: 'Colombia (CO)', oras: 'Manizales', suvenir: 'Manizales Mountain Landscape Photo', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Colombia (CO)', oras: 'Manizales', suvenir: 'Coffee Aroma Candle', categorie: 'Home', destinatari: ['acquaintance', 'relative'] },
 
 // Sofia
 { tara: 'Bulgaria (BG)', oras: 'Sofia', suvenir: 'Sofia Alexander Nevsky Cathedral Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Bulgaria (BG)', oras: 'Sofia', suvenir: 'Bulgarian Rose Oil', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Bulgaria (BG)', oras: 'Sofia', suvenir: 'Sofia Street Map Poster', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Bulgaria (BG)', oras: 'Sofia', suvenir: 'Bulgarian Rose Oil', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Bulgaria (BG)', oras: 'Sofia', suvenir: 'Sofia Street Map Poster', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Plovdiv
 { tara: 'Bulgaria (BG)', oras: 'Plovdiv', suvenir: 'Plovdiv Ancient Theatre Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Bulgaria (BG)', oras: 'Plovdiv', suvenir: 'Plovdiv Rose Perfume', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Bulgaria (BG)', oras: 'Plovdiv', suvenir: 'Thracian Wine Selection', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Bulgaria (BG)', oras: 'Plovdiv', suvenir: 'Plovdiv Rose Perfume', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Bulgaria (BG)', oras: 'Plovdiv', suvenir: 'Thracian Wine Selection', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Varna
 { tara: 'Bulgaria (BG)', oras: 'Varna', suvenir: 'Varna Sea Garden Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Bulgaria (BG)', oras: 'Varna', suvenir: 'Black Sea Pearl Necklace', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Bulgaria (BG)', oras: 'Varna', suvenir: 'Bulgarian Rakia Assortment', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Bulgaria (BG)', oras: 'Varna', suvenir: 'Black Sea Pearl Necklace', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Bulgaria (BG)', oras: 'Varna', suvenir: 'Bulgarian Rakia Assortment', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Burgas
 { tara: 'Bulgaria (BG)', oras: 'Burgas', suvenir: 'Burgas Beach Sand Bottle', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Bulgaria (BG)', oras: 'Burgas', suvenir: 'Bulgarian Lavender Soap', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Bulgaria (BG)', oras: 'Burgas', suvenir: 'Burgas Fishermen s Hat', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Bulgaria (BG)', oras: 'Burgas', suvenir: 'Bulgarian Lavender Soap', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Bulgaria (BG)', oras: 'Burgas', suvenir: 'Burgas Fishermen s Hat', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Ruse
 { tara: 'Bulgaria (BG)', oras: 'Ruse', suvenir: 'Ruse Danube River Cruise Ticket', categorie: 'Experience', destinatari: ['family', 'friend'] },
-{ tara: 'Bulgaria (BG)', oras: 'Ruse', suvenir: 'Ruse Antique Architecture Print', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Bulgaria (BG)', oras: 'Ruse', suvenir: 'Bulgarian Wine Selection', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Bulgaria (BG)', oras: 'Ruse', suvenir: 'Ruse Antique Architecture Print', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Bulgaria (BG)', oras: 'Ruse', suvenir: 'Bulgarian Wine Selection', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Stara Zagora
 { tara: 'Bulgaria (BG)', oras: 'Stara Zagora', suvenir: 'Stara Zagora Roman Mosaics Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Bulgaria (BG)', oras: 'Stara Zagora', suvenir: 'Thracian Wine Flask', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Bulgaria (BG)', oras: 'Stara Zagora', suvenir: 'Bulgarian Rose Beauty Set', categorie: 'Beauty', destinatari: ['family', 'lover'] },
+{ tara: 'Bulgaria (BG)', oras: 'Stara Zagora', suvenir: 'Thracian Wine Flask', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Bulgaria (BG)', oras: 'Stara Zagora', suvenir: 'Bulgarian Rose Beauty Set', categorie: 'Beauty', destinatari: ['acquaintance', 'relative'] },
 
 // Pleven
 { tara: 'Bulgaria (BG)', oras: 'Pleven', suvenir: 'Pleven Military Museum Poster', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Bulgaria (BG)', oras: 'Pleven', suvenir: 'Bulgarian Wine Assortment', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Bulgaria (BG)', oras: 'Pleven', suvenir: 'Pleven Rose Garden Seeds', categorie: 'Home', destinatari: ['family', 'lover'] },
+{ tara: 'Bulgaria (BG)', oras: 'Pleven', suvenir: 'Bulgarian Wine Assortment', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Bulgaria (BG)', oras: 'Pleven', suvenir: 'Pleven Rose Garden Seeds', categorie: 'Home', destinatari: ['acquaintance', 'relative'] },
 
 // Veliko Tarnovo
 { tara: 'Bulgaria (BG)', oras: 'Veliko Tarnovo', suvenir: 'Veliko Tarnovo Tsarevets Fortress Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Bulgaria (BG)', oras: 'Veliko Tarnovo', suvenir: 'Bulgarian Traditional Embroidery', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Bulgaria (BG)', oras: 'Veliko Tarnovo', suvenir: 'Veliko Tarnovo Craft Beer Set', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Bulgaria (BG)', oras: 'Veliko Tarnovo', suvenir: 'Bulgarian Traditional Embroidery', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Bulgaria (BG)', oras: 'Veliko Tarnovo', suvenir: 'Veliko Tarnovo Craft Beer Set', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Blagoevgrad
 { tara: 'Bulgaria (BG)', oras: 'Blagoevgrad', suvenir: 'Blagoevgrad Pirin Mountain Hiking Map', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Bulgaria (BG)', oras: 'Blagoevgrad', suvenir: 'Bulgarian Yogurt Culture Kit', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Bulgaria (BG)', oras: 'Blagoevgrad', suvenir: 'Rhodope Mountain Honey', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Bulgaria (BG)', oras: 'Blagoevgrad', suvenir: 'Bulgarian Yogurt Culture Kit', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Bulgaria (BG)', oras: 'Blagoevgrad', suvenir: 'Rhodope Mountain Honey', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Bansko
 { tara: 'Bulgaria (BG)', oras: 'Bansko', suvenir: 'Bansko Ski Resort Poster', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Bulgaria (BG)', oras: 'Bansko', suvenir: 'Bulgarian Herbal Tea Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Bulgaria (BG)', oras: 'Bansko', suvenir: 'Bansko Snow Globe', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Bulgaria (BG)', oras: 'Bansko', suvenir: 'Bulgarian Herbal Tea Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Bulgaria (BG)', oras: 'Bansko', suvenir: 'Bansko Snow Globe', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Riyadh
 { tara: 'Saudi Arabia (SA)', oras: 'Riyadh', suvenir: 'Riyadh Skyline Art Print', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Riyadh', suvenir: 'Traditional Saudi Arabian Dates', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Riyadh', suvenir: 'Camel Leather Wallet', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Riyadh', suvenir: 'Traditional Saudi Arabian Dates', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Riyadh', suvenir: 'Camel Leather Wallet', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Jeddah
 { tara: 'Saudi Arabia (SA)', oras: 'Jeddah', suvenir: 'Jeddah Old Town Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Jeddah', suvenir: 'Arabian Coffee Blend', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Jeddah', suvenir: 'Gold-Plated Arabic Calligraphy Necklace', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Jeddah', suvenir: 'Arabian Coffee Blend', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Jeddah', suvenir: 'Gold-Plated Arabic Calligraphy Necklace', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Mecca
 { tara: 'Saudi Arabia (SA)', oras: 'Mecca', suvenir: 'Mecca Prayer Mat', categorie: 'Religious', destinatari: ['family', 'friend'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Mecca', suvenir: 'Dates from Mecca Region', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Mecca', suvenir: 'Mecca Tower Souvenir Keychain', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Mecca', suvenir: 'Dates from Mecca Region', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Mecca', suvenir: 'Mecca Tower Souvenir Keychain', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Medina
 { tara: 'Saudi Arabia (SA)', oras: 'Medina', suvenir: 'Medina Mosque Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Medina', suvenir: 'Medina Ajwa Dates', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Medina', suvenir: 'Medina Sandalwood Perfume', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Medina', suvenir: 'Medina Ajwa Dates', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Medina', suvenir: 'Medina Sandalwood Perfume', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Dammam
 { tara: 'Saudi Arabia (SA)', oras: 'Dammam', suvenir: 'Dammam Oil Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Dammam', suvenir: 'Dammam Spices Mix', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Dammam', suvenir: 'Pearl Diving Handcrafted Necklace', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Dammam', suvenir: 'Dammam Spices Mix', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Dammam', suvenir: 'Pearl Diving Handcrafted Necklace', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Al Khobar
 { tara: 'Saudi Arabia (SA)', oras: 'Al Khobar', suvenir: 'Al Khobar Cityscape Art Print', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Al Khobar', suvenir: 'Eastern Province Dates', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Al Khobar', suvenir: 'Handcrafted Pearl Bracelet', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Al Khobar', suvenir: 'Eastern Province Dates', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Al Khobar', suvenir: 'Handcrafted Pearl Bracelet', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Abha
 { tara: 'Saudi Arabia (SA)', oras: 'Abha', suvenir: 'Abha Mountain Landscape Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Abha', suvenir: 'Abha Mountain Honey', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Abha', suvenir: 'Traditional Abha Shawl', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Abha', suvenir: 'Abha Mountain Honey', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Abha', suvenir: 'Traditional Abha Shawl', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Taif
 { tara: 'Saudi Arabia (SA)', oras: 'Taif', suvenir: 'Taif Rose Oil', categorie: 'Beauty', destinatari: ['family', 'friend'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Taif', suvenir: 'Taif Dates with Almonds', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Taif', suvenir: 'Handcrafted Taif Ceramic Vase', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Taif', suvenir: 'Taif Dates with Almonds', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Taif', suvenir: 'Handcrafted Taif Ceramic Vase', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Jubail
 { tara: 'Saudi Arabia (SA)', oras: 'Jubail', suvenir: 'Jubail Industrial City Photo Frame', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Jubail', suvenir: 'Jubail Dates Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Jubail', suvenir: 'Jubail Oil Refinery Model', categorie: 'Science', destinatari: ['family', 'lover'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Jubail', suvenir: 'Jubail Dates Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Jubail', suvenir: 'Jubail Oil Refinery Model', categorie: 'Science', destinatari: ['acquaintance', 'relative'] },
 
 // Yanbu
 { tara: 'Saudi Arabia (SA)', oras: 'Yanbu', suvenir: 'Yanbu Red Sea Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Yanbu', suvenir: 'Yanbu Dried Dates', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Saudi Arabia (SA)', oras: 'Yanbu', suvenir: 'Handcrafted Yanbu Pearl Necklace', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Yanbu', suvenir: 'Yanbu Dried Dates', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Saudi Arabia (SA)', oras: 'Yanbu', suvenir: 'Handcrafted Yanbu Pearl Necklace', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Budapest
 { tara: 'Hungary (HU)', oras: 'Budapest', suvenir: 'Budapest Chain Bridge Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Hungary (HU)', oras: 'Budapest', suvenir: 'Hungarian Paprika Set', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Hungary (HU)', oras: 'Budapest', suvenir: 'Budapest Danube River Cruise Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Hungary (HU)', oras: 'Budapest', suvenir: 'Hungarian Paprika Set', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Hungary (HU)', oras: 'Budapest', suvenir: 'Budapest Danube River Cruise Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Debrecen
 { tara: 'Hungary (HU)', oras: 'Debrecen', suvenir: 'Debrecen Reformed Great Church Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Hungary (HU)', oras: 'Debrecen', suvenir: 'Hungarian Tokaji Wine', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Hungary (HU)', oras: 'Debrecen', suvenir: 'Debrecen Hortobágy National Park Painting', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Hungary (HU)', oras: 'Debrecen', suvenir: 'Hungarian Tokaji Wine', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Hungary (HU)', oras: 'Debrecen', suvenir: 'Debrecen Hortobágy National Park Painting', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Szeged
 { tara: 'Hungary (HU)', oras: 'Szeged', suvenir: 'Szeged Votive Church Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Hungary (HU)', oras: 'Szeged', suvenir: 'Hungarian Paprika String', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Hungary (HU)', oras: 'Szeged', suvenir: 'Szeged Open-Air Festival Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Hungary (HU)', oras: 'Szeged', suvenir: 'Hungarian Paprika String', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Hungary (HU)', oras: 'Szeged', suvenir: 'Szeged Open-Air Festival Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Miskolc
 { tara: 'Hungary (HU)', oras: 'Miskolc', suvenir: 'Miskolc Avas Lookout Tower Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Hungary (HU)', oras: 'Miskolc', suvenir: 'Hungarian Tokaji Aszú Wine', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Hungary (HU)', oras: 'Miskolc', suvenir: 'Miskolc National Theatre Painting', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Hungary (HU)', oras: 'Miskolc', suvenir: 'Hungarian Tokaji Aszú Wine', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Hungary (HU)', oras: 'Miskolc', suvenir: 'Miskolc National Theatre Painting', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Pécs
 { tara: 'Hungary (HU)', oras: 'Pécs', suvenir: 'Pécs Cathedral Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Hungary (HU)', oras: 'Pécs', suvenir: 'Hungarian Folk Art Embroidery', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Hungary (HU)', oras: 'Pécs', suvenir: 'Pécs Zsolnay Porcelain', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Hungary (HU)', oras: 'Pécs', suvenir: 'Hungarian Folk Art Embroidery', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Hungary (HU)', oras: 'Pécs', suvenir: 'Pécs Zsolnay Porcelain', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Győr
 { tara: 'Hungary (HU)', oras: 'Győr', suvenir: 'Győr Bishop s Castle Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Hungary (HU)', oras: 'Győr', suvenir: 'Hungarian Salami Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Hungary (HU)', oras: 'Győr', suvenir: 'Győr Rába Quelle Thermal Bath Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Hungary (HU)', oras: 'Győr', suvenir: 'Hungarian Salami Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Hungary (HU)', oras: 'Győr', suvenir: 'Győr Rába Quelle Thermal Bath Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Nyíregyháza
 { tara: 'Hungary (HU)', oras: 'Nyíregyháza', suvenir: 'Nyíregyháza Zoo Souvenir', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Hungary (HU)', oras: 'Nyíregyháza', suvenir: 'Hungarian Tokaji Essencia Wine', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Hungary (HU)', oras: 'Nyíregyháza', suvenir: 'Nyíregyháza Aquarius Water Park Pass', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Hungary (HU)', oras: 'Nyíregyháza', suvenir: 'Hungarian Tokaji Essencia Wine', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Hungary (HU)', oras: 'Nyíregyháza', suvenir: 'Nyíregyháza Aquarius Water Park Pass', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Kecskemét
 { tara: 'Hungary (HU)', oras: 'Kecskemét', suvenir: 'Kecskemét Mercedes-Benz Factory Tour Pass', categorie: 'Experience', destinatari: ['family', 'friend'] },
-{ tara: 'Hungary (HU)', oras: 'Kecskemét', suvenir: 'Hungarian Apricot Jam', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Hungary (HU)', oras: 'Kecskemét', suvenir: 'Kecskemét Folk Art Pottery', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Hungary (HU)', oras: 'Kecskemét', suvenir: 'Hungarian Apricot Jam', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Hungary (HU)', oras: 'Kecskemét', suvenir: 'Kecskemét Folk Art Pottery', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Székesfehérvár
 { tara: 'Hungary (HU)', oras: 'Székesfehérvár', suvenir: 'Székesfehérvár Royal Palace Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Hungary (HU)', oras: 'Székesfehérvár', suvenir: 'Hungarian Pick Salami', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Hungary (HU)', oras: 'Székesfehérvár', suvenir: 'Székesfehérvár Bory Castle Ticket', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Hungary (HU)', oras: 'Székesfehérvár', suvenir: 'Hungarian Pick Salami', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Hungary (HU)', oras: 'Székesfehérvár', suvenir: 'Székesfehérvár Bory Castle Ticket', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Eger
 { tara: 'Hungary (HU)', oras: 'Eger', suvenir: 'Eger Castle Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Hungary (HU)', oras: 'Eger', suvenir: 'Hungarian Bull s Blood Wine', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Hungary (HU)', oras: 'Eger', suvenir: 'Eger Thermal Bath Pass', categorie: 'Experience', destinatari: ['family', 'lover'] },
+{ tara: 'Hungary (HU)', oras: 'Eger', suvenir: 'Hungarian Bull s Blood Wine', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Hungary (HU)', oras: 'Eger', suvenir: 'Eger Thermal Bath Pass', categorie: 'Experience', destinatari: ['acquaintance', 'relative'] },
 
 // Tunis
 { tara: 'Tunisia (TN)', oras: 'Tunis', suvenir: 'Tunisian Ceramic Plate', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Tunisia (TN)', oras: 'Tunis', suvenir: 'Traditional Tunisian Carpet', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Tunisia (TN)', oras: 'Tunis', suvenir: 'Dates from Medjool Oasis', categorie: 'Food', destinatari: ['family', 'lover'] },
+{ tara: 'Tunisia (TN)', oras: 'Tunis', suvenir: 'Traditional Tunisian Carpet', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Tunisia (TN)', oras: 'Tunis', suvenir: 'Dates from Medjool Oasis', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Sousse
 { tara: 'Tunisia (TN)', oras: 'Sousse', suvenir: 'Sousse Beach Towel', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Tunisia (TN)', oras: 'Sousse', suvenir: 'Spices and Herbs Selection', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Tunisia (TN)', oras: 'Sousse', suvenir: 'Sousse Medina Lantern', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Tunisia (TN)', oras: 'Sousse', suvenir: 'Spices and Herbs Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Tunisia (TN)', oras: 'Sousse', suvenir: 'Sousse Medina Lantern', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Hammamet
 { tara: 'Tunisia (TN)', oras: 'Hammamet', suvenir: 'Hammamet Ceramic Bowl', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Tunisia (TN)', oras: 'Hammamet', suvenir: 'Olive Oil Soap Set', categorie: 'Beauty', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Tunisia (TN)', oras: 'Hammamet', suvenir: 'Hammamet Beach Hat', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Tunisia (TN)', oras: 'Hammamet', suvenir: 'Olive Oil Soap Set', categorie: 'Beauty', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Tunisia (TN)', oras: 'Hammamet', suvenir: 'Hammamet Beach Hat', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Monastir
 { tara: 'Tunisia (TN)', oras: 'Monastir', suvenir: 'Monastir Embroidered Scarf', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Tunisia (TN)', oras: 'Monastir', suvenir: 'Traditional Pottery from Monastir', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Tunisia (TN)', oras: 'Monastir', suvenir: 'Monastir Olive Wood Kitchen Utensils', categorie: 'Household', destinatari: ['family', 'lover'] },
+{ tara: 'Tunisia (TN)', oras: 'Monastir', suvenir: 'Traditional Pottery from Monastir', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Tunisia (TN)', oras: 'Monastir', suvenir: 'Monastir Olive Wood Kitchen Utensils', categorie: 'Household', destinatari: ['acquaintance', 'relative'] },
 
 // Djerba
 { tara: 'Tunisia (TN)', oras: 'Djerba', suvenir: 'Djerba Ceramic Wall Tile', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Tunisia (TN)', oras: 'Djerba', suvenir: 'Saffron Threads from Djerba', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Tunisia (TN)', oras: 'Djerba', suvenir: 'Djerba Handwoven Basket', categorie: 'Art', destinatari: ['family', 'lover'] },
+{ tara: 'Tunisia (TN)', oras: 'Djerba', suvenir: 'Saffron Threads from Djerba', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Tunisia (TN)', oras: 'Djerba', suvenir: 'Djerba Handwoven Basket', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Carthage
 { tara: 'Tunisia (TN)', oras: 'Carthage', suvenir: 'Carthage Ancient Coin Replica', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Tunisia (TN)', oras: 'Carthage', suvenir: 'Carthage Punic Jug', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Tunisia (TN)', oras: 'Carthage', suvenir: 'Carthage History Book', categorie: 'Books', destinatari: ['family', 'lover'] },
+{ tara: 'Tunisia (TN)', oras: 'Carthage', suvenir: 'Carthage Punic Jug', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Tunisia (TN)', oras: 'Carthage', suvenir: 'Carthage History Book', categorie: 'Books', destinatari: ['acquaintance', 'relative'] },
 
 // Tozeur
 { tara: 'Tunisia (TN)', oras: 'Tozeur', suvenir: 'Tozeur Desert Sand Art Bottle', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Tunisia (TN)', oras: 'Tozeur', suvenir: 'Tozeur Dates and Nuts Mix', categorie: 'Food', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Tunisia (TN)', oras: 'Tozeur', suvenir: 'Tozeur Camel Leather Bag', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Tunisia (TN)', oras: 'Tozeur', suvenir: 'Tozeur Dates and Nuts Mix', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Tunisia (TN)', oras: 'Tozeur', suvenir: 'Tozeur Camel Leather Bag', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Mahdia
 { tara: 'Tunisia (TN)', oras: 'Mahdia', suvenir: 'Mahdia Pottery Bowl', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Tunisia (TN)', oras: 'Mahdia', suvenir: 'Mahdia Silver Filigree Jewelry', categorie: 'Fashion', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Tunisia (TN)', oras: 'Mahdia', suvenir: 'Mahdia Beach Towel', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Tunisia (TN)', oras: 'Mahdia', suvenir: 'Mahdia Silver Filigree Jewelry', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Tunisia (TN)', oras: 'Mahdia', suvenir: 'Mahdia Beach Towel', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Bizerte
 { tara: 'Tunisia (TN)', oras: 'Bizerte', suvenir: 'Bizerte Seashell Collection', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Tunisia (TN)', oras: 'Bizerte', suvenir: 'Bizerte Ceramic Plate', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Tunisia (TN)', oras: 'Bizerte', suvenir: 'Bizerte Olive Oil Soap Set', categorie: 'Beauty', destinatari: ['family', 'lover'] },
+{ tara: 'Tunisia (TN)', oras: 'Bizerte', suvenir: 'Bizerte Ceramic Plate', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Tunisia (TN)', oras: 'Bizerte', suvenir: 'Bizerte Olive Oil Soap Set', categorie: 'Beauty', destinatari: ['acquaintance', 'relative'] },
 
 // Douz
 { tara: 'Tunisia (TN)', oras: 'Douz', suvenir: 'Douz Desert Sand Bottle', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Tunisia (TN)', oras: 'Douz', suvenir: 'Traditional Douz Bedouin Rug', categorie: 'Art', destinatari: ['friend', 'acquaintance'] },
-{ tara: 'Tunisia (TN)', oras: 'Douz', suvenir: 'Douz Camel Leather Wallet', categorie: 'Fashion', destinatari: ['family', 'lover'] },
+{ tara: 'Tunisia (TN)', oras: 'Douz', suvenir: 'Traditional Douz Bedouin Rug', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Tunisia (TN)', oras: 'Douz', suvenir: 'Douz Camel Leather Wallet', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
+////
+//
+//
 //
 // Santo Domingo
 { tara: 'Dominican Republic (DO)', oras: 'Santo Domingo', suvenir: 'Amber Jewelry', categorie: 'Fashion', destinatari: ['family', 'friend'] },
@@ -3227,103 +3232,103 @@ async function addTestData() {
 
 // Port Louis
 { tara: 'Mauritius (MU)', oras: 'Port Louis', suvenir: 'Port Louis Waterfront Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Mauritius (MU)', oras: 'Port Louis', suvenir: 'Mauritian Vanilla Tea', categorie: 'Food', destinatari: ['friend', 'co-worker'] },
+{ tara: 'Mauritius (MU)', oras: 'Port Louis', suvenir: 'Mauritian Vanilla Tea', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
 { tara: 'Mauritius (MU)', oras: 'Port Louis', suvenir: 'Port Louis Souvenir Magnet', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Grand Baie
 { tara: 'Mauritius (MU)', oras: 'Grand Baie', suvenir: 'Grand Baie Beach Towel', categorie: 'Fashion', destinatari: ['family', 'friend'] },
 { tara: 'Mauritius (MU)', oras: 'Grand Baie', suvenir: 'Mauritian Rum Selection', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
-{ tara: 'Mauritius (MU)', oras: 'Grand Baie', suvenir: 'Grand Baie Handcrafted Necklace', categorie: 'Art', destinatari: ['friend', 'relative'] },
+{ tara: 'Mauritius (MU)', oras: 'Grand Baie', suvenir: 'Grand Baie Handcrafted Necklace', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Flic en Flac
 { tara: 'Mauritius (MU)', oras: 'Flic en Flac', suvenir: 'Flic en Flac Sunset Canvas', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Mauritius (MU)', oras: 'Flic en Flac', suvenir: 'Mauritian Vanilla Extract', categorie: 'Food', destinatari: ['co-worker', 'acquaintance'] },
-{ tara: 'Mauritius (MU)', oras: 'Flic en Flac', suvenir: 'Flic en Flac Shell Necklace', categorie: 'Fashion', destinatari: ['friend', 'relative'] },
+{ tara: 'Mauritius (MU)', oras: 'Flic en Flac', suvenir: 'Mauritian Vanilla Extract', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Mauritius (MU)', oras: 'Flic en Flac', suvenir: 'Flic en Flac Shell Necklace', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Belle Mare
 { tara: 'Mauritius (MU)', oras: 'Belle Mare', suvenir: 'Belle Mare Beach Print', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Mauritius (MU)', oras: 'Belle Mare', suvenir: 'Mauritian Pineapple Jam', categorie: 'Food', destinatari: ['co-worker', 'acquaintance'] },
-{ tara: 'Mauritius (MU)', oras: 'Belle Mare', suvenir: 'Belle Mare Seashell Earrings', categorie: 'Fashion', destinatari: ['friend', 'relative'] },
+{ tara: 'Mauritius (MU)', oras: 'Belle Mare', suvenir: 'Mauritian Pineapple Jam', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Mauritius (MU)', oras: 'Belle Mare', suvenir: 'Belle Mare Seashell Earrings', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Mahebourg
 { tara: 'Mauritius (MU)', oras: 'Mahebourg', suvenir: 'Mahebourg Harbour Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Mauritius (MU)', oras: 'Mahebourg', suvenir: 'Mauritian Spices Set', categorie: 'Food', destinatari: ['co-worker', 'acquaintance'] },
-{ tara: 'Mauritius (MU)', oras: 'Mahebourg', suvenir: 'Mahebourg Handcrafted Basket', categorie: 'Art', destinatari: ['friend', 'relative'] },
+{ tara: 'Mauritius (MU)', oras: 'Mahebourg', suvenir: 'Mauritian Spices Set', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Mauritius (MU)', oras: 'Mahebourg', suvenir: 'Mahebourg Handcrafted Basket', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Le Morne
 { tara: 'Mauritius (MU)', oras: 'Le Morne', suvenir: 'Le Morne Mountain Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Mauritius (MU)', oras: 'Le Morne', suvenir: 'Mauritian Coconut Oil Soap', categorie: 'Fashion', destinatari: ['co-worker', 'acquaintance'] },
-{ tara: 'Mauritius (MU)', oras: 'Le Morne', suvenir: 'Le Morne Sunset Print', categorie: 'Art', destinatari: ['friend', 'relative'] },
+{ tara: 'Mauritius (MU)', oras: 'Le Morne', suvenir: 'Mauritian Coconut Oil Soap', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Mauritius (MU)', oras: 'Le Morne', suvenir: 'Le Morne Sunset Print', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Trou-aux-Biches
 { tara: 'Mauritius (MU)', oras: 'Trou-aux-Biches', suvenir: 'Trou-aux-Biches Coral Necklace', categorie: 'Fashion', destinatari: ['family', 'friend'] },
 { tara: 'Mauritius (MU)', oras: 'Trou-aux-Biches', suvenir: 'Mauritian Rum Cake', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
-{ tara: 'Mauritius (MU)', oras: 'Trou-aux-Biches', suvenir: 'Trou-aux-Biches Beach Bag', categorie: 'Fashion', destinatari: ['friend', 'relative'] },
+{ tara: 'Mauritius (MU)', oras: 'Trou-aux-Biches', suvenir: 'Trou-aux-Biches Beach Bag', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Tamarin
 { tara: 'Mauritius (MU)', oras: 'Tamarin', suvenir: 'Tamarin Dolphin Figurine', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Mauritius (MU)', oras: 'Tamarin', suvenir: 'Mauritian Tea Sampler', categorie: 'Food', destinatari: ['co-worker', 'acquaintance'] },
-{ tara: 'Mauritius (MU)', oras: 'Tamarin', suvenir: 'Tamarin Beach Hat', categorie: 'Fashion', destinatari: ['friend', 'relative'] },
+{ tara: 'Mauritius (MU)', oras: 'Tamarin', suvenir: 'Mauritian Tea Sampler', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Mauritius (MU)', oras: 'Tamarin', suvenir: 'Tamarin Beach Hat', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Blue Bay
 { tara: 'Mauritius (MU)', oras: 'Blue Bay', suvenir: 'Blue Bay Marine Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
 { tara: 'Mauritius (MU)', oras: 'Blue Bay', suvenir: 'Mauritian Vanilla Rum', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
-{ tara: 'Mauritius (MU)', oras: 'Blue Bay', suvenir: 'Blue Bay Shell Necklace', categorie: 'Fashion', destinatari: ['friend', 'relative'] },
+{ tara: 'Mauritius (MU)', oras: 'Blue Bay', suvenir: 'Blue Bay Shell Necklace', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Curepipe
 { tara: 'Mauritius (MU)', oras: 'Curepipe', suvenir: 'Curepipe Floral Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Mauritius (MU)', oras: 'Curepipe', suvenir: 'Mauritian Tea Towel Set', categorie: 'Fashion', destinatari: ['co-worker', 'acquaintance'] },
-{ tara: 'Mauritius (MU)', oras: 'Curepipe', suvenir: 'Curepipe Volcano Model', categorie: 'Art', destinatari: ['friend', 'relative'] },
+{ tara: 'Mauritius (MU)', oras: 'Curepipe', suvenir: 'Mauritian Tea Towel Set', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Mauritius (MU)', oras: 'Curepipe', suvenir: 'Curepipe Volcano Model', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Yerevan
 { tara: 'Armenia (AM)', oras: 'Yerevan', suvenir: 'Yerevan Cityscape Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Armenia (AM)', oras: 'Yerevan', suvenir: 'Armenian Apricot Jam', categorie: 'Food', destinatari: ['co-worker', 'acquaintance'] },
-{ tara: 'Armenia (AM)', oras: 'Yerevan', suvenir: 'Yerevan Brandy', categorie: 'Food', destinatari: ['friend', 'relative'] },
+{ tara: 'Armenia (AM)', oras: 'Yerevan', suvenir: 'Armenian Apricot Jam', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Armenia (AM)', oras: 'Yerevan', suvenir: 'Yerevan Brandy', categorie: 'Food', destinatari: ['acquaintance', 'relative'] },
 
 // Gyumri
 { tara: 'Armenia (AM)', oras: 'Gyumri', suvenir: 'Gyumri Rug', categorie: 'Art', destinatari: ['family', 'friend'] },
 { tara: 'Armenia (AM)', oras: 'Gyumri', suvenir: 'Armenian Lavash Bread', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
-{ tara: 'Armenia (AM)', oras: 'Gyumri', suvenir: 'Gyumri Ceramic Mug', categorie: 'Art', destinatari: ['friend', 'relative'] },
+{ tara: 'Armenia (AM)', oras: 'Gyumri', suvenir: 'Gyumri Ceramic Mug', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Vanadzor
 { tara: 'Armenia (AM)', oras: 'Vanadzor', suvenir: 'Vanadzor Handcrafted Jewelry', categorie: 'Fashion', destinatari: ['family', 'friend'] },
-{ tara: 'Armenia (AM)', oras: 'Vanadzor', suvenir: 'Armenian Dried Fruits', categorie: 'Food', destinatari: ['co-worker', 'acquaintance'] },
-{ tara: 'Armenia (AM)', oras: 'Vanadzor', suvenir: 'Vanadzor Mountain Print', categorie: 'Art', destinatari: ['friend', 'relative'] },
+{ tara: 'Armenia (AM)', oras: 'Vanadzor', suvenir: 'Armenian Dried Fruits', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Armenia (AM)', oras: 'Vanadzor', suvenir: 'Vanadzor Mountain Print', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Dilijan
 { tara: 'Armenia (AM)', oras: 'Dilijan', suvenir: 'Dilijan Forest Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
 { tara: 'Armenia (AM)', oras: 'Dilijan', suvenir: 'Armenian Herbal Tea Blend', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
-{ tara: 'Armenia (AM)', oras: 'Dilijan', suvenir: 'Dilijan Ceramic Vase', categorie: 'Art', destinatari: ['friend', 'relative'] },
+{ tara: 'Armenia (AM)', oras: 'Dilijan', suvenir: 'Dilijan Ceramic Vase', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Jermuk
 { tara: 'Armenia (AM)', oras: 'Jermuk', suvenir: 'Jermuk Mineral Water', categorie: 'Food', destinatari: ['family', 'friend'] },
 { tara: 'Armenia (AM)', oras: 'Jermuk', suvenir: 'Jermuk Landscape Painting', categorie: 'Art', destinatari: ['lover', 'co-worker'] },
-{ tara: 'Armenia (AM)', oras: 'Jermuk', suvenir: 'Armenian Handmade Scarf', categorie: 'Fashion', destinatari: ['friend', 'relative'] },
+{ tara: 'Armenia (AM)', oras: 'Jermuk', suvenir: 'Armenian Handmade Scarf', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Tsaghkadzor
 { tara: 'Armenia (AM)', oras: 'Tsaghkadzor', suvenir: 'Tsaghkadzor Ski Resort Mug', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Armenia (AM)', oras: 'Tsaghkadzor', suvenir: 'Armenian Cognac', categorie: 'Food', destinatari: ['co-worker', 'acquaintance'] },
-{ tara: 'Armenia (AM)', oras: 'Tsaghkadzor', suvenir: 'Tsaghkadzor Snow Globe', categorie: 'Art', destinatari: ['friend', 'relative'] },
+{ tara: 'Armenia (AM)', oras: 'Tsaghkadzor', suvenir: 'Armenian Cognac', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Armenia (AM)', oras: 'Tsaghkadzor', suvenir: 'Tsaghkadzor Snow Globe', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Goris
 { tara: 'Armenia (AM)', oras: 'Goris', suvenir: 'Goris Cave Dwellings Model', categorie: 'Art', destinatari: ['family', 'friend'] },
 { tara: 'Armenia (AM)', oras: 'Goris', suvenir: 'Armenian Honey', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
-{ tara: 'Armenia (AM)', oras: 'Goris', suvenir: 'Goris Handcrafted Shawl', categorie: 'Fashion', destinatari: ['friend', 'relative'] },
+{ tara: 'Armenia (AM)', oras: 'Goris', suvenir: 'Goris Handcrafted Shawl', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Sevan
 { tara: 'Armenia (AM)', oras: 'Sevan', suvenir: 'Sevan Lake Photo Album', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Armenia (AM)', oras: 'Sevan', suvenir: 'Armenian Lavash Bread', categorie: 'Food', destinatari: ['co-worker', 'acquaintance'] },
-{ tara: 'Armenia (AM)', oras: 'Sevan', suvenir: 'Sevan Pearl Necklace', categorie: 'Fashion', destinatari: ['friend', 'relative'] },
+{ tara: 'Armenia (AM)', oras: 'Sevan', suvenir: 'Armenian Lavash Bread', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Armenia (AM)', oras: 'Sevan', suvenir: 'Sevan Pearl Necklace', categorie: 'Fashion', destinatari: ['acquaintance', 'relative'] },
 
 // Hrazdan
 { tara: 'Armenia (AM)', oras: 'Hrazdan', suvenir: 'Hrazdan Valley Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
 { tara: 'Armenia (AM)', oras: 'Hrazdan', suvenir: 'Armenian Dried Fruits', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
-{ tara: 'Armenia (AM)', oras: 'Hrazdan', suvenir: 'Hrazdan Handcrafted Pottery', categorie: 'Art', destinatari: ['friend', 'relative'] },
+{ tara: 'Armenia (AM)', oras: 'Hrazdan', suvenir: 'Hrazdan Handcrafted Pottery', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Alaverdi
 { tara: 'Armenia (AM)', oras: 'Alaverdi', suvenir: 'Alaverdi Monastery Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-{ tara: 'Armenia (AM)', oras: 'Alaverdi', suvenir: 'Armenian Lavender Sachets', categorie: 'Fashion', destinatari: ['co-worker', 'acquaintance'] },
-{ tara: 'Armenia (AM)', oras: 'Alaverdi', suvenir: 'Alaverdi Copper Vase', categorie: 'Art', destinatari: ['friend', 'relative'] },
+{ tara: 'Armenia (AM)', oras: 'Alaverdi', suvenir: 'Armenian Lavender Sachets', categorie: 'Fashion', destinatari: ['lover', 'co-worker'] },
+{ tara: 'Armenia (AM)', oras: 'Alaverdi', suvenir: 'Alaverdi Copper Vase', categorie: 'Art', destinatari: ['acquaintance', 'relative'] },
 
 // Yangon
 { tara: 'Myanmar (MM)', oras: 'Yangon', suvenir: 'Yangon Cityscape Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
@@ -4295,9 +4300,9 @@ async function addTestData() {
       await addDoc(suveniruriCollection, suvenir);
     }
 
-    console.log('Test data added successfully.');
+    console.log('Data added successfully.');
   } catch (error) {
-    console.error("Error adding test data: ", error);
+    console.error("Error adding data: ", error);
     throw error;
   }
 }
