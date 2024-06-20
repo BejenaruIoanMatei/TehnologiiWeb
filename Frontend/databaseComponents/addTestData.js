@@ -1,5 +1,5 @@
 // Import Firestore instance
-const { db } = require('./firebaseInit');
+const { db } = require('../firebaseInit');
 const { collection, addDoc } = require('firebase/firestore');
 
 // Function to add test data to the 'suveniruri' collection
