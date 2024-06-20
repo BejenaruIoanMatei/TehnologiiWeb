@@ -10,3 +10,11 @@
 5. pm2 start server.js
 6. in broswer put localhost:3000
 
+[
+  'lover',
+  'co-worker',
+  'acquaintance',
+  'relative',
+  'family',
+  'friend'
+]

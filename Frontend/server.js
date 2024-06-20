@@ -102,6 +102,7 @@ const resetLoggedInStatus = async () => {
     const querySnapshot = await getDocs(usersRef);
     querySnapshot.forEach(async (userDoc) => {
       await updateDoc(doc(db, 'users', userDoc.id), { loggedIn: false });
+      await updateDoc(doc(db, 'users', userDoc.id), { sessionId: false });
     });
     console.log('All users\' loggedIn status set to false');
   } catch (error) {
