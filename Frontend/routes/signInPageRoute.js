@@ -23,7 +23,7 @@ document.getElementById('signinForm').addEventListener('submit', async function(
 
       // Redirect based on user role or condition
       if (result.email === 'admin@sore.com') {
-        window.location.href = `/views/admin.html`;
+        window.location.href = `/views/explorePageAdminLoggedIn.html`;
       } else {
         window.location.href = `/views/explorePageLoggedIn.html`;
       }
