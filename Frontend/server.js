@@ -5,7 +5,6 @@ const { v4: uuidv4 } = require('uuid');
 const { db } = require('./firebaseInit'); // Adjust the path if needed
 const { collection, getDocs, updateDoc, doc } = require('firebase/firestore');
 const cookie = require('cookie');
-const cookieParser = require('cookie-parser'); // Import cookie-parser
 
 const loginComponent = require('./components/loginComponent');
 const explorePageRoute = require('./routes/indexToExplorePageButtonRoute');
@@ -13,15 +12,12 @@ const aboutUsRoute = require('./routes/indexToAboutButtonRoute');
 const helpRoute = require('./routes/indexToHelpRoute');
 const signInRoute = require('./routes/explorePageToSignInRoute');
 const registerComponent = require('./components/registerComponent');
-const signOutComponent = require('./components/logoutComponent'); // Adjust the path if needed
+const logoutComponent = require('./components/logoutComponent');
 
 const PORT = process.env.PORT || 3000;
 
 // In-memory session store
 const sessions = {};
-
-// Initialize cookie-parser middleware
-app.use(cookieParser());
 
 // Helper function to generate a new session token
 const generateSession = () => {
@@ -110,7 +106,7 @@ const redirectIfNotLoggedIn = (req, res) => {
 };
 
 // Main server code
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
   let sessionId = getSessionIdFromCookies(req);
 
   if (!sessionId || !sessions[sessionId]) {
@@ -149,7 +145,7 @@ const server = http.createServer((req, res) => {
       return;
     } else if (req.url === '/signOut') {
       // Call the sign out component to handle the logout process
-      signOutComponent(req, res, sessions);
+      await logoutComponent(req, res, sessions);
       return;
     } else if (req.url === '/signIn') {
       // Call the sign in route

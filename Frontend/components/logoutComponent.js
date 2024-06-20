@@ -1,9 +1,19 @@
 const { db } = require('../firebaseInit');
 const { collection, query, where, getDocs, updateDoc, doc } = require('firebase/firestore');
+const cookie = require('cookie');
 
 // Function to reset the loggedIn field for the current user to false
-async function logout(req, res, sessions) {
-  const sessionId = req.cookies.sessionId;
+async function logoutComponent(req, res, sessions) {
+  const cookies = req.headers.cookie; // Get cookies from headers
+
+  if (!cookies) {
+    res.writeHead(400, { 'Content-Type': 'text/plain' });
+    res.end('No cookies found');
+    return;
+  }
+
+  const parsedCookies = cookie.parse(cookies); // Parse cookies using cookie module
+  const sessionId = parsedCookies.sessionId;
 
   if (sessions[sessionId]) {
     // Update the loggedIn status in Firestore
@@ -42,4 +52,4 @@ async function logout(req, res, sessions) {
   }
 }
 
-module.exports = logout;
+module.exports = logoutComponent;

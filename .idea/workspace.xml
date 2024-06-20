@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="55: Refactor packageScripts scripts">
+    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="56: Integrate session manager into the components.&#10;*logoutComponent has bugs: DO NOT USE!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/components/loginComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/components/loginComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/components/logoutComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/components/logoutComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/components/registerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/components/registerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/routes/indexToExplorePageButtonRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/routes/indexToExplorePageButtonRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/routes/signInPageRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/routes/signInPageRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/routes/signOutRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/routes/signOutRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/routes/signOutRoute.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +78,7 @@
       <workItem from="1717827661128" duration="557000" />
       <workItem from="1717829664903" duration="1285000" />
       <workItem from="1717852469404" duration="489000" />
-      <workItem from="1718863386202" duration="5671000" />
+      <workItem from="1718863386202" duration="6186000" />
     </task>
     <task id="LOCAL-00001" summary="54: Refactor dataBase scripts">
       <option name="closed" value="true" />
@@ -100,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718863825508</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="56: Integrate session manager into the components.&#10;*logoutComponent has bugs: DO NOT USE!">
+      <option name="closed" value="true" />
+      <created>1718869304369</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718869304369</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +113,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="54: Refactor dataBase scripts" />
     <MESSAGE value="55: Refactor packageScripts scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="55: Refactor packageScripts scripts" />
+    <MESSAGE value="56: Integrate session manager into the components.&#10;*logoutComponent has bugs: DO NOT USE!" />
+    <option name="LAST_COMMIT_MESSAGE" value="56: Integrate session manager into the components.&#10;*logoutComponent has bugs: DO NOT USE!" />
   </component>
 </project>
