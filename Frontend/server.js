@@ -52,7 +52,7 @@ const getContentType = (extname) => {
   }
 };
 
-// Helper function to serve static files
+// Helper function to serve static files with caching headers
 const serveStaticFile = (res, filePath, contentType) => {
   fs.readFile(filePath, (err, content) => {
     if (err) {
@@ -68,8 +68,28 @@ const serveStaticFile = (res, filePath, contentType) => {
         res.end(`Server Error: ${err.code}`);
       }
     } else {
-      // Serve file
-      res.writeHead(200, { 'Content-Type': contentType });
+      // Determine file extension
+      const extname = path.extname(filePath);
+
+      // Set caching headers based on file type
+      let cacheControl = 'no-store'; // Default to no caching
+      if (extname === '.html' || extname === '.htm') {
+        cacheControl = 'no-cache, no-store, must-revalidate'; // Do not cache HTML files
+      } else if (extname === '.css') {
+        cacheControl = 'public, max-age=86400'; // Cache CSS for 1 day (86400 seconds)
+      } else if (extname === '.js') {
+        cacheControl = 'public, max-age=86400, must-revalidate'; // Cache JS for 1 day with must-revalidate
+      } else if (extname === '.json') {
+        cacheControl = 'public, max-age=86400'; // Cache JSON for 1 day (86400 seconds)
+      } else if (extname === '.png' || extname === '.jpg' || extname === '.jpeg' || extname === '.ico') {
+        cacheControl = 'public, max-age=604800'; // Cache images for 1 week (604800 seconds)
+      }
+
+      // Serve file with caching headers
+      res.writeHead(200, {
+        'Content-Type': contentType,
+        'Cache-Control': cacheControl,
+      });
       res.end(content, 'utf8');
     }
   });

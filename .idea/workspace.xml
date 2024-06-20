@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="56: Integrate session manager into the components.&#10;*logoutComponent has bugs: DO NOT USE!">
+    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="57: Integrate session manager into the components.&#10;*logoutComponent has been fixed.">
+      <change afterPath="$PROJECT_DIR$/Frontend/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/components/logoutComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/components/logoutComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/routes/signOutRoute.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +77,7 @@
       <workItem from="1717827661128" duration="557000" />
       <workItem from="1717829664903" duration="1285000" />
       <workItem from="1717852469404" duration="489000" />
-      <workItem from="1718863386202" duration="6186000" />
+      <workItem from="1718863386202" duration="6818000" />
     </task>
     <task id="LOCAL-00001" summary="54: Refactor dataBase scripts">
       <option name="closed" value="true" />
@@ -104,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718869304369</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="57: Integrate session manager into the components.&#10;*logoutComponent has been fixed.">
+      <option name="closed" value="true" />
+      <created>1718869836143</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718869836143</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +121,7 @@
     <MESSAGE value="54: Refactor dataBase scripts" />
     <MESSAGE value="55: Refactor packageScripts scripts" />
     <MESSAGE value="56: Integrate session manager into the components.&#10;*logoutComponent has bugs: DO NOT USE!" />
-    <option name="LAST_COMMIT_MESSAGE" value="56: Integrate session manager into the components.&#10;*logoutComponent has bugs: DO NOT USE!" />
+    <MESSAGE value="57: Integrate session manager into the components.&#10;*logoutComponent has been fixed." />
+    <option name="LAST_COMMIT_MESSAGE" value="57: Integrate session manager into the components.&#10;*logoutComponent has been fixed." />
   </component>
 </project>
