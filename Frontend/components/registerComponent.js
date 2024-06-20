@@ -1,9 +1,10 @@
-// Import Firestore database from firebaseInit.js
 const { db } = require('../firebaseInit');
-const { collection, query, where, getDocs, addDoc } = require('firebase/firestore');
+const { collection, query, where, getDocs, addDoc, updateDoc, doc } = require('firebase/firestore');
 const bcrypt = require('bcrypt');
+const cookie = require('cookie');
+const { v4: uuidv4 } = require('uuid');
 
-const registerComponent = async (req, res) => {
+const registerComponent = async (req, res, sessions) => {
   let body = '';
   req.on('data', chunk => {
     body += chunk.toString();
@@ -38,14 +39,29 @@ const registerComponent = async (req, res) => {
       // Hash the password
       const hashedPassword = await bcrypt.hash(password, 10);
 
-      // Add the new user to the database
-      await addDoc(usersRef, {
+      // Generate new session ID
+      const sessionId = uuidv4();
+
+      // Add the new user to the database with sessionId
+      const newUserRef = await addDoc(usersRef, {
         username,
         password: hashedPassword,
         age,
         email,
-        loggedIn: false // Default to false
+        loggedIn: true, // Registering means automatically logged in
+        sessionId: sessionId // Store sessionId in Firestore
       });
+
+      // Update session data
+      sessions[sessionId] = { loggedIn: true, email }; // Store session in memory
+
+      // Set session cookie
+      res.setHeader('Set-Cookie', cookie.serialize('sessionId', sessionId, {
+        httpOnly: true,
+        maxAge: 60 * 60 * 24, // 1 day
+        path: '/', // Ensure the cookie is sent with every request to the server
+        sameSite: 'strict' // Ensure the cookie is only sent on same-site requests
+      }));
 
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ message: 'Register successful' }));
@@ -57,4 +73,4 @@ const registerComponent = async (req, res) => {
   });
 };
 
-module.exports = registerComponent;
+module.exports = registerComponent

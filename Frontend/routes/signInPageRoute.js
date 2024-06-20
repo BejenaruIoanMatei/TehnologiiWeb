@@ -1,3 +1,7 @@
+// Assuming you have a sessionId stored in a global variable or retrieved from cookies
+let sessionId = '';
+
+// Event listener for the signinForm submission
 document.getElementById('signinForm').addEventListener('submit', async function(event) {
   event.preventDefault();
 
@@ -17,6 +21,7 @@ document.getElementById('signinForm').addEventListener('submit', async function(
     if (response.ok) {
       alert('Login successful');
 
+      // Redirect based on user role or condition
       if (result.email === 'admin@sore.com') {
         window.location.href = `/views/admin.html`;
       } else {
@@ -31,6 +36,7 @@ document.getElementById('signinForm').addEventListener('submit', async function(
   }
 });
 
+// Event listener for the register link click
 document.getElementById('submitRegisterFromSignIn').addEventListener('click', function() {
   window.location.href = '/views/registerPage.html';  // Redirect to registerPage.html
 });

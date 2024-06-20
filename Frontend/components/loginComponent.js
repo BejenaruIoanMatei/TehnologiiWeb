@@ -1,8 +1,10 @@
 const { db } = require('../firebaseInit');
 const { collection, query, where, getDocs, updateDoc, doc } = require('firebase/firestore');
 const bcrypt = require('bcrypt');
+const cookie = require('cookie');
+const { v4: uuidv4 } = require('uuid');
 
-const loginComponent = async (req, res) => {
+const loginComponent = async (req, res, sessions) => {
   let body = '';
   req.on('data', chunk => {
     body += chunk.toString();
@@ -25,12 +27,6 @@ const loginComponent = async (req, res) => {
       const userDoc = querySnapshot.docs[0];
       const user = userDoc.data();
 
-      if (user.loggedIn) {
-        res.writeHead(403, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ message: 'User already logged in' }));
-        return;
-      }
-
       const passwordMatch = await bcrypt.compare(password, user.password);
       if (!passwordMatch) {
         res.writeHead(401, { 'Content-Type': 'application/json' });
@@ -38,7 +34,33 @@ const loginComponent = async (req, res) => {
         return;
       }
 
-      await updateDoc(doc(db, 'users', userDoc.id), { loggedIn: true });
+      // Generate new session ID
+      const sessionId = uuidv4();
+
+      // Update session to logged in
+      const cookies = cookie.parse(req.headers.cookie || '');
+      const existingSessionId = cookies.sessionId;
+      if (existingSessionId && sessions[existingSessionId]) {
+        sessions[existingSessionId].loggedIn = true;
+        sessions[existingSessionId].email = user.email;
+      }
+
+      // Update session in Firestore
+      await updateDoc(doc(db, 'users', userDoc.id), {
+        loggedIn: true,
+        sessionId: sessionId
+      });
+
+      // Update session in memory
+      sessions[sessionId] = { loggedIn: true, email: user.email };
+
+      // Set session cookie
+      res.setHeader('Set-Cookie', cookie.serialize('sessionId', sessionId, {
+        httpOnly: true,
+        maxAge: 60 * 60 * 24, // 1 day
+        path: '/', // Ensure the cookie is sent with every request to the server
+        sameSite: 'strict' // Ensure the cookie is only sent on same-site requests
+      }));
 
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ message: 'Login successful', email: user.email }));

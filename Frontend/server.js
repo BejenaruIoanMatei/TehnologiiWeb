@@ -4,29 +4,36 @@ const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const { db } = require('./firebaseInit'); // Adjust the path if needed
 const { collection, getDocs, updateDoc, doc } = require('firebase/firestore');
+const cookie = require('cookie');
+const cookieParser = require('cookie-parser'); // Import cookie-parser
 
-const loginRoute = require('./components/loginComponent');
+const loginComponent = require('./components/loginComponent');
 const explorePageRoute = require('./routes/indexToExplorePageButtonRoute');
 const aboutUsRoute = require('./routes/indexToAboutButtonRoute');
 const helpRoute = require('./routes/indexToHelpRoute');
 const signInRoute = require('./routes/explorePageToSignInRoute');
-const registerRoute = require('./components/registerComponent');
-const signOut = require('./routes/signOutRoute');
+const registerComponent = require('./components/registerComponent');
+const signOutComponent = require('./components/logoutComponent'); // Adjust the path if needed
+
 const PORT = process.env.PORT || 3000;
 
 // In-memory session store
 const sessions = {};
 
+// Initialize cookie-parser middleware
+app.use(cookieParser());
+
 // Helper function to generate a new session token
 const generateSession = () => {
   const sessionId = uuidv4();
-  sessions[sessionId] = { loggedIn: false };
+  sessions[sessionId] = { loggedIn: false }; // Initialize session data
   return sessionId;
 };
 
-// Helper function to get session ID from headers
-const getSessionIdFromHeaders = (headers) => {
-  return headers['x-session-id'];
+// Helper function to get session ID from cookies
+const getSessionIdFromCookies = (req) => {
+  const cookies = cookie.parse(req.headers.cookie || '');
+  return cookies.sessionId;
 };
 
 // Helper function to determine content type based on file extension
@@ -86,15 +93,38 @@ const resetLoggedInStatus = async () => {
   }
 };
 
+// Helper function to check if a user is logged in
+const isLoggedIn = (req) => {
+  const sessionId = getSessionIdFromCookies(req);
+  return sessionId && sessions[sessionId] && sessions[sessionId].loggedIn;
+};
+
+// Helper function to redirect if not logged in
+const redirectIfNotLoggedIn = (req, res) => {
+  if (!isLoggedIn(req)) {
+    res.writeHead(302, { 'Location': '/signIn' }); // Redirect to the login page if not logged in
+    res.end();
+    return true; // Indicate that a redirect has occurred
+  }
+  return false; // No redirect occurred
+};
+
 // Main server code
 const server = http.createServer((req, res) => {
-  let sessionId = getSessionIdFromHeaders(req.headers);
+  let sessionId = getSessionIdFromCookies(req);
 
   if (!sessionId || !sessions[sessionId]) {
+    // Generate a new session ID if not present or invalid
     sessionId = generateSession();
-    res.setHeader('X-Session-Id', sessionId);
+    res.setHeader('Set-Cookie', cookie.serialize('sessionId', sessionId, {
+      httpOnly: true,
+      maxAge: 60 * 60 * 24, // 1 day
+      path: '/', // Ensure the cookie is sent with every request to the server
+      sameSite: 'strict' // Ensure the cookie is only sent on same-site requests
+    }));
   }
-  console.log(sessionId);
+
+  console.log(`Session ID: ${sessionId}`);
 
   if (req.method === 'GET') {
     let filePath;
@@ -103,25 +133,27 @@ const server = http.createServer((req, res) => {
     if (req.url === '/') {
       filePath = path.join(__dirname, 'views', 'index.html');
     } else if (req.url === '/explore') {
+      if (redirectIfNotLoggedIn(req, res)) return;
       // Call the explorePage route handler
       explorePageRoute(req, res);
       return;
     } else if (req.url === '/aboutUs') {
+      if (redirectIfNotLoggedIn(req, res)) return;
       // Call the about us route handler
       aboutUsRoute(req, res);
       return;
     } else if (req.url === '/help') {
+      if (redirectIfNotLoggedIn(req, res)) return;
       // Call the help route handler
       helpRoute(req, res);
       return;
-    } else if ( req.url === "/signOut" )
-    {
-      //Call the sign out route
-      signOut(req,res);
+    } else if (req.url === '/signOut') {
+      // Call the sign out component to handle the logout process
+      signOutComponent(req, res, sessions);
       return;
     } else if (req.url === '/signIn') {
       // Call the sign in route
-      signInRoute(req, res);
+      signInRoute(req, res, sessions);
       return;
     } else {
       filePath = path.join(__dirname, req.url);
@@ -138,10 +170,10 @@ const server = http.createServer((req, res) => {
     serveStaticFile(res, filePath, contentType);
   } else if (req.method === 'POST' && req.url === '/loginComponent') {
     // Call the login route handler
-    loginRoute(req, res);
+    loginComponent(req, res, sessions);
   } else if (req.method === 'POST' && req.url === '/registerComponent') {
     // Call the register route handler
-    registerRoute(req, res);
+    registerComponent(req, res, sessions);
   } else {
     // Method not allowed
     res.writeHead(405, { 'Content-Type': 'text/html' });

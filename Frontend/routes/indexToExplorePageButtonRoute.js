@@ -1,6 +1,6 @@
 const indexToExplorePageButtonRoute = (req, res) => {
   // Redirect to explorePage.html
-  res.writeHead(302, { 'Location': '../views/explorePage.html' });
+  res.writeHead(302, { 'Location': '../views/explorePageLoggedIn.html' });
   res.end();
 };
 
