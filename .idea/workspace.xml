@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="59: Update data  base with like and dislike counts.">
-      <change afterPath="$PROJECT_DIR$/routes/redirectAdminPageRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/redirectExploreAdminRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/redirectExploreUserRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/statisticsRoute.js" afterDir="false" />
+    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="72: Update admin session management.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/loginComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/loginComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/registerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/registerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/signInPageRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/signInPageRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/explorePageAdminLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/explorePageAdminLoggedIn.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +90,7 @@
       <workItem from="1718863386202" duration="6818000" />
       <workItem from="1718914069531" duration="687000" />
       <workItem from="1718994612197" duration="2370000" />
-      <workItem from="1718997651901" duration="4888000" />
+      <workItem from="1718997651901" duration="5561000" />
     </task>
     <task id="LOCAL-00001" summary="54: Refactor dataBase scripts">
       <option name="closed" value="true" />
@@ -148,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718908556668</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="72: Update admin session management.">
+      <option name="closed" value="true" />
+      <created>1719005366152</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719005366152</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +175,7 @@
     <MESSAGE value="57: Integrate session manager into the components.&#10;*logoutComponent has been fixed." />
     <MESSAGE value="58: Create filter querryes." />
     <MESSAGE value="59: Update data  base with like and dislike counts." />
-    <option name="LAST_COMMIT_MESSAGE" value="59: Update data  base with like and dislike counts." />
+    <MESSAGE value="72: Update admin session management." />
+    <option name="LAST_COMMIT_MESSAGE" value="72: Update admin session management." />
   </component>
 </project>
