@@ -13,8 +13,12 @@ const helpRoute = require('./routes/indexToHelpRoute');
 const signInRoute = require('./routes/explorePageToSignInRoute');
 const registerComponent = require('./components/registerComponent');
 const logoutComponent = require('./components/logoutComponent');
-
+const standardUserRoute = require ('./routes/redirectExploreUserRoute');
+const adminUserRoute = require('./routes/redirectExploreAdminRoute');
+const adminPageUserRoute = require('./routes/redirectAdminPageRoute');
+const adminStatisticsUserRoute = require('./routes/statisticsRoute')
 const PORT = process.env.PORT || 3000;
+
 
 // In-memory session store
 const sessions = {};
@@ -22,7 +26,7 @@ const sessions = {};
 // Helper function to generate a new session token
 const generateSession = () => {
   const sessionId = uuidv4();
-  sessions[sessionId] = { loggedIn: false }; // Initialize session data
+  sessions[sessionId] = { loggedIn: false , userRole : 'user' }; // Initialize session data
   return sessionId;
 };
 
@@ -126,6 +130,16 @@ const redirectIfNotLoggedIn = (req, res) => {
   return false; // No redirect occurred
 };
 
+//Helper function to redirect a user if it's not an admin
+const redirectIfNotLoggedInAdmin = (req, res) => {
+  if (res.sessions[sessionId].role !== 'admin') {
+    res.writeHead(302, { 'Location': '/explore' }); // Redirect to the login page if not logged in
+    res.end();
+    return true; // Indicate that a redirect has occurred
+  }
+  return false; // No redirect occurred
+};
+
 // Main server code
 const server = http.createServer(async (req, res) => {
   let sessionId = getSessionIdFromCookies(req);
@@ -152,17 +166,72 @@ const server = http.createServer(async (req, res) => {
     } else if (req.url === '/explore') {
       if (redirectIfNotLoggedIn(req, res)) return;
       // Call the explorePage route handler
+
       explorePageRoute(req, res);
       return;
     } else if (req.url === '/aboutUs') {
-      if (redirectIfNotLoggedIn(req, res)) return;
-      // Call the about us route handler
-      aboutUsRoute(req, res);
+      if (redirectIfNotLoggedIn(req, res) ) return;
+      if( ( sessions[sessionId].user === 'user' || sessions[sessionId].user === 'admin' ) && sessions[sessionId].loggedIn === true )
+      {
+        // Call the about us route handler
+        aboutUsRoute(req, res);
+      }
       return;
     } else if (req.url === '/help') {
       if (redirectIfNotLoggedIn(req, res)) return;
-      // Call the help route handler
-      helpRoute(req, res);
+      if( ( sessions[sessionId].user === 'user' || sessions[sessionId].user === 'admin' ) && sessions[sessionId].loggedIn === true )
+      {
+        // Call the help route handler
+        helpRoute(req, res);
+      }
+      else
+      {
+
+      }
+      return;
+    } else if ( req.url === '/redirectAdminRoute')
+    {
+      if (redirectIfNotLoggedIn(req, res) ) return;
+      if( sessions[sessionId].user === 'admin'  && sessions[sessionId].loggedIn === true )
+      {
+        // Call the about us route handler
+        adminUserRoute(req, res);
+      }
+      return;
+    } else if ( req.url === '/redirectUserRoute')
+    {
+      if (redirectIfNotLoggedIn(req, res) ) return;
+      if( sessions[sessionId].user === 'user'  && sessions[sessionId].loggedIn === true )
+      {
+        // Call the about us route handler
+        standardUserRoute(req, res);
+      }
+      return;
+    } else if ( req.url === '/redirectStatistics')
+    {
+      if (redirectIfNotLoggedIn(req, res) ) return;
+      if( sessions[sessionId].user === 'admin'  && sessions[sessionId].loggedIn === true )
+      {
+        // Call the about us route handler
+        adminStatisticsUserRoute(req, res);
+      }
+      else if( sessions[sessionId].user === 'user'  && sessions[sessionId].loggedIn === true)
+      {
+        window.location.href = `./views/explorePageLoggedIn.html`;
+      }
+      return;
+    } else if ( req.url === '/redirectAdmin')
+    {
+      if (redirectIfNotLoggedIn(req, res) ) return;
+      if( sessions[sessionId].user === 'admin'  && sessions[sessionId].loggedIn === true )
+      {
+        // Call the about us route handler
+        adminPageUserRoute(req, res);
+      }
+      else if( sessions[sessionId].user === 'user'  && sessions[sessionId].loggedIn === true)
+      {
+        window.location.href = `./views/explorePageLoggedIn.html`;
+      }
       return;
     } else if (req.url === '/signOut') {
       // Call the sign out component to handle the logout process

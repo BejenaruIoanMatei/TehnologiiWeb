@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="59: Update data  base with like and dislike counts.">
-      <change afterPath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToCsv.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/redirectAdminPageRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/redirectExploreAdminRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/redirectExploreUserRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/statisticsRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/exportScripts/masterExport.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/exportScripts/masterExport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/howToRunServer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/howToRunServer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/loginComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/loginComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/registerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/registerComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/signInPageRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/signInPageRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/explorePageAdminLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/explorePageAdminLoggedIn.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +98,7 @@
       <workItem from="1718863386202" duration="6818000" />
       <workItem from="1718914069531" duration="687000" />
       <workItem from="1718994612197" duration="2370000" />
-      <workItem from="1718997651901" duration="956000" />
+      <workItem from="1718997651901" duration="4888000" />
     </task>
     <task id="LOCAL-00001" summary="54: Refactor dataBase scripts">
       <option name="closed" value="true" />
@@ -150,6 +153,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>

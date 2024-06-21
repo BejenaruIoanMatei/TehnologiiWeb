@@ -22,10 +22,10 @@ document.getElementById('signinForm').addEventListener('submit', async function(
       alert('Login successful');
 
       // Redirect based on user role or condition
-      if (result.email === 'admin@sore.com') {
-        window.location.href = `/views/explorePageAdminLoggedIn.html`;
+      if ( result.role === 'admin' ) {
+        window.location.href = `/redirectAdminRoute`;
       } else {
-        window.location.href = `/views/explorePageLoggedIn.html`;
+        window.location.href = `/redirectUserRoute`;
       }
     } else {
       alert('Login failed: ' + result.message);

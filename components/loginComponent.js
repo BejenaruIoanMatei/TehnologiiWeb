@@ -37,22 +37,18 @@ const loginComponent = async (req, res, sessions) => {
       // Generate new session ID
       const sessionId = uuidv4();
 
-      // Update session to logged in
-      const cookies = cookie.parse(req.headers.cookie || '');
-      const existingSessionId = cookies.sessionId;
-      if (existingSessionId && sessions[existingSessionId]) {
-        sessions[existingSessionId].loggedIn = true;
-        sessions[existingSessionId].email = user.email;
-      }
-
-      // Update session in Firestore
+      // Update user's loggedIn and sessionId in Firestore
       await updateDoc(doc(db, 'users', userDoc.id), {
         loggedIn: true,
         sessionId: sessionId
       });
 
-      // Update session in memory
-      sessions[sessionId] = { loggedIn: true, email: user.email };
+      // Update session data with user info and role (assuming role is stored in user object)
+      sessions[sessionId] = {
+        loggedIn: true,
+        email: user.email,
+        userRole: user.role // Access user role from the fetched user data
+      };
 
       // Set session cookie
       res.setHeader('Set-Cookie', cookie.serialize('sessionId', sessionId, {
@@ -63,7 +59,7 @@ const loginComponent = async (req, res, sessions) => {
       }));
 
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ message: 'Login successful', email: user.email }));
+      res.end(JSON.stringify({ message: 'Login successful', email: user.email, role: user.role }));
     } catch (error) {
       console.error('Error logging in:', error);
       res.writeHead(500, { 'Content-Type': 'application/json' });

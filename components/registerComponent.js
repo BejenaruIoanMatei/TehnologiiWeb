@@ -42,12 +42,13 @@ const registerComponent = async (req, res, sessions) => {
       // Generate new session ID
       const sessionId = uuidv4();
 
-      // Add the new user to the database with sessionId
+      // Add the new user with default role "user"
       const newUserRef = await addDoc(usersRef, {
         username,
         password: hashedPassword,
         age,
         email,
+        role: 'user', // Set default role here
         loggedIn: true, // Registering means automatically logged in
         sessionId: sessionId // Store sessionId in Firestore
       });
@@ -73,4 +74,4 @@ const registerComponent = async (req, res, sessions) => {
   });
 };
 
-module.exports = registerComponent
+module.exports = registerComponent;
