@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const exportSouvenirsToJson = require('exportSouvenirsToJson');
-const exportSouvenirsToXml = require('exportSouvenirsToXml');
+const exportSouvenirsToJson = require('./exportSouvenirsToJson');
+const exportSouvenirsToXml = require('./exportSouvenirsToXml');
+const exportSouvenirsToHtml = require('./exportSouvenirsToHtml');
+const exportSouvenirsToCsv = require('./exportSouvenirsToCsv');
 
 // Function to delete all contents of the 'exports' directory
 function clearExportsDirectory() {
@@ -40,6 +42,14 @@ async function exportAllSouvenirs() {
     console.log("Starting XML export...");
     await exportSouvenirsToXml();
     console.log("XML export completed.");
+
+    console.log("Starting HTML export...");
+    await exportSouvenirsToHtml();
+    console.log("HTML export completed.");
+
+    console.log("Starting CSV export...");
+    await exportSouvenirsToCsv();
+    console.log("CSV export completed.");
   } catch (error) {
     console.error("Error during export: ", error);
   }

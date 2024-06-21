@@ -4,17 +4,11 @@
 4. npm install pm2
 
 5. npm install firebase
-6.npm-install firebase-admin
+6. npm-install firebase-admin
 7. npm install bcrypt
+8. npm install xml2js
+9. npm install json2csv
 
-5. pm2 start server.js
-6. in broswer put localhost:3000
+10. pm2 start server.js
+11. in broswer put localhost:3000
 
-[
-  'lover',
-  'co-worker',
-  'acquaintance',
-  'relative',
-  'family',
-  'friend'
-]

@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="59: Update data  base with like and dislike counts." />
+    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="59: Update data  base with like and dislike counts.">
+      <change afterPath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToCsv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/exportScripts/masterExport.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/exportScripts/masterExport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/howToRunServer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/howToRunServer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +36,7 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2eQIXhxweeGAeYDng1oqYyUXGhm" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -39,6 +47,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "20.14.0",
     "javascript.nodejs.core.library.typings.version": "20.14.2",
     "last_opened_file_path": "C:/Users/Stefan/Documents/GitHub/TehnologiiWeb/Frontend/views",
@@ -47,6 +56,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -84,7 +94,8 @@
       <workItem from="1717852469404" duration="489000" />
       <workItem from="1718863386202" duration="6818000" />
       <workItem from="1718914069531" duration="687000" />
-      <workItem from="1718994612197" duration="2174000" />
+      <workItem from="1718994612197" duration="2370000" />
+      <workItem from="1718997651901" duration="956000" />
     </task>
     <task id="LOCAL-00001" summary="54: Refactor dataBase scripts">
       <option name="closed" value="true" />
@@ -141,6 +152,9 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="54: Refactor dataBase scripts" />
     <MESSAGE value="55: Refactor packageScripts scripts" />
     <MESSAGE value="56: Integrate session manager into the components.&#10;*logoutComponent has bugs: DO NOT USE!" />
