@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const addDestinationButton = document.querySelector(".form-actions button");
     const destinationsList = document.createElement("ul");
     const formContainer = document.querySelector(".form-container");
-
+  
     formContainer.appendChild(destinationsList);
   
     // Populate country dropdown
@@ -85,31 +85,32 @@ document.addEventListener("DOMContentLoaded", function() {
       checkboxOptions.appendChild(label);
       checkboxOptions.appendChild(document.createElement("br"));
     });
-
+  
     // Array to store destinations
     const destinations = [];
-
+  
     // Add event listener for the add destination button
     addDestinationButton.addEventListener("click", function(event) {
       event.preventDefault();
-
+  
       const selectedCountry = countrySelect.value;
       const selectedCity = citySelect.value;
       const startDate = document.getElementById("start").value;
       const endDate = document.getElementById("end").value;
       const selectedBeneficiaries = Array.from(document.querySelectorAll("input[name='beneficiaries']:checked")).map(cb => cb.value);
-
+  
       if (!selectedCountry || !selectedCity || !startDate || !endDate || selectedBeneficiaries.length === 0) {
         alert("Please fill in all fields and select at least one beneficiary.");
         return;
       }
-
-      // Check if destination already exists
-      if (destinations.some(dest => dest.oras === selectedCity && dest.tara === selectedCountry)) {
+  
+      const destinationExists = destinations.some(dest => dest.oras === selectedCity && dest.tara === selectedCountry);
+  
+      if (destinationExists) {
         alert("This destination is already added.");
         return;
       }
-
+  
       const destination = {
         tara: selectedCountry,
         oras: selectedCity,
@@ -117,18 +118,29 @@ document.addEventListener("DOMContentLoaded", function() {
         endDate: endDate,
         beneficiari: selectedBeneficiaries
       };
-
+  
       destinations.push(destination);
       displayDestinations();
     });
-
+  
     function displayDestinations() {
       destinationsList.innerHTML = "";
-      destinations.forEach(destination => {
+      destinations.forEach((destination, index) => {
         const listItem = document.createElement("li");
-        listItem.textContent = `${destination.oras}, ${destination.tara} - from ${destination.startDate} to ${destination.endDate}`;
         listItem.style.marginBottom = "5px";
+        listItem.textContent = `${destination.oras}, ${destination.tara} - from ${destination.startDate} to ${destination.endDate}`;
+        
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "-";
+        deleteButton.style.marginLeft = "10px";
+        deleteButton.addEventListener("click", function() {
+          destinations.splice(index, 1);
+          displayDestinations();
+        });
+  
+        listItem.appendChild(deleteButton);
         destinationsList.appendChild(listItem);
       });
     }
   });
+  
