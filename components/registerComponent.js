@@ -1,4 +1,4 @@
-const { db } = require('../firebaseInit');
+const { db } = require('../utils/firebaseInit');
 const { collection, query, where, getDocs, addDoc, updateDoc, doc } = require('firebase/firestore');
 const bcrypt = require('bcrypt');
 const cookie = require('cookie');

@@ -1,3 +1,5 @@
+const { generateSignedUrl } = require('../utils/urlSigning');
+
 document.getElementById('registerForm').addEventListener('submit', async function(event) {
   event.preventDefault();
 
@@ -17,7 +19,8 @@ document.getElementById('registerForm').addEventListener('submit', async functio
   const result = await response.json();
   if (response.ok) {
     alert('Registration successful!');
-    window.location.href = '../views/explorePage.html';  // Redirect to explorePage.html
+    const signedUrl = await generateSignedUrl('/views/explorePage.html'); // Generate signed URL
+    window.location.href = signedUrl;  // Redirect to explorePage.html
   } else {
     alert('Registration failed: ' + result.message);
   }

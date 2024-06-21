@@ -1,7 +1,7 @@
 // statisticsComponent.js
 
 // Import Firestore database from firebaseInit.js
-const { db } = require('../firebaseInit');
+const { db } = require('../utils/firebaseInit');
 const { collection, query, where, getDocs } = require('firebase/firestore');
 
 // Function to update statistics values

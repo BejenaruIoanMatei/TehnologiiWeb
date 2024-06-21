@@ -1,5 +1,5 @@
-// Assuming you have a sessionId stored in a global variable or retrieved from cookies
-let sessionId = '';
+// Import the utility function for URL signing
+const { generateSignedUrl } = require('../utils/urlSigning');
 
 // Event listener for the signinForm submission
 document.getElementById('signinForm').addEventListener('submit', async function(event) {
@@ -21,12 +21,15 @@ document.getElementById('signinForm').addEventListener('submit', async function(
     if (response.ok) {
       alert('Login successful');
 
-      // Redirect based on user role or condition
-      if ( result.role === 'admin' ) {
-        window.location.href = `/redirectAdminRoute`;
+      // Determine the redirect URL based on user role from the server response
+      let redirectUrl = '';
+      if (result.role === 'admin') {
+        redirectUrl = await generateSignedUrl('/redirectAdminRoute');
       } else {
-        window.location.href = `/redirectUserRoute`;
+        redirectUrl = await generateSignedUrl('/redirectUserRoute');
       }
+
+      window.location.href = redirectUrl; // Redirect to the signed URL
     } else {
       alert('Login failed: ' + result.message);
     }

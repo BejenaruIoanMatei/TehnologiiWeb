@@ -1,5 +1,5 @@
 // Import Firestore instance
-const { db } = require('../../../firebaseInit');
+const { db } = require('../../../utils/firebaseInit');
 const { collection, getDocs, updateDoc, query, where } = require('firebase/firestore');
 
 // Generate a random number between min (inclusive) and max (inclusive)

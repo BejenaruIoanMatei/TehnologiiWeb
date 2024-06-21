@@ -1,8 +1,18 @@
+const { generateSignedUrl } = require('../utils/urlSigning');
+const { getSessionIdFromCookies } = require('../utils/sessionUtils');
 
+const indexToHelpRoute = (req, res, sessions ) => {
+  const sessionId = getSessionIdFromCookies(req);
 
-const indexToHelpRoute = (req, res) => {
-  // Redirect to explorePage.html
-  res.writeHead(302, { 'Location': '../views/help.html' });
+  if (!sessionId || !sessions[sessionId]) {
+    res.writeHead(403, { 'Content-Type': 'text/html' });
+    res.end('<h1>403 Forbidden</h1>', 'utf8');
+    return;
+  }
+
+  // Generate a signed URL for help.html with session ID
+  const signedUrl = generateSignedUrl('../views/help.html', sessionId);
+  res.writeHead(302, { 'Location': signedUrl });
   res.end();
 };
 

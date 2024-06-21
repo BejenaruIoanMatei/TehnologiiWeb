@@ -4,9 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="72: Update admin session management.">
+    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="73: Update server logic and reformat server code.">
+      <change afterPath="$PROJECT_DIR$/utils/sessionUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/urlSigning.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/dataModelScripts/addData.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/dataModelScripts/addData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/dataModelScripts/addTestData.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/dataModelScripts/addTestData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/dataModelScripts/deleteData.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/dataModelScripts/deleteData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/dataModelScripts/generateLikesDislikes.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/dataModelScripts/generateLikesDislikes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToCsv.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToCsv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToHtml.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToHtml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToJson.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToJson.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToXml.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToXml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchAcquintanceSouvenirs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchAcquintanceSouvenirs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchCo-WorkerSouvenirs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchCo-WorkerSouvenirs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchData.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchDestinatariTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchDestinatariTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchFamilySouvenirs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchFamilySouvenirs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchFriendSouvenirs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchFriendSouvenirs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchLoverSouvenirs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchLoverSouvenirs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchRelativeSouvenirs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchRelativeSouvenirs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/loginComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/loginComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/logoutComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/logoutComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/registerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/registerComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/statisticsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/statisticsComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebaseInit.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/firebaseInit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/adminRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/adminRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/basicUserRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/basicUserRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/explorePageToSignInRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/explorePageToSignInRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/indexToAboutButtonRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/indexToAboutButtonRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/indexToExplorePageButtonRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/indexToExplorePageButtonRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/indexToHelpRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/indexToHelpRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/redirectAdminPageRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/redirectAdminPageRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/redirectExploreAdminRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/redirectExploreAdminRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/redirectExploreUserRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/redirectExploreUserRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/registerPageRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/registerPageRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/signInPageRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/signInPageRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/statisticsRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/statisticsRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/aboutUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/aboutUs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/explorePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/explorePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/explorePageAdminLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/explorePageAdminLoggedIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/explorePageLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/explorePageLoggedIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/registerPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/registerPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/signPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/signPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +103,11 @@
       <recent name="C:\Users\Stefan\Documents\GitHub\TehnologiiWeb\Frontend\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Stefan\Documents\GitHub\TehnologiiWeb\utils" />
       <recent name="C:\Users\Stefan\Documents\GitHub\TehnologiiWeb\components\database\exports" />
       <recent name="C:\Users\Stefan\Documents\GitHub\TehnologiiWeb\components\database\fetchComponents" />
       <recent name="C:\Users\Stefan\Documents\GitHub\TehnologiiWeb\components\database\dataModelScripts" />
       <recent name="C:\Users\Stefan\Documents\GitHub\TehnologiiWeb\components\database" />
-      <recent name="C:\Users\Stefan\Documents\GitHub\TehnologiiWeb\Frontend\databaseComponents" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -90,7 +132,7 @@
       <workItem from="1718863386202" duration="6818000" />
       <workItem from="1718914069531" duration="687000" />
       <workItem from="1718994612197" duration="2370000" />
-      <workItem from="1718997651901" duration="5561000" />
+      <workItem from="1718997651901" duration="10513000" />
     </task>
     <task id="LOCAL-00001" summary="54: Refactor dataBase scripts">
       <option name="closed" value="true" />
@@ -148,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719005366152</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="73: Update server logic and reformat server code.">
+      <option name="closed" value="true" />
+      <created>1719006177835</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719006177835</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +226,7 @@
     <MESSAGE value="58: Create filter querryes." />
     <MESSAGE value="59: Update data  base with like and dislike counts." />
     <MESSAGE value="72: Update admin session management." />
-    <option name="LAST_COMMIT_MESSAGE" value="72: Update admin session management." />
+    <MESSAGE value="73: Update server logic and reformat server code." />
+    <option name="LAST_COMMIT_MESSAGE" value="73: Update server logic and reformat server code." />
   </component>
 </project>

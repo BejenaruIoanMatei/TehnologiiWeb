@@ -1,10 +1,12 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const { v4: uuidv4 } = require('uuid');
-const { db } = require('./firebaseInit');
+const { db } = require('./utils/firebaseInit');
 const { collection, getDocs, updateDoc, doc } = require('firebase/firestore');
 const cookie = require('cookie');
+const { generateSignedUrl, verifySignedUrl } = require('./utils/urlSigning'); // Importing generateSignedUrl and verifySignedUrl
 
 // Components and routes
 const loginComponent = require('./components/loginComponent');
@@ -19,12 +21,11 @@ const adminUserRoute = require('./routes/redirectExploreAdminRoute');
 const adminPageUserRoute = require('./routes/redirectAdminPageRoute');
 const adminStatisticsUserRoute = require('./routes/statisticsRoute');
 
+const protectedRoutes = ['/explore', '/aboutUs', '/help', '/redirectAdminRoute', '/redirectUserRoute', '/redirectStatistics', '/redirectAdmin','/adminUserRoute','/standardUserRoute'];
 const PORT = process.env.PORT || 3000;
 
-// In-memory session store
 const sessions = {};
 
-// Helper functions
 const generateSession = () => {
   const sessionId = uuidv4();
   sessions[sessionId] = { loggedIn: false, userRole: 'user' };
@@ -81,6 +82,7 @@ const serveStaticFile = (res, filePath, contentType) => {
   });
 };
 
+/* Functie care reseteaza statusul de logare a userilor cand lansam serverul */
 const resetLoggedInStatus = async () => {
   try {
     const usersRef = collection(db, 'users');
@@ -94,11 +96,13 @@ const resetLoggedInStatus = async () => {
   }
 };
 
+/* Functie care verifica daca un user este logat */
 const isLoggedIn = (req) => {
   const sessionId = getSessionIdFromCookies(req);
   return sessionId && sessions[sessionId] && sessions[sessionId].loggedIn;
 };
 
+/* Functie care redirectioneaza userul care pagina de sign in daca nu este logat */
 const redirectIfNotLoggedIn = (req, res) => {
   if (!isLoggedIn(req)) {
     res.writeHead(302, { 'Location': '/signIn' });
@@ -108,60 +112,53 @@ const redirectIfNotLoggedIn = (req, res) => {
   return false;
 };
 
-const redirectIfNotLoggedInAdmin = (req, res) => {
-  const sessionId = getSessionIdFromCookies(req);
-  if (!sessionId || !sessions[sessionId] || sessions[sessionId].userRole !== 'admin') {
-    res.writeHead(302, { 'Location': '/explore' });
-    res.end();
-    return true;
-  }
-  return false;
-};
-
+/* structura ce contine toate rutele */
 const routes = {
-  '/': (req, res) => serveStaticFile(res, path.join(__dirname, 'views', 'index.html'), 'text/html'),
+  '/': (req, res) => {
+    if (req.url === '/' && !verifySignedUrl(req)) {
+      const signedUrl = generateSignedUrl('/', getSessionIdFromCookies(req));
+      res.writeHead(302, { 'Location': signedUrl });
+      res.end();
+      return;
+    }
+    serveStaticFile(res, path.join(__dirname, 'views', 'index.html'), 'text/html');
+  },
   '/explore': (req, res) => {
     if (redirectIfNotLoggedIn(req, res)) return;
-    if( sessions[getSessionIdFromCookies(req)].userRole === 'admin' )
-    {
-      adminUserRoute(req,res);
-    }
-    else
-    {
-      explorePageRoute(req, res);
+    if (sessions[getSessionIdFromCookies(req)].userRole === 'admin') {
+      adminUserRoute(req, res, sessions);
+    } else {
+      explorePageRoute(req, res, sessions);
     }
   },
+
   '/aboutUs': (req, res) => {
     if (redirectIfNotLoggedIn(req, res)) return;
-    aboutUsRoute(req, res);
+    aboutUsRoute(req, res, sessions);
   },
   '/help': (req, res) => {
     if (redirectIfNotLoggedIn(req, res)) return;
-    helpRoute(req, res);
+    helpRoute(req, res, sessions);
   },
   '/redirectAdminRoute': (req, res) => {
     if (redirectIfNotLoggedIn(req, res)) return;
-    if (sessions[getSessionIdFromCookies(req)].userRole === 'admin')
-    {
-      adminUserRoute(req, res);
+    if (sessions[getSessionIdFromCookies(req)].userRole === 'admin') {
+      adminUserRoute(req, res, sessions);
     }
   },
   '/redirectUserRoute': (req, res) => {
     if (redirectIfNotLoggedIn(req, res)) return;
-    if (sessions[getSessionIdFromCookies(req)].userRole === 'user')
-    {
-      standardUserRoute(req, res);
+    if (sessions[getSessionIdFromCookies(req)].userRole === 'user') {
+      standardUserRoute(req, res, sessions);
     }
   },
   '/redirectStatistics': (req, res) => {
     if (redirectIfNotLoggedIn(req, res)) return;
     const sessionId = getSessionIdFromCookies(req);
-    if (sessions[sessionId].userRole === 'admin')
-    {
-      adminStatisticsUserRoute(req, res);
-    } else
-    {
-      res.writeHead(302, { 'Location': '/explorePageLoggedIn.html' });
+    if (sessions[sessionId].userRole === 'admin') {
+      adminStatisticsUserRoute(req, res, sessions);
+    } else {
+      res.writeHead(302, { 'Location': generateSignedUrl('/explorePageLoggedIn.html') });
       res.end();
     }
   },
@@ -169,9 +166,9 @@ const routes = {
     if (redirectIfNotLoggedIn(req, res)) return;
     const sessionId = getSessionIdFromCookies(req);
     if (sessions[sessionId].userRole === 'admin') {
-      adminPageUserRoute(req, res);
+      adminPageUserRoute(req, res, sessions);
     } else {
-      res.writeHead(302, { 'Location': '/explorePageLoggedIn.html' });
+      res.writeHead(302, { 'Location': generateSignedUrl('/explorePageLoggedIn.html') });
       res.end();
     }
   },
@@ -183,41 +180,47 @@ const routes = {
   },
 };
 
+/* setupul serverului */
 const server = http.createServer(async (req, res) => {
   let sessionId = getSessionIdFromCookies(req);
 
+  // Session Management
   if (!sessionId || !sessions[sessionId]) {
     sessionId = generateSession();
+    const signedRootUrl = generateSignedUrl('/', sessionId);
     res.setHeader('Set-Cookie', cookie.serialize('sessionId', sessionId, {
       httpOnly: true,
-      maxAge: 60 * 60 * 24,
+      maxAge: 60 * 60 * 24, // 1 day
       path: '/',
       sameSite: 'strict'
     }));
+    res.writeHead(302, { Location: signedRootUrl });
+    res.end();
+    return;
   }
 
   console.log(`Session ID: ${sessionId}`);
 
-  if (req.method === 'GET')
-  {
-    const handler = routes[req.url] || (() => {
-      const filePath = path.join(__dirname, req.url);
+  if (req.method === 'GET') {
+    /* Verific daca ruta este protejata, daca este atunci semnez fisierul html */
+    if (protectedRoutes.includes(req.url.split('?')[0]) && !verifySignedUrl(req)) {
+      const signedUrl = generateSignedUrl(req.url, sessionId); // Generate signed URL
+      res.writeHead(302, { 'Location': signedUrl });
+      res.end();
+      return;
+    }
+
+    const handler = routes[req.url.split('?')[0]] || ((()  => {
+      const filePath = path.join(__dirname, req.url.split('?')[0]);
       serveStaticFile(res, filePath, getContentType(path.extname(filePath)));
-    });
+    }));
     handler(req, res);
-  }
-  else if (req.method === 'POST')
-  {
-    if (req.url === '/loginComponent')
-    {
+  } else if (req.method === 'POST') {
+    if (req.url === '/loginComponent') {
       await loginComponent(req, res, sessions);
-    }
-    else if (req.url === '/registerComponent')
-    {
+    } else if (req.url === '/registerComponent') {
       await registerComponent(req, res, sessions);
-    }
-    else
-    {
+    } else {
       res.writeHead(405, { 'Content-Type': 'text/html' });
       res.end('<h1>405 Method Not Allowed</h1>', 'utf8');
     }

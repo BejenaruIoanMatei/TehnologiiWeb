@@ -1,5 +1,5 @@
 // Import Firestore instance
-const { db } = require('../../../firebaseInit');
+const { db } = require('../../../utils/firebaseInit');
 const { collection, getDocs, query, where } = require('firebase/firestore');
 
 // Function to fetch all souvenirs with destinatar of type "lover" based on oras and tara

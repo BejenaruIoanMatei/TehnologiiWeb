@@ -1,4 +1,4 @@
-const { db } = require('../../../firebaseInit');
+const { db } = require('../../../utils/firebaseInit');
 const { collection, getDocs } = require('firebase/firestore');
 const fs = require('fs');
 const path = require('path');
