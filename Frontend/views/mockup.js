@@ -1,5 +1,3 @@
-// mockup.js
-
 document.addEventListener("DOMContentLoaded", function() {
     const testSuveniruri = [
       { tara: 'France (FR)', oras: 'Paris', suvenir: 'Eiffel Tower Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
@@ -29,12 +27,17 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   
-    const beneficiaries = ["Family", "Friends", "Colleagues", "Relative", "Lover", "Acquaintance", "Co-worker"];
+    const beneficiaries = ["Family", "Friend", "Relative", "Lover", "Acquaintance", "Co-worker"];
   
     const countrySelect = document.getElementById("country");
     const citySelect = document.getElementById("city");
     const beneficiariesToggle = document.getElementById("beneficiaries-toggle");
     const checkboxOptions = document.getElementById("checkbox-options");
+    const addDestinationButton = document.querySelector(".form-actions button");
+    const destinationsList = document.createElement("ul");
+    const formContainer = document.querySelector(".form-container");
+
+    formContainer.appendChild(destinationsList);
   
     // Populate country dropdown
     for (let country in countries) {
@@ -82,5 +85,50 @@ document.addEventListener("DOMContentLoaded", function() {
       checkboxOptions.appendChild(label);
       checkboxOptions.appendChild(document.createElement("br"));
     });
+
+    // Array to store destinations
+    const destinations = [];
+
+    // Add event listener for the add destination button
+    addDestinationButton.addEventListener("click", function(event) {
+      event.preventDefault();
+
+      const selectedCountry = countrySelect.value;
+      const selectedCity = citySelect.value;
+      const startDate = document.getElementById("start").value;
+      const endDate = document.getElementById("end").value;
+      const selectedBeneficiaries = Array.from(document.querySelectorAll("input[name='beneficiaries']:checked")).map(cb => cb.value);
+
+      if (!selectedCountry || !selectedCity || !startDate || !endDate || selectedBeneficiaries.length === 0) {
+        alert("Please fill in all fields and select at least one beneficiary.");
+        return;
+      }
+
+      // Check if destination already exists
+      if (destinations.some(dest => dest.oras === selectedCity && dest.tara === selectedCountry)) {
+        alert("This destination is already added.");
+        return;
+      }
+
+      const destination = {
+        tara: selectedCountry,
+        oras: selectedCity,
+        startDate: startDate,
+        endDate: endDate,
+        beneficiari: selectedBeneficiaries
+      };
+
+      destinations.push(destination);
+      displayDestinations();
+    });
+
+    function displayDestinations() {
+      destinationsList.innerHTML = "";
+      destinations.forEach(destination => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${destination.oras}, ${destination.tara} - from ${destination.startDate} to ${destination.endDate}`;
+        listItem.style.marginBottom = "5px";
+        destinationsList.appendChild(listItem);
+      });
+    }
   });
-  

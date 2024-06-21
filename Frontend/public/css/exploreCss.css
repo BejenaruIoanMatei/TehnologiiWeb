@@ -222,8 +222,11 @@ button[type="submit"]:hover {
 }
 
 .checkbox-options label {
-  margin-bottom: 10px;
+  display: block;
+  color:grey;
+  margin-top: 5px;
 }
+
 
 .checkbox-options input[type="checkbox"] {
   margin-right: 10px;
@@ -284,7 +287,6 @@ footer a {
   font-size: 12px; 
   padding: 4px 10px; 
 }
-
 
 
 
