@@ -1,23 +1,28 @@
 {
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.20.2",
-    "cookie-parser": "^1.4.6",
-    "cookie-session": "^2.1.0",
-    "express": "^4.19.2",
-    "firebase": "^10.12.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.4.0",
-    "pm2": "^5.4.0"
-  },
-  "name": "tehnologiiweb",
+  "name": "souvenir_web_recommender_backend",
   "version": "1.0.0",
-  "description": "Echipa formata din Bejenaru Ioan-Matei si Moscalu Stefan",
-  "main": "index.js",
+  "main": "login.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "firebase": "^10.12.2",
+    "firebase-admin": "^12.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.0",
+    "mssql": "^11.0.0",
+    "swagger-ui-express": "^5.0.0",
+    "uuid": "^9.0.1",
+    "yamljs": "^0.3.0"
+  }
 }

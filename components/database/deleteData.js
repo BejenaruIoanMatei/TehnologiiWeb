@@ -1,5 +1,5 @@
 // Import Firestore instance
-const { db } = require('../firebaseInit');
+const { db } = require('../../firebaseInit');
 const { collection, getDocs, deleteDoc, doc } = require('firebase/firestore');
 
 // Function to delete all documents from the 'suveniruri' collection
