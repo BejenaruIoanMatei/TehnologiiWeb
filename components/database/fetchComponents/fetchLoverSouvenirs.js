@@ -1,5 +1,5 @@
 // Import Firestore instance
-const { db } = require('../../firebaseInit');
+const { db } = require('../../../firebaseInit');
 const { collection, getDocs, query, where } = require('firebase/firestore');
 
 // Function to fetch all souvenirs with destinatar of type "lover" based on oras and tara
@@ -10,7 +10,7 @@ async function fetchSouvenirsByDestinatarType(oras, tara) {
 
     // Query to filter documents where destinatari array contains "lover" and matches oras and tara
     const q = query(suveniruriCollection,
-      where('destinatari', 'array-contains', 'friend'),
+      where('destinatari', 'array-contains', 'lover'),
       where('oras', '==', oras),
       where('tara', '==', tara)
     );
