@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
       destinations.forEach((destination, index) => {
         const listItem = document.createElement("li");
         listItem.style.marginBottom = "5px";
-        listItem.textContent = `${destination.oras}, ${destination.tara} - from ${destination.startDate} to ${destination.endDate}`;
+        listItem.textContent = `${destination.oras}, ${destination.tara} - from ${destination.startDate} to ${destination.endDate} - Beneficiaries: ${destination.beneficiari.join(', ')}`;
         
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "-";
