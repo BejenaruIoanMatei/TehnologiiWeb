@@ -21,7 +21,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <link href="../public/css/exploreCss.css" rel="stylesheet" />
   </head>
   <body>
@@ -38,12 +37,12 @@
     </header>
 
     <section id="home" class="hero">
-      <h1>Let's get you started on your next trip !</h1>
-      <h3>It only takes 3 Steps !</h3>
+      <h1>Let's get you started on your next trip!</h1>
+      <h3>It only takes 2 Steps!</h3>
       <div class="hero-content">
         <div class="form-container">
           <h2>
-            <span style="color: grey">Step 1 : </span>Where do you want to go?
+            <span style="color: grey">Step 1 :</span> Where do you want to go?
           </h2>
           <form action="/submit-destination" method="post">
             <label for="country"></label>
@@ -75,6 +74,20 @@
             <label for="end">Final day:</label>
             <input type="date" id="end" name="trip-end" required /><br /><br />
 
+            <h2 class="custom-heading">
+              Also, don't forget to choose the 
+              <button type="button" id="beneficiaries-toggle" class="btn styled-button">
+                Beneficiaries
+              </button>
+              .
+            </h2>
+            
+            <div
+              class="checkbox-options"
+              id="checkbox-options"
+              style="display: none"
+            ></div><br /><br />
+
             <div class="form-actions">
               <img
                 src="../public/img/suitcase.png"
@@ -94,33 +107,23 @@
     </section>
 
     <section id="create">
-      <div class="text">
-        <h2>
-          <span style="color: grey">Step 2 : </span>Don't forget to choose the :
-          <button
-            type="button"
-            id="beneficiaries-toggle"
-            class="btn styled-button"
-          >
-            Beneficiaries
+      <div class="overlay-container">
+        <div class="image-container">
+          <img
+            src="../public/img/create-trip.png"
+            alt="Circle Image"
+            class="circle-image"
+          />
+        </div>
+        <div class="main-section">
+          <h2>
+            <span style="color : grey">Step 2 :</span> Enjoy your souvenirs!
+          </h2>
+          <button type="submit" id="submit-trip" class="btn styled-button">
+            Create Trip
           </button>
-          .
-        </h2>
-        <div
-          class="checkbox-options"
-          id="checkbox-options"
-          style="display: none"
-        ></div>
+        </div>
       </div>
-
-      <div class="overlay-container"> <div class="image-container">
-        <img src="../public/img/create-trip.png" alt="Circle Image" class="circle-image">
-      </div>
-      <div class="main-section">
-        <h2><span style="color : grey">Step 3 : </span>Enjoy your souvenirs !</h2>
-        <button type="submit" id="submit-trip" class="btn styled-button">Create Trip</button>
-      </div>
-    </div>
     </section>
   </body>
 </html>
