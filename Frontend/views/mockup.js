@@ -104,6 +104,12 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
       }
   
+      // Check if start date is before end date
+      if (new Date(startDate) > new Date(endDate)) {
+        alert("The start date cannot be later than the end date.");
+        return;
+      }
+  
       const destinationExists = destinations.some(dest => dest.oras === selectedCity && dest.tara === selectedCountry);
   
       if (destinationExists) {
