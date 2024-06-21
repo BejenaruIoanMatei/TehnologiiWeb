@@ -130,58 +130,76 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   // Function to display destinations
-function displayDestinations() {
-  destinationsList.innerHTML = "";
-  destinations.forEach((destination, index) => {
-    const listItem = document.createElement("li");
-    listItem.style.marginBottom = "5px";
-    listItem.textContent = `${destination.oras}, ${destination.tara} - from ${destination.startDate} to ${destination.endDate} - Beneficiaries: ${destination.beneficiari.join(', ')}`;
+  function displayDestinations() {
+    destinationsList.innerHTML = "";
+    destinations.forEach((destination, index) => {
+      const listItem = document.createElement("li");
+      listItem.style.marginBottom = "5px";
+      listItem.textContent = `${destination.oras}, ${destination.tara} - from ${destination.startDate} to ${destination.endDate} - Beneficiaries: ${destination.beneficiari.join(', ')}`;
 
-    const deleteButton = document.createElement("button");
-    deleteButton.textContent = "-";
-    deleteButton.style.marginLeft = "10px";
-    deleteButton.addEventListener("click", function() {
-      destinations.splice(index, 1);
-      displayDestinations();
+      const deleteButton = document.createElement("button");
+      deleteButton.textContent = "-";
+      deleteButton.style.marginLeft = "10px";
+      deleteButton.addEventListener("click", function() {
+        destinations.splice(index, 1);
+        displayDestinations();
+      });
+
+      listItem.appendChild(deleteButton);
+      destinationsList.appendChild(listItem);
+    });
+  }
+
+  // Event listener for the "Create Trip" button
+  const createTripButton = document.getElementById("submit-trip");
+  createTripButton.addEventListener("click", function() {
+    // Display popup with souvenir details
+    const popupContainer = document.getElementById("popup-container");
+    const closePopup = document.getElementById("close-popup");
+    const souvenirList = document.getElementById("souvenir-list");
+
+    souvenirList.innerHTML = ""; // Clear previous content
+
+    destinations.forEach(destination => {
+      const mainSouvenir = getMainSouvenir(destination);
+      const otherSouvenirs = getOtherSouvenirs(destination);
+
+      const destinationDiv = document.createElement("div");
+      destinationDiv.classList.add("destination-souvenirs");
+      destinationDiv.innerHTML = `
+        <h2>${destination.oras}, ${destination.tara}</h2>
+        <p><strong>Main Souvenir:</strong> ${mainSouvenir}</p>
+        <p><strong>Other Souvenirs:</strong> ${otherSouvenirs.join(', ')}</p>
+      `;
+      souvenirList.appendChild(destinationDiv);
     });
 
-    listItem.appendChild(deleteButton);
-    destinationsList.appendChild(listItem);
+    popupContainer.style.display = "block";
+
+    // Close popup when clicking on close button
+    closePopup.addEventListener("click", function() {
+      popupContainer.style.display = "none";
+    });
   });
-}
 
-// Event listener for the "Create Trip" button
-const createTripButton = document.getElementById("submit-trip");
-createTripButton.addEventListener("click", function() {
-  // Display popup with souvenir details
-  const popupContainer = document.getElementById("popup-container");
-  const closePopup = document.getElementById("close-popup");
-  const mainSouvenir = document.getElementById("main-souvenir");
-  const otherSouvenirs = document.getElementById("other-souvenirs");
+  // Function to determine main souvenir
+  function getMainSouvenir(destination) {
+    const relevantSouvenirs = testSuveniruri.filter(souvenir => 
+      souvenir.tara === destination.tara && 
+      souvenir.oras === destination.oras &&
+      souvenir.destinatari.includes(destination.beneficiari[0])
+    );
+    return relevantSouvenirs.length > 0 ? relevantSouvenirs[0].suvenir : "No main souvenir found";
+  }
 
-  // Assuming you have a function to determine the main souvenir
-  const main = getMainSouvenir();
-  const others = getOtherSouvenirs();
-
-  mainSouvenir.textContent = `Main Souvenir: ${main}`;
-  otherSouvenirs.innerHTML = others.map(souvenir => `<li>${souvenir}</li>`).join('');
-
-  popupContainer.style.display = "block";
-
-  // Close popup when clicking on close button
-  closePopup.addEventListener("click", function() {
-    popupContainer.style.display = "none";
-  });
+  // Function to get other souvenirs
+  function getOtherSouvenirs(destination) {
+    const otherSouvenirs = testSuveniruri.filter(souvenir => 
+      souvenir.tara === destination.tara && 
+      souvenir.oras === destination.oras &&
+      souvenir.suvenir !== getMainSouvenir(destination)
+    );
+    return otherSouvenirs.map(souvenir => souvenir.suvenir);
+  }
 });
 
-// Function to determine main souvenir (example, you can adjust based on your logic)
-function getMainSouvenir() {
-  return destinations.length > 0 ? destinations[0].suvenir : "None";  // Adjust as per your logic
-}
-
-// Function to get other souvenirs (example, you can adjust based on your logic)
-function getOtherSouvenirs() {
-  return destinations.length > 1 ? destinations.slice(1).map(dest => dest.suvenir) : [];  // Adjust as per your logic
-}
-
-})
