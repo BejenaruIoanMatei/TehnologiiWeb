@@ -5,50 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="73: Update server logic and reformat server code.">
-      <change afterPath="$PROJECT_DIR$/utils/sessionUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/urlSigning.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/adminComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/dataModelScripts/addData.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/dataModelScripts/addData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/dataModelScripts/addTestData.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/dataModelScripts/addTestData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/dataModelScripts/deleteData.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/dataModelScripts/deleteData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/dataModelScripts/generateLikesDislikes.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/dataModelScripts/generateLikesDislikes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToCsv.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToCsv.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToHtml.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToHtml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToJson.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToJson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToXml.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToXml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchAcquintanceSouvenirs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchAcquintanceSouvenirs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchCo-WorkerSouvenirs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchCo-WorkerSouvenirs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchData.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchDestinatariTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchDestinatariTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchFamilySouvenirs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchFamilySouvenirs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchFriendSouvenirs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchFriendSouvenirs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchLoverSouvenirs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchLoverSouvenirs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchRelativeSouvenirs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchRelativeSouvenirs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/loginComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/loginComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/logoutComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/logoutComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/registerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/registerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/statisticsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/statisticsComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaseInit.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/firebaseInit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/adminRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/adminRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/basicUserRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/basicUserRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/explorePageToSignInRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/explorePageToSignInRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/indexToAboutButtonRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/indexToAboutButtonRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/indexToExplorePageButtonRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/indexToExplorePageButtonRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/indexToHelpRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/indexToHelpRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/redirectAdminPageRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/redirectAdminPageRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/redirectExploreAdminRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/redirectExploreAdminRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/redirectExploreUserRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/redirectExploreUserRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/registerPageRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/registerPageRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/signInPageRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/signInPageRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/statisticsRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/statisticsRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/aboutUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/aboutUs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/explorePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/explorePage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/explorePageAdminLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/explorePageAdminLoggedIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/explorePageLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/explorePageLoggedIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/registerPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/registerPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/signPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/signPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,24 +39,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "20.14.0",
-    "javascript.nodejs.core.library.typings.version": "20.14.2",
-    "last_opened_file_path": "C:/Users/Stefan/Documents/GitHub/TehnologiiWeb/Frontend/views",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.14.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.14.2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Stefan/Documents/GitHub/TehnologiiWeb/Frontend/views&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.1.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Stefan\Documents\GitHub\TehnologiiWeb\Frontend\views" />
@@ -133,6 +92,7 @@
       <workItem from="1718914069531" duration="687000" />
       <workItem from="1718994612197" duration="2370000" />
       <workItem from="1718997651901" duration="10513000" />
+      <workItem from="1719046880280" duration="117000" />
     </task>
     <task id="LOCAL-00001" summary="54: Refactor dataBase scripts">
       <option name="closed" value="true" />
