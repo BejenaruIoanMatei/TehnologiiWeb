@@ -146,7 +146,7 @@ button[type="submitRegister"]:hover {
   nav ul li a:hover {
     background-color: #9a9494;
   }
-  
+
 
   .signin-box span,
 .signin-box #submitRegisterFromSignIn {
@@ -250,4 +250,18 @@ button[type="submitRegister"]:hover {
   }
 }
 
+.custom-button {
+  border-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: #1E5573;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.custom-button:hover {
+  background-color: #0b0b0b;
+}

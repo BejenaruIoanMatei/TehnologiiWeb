@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="73: Update server logic and reformat server code.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/registerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/registerComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/registerCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/registerCSS.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/signCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/signCss.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/signInPageRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/signInPageRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/registerPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/registerPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/signPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/signPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719006177835</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="75: Update server logic and reformat server code.">
+      <option name="closed" value="true" />
+      <created>1719068948630</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719068948630</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +199,7 @@
     <MESSAGE value="59: Update data  base with like and dislike counts." />
     <MESSAGE value="72: Update admin session management." />
     <MESSAGE value="73: Update server logic and reformat server code." />
-    <option name="LAST_COMMIT_MESSAGE" value="73: Update server logic and reformat server code." />
+    <MESSAGE value="75: Update server logic and reformat server code." />
+    <option name="LAST_COMMIT_MESSAGE" value="75: Update server logic and reformat server code." />
   </component>
 </project>

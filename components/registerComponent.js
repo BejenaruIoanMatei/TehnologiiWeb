@@ -1,19 +1,23 @@
 const { db } = require('../utils/firebaseInit');
-const { collection, query, where, getDocs, addDoc, updateDoc, doc } = require('firebase/firestore');
+const { collection, query, where, getDocs, addDoc } = require('firebase/firestore');
 const bcrypt = require('bcrypt');
 const cookie = require('cookie');
 const { v4: uuidv4 } = require('uuid');
 
 const registerComponent = async (req, res, sessions) => {
   let body = '';
+
+  // Collect data chunks from request
   req.on('data', chunk => {
     body += chunk.toString();
   });
 
+  // When request data is fully received
   req.on('end', async () => {
-    const { username, password, age, email } = JSON.parse(body);
-
     try {
+      const { username, password, age, email } = JSON.parse(body);
+
+      // Initialize Firestore collection reference
       const usersRef = collection(db, 'users');
 
       // Check if username already exists
@@ -53,8 +57,8 @@ const registerComponent = async (req, res, sessions) => {
         sessionId: sessionId // Store sessionId in Firestore
       });
 
-      // Update session data
-      sessions[sessionId] = { loggedIn: true, email }; // Store session in memory
+      // Update session data in memory
+      sessions[sessionId] = { loggedIn: true, email };
 
       // Set session cookie
       res.setHeader('Set-Cookie', cookie.serialize('sessionId', sessionId, {
@@ -64,6 +68,7 @@ const registerComponent = async (req, res, sessions) => {
         sameSite: 'strict' // Ensure the cookie is only sent on same-site requests
       }));
 
+      // Send success response
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ message: 'Register successful' }));
     } catch (error) {

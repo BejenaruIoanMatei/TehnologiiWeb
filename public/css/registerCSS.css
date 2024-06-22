@@ -66,6 +66,22 @@ button[type="submit"]:hover {
   background-color: #0b0b0b;
 }
 
+.custom-button {
+  border-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: #1E5573;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #0b0b0b;
+}
+
 
   header {
     background-color: #fff;
