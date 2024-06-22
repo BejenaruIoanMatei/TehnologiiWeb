@@ -1,31 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const testSuveniruri = [
-    { tara: 'France (FR)', oras: 'Paris', suvenir: 'Eiffel Tower Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
-    { tara: 'France (FR)', oras: 'Paris', suvenir: 'Parisian Perfume', categorie: 'Beauty', destinatari: ['relative', 'lover'] },
-    { tara: 'France (FR)', oras: 'Paris', suvenir: 'French Cooking Book', categorie: 'Books', destinatari: ['acquaintance', 'co-worker'] },
-    { tara: 'France (FR)', oras: 'Nice', suvenir: 'Côte d\'Azur Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-    { tara: 'France (FR)', oras: 'Nice', suvenir: 'Provence Lavender Soap', categorie: 'Beauty', destinatari: ['relative', 'acquaintance'] },
-    { tara: 'France (FR)', oras: 'Nice', suvenir: 'French Wine Assortment', categorie: 'Food', destinatari: ['lover', 'co-worker'] },
-    { tara: 'France (FR)', oras: 'Lyon', suvenir: 'Lyon Cathedral Model', categorie: 'Art', destinatari: ['family', 'friend'] },
-    { tara: 'France (FR)', oras: 'Lyon', suvenir: 'Silk Scarf', categorie: 'Fashion', destinatari: ['relative', 'lover'] },
-    { tara: 'France (FR)', oras: 'Lyon', suvenir: 'Lyon Gastronomy Guide', categorie: 'Books', destinatari: ['acquaintance', 'co-worker'] },
-    { tara: 'France (FR)', oras: 'Marseille', suvenir: 'Calanques Landscape Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-    { tara: 'France (FR)', oras: 'Marseille', suvenir: 'Marseille Soap Set', categorie: 'Beauty', destinatari: ['relative', 'lover'] },
-    { tara: 'France (FR)', oras: 'Marseille', suvenir: 'Bouillabaisse Recipe Book', categorie: 'Books', destinatari: ['acquaintance', 'co-worker'] },
-    { tara: 'France (FR)', oras: 'Bordeaux', suvenir: 'Bordeaux Vineyard Painting', categorie: 'Art', destinatari: ['family', 'friend'] },
-    { tara: 'France (FR)', oras: 'Bordeaux', suvenir: 'Wine Stoppers Set', categorie: 'Food', destinatari: ['relative', 'acquaintance'] },
-    { tara: 'France (FR)', oras: 'Bordeaux', suvenir: 'Bordeaux Wine Guide', categorie: 'Books', destinatari: ['lover', 'co-worker'] },
-  ];
+const fetchRelativeSouvenirs = require("./database/fetchComponents/fetchRelativeSouvenirs");
+const fetchLoverSouvenirs = require("./database/fetchComponents/fetchLoverSouvenirs");
+const fetchCoWorkerSouvenirs = require("./database/fetchComponents/fetchCoWorkerSouvenirs");
+const fetchFamilySouvenirs = require("./database/fetchComponents/fetchFamilySouvenirs");
+const fetchFriendSouvenirs = require("./database/fetchComponents/fetchFriendSouvenirs");
+const fetchAcquaintanceSouvenirs = require("./database/fetchComponents/fetchAcquaintanceSouvenirs");
+const { db } = require('../utils/firebaseInit');
+const { collection, getDocs } = require('firebase/firestore');
+const fetchCountriesAndCities = require("./database/fetchComponents/fetchCountriesAndCities");
 
-  const countries = {};
-  testSuveniruri.forEach(item => {
-    if (!countries[item.tara]) {
-      countries[item.tara] = [];
-    }
-    if (!countries[item.tara].includes(item.oras)) {
-      countries[item.tara].push(item.oras);
-    }
-  });
+document.addEventListener("DOMContentLoaded", async function () {
+
+  const countries = await fetchCountriesAndCities();
 
   const beneficiaries = ["Family", "Friend", "Relative", "Lover", "Acquaintance", "Co-worker"];
 
@@ -48,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // Populate city dropdown based on selected country
-  countrySelect.addEventListener("change", function() {
+  countrySelect.addEventListener("change", function () {
     let selectedCountry = countrySelect.value;
     let cities = countries[selectedCountry];
 
@@ -65,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   // Toggle beneficiaries options visibility
-  beneficiariesToggle.addEventListener("click", function() {
+  beneficiariesToggle.addEventListener("click", function () {
     if (checkboxOptions.style.display === "none") {
       checkboxOptions.style.display = "block";
     } else {
@@ -90,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const destinations = [];
 
   // Add event listener for the add destination button
-  addDestinationButton.addEventListener("click", function(event) {
+  addDestinationButton.addEventListener("click", function (event) {
     event.preventDefault();
 
     const selectedCountry = countrySelect.value;
@@ -140,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const deleteButton = document.createElement("button");
       deleteButton.textContent = "-";
       deleteButton.style.marginLeft = "10px";
-      deleteButton.addEventListener("click", function() {
+      deleteButton.addEventListener("click", function () {
         destinations.splice(index, 1);
         displayDestinations();
       });
@@ -152,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Event listener for the "Create Trip" button
   const createTripButton = document.getElementById("submit-trip");
-  createTripButton.addEventListener("click", function() {
+  createTripButton.addEventListener("click", function () {
     // Display popup with souvenir details
     const popupContainer = document.getElementById("popup-container");
     const closePopup = document.getElementById("close-popup");
@@ -177,15 +162,15 @@ document.addEventListener("DOMContentLoaded", function() {
     popupContainer.style.display = "block";
 
     // Close popup when clicking on close button
-    closePopup.addEventListener("click", function() {
+    closePopup.addEventListener("click", function () {
       popupContainer.style.display = "none";
     });
   });
 
   // Function to determine main souvenir
   function getMainSouvenir(destination) {
-    const relevantSouvenirs = testSuveniruri.filter(souvenir => 
-      souvenir.tara === destination.tara && 
+    const relevantSouvenirs = testSuveniruri.filter(souvenir =>
+      souvenir.tara === destination.tara &&
       souvenir.oras === destination.oras &&
       souvenir.destinatari.includes(destination.beneficiari[0])
     );
@@ -194,8 +179,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Function to get other souvenirs
   function getOtherSouvenirs(destination) {
-    const otherSouvenirs = testSuveniruri.filter(souvenir => 
-      souvenir.tara === destination.tara && 
+    const otherSouvenirs = testSuveniruri.filter(souvenir =>
+      souvenir.tara === destination.tara &&
       souvenir.oras === destination.oras &&
       souvenir.suvenir !== getMainSouvenir(destination)
     );
