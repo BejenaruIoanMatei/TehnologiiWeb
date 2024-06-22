@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2024. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+ * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+ * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+ * Vestibulum commodo. Ut rhoncus gravida arcu.
+ */
+
+/* Dependencies definitions */
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
@@ -6,9 +15,9 @@ const { v4: uuidv4 } = require('uuid');
 const { db } = require('./utils/firebaseInit');
 const { collection, getDocs, updateDoc, doc } = require('firebase/firestore');
 const cookie = require('cookie');
-const { generateSignedUrl, verifySignedUrl } = require('./utils/urlSigning'); // Importing generateSignedUrl and verifySignedUrl
 
-// Components and routes
+/* Components and routes definitions */
+const { generateSignedUrl, verifySignedUrl } = require('./utils/urlSigning'); // Importing generateSignedUrl and verifySignedUrl
 const loginComponent = require('./components/loginComponent');
 const explorePageRoute = require('./routes/indexToExplorePageButtonRoute');
 const aboutUsRoute = require('./routes/indexToAboutButtonRoute');
@@ -20,11 +29,26 @@ const standardUserRoute = require('./routes/redirectExploreUserRoute');
 const adminUserRoute = require('./routes/redirectExploreAdminRoute');
 const adminPageUserRoute = require('./routes/redirectAdminPageRoute');
 const adminStatisticsUserRoute = require('./routes/statisticsRoute');
+const fetchCountriesAndCities = require("./components/database/fetchComponents/fetchCountriesAndCities");
+
+/* Protected routes to be hashed definitions */
 
 const protectedRoutes = ['/explore', '/aboutUs', '/help', '/redirectAdminRoute', '/redirectUserRoute', '/redirectStatistics', '/redirectAdmin','/adminUserRoute','/standardUserRoute'];
 const PORT = process.env.PORT || 3000;
 
+/* Global variables definition */
 const sessions = {};
+let countries={};
+
+async function initializeCountries() {
+  try {
+    countries = await fetchCountriesAndCities();
+    console.log('Countries and cities fetched:', countries);
+  } catch (error) {
+    console.error('Error fetching countries and cities:', error);
+    throw error;
+  }
+}
 
 const generateSession = () => {
   const sessionId = uuidv4();
@@ -68,7 +92,7 @@ const serveStaticFile = (res, filePath, contentType) => {
       if (extname === '.html') {
         cacheControl = 'no-cache, no-store, must-revalidate';
       } else if (extname === '.css' || extname === '.js' || extname === '.json') {
-        cacheControl = 'public, max-age=86400';
+        cacheControl = 'public, max-age=100';
       } else if (extname === '.png' || extname === '.jpg' || extname === '.ico') {
         cacheControl = 'public, max-age=604800';
       }
@@ -205,7 +229,8 @@ const server = http.createServer(async (req, res) => {
 
   if (req.method === 'GET') {
     /* Verific daca ruta este protejata, daca este atunci semnez fisierul html */
-    if (protectedRoutes.includes(req.url.split('?')[0]) && !verifySignedUrl(req)) {
+    if (protectedRoutes.includes(req.url.split('?')[0]) && !verifySignedUrl(req))
+    {
       const signedUrl = generateSignedUrl(req.url, sessionId); // Generate signed URL
       res.writeHead(302, { 'Location': signedUrl });
       res.end();
@@ -217,13 +242,20 @@ const server = http.createServer(async (req, res) => {
       serveStaticFile(res, filePath, getContentType(path.extname(filePath)));
     }));
     handler(req, res);
-  } else if (req.method === 'POST') {
+  }
+  else if (req.method === 'POST')
+  {
     console.log('POST branch reached');
-    if (req.url === '/loginComponent') {
+    if (req.url === '/loginComponent')
+    {
       await loginComponent(req, res, sessions);
-    } else if (req.url === '/registerComponent') {
+    }
+    else if (req.url === '/registerComponent')
+    {
       await registerComponent(req, res, sessions);
-    } else {
+    }
+    else
+    {
       res.writeHead(405, { 'Content-Type': 'text/html' });
       res.end('<h1>405 Method Not Allowed</h1>', 'utf8');
     }
