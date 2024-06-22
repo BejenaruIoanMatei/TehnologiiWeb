@@ -10,7 +10,11 @@ const fetchCountriesAndCities = require("./database/fetchComponents/fetchCountri
 
 document.addEventListener("DOMContentLoaded", async function () {
 
-  const countries = await fetchCountriesAndCities();
+  const response = await fetch('/getCountries');
+  if (!response.ok) {
+    throw new Error('Failed to fetch countries');
+  }
+  const countries = await response.json();
 
   const beneficiaries = ["Family", "Friend", "Relative", "Lover", "Acquaintance", "Co-worker"];
 
