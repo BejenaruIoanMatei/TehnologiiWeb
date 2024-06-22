@@ -1,7 +1,3 @@
-// Import the utility function for URL signing
-const { generateSignedUrl } = require('../utils/urlSigning');
-
-// Event listener for the signinForm submission
 document.getElementById('signinForm').addEventListener('submit', async function(event) {
   event.preventDefault();
 

@@ -200,6 +200,8 @@ const server = http.createServer(async (req, res) => {
   }
 
   console.log(`Session ID: ${sessionId}`);
+  console.log('Requested url: ', req.url);
+  console.log('Incoming method: ', req.method );
 
   if (req.method === 'GET') {
     /* Verific daca ruta este protejata, daca este atunci semnez fisierul html */
@@ -216,6 +218,7 @@ const server = http.createServer(async (req, res) => {
     }));
     handler(req, res);
   } else if (req.method === 'POST') {
+    console.log('POST branch reached');
     if (req.url === '/loginComponent') {
       await loginComponent(req, res, sessions);
     } else if (req.url === '/registerComponent') {
