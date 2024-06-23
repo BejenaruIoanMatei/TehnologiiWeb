@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="78: Update recommendComponent.js">
-      <change afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchOtherSouvenirs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/likeRatioUtil.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchMainSouvenirs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchMainSouvenirs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/recommendComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/recommendComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>

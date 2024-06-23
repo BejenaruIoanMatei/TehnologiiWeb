@@ -1,3 +1,5 @@
+/* flag defines */
+flagUpdateLikeRatioAllDocuments = false;
 
 /* Dependencies definitions */
 const http = require('http');
@@ -31,6 +33,7 @@ const fetchFriendSouvenirs = require("./components/database/fetchComponents/fetc
 const fetchAcquaintanceSouvenirs = require("./components/database/fetchComponents/fetchAcquaintanceSouvenirs");
 const fetchMainSouvenir = require('./components/database/fetchComponents/fetchMainSouvenirs');
 const fetchOtherSouvenirs = require('./components/database/fetchComponents/fetchOtherSouvenirs');
+const { calculateLikeRatio, updateLikeRatioForSouvenirs } = require('./utils/likeRatioUtil');
 /* Protected routes to be hashed definitions */
 
 const protectedRoutes = [
@@ -300,6 +303,10 @@ initializeCountries()
     server.listen(PORT, async () => {
       console.log('Server running on port', PORT);
       await resetLoggedInStatus();
+      if( flagUpdateLikeRatioAllDocuments === true )
+      {
+        await updateLikeRatioForSouvenirs();
+      }
     });
   })
   .catch((error) => {

@@ -1,12 +1,4 @@
-// const fetchRelativeSouvenirs = require("./database/fetchComponents/fetchRelativeSouvenirs");
-// const fetchLoverSouvenirs = require("./database/fetchComponents/fetchLoverSouvenirs");
-// const fetchCoWorkerSouvenirs = require("./database/fetchComponents/fetchCoWorkerSouvenirs");
-// const fetchFamilySouvenirs = require("./database/fetchComponents/fetchFamilySouvenirs");
-// const fetchFriendSouvenirs = require("./database/fetchComponents/fetchFriendSouvenirs");
-// const fetchAcquaintanceSouvenirs = require("./database/fetchComponents/fetchAcquaintanceSouvenirs");
-// const { db } = require('../utils/firebaseInit');
-// const { collection, getDocs } = require('firebase/firestore');
-// const fetchCountriesAndCities = require("./database/fetchComponents/fetchCountriesAndCities");
+
 
 document.addEventListener("DOMContentLoaded", async function () {
 
@@ -140,55 +132,72 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
   }
 
-const createTripButton = document.getElementById("submit-trip");
-createTripButton.addEventListener("click", async function () {
-  // Display popup with souvenir details
-  const popupContainer = document.getElementById("popup-container");
-  const closePopup = document.getElementById("close-popup");
-  const souvenirList = document.getElementById("souvenir-list");
-
-  souvenirList.innerHTML = ""; // Clear previous content
-
-  console.log('Recommend component destinations: ', destinations);
-  try {
-    // Array to hold promises for fetching main and other souvenirs
-    const fetchPromises = destinations.map(async (destination) => {
-      try {
-        const mainSouvenir = await getMainSouvenir(destination);
-        const otherSouvenirs = await getOtherSouvenirs(destination);
-
-        console.log('Recommend component main souvenir:', mainSouvenir);
-        console.log('Recommend component other souvenirs:', otherSouvenirs);
-
-        const destinationDiv = document.createElement("div");
-        destinationDiv.classList.add("destination-souvenirs");
-        destinationDiv.innerHTML = `
-        <h2>${destination.oras}, ${destination.tara}</h2>
-        <p><strong>Main Souvenir:</strong> ${mainSouvenir}</p>
-        <p><strong>Other Souvenirs:</strong> ${otherSouvenirs.join(', ')}</p>
-      `;
-
-        souvenirList.appendChild(destinationDiv);
-      } catch (error) {
-        console.error("Error fetching or displaying souvenirs:", error);
-        // Optionally handle specific error cases if needed
-      }
-    });
-
-    // Wait for all promises to resolve
-    await Promise.all(fetchPromises);
-  } catch (error) {
-    console.error("Error fetching or displaying souvenirs:", error);
-    // Handle error display if needed
+  async function getLikeRatioForSouvenir(souvenir) {
+    const likeRatio = souvenir.likeRatio;
+    return { likeRatio };
   }
 
-  popupContainer.style.display = "block";
+  const createTripButton = document.getElementById("submit-trip");
+  createTripButton.addEventListener("click", async function () {
+    // Display popup with souvenir details
+    const popupContainer = document.getElementById("popup-container");
+    const closePopup = document.getElementById("close-popup");
+    const souvenirList = document.getElementById("souvenir-list");
 
-  // Close popup when clicking on close button
-  closePopup.addEventListener("click", function () {
-    popupContainer.style.display = "none";
+    souvenirList.innerHTML = ""; // Clear previous content
+
+    console.log('Recommend component destinations: ', destinations);
+    try {
+      // Array to hold promises for fetching main and other souvenirs
+      const fetchPromises = destinations.map(async (destination) => {
+        try {
+          const mainSouvenir = await getMainSouvenir(destination);
+          const otherSouvenirs = await getOtherSouvenirs(destination);
+
+          console.log('Recommend component main souvenir:', mainSouvenir);
+          console.log('Recommend component other souvenirs:', otherSouvenirs);
+
+          const destinationDiv = document.createElement("div");
+          destinationDiv.classList.add("destination-souvenirs");
+          destinationDiv.innerHTML = `
+          <h2>${destination.oras}, ${destination.tara}</h2>
+          <p><strong>Main Souvenir:</strong> ${mainSouvenir}</p>
+          <p><strong>Other Souvenirs:</strong> ${otherSouvenirs.join(', ')}</p>
+        `;
+
+          // Append likeRatio information for each souvenir
+          await Promise.all(otherSouvenirs.map(async (souvenir) => {
+            const { likeRatio } = await getLikeRatioForSouvenir(souvenir); // Assuming you have a function to fetch likeRatio
+            const souvenirInfo = document.createElement("div");
+            souvenirInfo.innerHTML = `<p><strong>Like Ratio:</strong> ${likeRatio}%</p>`;
+            destinationDiv.appendChild(souvenirInfo);
+          }));
+
+          souvenirList.appendChild(destinationDiv);
+        } catch (error) {
+          console.error("Error fetching or displaying souvenirs:", error);
+          // Optionally handle specific error cases if needed
+        }
+      });
+
+      // Wait for all promises to resolve
+      await Promise.all(fetchPromises);
+    } catch (error) {
+      console.error("Error fetching or displaying souvenirs:", error);
+      // Handle error display if needed
+    }
+
+    popupContainer.style.display = "block";
+
+    // Close popup when clicking on close button
+    closePopup.addEventListener("click", function () {
+      popupContainer.style.display = "none";
+    });
   });
-});
+
+
+
+
 
 
 
