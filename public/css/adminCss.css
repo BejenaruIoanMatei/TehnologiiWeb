@@ -45,7 +45,7 @@ h3{
 .container .header .nav .user .btn:hover::after {
     content: "Go to Statistics";
     display: block; /* Ensure the text appears below */
-    font-size: 12px; 
+    font-size: 12px;
     margin-top: 5px; /* Add space between button and text */
     text-align: center; /* Center the text */
   }
@@ -83,7 +83,7 @@ td{
     justify-content: center;
 }
 
-.side-menu li 
+.side-menu li
 {
     font-size: 24px;
     padding: 10px 40px;
@@ -212,7 +212,7 @@ td{
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
-    
+
 }
 
 .container .content .content-2 .recent-payments{
@@ -299,4 +299,19 @@ button:hover {
     .container .content .content-2 .recent-payments table td:nth-child(2) {
         display: none;
     }
+}
+.styled-button {
+  border-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: #1E5573;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.styled-button:hover {
+  background-color: #0b0b0b;
 }

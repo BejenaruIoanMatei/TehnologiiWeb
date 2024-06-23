@@ -1,85 +1,101 @@
-// ... your existing import statements ...
+// adminComponent.js (Client-Side)
 
-const fs = require('fs');
-const path = require('path');
-const archiver = require('archiver');
+// Function to handle export to HTML
+document.getElementById('exportToHTML').addEventListener('click', async () => { // Assuming you have a button with the ID 'exportButton'
+  try {
+    console.log("Export to HTML has been clicked!");
 
-const exportSouvenirsToJson = require('../components/database/exportScripts/exportSouvenirsToJson');
-const exportSouvenirsToXml = require('../components/database/exportScripts/exportSouvenirsToXml');
-const exportSouvenirsToHtml = require('../components/database/exportScripts/exportSouvenirsToHtml');
-const exportSouvenirsToCsv = require('../components/database/exportScripts/exportSouvenirsToCsv');
-
-const exportsDir = path.join(__dirname, 'exports');
-
-// Helper function to get all files of a certain type from a directory
-function getFilesByType(dir, ext) {
-  return fs
-    .readdirSync(dir)
-    .filter(
-      (file) => fs.statSync(path.join(dir, file)).isFile() && path.extname(file) === ext
-    );
-}
-
-// Function to create a ZIP archive of selected files and initiate download
-function createAndDownloadZipArchive(files, archiveName) {
-  const archive = archiver('zip', { zlib: { level: 9 } });
-
-  res.writeHead(200, {
-    'Content-Type': 'application/zip',
-    'Content-disposition': `attachment; filename=${archiveName}`,
-  });
-
-  archive.on('error', (err) => {
-    res.writeHead(500);
-    res.end(`Error creating archive: ${err.message}`);
-    throw err; 
-  });
-
-  archive.pipe(res);
-
-  files.forEach((file) => {
-    archive.file(path.join(exportsDir, file.split('/').slice(0, -1).join('/'), file), {
-      name: file,
+    const response = await fetch('/exportToHTML', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({}),
     });
-  });
 
-  archive.finalize();
-}
-
-document.getElementById('exportToHTML').addEventListener('click', async () => {
-  await exportSouvenirsToHtml(); // Export to HTML first
-
-  const htmlFiles = [];
-  fs.readdirSync(exportsDir).forEach((dir) => {
-    if (fs.statSync(path.join(exportsDir, dir)).isDirectory()) {
-      htmlFiles.push(...getFilesByType(path.join(exportsDir, dir), '.html').map(file => `${dir}/${file}`));
+    if (response.ok) {
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'exported_souvenirs.zip');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } else {
+      console.error('Error:', response.statusText);
     }
-  });
-
-  if (htmlFiles.length > 0) {
-    createAndDownloadZipArchive(htmlFiles, 'html_exports.zip');
-  } else {
-    console.log("No HTML files found to export.");
+  } catch (error) {
+    console.error('Error:', error);
   }
 });
 
-// ... similar event listeners for exportToCSV, exportToXML, exportToJSON ...
+// Function to handle export to CSV
+document.getElementById('exportToCSV').addEventListener('click', async () => {
+  console.log('Export to CSV button clicked');
+  try {
+    const response = await fetch('/exportToCSV', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({}),
+    });
 
-// Example for exportToJSON:
-
-document.getElementById('exportToJSON').addEventListener('click', async () => {
-  await exportSouvenirsToJson(); 
-
-  const jsonFiles = [];
-  fs.readdirSync(exportsDir).forEach((dir) => {
-    if (fs.statSync(path.join(exportsDir, dir)).isDirectory()) {
-      jsonFiles.push(...getFilesByType(path.join(exportsDir, dir), '.json').map(file => `${dir}/${file}`));
+    if (response.ok) {
+      alert('CSV export successful!');
+    } else {
+      alert('Failed to export CSV');
     }
-  });
+  } catch (error) {
+    console.error('Error exporting CSV:', error);
+    alert('Failed to export CSV');
+  }
+});
 
-  if (jsonFiles.length > 0) {
-    createAndDownloadZipArchive(jsonFiles, 'json_exports.zip');
-  } else {
-    console.log("No JSON files found to export.");
+// Function to handle export to XML
+document.getElementById('exportToXML').addEventListener('click', async () => {
+  console.log('Export to XML button clicked');
+  try {
+    const response = await fetch('/exportToXML', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({}),
+    });
+
+    if (response.ok) {
+      alert('XML export successful!');
+    } else {
+      alert('Failed to export XML');
+    }
+  } catch (error) {
+    console.error('Error exporting XML:', error);
+    alert('Failed to export XML');
+  }
+});
+
+// Function to handle export to JSON
+document.getElementById('exportToJSON').addEventListener('click', async () => {
+  console.log('Export to JSON button clicked');
+  try {
+    const response = await fetch('/exportToJSON', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({}),
+    });
+
+    if (response.ok) {
+      alert('JSON export successful!');
+    } else {
+      alert('Failed to export JSON');
+    }
+  } catch (error) {
+    console.error('Error exporting JSON:', error);
+    alert('Failed to export JSON');
   }
 });

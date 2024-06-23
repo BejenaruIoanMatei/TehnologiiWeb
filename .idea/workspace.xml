@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="81: Update recommendComponent.js">
-      <change afterPath="$PROJECT_DIR$/utils/statisticsUtil.js" afterDir="false" />
+    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="85: Update statistics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/statisticsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/statisticsComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/redirectAdminPageRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/redirectAdminPageRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/adminComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/adminComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToHtml.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToHtml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/howToRunServer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/howToRunServer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/adminCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/adminCss.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/statistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/statistics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719144105181</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="84: Update statistics">
+      <option name="closed" value="true" />
+      <created>1719153361030</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1719153361030</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +276,8 @@
     <MESSAGE value="78: Integrate countries and cities via script" />
     <MESSAGE value="78: Update recommendComponent.js" />
     <MESSAGE value="81: Update recommendComponent.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="81: Update recommendComponent.js" />
+    <MESSAGE value="84: Update statistics" />
+    <MESSAGE value="85: Update statistics" />
+    <option name="LAST_COMMIT_MESSAGE" value="85: Update statistics" />
   </component>
 </project>

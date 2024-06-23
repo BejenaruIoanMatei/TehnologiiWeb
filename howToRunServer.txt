@@ -7,7 +7,7 @@
 6. npm-install firebase-admin
 7. npm install bcrypt
 8. npm install xml2js
-9. npm install json2csv
+9. npm install json2csv cookie archiver
 
 10. pm2 start server.js
 11. in broswer put localhost:3000

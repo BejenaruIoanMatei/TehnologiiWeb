@@ -10,6 +10,8 @@ const { v4: uuidv4 } = require('uuid');
 const { db } = require('./utils/firebaseInit');
 const { collection, getDocs, updateDoc, doc } = require('firebase/firestore');
 const cookie = require('cookie');
+const archiver = require('archiver');
+const { PassThrough } = require('stream');
 
 /* Components and routes definitions */
 const { generateSignedUrl, verifySignedUrl } = require('./utils/urlSigning'); // Importing generateSignedUrl and verifySignedUrl
@@ -29,7 +31,7 @@ const { getNumberOfAccesses, getLoggedInUsers, getSouvenirsSuggested, getSatisfi
 const fetchMainSouvenir = require('./components/database/fetchComponents/fetchMainSouvenirs');
 const fetchOtherSouvenirs = require('./components/database/fetchComponents/fetchOtherSouvenirs');
 const { calculateLikeRatio, updateLikeRatioForSouvenirs } = require('./utils/likeRatioUtil');
-
+const exportSouvenirsToHtml = require('./components/database/exportScripts/exportSouvenirsToHtml');
 /* Protected routes to be hashed definitions */
 const protectedRoutes = [
   '/explore',
@@ -266,44 +268,70 @@ const server = http.createServer(async (req, res) => {
     }));
     handler(req, res);
   }
-  else if (req.method === 'POST')
-  {
+  else if (req.method === 'POST') {
     console.log('POST branch reached');
-    if (req.url === '/loginComponent')
-    {
+    if (req.url === '/loginComponent') {
       await loginComponent(req, res, sessions);
-    }
-    else if (req.url === '/registerComponent')
-    {
+    } else if (req.url === '/registerComponent') {
       await registerComponent(req, res, sessions);
-    }
-    else if( req.url === '/getMainSouvenir')
-    {
+    } else if (req.url === '/getMainSouvenir') {
       await fetchMainSouvenir(req, res);
-    }
-    else if( req.url === '/getOtherSouvenirs')
-    {
-      await fetchOtherSouvenirs(req,res);
-    }
-    else if (req.url === '/getNumberOfAccesses')
-    {
+    } else if (req.url === '/getOtherSouvenirs') {
+      await fetchOtherSouvenirs(req, res);
+    } else if (req.url === '/getNumberOfAccesses') {
       await getNumberOfAccesses(req, res);
-    }
-    else if (req.url === '/getLoggedInUsers')
-    {
+    } else if (req.url === '/getLoggedInUsers') {
       await getLoggedInUsers(req, res);
-    }
-    else if (req.url === '/getSouvenirsSuggested')
-    {
+    } else if (req.url === '/getSouvenirsSuggested') {
       await getSouvenirsSuggested(req, res);
-    }
-    else if (req.url === '/getSatisfiedCustomers')
-    {
+    } else if (req.url === '/getSatisfiedCustomers') {
       await getSatisfiedCustomers(req, res);
-    }
-    else if (req.url === '/getGlobalLikeRatio')
-    {
+    } else if (req.url === '/getGlobalLikeRatio') {
       await getGlobalLikeRatio(req, res);
+    }
+    else if (req.method === 'POST' && req.url === '/exportToHTML')
+    {
+      try {
+        console.log("The HTML export request has been triggered!");
+
+        // Create a temporary file path for the ZIP archive
+        const tempDir = path.join(__dirname, 'temp');
+        const zipFilePath = path.join(tempDir, 'exported_souvenirs.zip');
+
+        if (!fs.existsSync(tempDir)) {
+          fs.mkdirSync(tempDir);
+        }
+
+        const output = fs.createWriteStream(zipFilePath);
+        const archive = archiver('zip');
+        archive.pipe(output);
+
+        // Set response headers after archive is piped to output
+        res.writeHead(200, {
+          'Content-Type': 'application/zip',
+          'Content-Disposition': 'attachment; filename=exported_souvenirs.zip'
+        });
+
+        // Export souvenirs and add them to the archive
+        await exportSouvenirsToHtml(archive, db);
+
+        // Finalize the archive and handle download
+        archive.on('end', () => {
+          console.log("Archive finalized, sending to user...");
+          const zipFileReadStream = fs.createReadStream(zipFilePath);
+          zipFileReadStream.pipe(res); // Pipe the file to the response
+          zipFileReadStream.on('end', () => {
+            fs.unlinkSync(zipFilePath); // Delete the temporary file
+            console.log("The HTML export request has been processed!"); // Moved log here
+          });
+        });
+        archive.finalize();
+
+      } catch (error) {
+        console.error('Error exporting souvenirs:', error);
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Internal server error' }));
+      }
     }
     else
     {
