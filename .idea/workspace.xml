@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="88: Add RSA Encryption / Decryption">
-      <change afterPath="$PROJECT_DIR$/components/protectedFetchSignedUrl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/componentsId" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/signInRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/generateTokenUtil.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/adminComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/adminComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToCsv.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToCsv.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToJson.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToJson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToXml.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToXml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/signInRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/signInRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/private_key.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/public_key.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/urlSigningClient.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/urlSigningServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/urlSigningServer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/signPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/signPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/generateTokenUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/generateTokenUtil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/tokenSignUrl.json" beforeDir="false" afterPath="$PROJECT_DIR$/utils/tokenSignUrl.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

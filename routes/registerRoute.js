@@ -21,37 +21,38 @@ async function fetchSignedURL(urlToSign) {
   }
 }
 
-document.getElementById('signinForm').addEventListener('submit', async function(event) {
-  event.preventDefault();
-
+document.getElementById('submitRegister').addEventListener('click', async () => {
+  const username = document.getElementById('username').value;
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
+  const age = document.getElementById('age').value;
+
+  const formData = {
+    username,
+    email,
+    password,
+    age
+  };
 
   try {
-    const signedUrl = await fetchSignedURL('/loginComponent');
+    const signedUrl = await fetchSignedURL('/registerComponent');
     const response = await fetch(signedUrl, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify(formData)
     });
 
-    const result = await response.json();
+    const responseData = await response.json();
+    alert(responseData.message); // Show response message
+
     if (response.ok) {
       // Redirect or handle success as needed
-      alert('Login Successful!');
       window.location.href = '/'; // Redirect to home page after successful registration
-    } else {
-      alert('Login failed: ' + result.message);
     }
   } catch (error) {
-    console.error('Error logging in:', error);
-    alert('Login failed: An error occurred');
+    console.error('Error registering:', error);
+    alert('Error registering. Please try again.'); // Show generic error message
   }
-});
-
-// Event listener for the register link click
-document.getElementById('submitRegisterFromSignIn').addEventListener('click', function() {
-  window.location.href = '/views/registerPage.html';  // Redirect to registerPage.html
 });

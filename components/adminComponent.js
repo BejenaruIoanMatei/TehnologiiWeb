@@ -1,7 +1,7 @@
 // adminComponent.js (Client-Side)
 // Function to fetch signed URL from server for a specific endpoint
 
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbnRpdHlJZCI6IjAyMjY0NjU3LTUwOWUtNGNhMS04ZTA0LTg5MmY3ZWI3MDRiMCIsImlhdCI6MTcxOTE3MDM3MywiZXhwIjoxNzE5MTczOTczfQ.4n4FqfW4puPvprbEO-ZZg6gJ7tqFvqoQ1t4yK3bubCU';
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbnRpdHlJZCI6IjAyMjY0NjU3LTUwOWUtNGNhMS04ZTA0LTg5MmY3ZWI3MDRiMCIsImlhdCI6MTcxOTE3NTY2MCwiZXhwIjoxNzE5NzgwNDYwfQ.EkeEZlSzRCwEMLnRuHWCUzDI_cG67ngYrRpWFR_UpUQ";
 async function fetchSignedURL(urlToSign) {
   try {
     const response = await fetch('/generateSignedURL', {

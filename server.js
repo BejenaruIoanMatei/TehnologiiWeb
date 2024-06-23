@@ -37,6 +37,7 @@ const exportSouvenirsToHtml = require('./components/database/exportScripts/expor
 const exportSouvenirsToCSV = require('./components/database/exportScripts/exportSouvenirsToCSV');
 const exportSouvenirsToXML = require('./components/database/exportScripts/exportSouvenirsToXML');
 const exportSouvenirsToJSON = require('./components/database/exportScripts/exportSouvenirsToJSON');
+
 /* Protected routes to be hashed definitions */
 const GETProtectedRoutes = [
   '/explore',
@@ -53,7 +54,9 @@ const POSTProtectedRoutes = [
   '/exportToHTML',
   '/exportToJSON',
   '/exportToXML',
-  '/exportToCSV'
+  '/exportToCSV',
+  '/loginComponent',
+  '/registerComponent',
 ]
 const PORT = process.env.PORT || 3000;
 
@@ -375,7 +378,7 @@ const server = http.createServer(async (req, res) => {
         const signedUrl = generateSignedUrl(url);
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ signedURL: signedUrl }));
-
+        console.log("Url signing done!");
       } catch (error) {
         console.error('Error generating signed URL:', error);
         res.writeHead(500, { 'Content-Type': 'application/json' });
