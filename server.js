@@ -159,6 +159,7 @@ const routes = {
       const countries = await fetchCountriesAndCities();
       res.writeHead(200, {'Content-Type': 'application/json'});
       res.end(JSON.stringify(countries));
+      console.log("The server has sent the countries to the client");
     } catch (error) {
       console.error('Error fetching countries and cities:', error);
       res.writeHead(500, {'Content-Type': 'application/json'});

@@ -1,13 +1,3 @@
-const fetchRelativeSouvenirs = require("./database/fetchComponents/fetchRelativeSouvenirs");
-const fetchLoverSouvenirs = require("./database/fetchComponents/fetchLoverSouvenirs");
-const fetchCoWorkerSouvenirs = require("./database/fetchComponents/fetchCoWorkerSouvenirs");
-const fetchFamilySouvenirs = require("./database/fetchComponents/fetchFamilySouvenirs");
-const fetchFriendSouvenirs = require("./database/fetchComponents/fetchFriendSouvenirs");
-const fetchAcquaintanceSouvenirs = require("./database/fetchComponents/fetchAcquaintanceSouvenirs");
-const { db } = require('../utils/firebaseInit');
-const { collection, getDocs } = require('firebase/firestore');
-const fetchCountriesAndCities = require("./database/fetchComponents/fetchCountriesAndCities");
-
 document.addEventListener("DOMContentLoaded", async function () {
 
   const response = await fetch('/getCountries');
@@ -15,7 +5,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     throw new Error('Failed to fetch countries');
   }
   const countries = await response.json();
-
   const beneficiaries = ["Family", "Friend", "Relative", "Lover", "Acquaintance", "Co-worker"];
 
   const countrySelect = document.getElementById("country");
