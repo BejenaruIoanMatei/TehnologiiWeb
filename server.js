@@ -1,7 +1,9 @@
 /* flag defines */
 flagUpdateLikeRatioAllDocuments = false;
+const secretKey = 'I"th/80O{{+ptiLfNQX,)5&.IRy:^wno7KON>=:z7;;kAy{~+e$J7./O$9=!lH2/';
 
 /* Dependencies definitions */
+const jwt = require('jsonwebtoken');
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
@@ -32,6 +34,9 @@ const fetchMainSouvenir = require('./components/database/fetchComponents/fetchMa
 const fetchOtherSouvenirs = require('./components/database/fetchComponents/fetchOtherSouvenirs');
 const { calculateLikeRatio, updateLikeRatioForSouvenirs } = require('./utils/likeRatioUtil');
 const exportSouvenirsToHtml = require('./components/database/exportScripts/exportSouvenirsToHtml');
+const exportSouvenirsToCSV = require('./components/database/exportScripts/exportSouvenirsToCSV');
+const exportSouvenirsToXML = require('./components/database/exportScripts/exportSouvenirsToXML');
+const exportSouvenirsToJSON = require('./components/database/exportScripts/exportSouvenirsToJSON');
 /* Protected routes to be hashed definitions */
 const GETProtectedRoutes = [
   '/explore',
@@ -45,7 +50,10 @@ const GETProtectedRoutes = [
   '/standardUserRoute',
   ];
 const POSTProtectedRoutes = [
-  '/exportToHTML'
+  '/exportToHTML',
+  '/exportToJSON',
+  '/exportToXML',
+  '/exportToCSV'
 ]
 const PORT = process.env.PORT || 3000;
 
@@ -62,7 +70,14 @@ async function initializeCountries() {
     throw error;
   }
 }
-
+async function parseBodyJWT(req) {
+  return new Promise((resolve, reject) => {
+    let body = '';
+    req.on('data', chunk => body += chunk);
+    req.on('end', () => resolve(body));
+    req.on('error', err => reject(err));
+  });
+}
 const generateSession = async () => {
   const sessionId = uuidv4();
   sessions[sessionId] = { loggedIn: false, userRole: 'user' };
@@ -320,29 +335,53 @@ const server = http.createServer(async (req, res) => {
     const urlWithoutParams = req.url.split('?')[0];
     console.log('POST branch reached');
     console.log('The received url is', urlWithoutParams);
-    if( urlWithoutParams === '/generateSignedURL' )
-    {
-    console.log('A request to sign a url has occurred!');
-    try {
-      const body = await parseBody(req);
-      const {url} = JSON.parse(body);
+    if (urlWithoutParams === '/generateSignedURL') {
+      console.log('A request to sign a url has occurred!');
 
-      if (!url || typeof url !== 'string') {
-        throw new Error('Invalid URL format');
+      try {
+        const body = await parseBody(req);
+        const { url } = JSON.parse(body);
+
+        if (!url || typeof url !== 'string') {
+          throw new Error('Invalid URL format');
+        }
+
+        // 1. Authentication (using JWT as an example)
+        const authHeader = req.headers.authorization;
+        if (!authHeader || !authHeader.startsWith('Bearer ')) {
+          res.writeHead(401, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Unauthorized - Missing or invalid token' }));
+          return;
+        }
+        const token = authHeader.split(' ')[1];
+        let decodedToken;
+        try {
+          decodedToken = jwt.verify(token, secretKey);
+        } catch (err) {
+          res.writeHead(401, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Unauthorized - Invalid token' }));
+          return;
+        }
+
+        // 2. Authorization (check entity permissions - customize as needed)
+        const approvedEntities = ['02264657-509e-4ca1-8e04-892f7eb704b0'];
+        if (!approvedEntities.includes(decodedToken.entityId)) {
+          res.writeHead(403, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Forbidden - Not authorized' }));
+          return;
+        }
+
+        // Generate and respond with the signed URL
+        const signedUrl = generateSignedUrl(url);
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ signedURL: signedUrl }));
+
+      } catch (error) {
+        console.error('Error generating signed URL:', error);
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Internal Server Error' }));
       }
-
-      // Generate signed URL
-      const signedUrl = generateSignedUrl(url );
-
-      // Respond with the signed URL
-      res.writeHead(200, {'Content-Type': 'application/json'});
-      res.end(JSON.stringify({signedURL: signedUrl}));
-    } catch (error) {
-      console.error('Error generating signed URL:', error);
-      res.writeHead(500, {'Content-Type': 'application/json'});
-      res.end(JSON.stringify({error: 'Internal Server Error'}));
-    }
-  } else if (urlWithoutParams === '/loginComponent') {
+    } else if (urlWithoutParams === '/loginComponent') {
       await loginComponent(req, res, sessions);
     } else if (urlWithoutParams === '/registerComponent') {
       await registerComponent(req, res, sessions);
@@ -367,7 +406,7 @@ const server = http.createServer(async (req, res) => {
 
         // Create a temporary file path for the ZIP archive
         const tempDir = path.join(__dirname, 'temp');
-        const zipFilePath = path.join(tempDir, 'exported_souvenirs.zip');
+        const zipFilePath = path.join(tempDir, 'exported_souvenirs_html.zip');
 
         if (!fs.existsSync(tempDir)) {
           fs.mkdirSync(tempDir);
@@ -380,7 +419,7 @@ const server = http.createServer(async (req, res) => {
         // Set response headers after archive is piped to output
         res.writeHead(200, {
           'Content-Type': 'application/zip',
-          'Content-Disposition': 'attachment; filename=exported_souvenirs.zip'
+          'Content-Disposition': 'attachment; filename=exported_souvenirs_html.zip'
         });
 
         // Export souvenirs and add them to the archive
@@ -394,6 +433,136 @@ const server = http.createServer(async (req, res) => {
           zipFileReadStream.on('end', () => {
             fs.unlinkSync(zipFilePath); // Delete the temporary file
             console.log("The HTML export request has been processed!"); // Moved log here
+          });
+        });
+        archive.finalize();
+
+      } catch (error) {
+        console.error('Error exporting souvenirs:', error);
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Internal server error' }));
+      }
+    } else if ( urlWithoutParams === '/exportToCSV')
+    {
+      try {
+        console.log("The CSV export request has been triggered!");
+
+        // Create a temporary file path for the ZIP archive
+        const tempDir = path.join(__dirname, 'temp');
+        const zipFilePath = path.join(tempDir, 'exported_souvenirs_CSV.zip');
+
+        if (!fs.existsSync(tempDir)) {
+          fs.mkdirSync(tempDir);
+        }
+
+        const output = fs.createWriteStream(zipFilePath);
+        const archive = archiver('zip');
+        archive.pipe(output);
+
+        // Set response headers after archive is piped to output
+        res.writeHead(200, {
+          'Content-Type': 'application/zip',
+          'Content-Disposition': 'attachment; filename=exported_souvenirs_CSV.zip'
+        });
+
+        // Export souvenirs and add them to the archive
+        await exportSouvenirsToCSV(archive, db);
+
+        // Finalize the archive and handle download
+        archive.on('end', () => {
+          console.log("Archive finalized, sending to user...");
+          const zipFileReadStream = fs.createReadStream(zipFilePath);
+          zipFileReadStream.pipe(res); // Pipe the file to the response
+          zipFileReadStream.on('end', () => {
+            fs.unlinkSync(zipFilePath); // Delete the temporary file
+            console.log("The CSV export request has been processed!"); // Moved log here
+          });
+        });
+        archive.finalize();
+
+      } catch (error) {
+        console.error('Error exporting souvenirs:', error);
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Internal server error' }));
+      }
+
+    } else if( urlWithoutParams === '/exportToXML')
+    {
+      try {
+        console.log("The XML export request has been triggered!");
+
+        // Create a temporary file path for the ZIP archive
+        const tempDir = path.join(__dirname, 'temp');
+        const zipFilePath = path.join(tempDir, 'exported_souvenirs_XML.zip');
+
+        if (!fs.existsSync(tempDir)) {
+          fs.mkdirSync(tempDir);
+        }
+
+        const output = fs.createWriteStream(zipFilePath);
+        const archive = archiver('zip');
+        archive.pipe(output);
+
+        // Set response headers after archive is piped to output
+        res.writeHead(200, {
+          'Content-Type': 'application/zip',
+          'Content-Disposition': 'attachment; filename=exported_souvenirs_XML.zip'
+        });
+
+        // Export souvenirs and add them to the archive
+        await exportSouvenirsToXML(archive, db);
+
+        // Finalize the archive and handle download
+        archive.on('end', () => {
+          console.log("Archive finalized, sending to user...");
+          const zipFileReadStream = fs.createReadStream(zipFilePath);
+          zipFileReadStream.pipe(res); // Pipe the file to the response
+          zipFileReadStream.on('end', () => {
+            fs.unlinkSync(zipFilePath); // Delete the temporary file
+            console.log("The XML export request has been processed!"); // Moved log here
+          });
+        });
+        archive.finalize();
+
+      } catch (error) {
+        console.error('Error exporting souvenirs:', error);
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Internal server error' }));
+      }
+    } else if( urlWithoutParams === '/exportToJSON')
+    {
+      try {
+        console.log("The JSON export request has been triggered!");
+
+        // Create a temporary file path for the ZIP archive
+        const tempDir = path.join(__dirname, 'temp');
+        const zipFilePath = path.join(tempDir, 'exported_souvenirs_JSON.zip');
+
+        if (!fs.existsSync(tempDir)) {
+          fs.mkdirSync(tempDir);
+        }
+
+        const output = fs.createWriteStream(zipFilePath);
+        const archive = archiver('zip');
+        archive.pipe(output);
+
+        // Set response headers after archive is piped to output
+        res.writeHead(200, {
+          'Content-Type': 'application/zip',
+          'Content-Disposition': 'attachment; filename=exported_souvenirs_JSON.zip'
+        });
+
+        // Export souvenirs and add them to the archive
+        await exportSouvenirsToJSON(archive, db);
+
+        // Finalize the archive and handle download
+        archive.on('end', () => {
+          console.log("Archive finalized, sending to user...");
+          const zipFileReadStream = fs.createReadStream(zipFilePath);
+          zipFileReadStream.pipe(res); // Pipe the file to the response
+          zipFileReadStream.on('end', () => {
+            fs.unlinkSync(zipFilePath); // Delete the temporary file
+            console.log("The JSON export request has been processed!"); // Moved log here
           });
         });
         archive.finalize();
