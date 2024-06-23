@@ -1,3 +1,13 @@
+// const fetchRelativeSouvenirs = require("./database/fetchComponents/fetchRelativeSouvenirs");
+// const fetchLoverSouvenirs = require("./database/fetchComponents/fetchLoverSouvenirs");
+// const fetchCoWorkerSouvenirs = require("./database/fetchComponents/fetchCoWorkerSouvenirs");
+// const fetchFamilySouvenirs = require("./database/fetchComponents/fetchFamilySouvenirs");
+// const fetchFriendSouvenirs = require("./database/fetchComponents/fetchFriendSouvenirs");
+// const fetchAcquaintanceSouvenirs = require("./database/fetchComponents/fetchAcquaintanceSouvenirs");
+// const { db } = require('../utils/firebaseInit');
+// const { collection, getDocs } = require('firebase/firestore');
+// const fetchCountriesAndCities = require("./database/fetchComponents/fetchCountriesAndCities");
+
 document.addEventListener("DOMContentLoaded", async function () {
 
   const response = await fetch('/getCountries');
@@ -5,6 +15,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     throw new Error('Failed to fetch countries');
   }
   const countries = await response.json();
+  console.log(response);
+  console.log(countries);
   const beneficiaries = ["Family", "Friend", "Relative", "Lover", "Acquaintance", "Co-worker"];
 
   const countrySelect = document.getElementById("country");
@@ -139,14 +151,14 @@ document.addEventListener("DOMContentLoaded", async function () {
     souvenirList.innerHTML = ""; // Clear previous content
 
     destinations.forEach(destination => {
-      const mainSouvenir = getMainSouvenir(destination);
+      const mainSouvenirs = getMainSouvenirs(destination);
       const otherSouvenirs = getOtherSouvenirs(destination);
 
       const destinationDiv = document.createElement("div");
       destinationDiv.classList.add("destination-souvenirs");
       destinationDiv.innerHTML = `
         <h2>${destination.oras}, ${destination.tara}</h2>
-        <p><strong>Main Souvenir:</strong> ${mainSouvenir}</p>
+        <p><strong>Main Souvenirs:</strong> ${mainSouvenirs}</p>
         <p><strong>Other Souvenirs:</strong> ${otherSouvenirs.join(', ')}</p>
       `;
       souvenirList.appendChild(destinationDiv);
@@ -160,24 +172,33 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
   });
 
-  // Function to determine main souvenir
-  function getMainSouvenir(destination) {
-    const relevantSouvenirs = testSuveniruri.filter(souvenir =>
-      souvenir.tara === destination.tara &&
-      souvenir.oras === destination.oras &&
-      souvenir.destinatari.includes(destination.beneficiari[0])
-    );
-    return relevantSouvenirs.length > 0 ? relevantSouvenirs[0].suvenir : "No main souvenir found";
+// Function to determine main souvenir
+async function getMainSouvenirs(destination) {
+  const response = await fetch('/getMainSouvenirs', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(destination)
+  });
+
+  if (!response.ok) {
+    throw new Error('Failed to fetch main souvenirs');
   }
 
-  // Function to get other souvenirs
-  function getOtherSouvenirs(destination) {
-    const otherSouvenirs = testSuveniruri.filter(souvenir =>
-      souvenir.tara === destination.tara &&
-      souvenir.oras === destination.oras &&
-      souvenir.suvenir !== getMainSouvenir(destination)
-    );
-    return otherSouvenirs.map(souvenir => souvenir.suvenir);
-  }
+  const relevantSouvenirs = await response.json();
+  return relevantSouvenirs.length > 0 ? relevantSouvenirs[0].suvenir : "No main souvenir found";
+}
+
+
+// Function to get other souvenirs
+async function getOtherSouvenirs(destination) {
+  const otherSouvenirs = testSuveniruri.filter(souvenir =>
+    souvenir.tara === destination.tara &&
+    souvenir.oras === destination.oras &&
+    souvenir.suvenir !== getMainSouvenirs(destination)
+  );
+  return otherSouvenirs.map(souvenir => souvenir.suvenir);
+}
 });
 

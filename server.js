@@ -23,10 +23,26 @@ const adminUserRoute = require('./routes/redirectExploreAdminRoute');
 const adminPageUserRoute = require('./routes/redirectAdminPageRoute');
 const adminStatisticsUserRoute = require('./routes/statisticsRoute');
 const fetchCountriesAndCities = require("./components/database/fetchComponents/fetchCountriesAndCities");
-
+const fetchRelativeSouvenirs = require("./components/database/fetchComponents/fetchRelativeSouvenirs");
+const fetchLoverSouvenirs = require("./components/database/fetchComponents/fetchLoverSouvenirs");
+const fetchCoWorkerSouvenirs = require("./components/database/fetchComponents/fetchCoWorkerSouvenirs");
+const fetchFamilySouvenirs = require("./components/database/fetchComponents/fetchFamilySouvenirs");
+const fetchFriendSouvenirs = require("./components/database/fetchComponents/fetchFriendSouvenirs");
+const fetchAcquaintanceSouvenirs = require("./components/database/fetchComponents/fetchAcquaintanceSouvenirs");
+const fetchMainSouvenirs = require('./components/database/fetchComponents/fetchMainSouvenirs');
 /* Protected routes to be hashed definitions */
 
-const protectedRoutes = ['/explore', '/aboutUs', '/help', '/redirectAdminRoute', '/redirectUserRoute', '/redirectStatistics', '/redirectAdmin','/adminUserRoute','/standardUserRoute'];
+const protectedRoutes = [
+  '/explore',
+  '/aboutUs',
+  '/help',
+  '/redirectAdminRoute',
+  '/redirectUserRoute',
+  '/redirectStatistics',
+  '/redirectAdmin',
+  '/adminUserRoute',
+  '/standardUserRoute',
+  '/getCountries'];
 const PORT = process.env.PORT || 3000;
 
 /* Global variables definition */
@@ -259,6 +275,10 @@ const server = http.createServer(async (req, res) => {
     else if (req.url === '/registerComponent')
     {
       await registerComponent(req, res, sessions);
+    }
+    else if( req.url === '/getMainSouvenirs')
+    {
+      await fetchMainSouvenirs(req, res);
     }
     else
     {
