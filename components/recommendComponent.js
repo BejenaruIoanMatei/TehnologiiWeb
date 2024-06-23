@@ -140,41 +140,63 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
   }
 
-  // Event listener for the "Create Trip" button
-  const createTripButton = document.getElementById("submit-trip");
-  createTripButton.addEventListener("click", function () {
-    // Display popup with souvenir details
-    const popupContainer = document.getElementById("popup-container");
-    const closePopup = document.getElementById("close-popup");
-    const souvenirList = document.getElementById("souvenir-list");
+const createTripButton = document.getElementById("submit-trip");
+createTripButton.addEventListener("click", async function () {
+  // Display popup with souvenir details
+  const popupContainer = document.getElementById("popup-container");
+  const closePopup = document.getElementById("close-popup");
+  const souvenirList = document.getElementById("souvenir-list");
 
-    souvenirList.innerHTML = ""; // Clear previous content
+  souvenirList.innerHTML = ""; // Clear previous content
 
-    destinations.forEach(destination => {
-      const mainSouvenirs = getMainSouvenirs(destination);
-      const otherSouvenirs = getOtherSouvenirs(destination);
+  console.log('Recommend component destinations: ', destinations);
+  try {
+    // Array to hold promises for fetching main and other souvenirs
+    const fetchPromises = destinations.map(async (destination) => {
+      try {
+        const mainSouvenir = await getMainSouvenir(destination);
+        const otherSouvenirs = await getOtherSouvenirs(destination);
 
-      const destinationDiv = document.createElement("div");
-      destinationDiv.classList.add("destination-souvenirs");
-      destinationDiv.innerHTML = `
+        console.log('Recommend component main souvenir:', mainSouvenir);
+        console.log('Recommend component other souvenirs:', otherSouvenirs);
+
+        const destinationDiv = document.createElement("div");
+        destinationDiv.classList.add("destination-souvenirs");
+        destinationDiv.innerHTML = `
         <h2>${destination.oras}, ${destination.tara}</h2>
-        <p><strong>Main Souvenirs:</strong> ${mainSouvenirs}</p>
+        <p><strong>Main Souvenir:</strong> ${mainSouvenir}</p>
         <p><strong>Other Souvenirs:</strong> ${otherSouvenirs.join(', ')}</p>
       `;
-      souvenirList.appendChild(destinationDiv);
+
+        souvenirList.appendChild(destinationDiv);
+      } catch (error) {
+        console.error("Error fetching or displaying souvenirs:", error);
+        // Optionally handle specific error cases if needed
+      }
     });
 
-    popupContainer.style.display = "block";
+    // Wait for all promises to resolve
+    await Promise.all(fetchPromises);
+  } catch (error) {
+    console.error("Error fetching or displaying souvenirs:", error);
+    // Handle error display if needed
+  }
 
-    // Close popup when clicking on close button
-    closePopup.addEventListener("click", function () {
-      popupContainer.style.display = "none";
-    });
+  popupContainer.style.display = "block";
+
+  // Close popup when clicking on close button
+  closePopup.addEventListener("click", function () {
+    popupContainer.style.display = "none";
   });
+});
+
+
 
 // Function to determine main souvenir
-async function getMainSouvenirs(destination) {
-  const response = await fetch('/getMainSouvenirs', {
+async function getMainSouvenir(destination)
+{
+  const response = await fetch('/getMainSouvenir',
+    {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -183,22 +205,42 @@ async function getMainSouvenirs(destination) {
   });
 
   if (!response.ok) {
-    throw new Error('Failed to fetch main souvenirs');
+    throw new Error('Failed to fetch main souvenir');
   }
 
-  const relevantSouvenirs = await response.json();
-  return relevantSouvenirs.length > 0 ? relevantSouvenirs[0].suvenir : "No main souvenir found";
+  const relevantSouvenir = await response.json();
+  console.log('Componenta de recomandare main souvenir a primit',relevantSouvenir);
+  return relevantSouvenir ? relevantSouvenir.suvenir : "No main souvenir found";
 }
 
 
-// Function to get other souvenirs
-async function getOtherSouvenirs(destination) {
-  const otherSouvenirs = testSuveniruri.filter(souvenir =>
-    souvenir.tara === destination.tara &&
-    souvenir.oras === destination.oras &&
-    souvenir.suvenir !== getMainSouvenirs(destination)
-  );
-  return otherSouvenirs.map(souvenir => souvenir.suvenir);
-}
+// Function to fetch other souvenirs
+  async function getOtherSouvenirs(destination) {
+    try {
+      const mainSouvenir = await getMainSouvenir(destination);
+
+      const response = await fetch('/getOtherSouvenirs', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(destination)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch other souvenirs');
+      }
+
+      const otherSouvenirs = await response.json();
+
+      // Filter out the main souvenir from the list of other souvenirs
+      const filteredSouvenirs = otherSouvenirs.filter(souvenir => souvenir !== mainSouvenir);
+
+      return filteredSouvenirs;
+    } catch (error) {
+      console.error('Error fetching other souvenirs:', error);
+      throw error;
+    }
+  }
 });
 

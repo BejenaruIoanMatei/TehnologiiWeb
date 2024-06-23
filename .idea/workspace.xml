@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="78: Integrate countries and cities via script">
-      <change afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchMainSouvenirs.js" afterDir="false" />
+    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="78: Update recommendComponent.js">
+      <change afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchOtherSouvenirs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchMainSouvenirs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchMainSouvenirs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/recommendComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/recommendComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
@@ -212,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719135191194</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="78: Update recommendComponent.js">
+      <option name="closed" value="true" />
+      <created>1719136827981</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1719136827981</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +254,7 @@
     <MESSAGE value="76: fix register,fix sign in" />
     <MESSAGE value="77: Create Recommend Component" />
     <MESSAGE value="78: Integrate countries and cities via script" />
-    <option name="LAST_COMMIT_MESSAGE" value="78: Integrate countries and cities via script" />
+    <MESSAGE value="78: Update recommendComponent.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="78: Update recommendComponent.js" />
   </component>
 </project>

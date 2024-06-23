@@ -29,7 +29,8 @@ const fetchCoWorkerSouvenirs = require("./components/database/fetchComponents/fe
 const fetchFamilySouvenirs = require("./components/database/fetchComponents/fetchFamilySouvenirs");
 const fetchFriendSouvenirs = require("./components/database/fetchComponents/fetchFriendSouvenirs");
 const fetchAcquaintanceSouvenirs = require("./components/database/fetchComponents/fetchAcquaintanceSouvenirs");
-const fetchMainSouvenirs = require('./components/database/fetchComponents/fetchMainSouvenirs');
+const fetchMainSouvenir = require('./components/database/fetchComponents/fetchMainSouvenirs');
+const fetchOtherSouvenirs = require('./components/database/fetchComponents/fetchOtherSouvenirs');
 /* Protected routes to be hashed definitions */
 
 const protectedRoutes = [
@@ -42,7 +43,8 @@ const protectedRoutes = [
   '/redirectAdmin',
   '/adminUserRoute',
   '/standardUserRoute',
-  '/getCountries'];
+  '/getCountries',
+  '/getMainSouvenir'];
 const PORT = process.env.PORT || 3000;
 
 /* Global variables definition */
@@ -276,9 +278,13 @@ const server = http.createServer(async (req, res) => {
     {
       await registerComponent(req, res, sessions);
     }
-    else if( req.url === '/getMainSouvenirs')
+    else if( req.url === '/getMainSouvenir')
     {
-      await fetchMainSouvenirs(req, res);
+      await fetchMainSouvenir(req, res);
+    }
+    else if( req.url === '/getOtherSouvenirs')
+    {
+      await fetchOtherSouvenirs(req,res);
     }
     else
     {
