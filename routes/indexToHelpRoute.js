@@ -1,4 +1,4 @@
-const { generateSignedUrl } = require('../utils/urlSigning');
+const { generateSignedUrl } = require('../utils/urlSigningServer');
 const { getSessionIdFromCookies } = require('../utils/sessionUtils');
 
 const indexToHelpRoute = (req, res, sessions ) => {

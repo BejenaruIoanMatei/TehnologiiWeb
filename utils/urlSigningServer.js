@@ -58,7 +58,28 @@ const verifySignedUrl = (req) => {
   }
 };
 
+// Function to decrypt data using RSA private key
+const decryptRSA = (encryptedData) => {
+  try {
+    // Load the private key from file (replace with your private key file path)
+    const privateKeyPath = path.join(__dirname, 'private_key.pem');
+    const privateKey = fs.readFileSync(privateKeyPath, 'utf8');
+
+    // Create a new NodeRSA object with the private key
+    const key = new NodeRSA(privateKey, 'pkcs8-private');
+
+    // Decrypt the data using the private key
+    const decryptedData = key.decrypt(encryptedData, 'utf8');
+
+    return decryptedData;
+  } catch (error) {
+    console.error('Error decrypting with RSA:', error);
+    throw error;
+  }
+};
+
 module.exports = {
   generateSignedUrl,
-  verifySignedUrl
+  verifySignedUrl,
+  decryptRSA
 };

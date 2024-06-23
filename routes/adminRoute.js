@@ -1,4 +1,4 @@
-const { generateSignedUrl } = require('../utils/urlSigning');
+const { generateSignedUrl } = require('../utils/urlSigningServer');
 const { getSessionIdFromCookies } = require('../utils/sessionUtils'); // Import session utilities if needed
 
 const adminRoute = (req, res, sessions ) => {

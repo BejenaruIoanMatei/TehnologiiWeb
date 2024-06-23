@@ -4,7 +4,10 @@ const bcrypt = require('bcrypt');
 const cookie = require('cookie');
 const { v4: uuidv4 } = require('uuid');
 
+
 const loginComponent = async (req, res, sessions) => {
+
+
   let body = '';
   req.on('data', chunk => {
     body += chunk.toString();
@@ -34,12 +37,12 @@ const loginComponent = async (req, res, sessions) => {
         return;
       }
 
-      if ( user.loggedIn === true )
-      {
+      if (user.loggedIn) {
         res.writeHead(401, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ message: 'You are already logged in on another tab!' }));
         return;
       }
+
       // Generate new session ID
       const sessionId = uuidv4();
 
@@ -66,6 +69,7 @@ const loginComponent = async (req, res, sessions) => {
 
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ message: 'Login successful', email: user.email, role: user.role }));
+
     } catch (error) {
       console.error('Error logging in:', error);
       res.writeHead(500, { 'Content-Type': 'application/json' });

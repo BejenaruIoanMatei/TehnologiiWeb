@@ -14,7 +14,7 @@ const archiver = require('archiver');
 const { PassThrough } = require('stream');
 
 /* Components and routes definitions */
-const { generateSignedUrl, verifySignedUrl } = require('./utils/urlSigning'); // Importing generateSignedUrl and verifySignedUrl
+const { generateSignedUrl, verifySignedUrl } = require('./utils/urlSigningServer'); // Importing generateSignedUrl and verifySignedUrl
 const loginComponent = require('./components/loginComponent');
 const explorePageRoute = require('./routes/indexToExplorePageButtonRoute');
 const aboutUsRoute = require('./routes/indexToAboutButtonRoute');
@@ -33,7 +33,7 @@ const fetchOtherSouvenirs = require('./components/database/fetchComponents/fetch
 const { calculateLikeRatio, updateLikeRatioForSouvenirs } = require('./utils/likeRatioUtil');
 const exportSouvenirsToHtml = require('./components/database/exportScripts/exportSouvenirsToHtml');
 /* Protected routes to be hashed definitions */
-const protectedRoutes = [
+const GETProtectedRoutes = [
   '/explore',
   '/aboutUs',
   '/help',
@@ -43,8 +43,10 @@ const protectedRoutes = [
   '/redirectAdmin',
   '/adminUserRoute',
   '/standardUserRoute',
-  '/getCountries',
-  '/getMainSouvenir'];
+  ];
+const POSTProtectedRoutes = [
+  '/exportToHTML'
+]
 const PORT = process.env.PORT || 3000;
 
 /* Global variables definition */
@@ -117,7 +119,20 @@ const serveStaticFile = (res, filePath, contentType) => {
     }
   });
 };
-
+async function parseBody(req) {
+  return new Promise((resolve, reject) => {
+    let body = '';
+    req.on('data', chunk => {
+      body += chunk.toString();
+    });
+    req.on('end', () => {
+      resolve(body);
+    });
+    req.on('error', err => {
+      reject(err);
+    });
+  });
+}
 /* Functie care reseteaza statusul de logare a userilor cand lansam serverul */
 const resetLoggedInStatus = async () => {
   try {
@@ -229,6 +244,31 @@ const routes = {
   },
 };
 
+function handlePOSTProtectedRoutes(req, res, sessionId) {
+  try {
+    // Parse the URL and extract the pathname
+    const parsedUrl = new URL('http://dummyhost' + req.url);
+    const pathname = parsedUrl.pathname;
+
+    // Remove everything after '?' in the request URL
+    const urlWithoutParams = req.url.split('?')[0];
+
+    // Check if the request URL is in POSTProtectedRoutes and is properly signed
+    if (POSTProtectedRoutes.includes(urlWithoutParams) && req.method === 'POST' && !verifySignedUrl(req)) {
+      const signedUrl = generateSignedUrl(req.url, sessionId);
+      res.writeHead(302, { 'Location': signedUrl });
+      res.end();
+      return true; // Indicate that redirection occurred
+    }
+
+    // If no redirection occurred
+    return false;
+  } catch (error) {
+    console.error('Error handling POST protected routes:', error);
+    return false;
+  }
+}
+
 /* setupul serverului */
 const server = http.createServer(async (req, res) => {
   let sessionId = getSessionIdFromCookies(req);
@@ -254,7 +294,7 @@ const server = http.createServer(async (req, res) => {
 
   if (req.method === 'GET') {
     /* Verific daca ruta este protejata, daca este atunci semnez fisierul html */
-    if (protectedRoutes.includes(req.url.split('?')[0]) && !verifySignedUrl(req))
+    if (GETProtectedRoutes.includes(req.url.split('?')[0]) && !verifySignedUrl(req))
     {
       const signedUrl = generateSignedUrl(req.url, sessionId); // Generate signed URL
       res.writeHead(302, { 'Location': signedUrl });
@@ -268,28 +308,59 @@ const server = http.createServer(async (req, res) => {
     }));
     handler(req, res);
   }
-  else if (req.method === 'POST') {
-    console.log('POST branch reached');
-    if (req.url === '/loginComponent') {
-      await loginComponent(req, res, sessions);
-    } else if (req.url === '/registerComponent') {
-      await registerComponent(req, res, sessions);
-    } else if (req.url === '/getMainSouvenir') {
-      await fetchMainSouvenir(req, res);
-    } else if (req.url === '/getOtherSouvenirs') {
-      await fetchOtherSouvenirs(req, res);
-    } else if (req.url === '/getNumberOfAccesses') {
-      await getNumberOfAccesses(req, res);
-    } else if (req.url === '/getLoggedInUsers') {
-      await getLoggedInUsers(req, res);
-    } else if (req.url === '/getSouvenirsSuggested') {
-      await getSouvenirsSuggested(req, res);
-    } else if (req.url === '/getSatisfiedCustomers') {
-      await getSatisfiedCustomers(req, res);
-    } else if (req.url === '/getGlobalLikeRatio') {
-      await getGlobalLikeRatio(req, res);
+  else if (req.method === 'POST')
+  {
+
+
+   // Check if the request URL is in POSTProtectedRoutes and is properly signed
+    // Handle POST protected routes
+    if (handlePOSTProtectedRoutes(req, res, sessionId)) {
+      return; // Stop further processing if redirection occurred
     }
-    else if (req.method === 'POST' && req.url === '/exportToHTML')
+    const urlWithoutParams = req.url.split('?')[0];
+    console.log('POST branch reached');
+    console.log('The received url is', urlWithoutParams);
+    if( urlWithoutParams === '/generateSignedURL' )
+    {
+    console.log('A request to sign a url has occurred!');
+    try {
+      const body = await parseBody(req);
+      const {url} = JSON.parse(body);
+
+      if (!url || typeof url !== 'string') {
+        throw new Error('Invalid URL format');
+      }
+
+      // Generate signed URL
+      const signedUrl = generateSignedUrl(url );
+
+      // Respond with the signed URL
+      res.writeHead(200, {'Content-Type': 'application/json'});
+      res.end(JSON.stringify({signedURL: signedUrl}));
+    } catch (error) {
+      console.error('Error generating signed URL:', error);
+      res.writeHead(500, {'Content-Type': 'application/json'});
+      res.end(JSON.stringify({error: 'Internal Server Error'}));
+    }
+  } else if (urlWithoutParams === '/loginComponent') {
+      await loginComponent(req, res, sessions);
+    } else if (urlWithoutParams === '/registerComponent') {
+      await registerComponent(req, res, sessions);
+    } else if (urlWithoutParams === '/getMainSouvenir') {
+      await fetchMainSouvenir(req, res);
+    } else if (urlWithoutParams === '/getOtherSouvenirs') {
+      await fetchOtherSouvenirs(req, res);
+    } else if (urlWithoutParams === '/getNumberOfAccesses') {
+      await getNumberOfAccesses(req, res);
+    } else if (urlWithoutParams === '/getLoggedInUsers') {
+      await getLoggedInUsers(req, res);
+    } else if (urlWithoutParams === '/getSouvenirsSuggested') {
+      await getSouvenirsSuggested(req, res);
+    } else if (urlWithoutParams === '/getSatisfiedCustomers') {
+      await getSatisfiedCustomers(req, res);
+    } else if (urlWithoutParams === '/getGlobalLikeRatio') {
+      await getGlobalLikeRatio(req, res);
+    } else if ( urlWithoutParams === '/exportToHTML')
     {
       try {
         console.log("The HTML export request has been triggered!");

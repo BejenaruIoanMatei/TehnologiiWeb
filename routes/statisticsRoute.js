@@ -1,5 +1,5 @@
 // Import the utility function for URL signing
-const { generateSignedUrl } = require('../utils/urlSigning');
+const { generateSignedUrl } = require('../utils/urlSigningServer');
 
 const statisticAdminRoute = async (req, res) => {
   try {

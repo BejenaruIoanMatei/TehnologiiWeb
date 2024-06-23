@@ -5,15 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="85: Update statistics">
+      <change afterPath="$PROJECT_DIR$/utils/private_key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/public_key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/urlSigningClient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/adminComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/adminComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToHtml.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/exportScripts/exportSouvenirsToHtml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/howToRunServer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/howToRunServer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/adminCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/adminCss.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/loginComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/loginComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/adminRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/adminRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/basicUserRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/basicUserRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/explorePageToSignInRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/explorePageToSignInRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/indexToAboutButtonRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/indexToAboutButtonRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/indexToExplorePageButtonRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/indexToExplorePageButtonRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/indexToHelpRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/indexToHelpRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/redirectAdminPageRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/redirectAdminPageRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/redirectExploreAdminRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/redirectExploreAdminRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/redirectExploreUserRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/redirectExploreUserRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/statisticsRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/statisticsRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/urlSigning.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/urlSigningServer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +113,8 @@
       <workItem from="1719046880280" duration="117000" />
       <workItem from="1719075330231" duration="933000" />
       <workItem from="1719076640769" duration="453000" />
+      <workItem from="1719159613462" duration="172000" />
+      <workItem from="1719159823625" duration="5507000" />
     </task>
     <task id="LOCAL-00001" summary="54: Refactor dataBase scripts">
       <option name="closed" value="true" />

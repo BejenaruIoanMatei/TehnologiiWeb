@@ -1,11 +1,34 @@
-// adminComponent.js (Client-Side)
+const NodeRSA = require('node-rsa');
+const fs = require('fs');
+const path = require('path');
+
+const encryptRSA = (data) => {
+  try {
+    // Load the public key from file (replace with your public key file path)
+    const publicKey = '-----BEGIN PUBLIC KEY-----MIICITANBgkqhkiG9w0BAQEFAAOCAg4AMIICCQKCAgB+K8Muhs/lv4kv9Px5YsUEtvT4JbxEpnlITg2KwMavptOUvvDAyvWEvr41BFziPQqn/eVAQdpk0u9CK+hE1kTPXnVbu0OvkJbZtNbaReFWtWM0HGt4VqZpvaGq1il0bb5/YhcAsMFl1BrXkGte9ukfqBh2c2UlQ0wG5xczMQKbuPixgr3FpmUJkydg/P28K5/POJ3/muam50q0dIvp1h9cZiaK3isSguRYnifZ38Zrg2+mwZ19zOPocKI06XkXPCM1M6EBaOQHSHD8H8Zwx/AgC1XTswv0kD6xnOPvftN9JuNeRQeFQu5/gEdMvHWgrHSoMw8m4XZIDRW5OlRVzwk5uk079bb5DwTFtYtFPsJR3hOqGt9i/x+cf42NuYBoAsNONXTXCTDJxfm7pt6/emb9tmJnHyjfFDoFAu1lyK/7HUvtIK122kPhPlFfufvFZB7g4CloYr/KpqlV31xozgLY9/0GV792cvuYl6vMZbueJZO9Q1Gz6JA8VG9lGmUkMYpXpbQ8Hmqx+D/jd6JpUi/JqCqBS5jYEb+ETMqjOmOOAJ2FJkq+xLfBZOXhboJWKS9mUBYUMdE5S1fXlM03ZFxBHgXgiwwzd3P89ZWqBDM64FvUd81pf5TShlz2AE6lesBXuQkM7KyqsdMM+bIXHmLi5JzlGkM/HOw+MwwHEf3mhwIDAQAB-----END PUBLIC KEY-----';
+
+    // Create a new NodeRSA object with the public key
+    const key = new NodeRSA(publicKey, 'pkcs8-public');
+
+    // Encrypt the data using the public key
+    const encryptedData = key.encrypt(data, 'base64');
+
+    return encryptedData;
+  } catch (error) {
+    console.error('Error encrypting with RSA:', error);
+    throw error;
+  }
+};
 
 // Function to handle export to HTML
 document.getElementById('exportToHTML').addEventListener('click', async () => { // Assuming you have a button with the ID 'exportButton'
   try {
     console.log("Export to HTML has been clicked!");
 
-    const response = await fetch('/exportToHTML', {
+    // Fetch signed URL from server
+    const signedUrl = await encryptURL('/exportToHTML');
+    // Use the signed URL in the POST request to /exportToHTML
+    const exportResponse = await fetch(signedUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -13,8 +36,8 @@ document.getElementById('exportToHTML').addEventListener('click', async () => { 
       body: JSON.stringify({}),
     });
 
-    if (response.ok) {
-      const blob = await response.blob();
+    if (exportResponse.ok) {
+      const blob = await exportResponse.blob();
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
@@ -24,13 +47,12 @@ document.getElementById('exportToHTML').addEventListener('click', async () => { 
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
     } else {
-      console.error('Error:', response.statusText);
+      console.error('Error exporting to HTML:', exportResponse.statusText);
     }
   } catch (error) {
     console.error('Error:', error);
   }
 });
-
 // Function to handle export to CSV
 document.getElementById('exportToCSV').addEventListener('click', async () => {
   console.log('Export to CSV button clicked');
