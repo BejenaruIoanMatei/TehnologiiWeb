@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="77: Create Recommend Component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/recommendComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/recommendComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/loginComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/loginComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

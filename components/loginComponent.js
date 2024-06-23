@@ -34,6 +34,12 @@ const loginComponent = async (req, res, sessions) => {
         return;
       }
 
+      if ( user.loggedIn === true )
+      {
+        res.writeHead(401, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ message: 'You are already logged in on another tab!' }));
+        return;
+      }
       // Generate new session ID
       const sessionId = uuidv4();
 
