@@ -25,17 +25,12 @@ const adminUserRoute = require('./routes/redirectExploreAdminRoute');
 const adminPageUserRoute = require('./routes/redirectAdminPageRoute');
 const adminStatisticsUserRoute = require('./routes/statisticsRoute');
 const fetchCountriesAndCities = require("./components/database/fetchComponents/fetchCountriesAndCities");
-const fetchRelativeSouvenirs = require("./components/database/fetchComponents/fetchRelativeSouvenirs");
-const fetchLoverSouvenirs = require("./components/database/fetchComponents/fetchLoverSouvenirs");
-const fetchCoWorkerSouvenirs = require("./components/database/fetchComponents/fetchCoWorkerSouvenirs");
-const fetchFamilySouvenirs = require("./components/database/fetchComponents/fetchFamilySouvenirs");
-const fetchFriendSouvenirs = require("./components/database/fetchComponents/fetchFriendSouvenirs");
-const fetchAcquaintanceSouvenirs = require("./components/database/fetchComponents/fetchAcquaintanceSouvenirs");
+const { getNumberOfAccesses, getLoggedInUsers, getSouvenirsSuggested, getSatisfiedCustomers, getGlobalLikeRatio, updateStatisticsDataNumberOfAccesses } = require('./utils/statisticsUtil');
 const fetchMainSouvenir = require('./components/database/fetchComponents/fetchMainSouvenirs');
 const fetchOtherSouvenirs = require('./components/database/fetchComponents/fetchOtherSouvenirs');
 const { calculateLikeRatio, updateLikeRatioForSouvenirs } = require('./utils/likeRatioUtil');
-/* Protected routes to be hashed definitions */
 
+/* Protected routes to be hashed definitions */
 const protectedRoutes = [
   '/explore',
   '/aboutUs',
@@ -64,9 +59,10 @@ async function initializeCountries() {
   }
 }
 
-const generateSession = () => {
+const generateSession = async () => {
   const sessionId = uuidv4();
   sessions[sessionId] = { loggedIn: false, userRole: 'user' };
+  await updateStatisticsDataNumberOfAccesses();
   return sessionId;
 };
 
@@ -237,7 +233,7 @@ const server = http.createServer(async (req, res) => {
 
   // Session Management
   if (!sessionId || !sessions[sessionId]) {
-    sessionId = generateSession();
+    sessionId = await generateSession();
     const signedRootUrl = generateSignedUrl('/', sessionId);
     res.setHeader('Set-Cookie', cookie.serialize('sessionId', sessionId, {
       httpOnly: true,
@@ -288,6 +284,26 @@ const server = http.createServer(async (req, res) => {
     else if( req.url === '/getOtherSouvenirs')
     {
       await fetchOtherSouvenirs(req,res);
+    }
+    else if (req.url === '/getNumberOfAccesses')
+    {
+      await getNumberOfAccesses(req, res);
+    }
+    else if (req.url === '/getLoggedInUsers')
+    {
+      await getLoggedInUsers(req, res);
+    }
+    else if (req.url === '/getSouvenirsSuggested')
+    {
+      await getSouvenirsSuggested(req, res);
+    }
+    else if (req.url === '/getSatisfiedCustomers')
+    {
+      await getSatisfiedCustomers(req, res);
+    }
+    else if (req.url === '/getGlobalLikeRatio')
+    {
+      await getGlobalLikeRatio(req, res);
     }
     else
     {

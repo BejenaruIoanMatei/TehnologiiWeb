@@ -11,7 +11,7 @@ const redirectAdminPageRoute = (req, res, sessions ) => {
   }
 
   // Generate a signed URL for admin.html with session ID
-  const signedUrl = generateSignedUrl('../views/admin.html', sessionId);
+  const signedUrl = generateSignedUrl('/views/admin.html', sessionId);
   res.writeHead(302, { 'Location': signedUrl });
   res.end();
 };
