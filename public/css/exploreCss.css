@@ -25,18 +25,40 @@
   max-width: 600px;
   position: relative;
   border-radius: 5px;
+  position: relative; /* This is important for positioning the close button */
+
 }
 
 .close-popup {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 30px;
-  cursor: pointer;
+  top: -15px;
+  right: -15px;
+  background-color: #ff4d4d;
+  color: white;
+  width: 30px;               /* Set width for a circle */
+  height: 30px;              /* Set height for a circle */
+  border: none;
+  border-radius: 50%;        /* Circle shape */
+  font-size: 20px;           
+  display: flex;             /* Center the text inside the circle */
+  align-items: center;       /* Center the text inside the circle */
+  justify-content: center;   /* Center the text inside the circle */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
 .close-popup:hover {
-  color: #aaa;
+  background-color: #ff1a1a; /* Darker red on hover */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+
+.close-popup:hover {
+  background-color: #ff1a1a; /* Darker red on hover */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+
 }
 
 .popup-content h2,
