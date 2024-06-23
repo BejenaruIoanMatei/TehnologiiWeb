@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="88: Add RSA Encryption / Decryption">
-      <change afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchAllUsers.js" afterDir="false" />
+    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="119: Update admin page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/adminComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/adminComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchAllUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchAllUsers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719165503262</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="119: Update admin page">
+      <option name="closed" value="true" />
+      <created>1719182694162</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1719182694162</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +290,7 @@
     <MESSAGE value="84: Update statistics" />
     <MESSAGE value="85: Update statistics" />
     <MESSAGE value="88: Add RSA Encryption / Decryption" />
-    <option name="LAST_COMMIT_MESSAGE" value="88: Add RSA Encryption / Decryption" />
+    <MESSAGE value="119: Update admin page" />
+    <option name="LAST_COMMIT_MESSAGE" value="119: Update admin page" />
   </component>
 </project>
