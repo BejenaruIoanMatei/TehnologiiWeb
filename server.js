@@ -37,7 +37,7 @@ const exportSouvenirsToHtml = require('./components/database/exportScripts/expor
 const exportSouvenirsToCSV = require('./components/database/exportScripts/exportSouvenirsToCSV');
 const exportSouvenirsToXML = require('./components/database/exportScripts/exportSouvenirsToXML');
 const exportSouvenirsToJSON = require('./components/database/exportScripts/exportSouvenirsToJSON');
-
+const fetchAllUsers = require('./components/database/fetchComponents/fetchAllUsers');
 /* Protected routes to be hashed definitions */
 const GETProtectedRoutes = [
   '/explore',
@@ -259,7 +259,7 @@ const routes = {
   },
   '/signIn': (req, res) => {
     signInRoute(req, res, sessions);
-  },
+  }
 };
 
 function handlePOSTProtectedRoutes(req, res, sessionId) {
@@ -389,21 +389,29 @@ const server = http.createServer(async (req, res) => {
     } else if (urlWithoutParams === '/registerComponent') {
       await registerComponent(req, res, sessions);
     } else if (urlWithoutParams === '/getMainSouvenir') {
+      if (redirectIfNotLoggedIn(req, res)) return;
       await fetchMainSouvenir(req, res);
     } else if (urlWithoutParams === '/getOtherSouvenirs') {
+      if (redirectIfNotLoggedIn(req, res)) return;
       await fetchOtherSouvenirs(req, res);
     } else if (urlWithoutParams === '/getNumberOfAccesses') {
+      if (redirectIfNotLoggedIn(req, res)) return;
       await getNumberOfAccesses(req, res);
     } else if (urlWithoutParams === '/getLoggedInUsers') {
+      if (redirectIfNotLoggedIn(req, res)) return;
       await getLoggedInUsers(req, res);
     } else if (urlWithoutParams === '/getSouvenirsSuggested') {
+      if (redirectIfNotLoggedIn(req, res)) return;
       await getSouvenirsSuggested(req, res);
     } else if (urlWithoutParams === '/getSatisfiedCustomers') {
+      if (redirectIfNotLoggedIn(req, res)) return;
       await getSatisfiedCustomers(req, res);
     } else if (urlWithoutParams === '/getGlobalLikeRatio') {
+      if (redirectIfNotLoggedIn(req, res)) return;
       await getGlobalLikeRatio(req, res);
     } else if ( urlWithoutParams === '/exportToHTML')
     {
+      if (redirectIfNotLoggedIn(req, res)) return;
       try {
         console.log("The HTML export request has been triggered!");
 
@@ -447,6 +455,7 @@ const server = http.createServer(async (req, res) => {
       }
     } else if ( urlWithoutParams === '/exportToCSV')
     {
+      if (redirectIfNotLoggedIn(req, res)) return;
       try {
         console.log("The CSV export request has been triggered!");
 
@@ -491,6 +500,7 @@ const server = http.createServer(async (req, res) => {
 
     } else if( urlWithoutParams === '/exportToXML')
     {
+      if (redirectIfNotLoggedIn(req, res)) return;
       try {
         console.log("The XML export request has been triggered!");
 
@@ -575,6 +585,19 @@ const server = http.createServer(async (req, res) => {
         res.writeHead(500, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ error: 'Internal server error' }));
       }
+    } else if ( urlWithoutParams === '/fetchAllUsers')
+    {
+      if (redirectIfNotLoggedIn(req, res)) return;
+      const sessionId = getSessionIdFromCookies(req);
+      if (sessions[sessionId].userRole !== 'admin')
+      {
+        aes.writeHead(405, { 'Content-Type': 'text/html' });
+        res.end('<h1>405 Method Not Allowed</h1>', 'utf8');
+      }
+      else
+      {
+        fetchAllUsers(req,res);
+      }
     }
     else
     {
@@ -584,21 +607,28 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-initializeCountries()
-  .then(() => {
-    // Start the server listening once initialization is complete
-    server.listen(PORT, async () => {
-      console.log('Server running on port', PORT);
-      await resetLoggedInStatus();
-      if( flagUpdateLikeRatioAllDocuments === true )
-      {
-        await updateLikeRatioForSouvenirs();
-      }
-    });
-  })
-  .catch((error) => {
-    console.error('Failed to initialize countries:', error);
-    process.exit(1); // Exit the process if initialization fails
-  });
-
+// initializeCountries()
+//   .then(() => {
+//     // Start the server listening once initialization is complete
+//     server.listen(PORT, async () => {
+//       console.log('Server running on port', PORT);
+//       await resetLoggedInStatus();
+//       if( flagUpdateLikeRatioAllDocuments === true )
+//       {
+//         await updateLikeRatioForSouvenirs();
+//       }
+//     });
+//   })
+//   .catch((error) => {
+//     console.error('Failed to initialize countries:', error);
+//     process.exit(1); // Exit the process if initialization fails
+//   });
+server.listen(PORT, async () => {
+  console.log('Server running on port', PORT);
+  await resetLoggedInStatus();
+  if( flagUpdateLikeRatioAllDocuments === true )
+  {
+    await updateLikeRatioForSouvenirs();
+  }
+});
 module.exports = { countries };

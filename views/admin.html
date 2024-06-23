@@ -1,157 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../public/css/adminCss.css" />
-    <title>Admin Panel</title>
-  </head>
-  <body>
-    <div class="side-menu">
-      <div class="brand-name">
-        <h1>Admin Page</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../public/css/adminCss.css" />
+  <title>Admin Panel</title>
+</head>
+<body>
+<div class="side-menu">
+  <div class="brand-name">
+    <h1>Admin Page</h1>
+  </div>
+</div>
+<div class="container">
+  <div class="header">
+    <div class="nav">
+      <div class="search">
+        <input type="text" placeholder="Search.." />
+        <button type="submit">
+          <img src="../public/img/search.png" alt="" />
+        </button>
       </div>
-      <ul>
-        <li>
-          <img src="../public/img/dashboard.png" alt="" />&nbsp; <span>Info</span>
-        </li>
-        <li>
-          <img src="../public/img/dashboard.png" alt="" />&nbsp; <span>Info</span>
-        </li>
-        <li>
-          <img src="../public/img/dashboard.png" alt="" />&nbsp; <span>Info</span>
-        </li>
-        <li>
-          <img src="../public/img/dashboard.png" alt="" />&nbsp; <span>Info</span>
-        </li>
-        <li>
-          <img src="../public/img/dashboard.png" alt="" />&nbsp; <span>Info</span>
-        </li>
-      </ul>
-    </div>
-    <div class="container">
-      <div class="header">
-        <div class="nav">
-          <div class="search">
-            <input type="text" placeholder="Search.." />
-            <button type="submit">
-              <img src="../public/img/search.png" alt="" />
-            </button>
-          </div>
-          <div class="user">
-            <a href="/redirectStatistics" class="btn">Statistics</a>
-            <a href="/" class="styled-button">Home</a>
-            <img src="../public/img/notifications.png" alt="" />
-            <div class="img-case">
-              <img src="../public/img/user.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content">
-        <div class="cards">
-          <div class="card">
-            <button id="exportToHTML">Export to HTML</button>
-          </div>
-          <div class="card">
-            <button id="exportToCSV">Export to CSV</button>
-          </div>
-          <div class="card">
-
-            <button id="exportToXML">Export to XML</button>
-          </div>
-          <div class="card">
-
-            <button id="exportToJSON">Export to JSON</button>
-          </div>
-        </div>
-        <div class="content-2">
-          <div class="recent-payments">
-            <div class="title">
-              <h2>Recent</h2>
-              <a href="#" class="btn">View all</a>
-            </div>
-            <table>
-              <tr>
-                <th>Name</th>
-                <th>Name</th>
-                <th>Name</th>
-                <th>Name</th>
-              </tr>
-              <tr>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td><a href="#" class="btn">View</a></td>
-              </tr>
-              <tr>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td><a href="#" class="btn">View</a></td>
-              </tr>
-              <tr>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td><a href="#" class="btn">View</a></td>
-              </tr>
-              <tr>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td><a href="#" class="btn">View</a></td>
-              </tr>
-              <tr>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td><a href="#" class="btn">View</a></td>
-              </tr>
-            </table>
-          </div>
-          <div class="new-students">
-            <div class="title">
-              <h2>New</h2>
-              <a href="#" class="btn">View all</a>
-            </div>
-            <table>
-              <tr>
-                <th>Info</th>
-                <th>Info</th>
-                <th>Info</th>
-              </tr>
-              <tr>
-                <td><img src="../public/img/user.png" alt="" /></td>
-                <td>John</td>
-                <td>Info</td>
-              </tr>
-              <tr>
-                <td><img src="../public/img/user.png" alt="" /></td>
-                <td>John</td>
-                <td>Info</td>
-              </tr>
-              <tr>
-                <td><img src="../public/img/user.png" alt="" /></td>
-                <td>John</td>
-                <td>Info</td>
-              </tr>
-              <tr>
-                <td><img src="../public/img/user.png" alt="" /></td>
-                <td>John</td>
-                <td>Info</td>
-              </tr>
-            </table>
-          </div>
+      <div class="user">
+        <a href="/redirectStatistics" class="btn">Statistics</a>
+        <a href="/" class="styled-button">Home</a>
+        <img src="../public/img/notifications.png" alt="" />
+        <div class="img-case">
+          <img src="../public/img/user.png" alt="" />
         </div>
       </div>
     </div>
-    <script src="../components/adminComponent.js"></script>
-  </body>
+  </div>
+  <div class="content">
+    <div class="cards">
+      <div class="card">
+        <button id="exportToHTML">Export to HTML</button>
+      </div>
+      <div class="card">
+        <button id="exportToCSV">Export to CSV</button>
+      </div>
+      <div class="card">
+
+        <button id="exportToXML">Export to XML</button>
+      </div>
+      <div class="card">
+
+        <button id="exportToJSON">Export to JSON</button>
+      </div>
+    </div>
+    <div class="content-2">
+      <div class="recent-payments">
+        <div class="title">
+          <h2>Users</h2>
+        </div>
+        <table>
+          <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Login Status</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>Info</td>
+            <td>Info</td>
+            <td>Info</td>
+            <td>Info</td>
+            <td>Info</td>
+            <td><a href="#" class="btn">Submit</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../components/adminComponent.js"></script>
+</body>
 </html>
-

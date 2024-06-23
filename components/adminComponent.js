@@ -23,6 +23,50 @@ async function fetchSignedURL(urlToSign) {
   }
 }
 
+async function loadUsersToTable() {
+  try {
+
+
+    const response = await fetch('/fetchAllUsers', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`Server responded with status: ${response.status}`);
+    }
+
+    const users = await response.json();
+
+    // Get the table body element
+    const tableBody = document.querySelector('.recent-payments table tbody');
+
+    // Clear any existing rows
+    tableBody.innerHTML = '';
+
+    // Add rows for each user
+    users.forEach(user => {
+      const row = `
+        <tr>
+          <td>${user.username}</td>
+          <td>${user.email}</td>
+          <td>${user.role}</td>
+          <td>${user.loggedIn ? 'Active' : 'Inactive'}</td>
+          <td><a href="#" class="btn">Submit</a></td>
+        </tr>
+      `;
+      tableBody.innerHTML += row;
+    });
+  } catch (error) {
+    console.error('Error fetching or displaying users:', error);
+    // You might want to display an error message to the user here
+  }
+}
+
+window.addEventListener('load', loadUsersToTable);
+
 // Function to handle export to HTML
 document.getElementById('exportToHTML').addEventListener('click', async () => {
   console.log("Export to HTML has been clicked!");
