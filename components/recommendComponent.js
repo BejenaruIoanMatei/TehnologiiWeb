@@ -1,7 +1,4 @@
-
-
 document.addEventListener("DOMContentLoaded", async function () {
-
   const response = await fetch('/getCountries');
   if (!response.ok) {
     throw new Error('Failed to fetch countries');
@@ -138,83 +135,58 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 
   const createTripButton = document.getElementById("submit-trip");
-createTripButton.addEventListener("click", async function () {
-  const popupContainer = document.getElementById("popup-container");
-  const closePopup = document.getElementById("close-popup");
-  const souvenirList = document.getElementById("souvenir-list");
+  createTripButton.addEventListener("click", async function () {
+    const popupContainer = document.getElementById("popup-container");
+    const closePopup = document.getElementById("close-popup");
+    const souvenirList = document.getElementById("souvenir-list");
 
-  souvenirList.innerHTML = ""; // Clear previous content
+    souvenirList.innerHTML = ""; // Clear previous content
 
-  console.log('Recommend component destinations: ', destinations);
-  try {
-    const fetchPromises = destinations.map(async (destination) => {
-      try {
-        const mainSouvenir = await getMainSouvenir(destination);
-        const otherSouvenirs = await getOtherSouvenirs(destination);
+    console.log('Recommend component destinations: ', destinations);
+    try {
+      const fetchPromises = destinations.map(async (destination) => {
+        try {
+          const mainSouvenir = await getMainSouvenir(destination);
+          const otherSouvenirs = await getOtherSouvenirs(destination);
 
-        console.log('Recommend component main souvenir:', mainSouvenir);
-        console.log('Recommend component other souvenirs:', otherSouvenirs);
+          console.log('Recommend component main souvenir:', mainSouvenir);
+          console.log('Recommend component other souvenirs:', otherSouvenirs);
 
-        const destinationDiv = document.createElement("div");
-        destinationDiv.classList.add("destination-souvenirs");
-        destinationDiv.innerHTML = `
-          <h2>${destination.oras}, ${destination.tara}</h2>
-          <p><strong>Main Souvenir:</strong> ${mainSouvenir.suvenir}</p>
-          <p><strong>Other Souvenirs:</strong></p>
-        `;
-
-        const otherSouvenirsList = document.createElement("ul");
-        otherSouvenirs.forEach(souvenir => {
-          const souvenirItem = document.createElement("li");
-          souvenirItem.innerHTML = `
-            <strong>${souvenir.suvenir}</strong> (Like Ratio: ${souvenir.likeRatio}%)
-            <br>Category: ${souvenir.categorie}
+          const destinationDiv = document.createElement("div");
+          destinationDiv.classList.add("destination-souvenirs");
+          destinationDiv.innerHTML = `
+            <h2 class="location">${destination.oras}, ${destination.tara}</h2>
+            <p class="main-souvenir"><strong>Main Souvenir:</strong> ${mainSouvenir.suvenir} (Like Ratio: ${mainSouvenir.likeRatio}%)</p>
+            <p><strong>Other Souvenirs:</strong></p>
+            <ul>
+              ${otherSouvenirs.map(souvenir => `
+                <li>${souvenir.suvenir} (Like Ratio: ${souvenir.likeRatio}%)
+                  <br>Category: ${souvenir.categorie}
+                </li>
+              `).join('')}
+            </ul>
           `;
-          otherSouvenirsList.appendChild(souvenirItem);
-        });
+          souvenirList.appendChild(destinationDiv);
+        } catch (error) {
+          console.error("Error fetching or displaying souvenirs:", error);
+        }
+      });
 
-        destinationDiv.appendChild(otherSouvenirsList);
-        souvenirList.appendChild(destinationDiv);
-      } catch (error) {
-        console.error("Error fetching or displaying souvenirs:", error);
-      }
+      await Promise.all(fetchPromises);
+    } catch (error) {
+      console.error("Error fetching or displaying souvenirs:", error);
+    }
+
+    popupContainer.style.display = "block";
+
+    closePopup.addEventListener("click", function () {
+      popupContainer.style.display = "none";
     });
-
-    await Promise.all(fetchPromises);
-  } catch (error) {
-    console.error("Error fetching or displaying souvenirs:", error);
-  }
-
-  popupContainer.style.display = "block";
-
-  closePopup.addEventListener("click", function () {
-    popupContainer.style.display = "none";
-  });
-});
-
-// Function to determine main souvenir
-async function getMainSouvenir(destination) {
-  const response = await fetch('/getMainSouvenir', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(destination)
   });
 
-  if (!response.ok) {
-    throw new Error('Failed to fetch main souvenir');
-  }
-
-  const relevantSouvenir = await response.json();
-  console.log('Componenta de recomandare main souvenir a primit', relevantSouvenir);
-  return relevantSouvenir || { suvenir: "No main souvenir found" };
-}
-
-// Function to fetch other souvenirs
-async function getOtherSouvenirs(destination) {
-  try {
-    const response = await fetch('/getOtherSouvenirs', {
+  // Function to determine main souvenir
+  async function getMainSouvenir(destination) {
+    const response = await fetch('/getMainSouvenir', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -223,15 +195,34 @@ async function getOtherSouvenirs(destination) {
     });
 
     if (!response.ok) {
-      throw new Error('Failed to fetch other souvenirs');
+      throw new Error('Failed to fetch main souvenir');
     }
 
-    const otherSouvenirs = await response.json();
-    return otherSouvenirs;
-  } catch (error) {
-    console.error('Error fetching other souvenirs:', error);
-    throw error;
+    const relevantSouvenir = await response.json();
+    console.log('Componenta de recomandare main souvenir a primit', relevantSouvenir);
+    return relevantSouvenir || { suvenir: "No main souvenir found" };
   }
-}
-});
 
+  // Function to fetch other souvenirs
+  async function getOtherSouvenirs(destination) {
+    try {
+      const response = await fetch('/getOtherSouvenirs', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(destination)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch other souvenirs');
+      }
+
+      const otherSouvenirs = await response.json();
+      return otherSouvenirs;
+    } catch (error) {
+      console.error('Error fetching other souvenirs:', error);
+      throw error;
+    }
+  }
+});
