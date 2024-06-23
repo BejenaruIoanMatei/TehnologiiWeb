@@ -61,6 +61,41 @@
 
 }
 
+/* ... (existing styles) ... */
+
+.feedback-section {
+  text-align: center;
+  margin-top: 20px;
+  color:black;
+}
+
+.like-button, .dislike-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.like-button {
+  background-color: green;
+  color: white;
+}
+
+.like-button:hover {
+  background-color: darkgreen;
+}
+
+.dislike-button {
+  background-color: red;
+  color: white;
+}
+
+.dislike-button:hover {
+  background-color: darkred;
+}
+
+
 .popup-content h2,
 .popup-content h3,
 .popup-content p {

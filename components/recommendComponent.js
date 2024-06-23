@@ -165,7 +165,39 @@ document.addEventListener("DOMContentLoaded", async function () {
                 </li>
               `).join('')}
             </ul>
+            <div class="feedback-section">
+              <p>Do you like the recommendation?</p>
+              <button class="like-button">Yes</button>
+              <button class="dislike-button">No</button>
+            </div>
           `;
+
+          // Add event listeners to the like and dislike buttons
+          const likeButton = destinationDiv.querySelector(".like-button");
+          const dislikeButton = destinationDiv.querySelector(".dislike-button");
+
+          likeButton.addEventListener("click", async () => {
+            try {
+              // Replace with your backend logic to handle like
+              console.log("Liked:", destination);
+              // Simulate sending feedback to backend
+              await sendFeedback(destination, 'like');
+            } catch (error) {
+              console.error("Error handling like:", error);
+            }
+          });
+
+          dislikeButton.addEventListener("click", async () => {
+            try {
+              // Replace with your backend logic to handle dislike
+              console.log("Disliked:", destination);
+              // Simulate sending feedback to backend
+              await sendFeedback(destination, 'dislike');
+            } catch (error) {
+              console.error("Error handling dislike:", error);
+            }
+          });
+
           souvenirList.appendChild(destinationDiv);
         } catch (error) {
           console.error("Error fetching or displaying souvenirs:", error);
@@ -224,5 +256,14 @@ document.addEventListener("DOMContentLoaded", async function () {
       console.error('Error fetching other souvenirs:', error);
       throw error;
     }
+  }
+
+  // Function to simulate sending feedback to backend
+  async function sendFeedback(destination, feedback) {
+    // Simulate sending feedback to backend
+    await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate async operation
+
+    console.log(`Feedback sent to backend for ${feedback}:`, destination);
+    // Replace with your actual backend logic to handle feedback
   }
 });
