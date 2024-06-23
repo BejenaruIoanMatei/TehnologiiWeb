@@ -1,10 +1,3 @@
-/*
- * Copyright (c) 2024. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
- * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
- * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
- * Vestibulum commodo. Ut rhoncus gravida arcu.
- */
 
 /* Dependencies definitions */
 const http = require('http');
@@ -84,7 +77,7 @@ const serveStaticFile = (res, filePath, contentType) => {
         });
       } else {
         res.writeHead(500);
-        res.end(`Server Error: ${err.code}`);
+        res.end('Server Error: ${err.code}');
       }
     } else {
       const extname = path.extname(filePath);
@@ -160,6 +153,18 @@ const routes = {
     if (redirectIfNotLoggedIn(req, res)) return;
     aboutUsRoute(req, res, sessions);
   },
+  '/getCountries': async (req, res) => {
+    if (redirectIfNotLoggedIn(req, res)) return;
+    try {
+      const countries = await fetchCountriesAndCities();
+      res.writeHead(200, {'Content-Type': 'application/json'});
+      res.end(JSON.stringify(countries));
+    } catch (error) {
+      console.error('Error fetching countries and cities:', error);
+      res.writeHead(500, {'Content-Type': 'application/json'});
+      res.end(JSON.stringify({error: 'Internal Server Error'}));
+    }
+  },
   '/help': (req, res) => {
     if (redirectIfNotLoggedIn(req, res)) return;
     helpRoute(req, res, sessions);
@@ -223,7 +228,7 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  console.log(`Session ID: ${sessionId}`);
+  console.log('Session ID: ${sessionId}');
   console.log('Requested url: ', req.url);
   console.log('Incoming method: ', req.method );
 
@@ -262,7 +267,17 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, async () => {
-  console.log(`Server running on port ${PORT}`);
-  await resetLoggedInStatus();
-});
+initializeCountries()
+  .then(() => {
+    // Start the server listening once initialization is complete
+    server.listen(PORT, async () => {
+      console.log('Server running on port', PORT);
+      await resetLoggedInStatus();
+    });
+  })
+  .catch((error) => {
+    console.error('Failed to initialize countries:', error);
+    process.exit(1); // Exit the process if initialization fails
+  });
+
+module.exports = { countries };
