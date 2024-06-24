@@ -1,3 +1,10 @@
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
+
 /* flag defines */
 flagUpdateLikeRatioAllDocuments = false;
 const secretKey = 'I"th/80O{{+ptiLfNQX,)5&.IRy:^wno7KON>=:z7;;kAy{~+e$J7./O$9=!lH2/';
@@ -52,6 +59,13 @@ const GETProtectedRoutes = [
   '/redirectAdmin',
   '/adminUserRoute',
   '/standardUserRoute',
+  '/adminComponent',
+  '/adminStatisticsUserRoute',
+  '/adminStatistics',
+  '/adminStatisticsUsers',
+  '/loginComponent',
+  '/registerComponent',
+
   ];
 const POSTProtectedRoutes = [
   '/exportToHTML',
@@ -170,7 +184,7 @@ const redirectIfNotLoggedIn = (req, res) => {
   return false;
 };
 
-/* structura ce contine toate rutele */
+/* structura ce contine toate rutele de get */
 const routes = {
   '/': (req, res) => {
     if (req.url === '/' && !verifySignedUrl(req)) {
@@ -293,7 +307,8 @@ const server = http.createServer(async (req, res) => {
   console.log('Requested url: ', req.url);
   console.log('Incoming method: ', req.method );
 
-  if (req.method === 'GET') {
+  if (req.method === 'GET')
+  {
     /* Verific daca ruta este protejata, daca este atunci semnez fisierul html */
     if (GETProtectedRoutes.includes(req.url.split('?')[0]) && !verifySignedUrl(req))
     {
@@ -312,11 +327,8 @@ const server = http.createServer(async (req, res) => {
   else if (req.method === 'POST')
   {
 
-
-   // Check if the request URL is in POSTProtectedRoutes and is properly signed
-    // Handle POST protected routes
     if (handlePOSTProtectedRoutes(req, res, sessionId)) {
-      return; // Stop further processing if redirection occurred
+      return;
     }
     const urlWithoutParams = req.url.split('?')[0];
     console.log('POST branch reached');
@@ -332,17 +344,19 @@ const server = http.createServer(async (req, res) => {
           throw new Error('Invalid URL format');
         }
 
-        // 1. Authentication (using JWT as an example)
         const authHeader = req.headers.authorization;
         if (!authHeader || !authHeader.startsWith('Bearer ')) {
           res.writeHead(401, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ error: 'Unauthorized - Missing or invalid token' }));
           return;
         }
+
         const token = authHeader.split(' ')[1];
         console.log('Ecrypted token: ', token);
+
         const decryptedToken = await decryptJWTToken(token);
         console.log('Decrypted token', decryptedToken);
+
         let decodedToken;
         try {
           decodedToken = jwt.verify(decryptedToken, secretKey);
@@ -352,7 +366,7 @@ const server = http.createServer(async (req, res) => {
           return;
         }
 
-        // 2. Authorization (check entity permissions - customize as needed)
+
         const approvedEntities = ['02264657-509e-4ca1-8e04-892f7eb704b0'];
         if (!approvedEntities.includes(decodedToken.entityId)) {
           res.writeHead(403, { 'Content-Type': 'application/json' });
@@ -360,7 +374,6 @@ const server = http.createServer(async (req, res) => {
           return;
         }
 
-        // Generate and respond with the signed URL
         const signedUrl = generateSignedUrl(url);
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ signedURL: signedUrl }));
@@ -401,7 +414,6 @@ const server = http.createServer(async (req, res) => {
       try {
         console.log("The HTML export request has been triggered!");
 
-        // Create a temporary file path for the ZIP archive
         const tempDir = path.join(__dirname, 'temp');
         const zipFilePath = path.join(tempDir, 'exported_souvenirs_html.zip');
 
@@ -413,16 +425,14 @@ const server = http.createServer(async (req, res) => {
         const archive = archiver('zip');
         archive.pipe(output);
 
-        // Set response headers after archive is piped to output
+
         res.writeHead(200, {
           'Content-Type': 'application/zip',
           'Content-Disposition': 'attachment; filename=exported_souvenirs_html.zip'
         });
 
-        // Export souvenirs and add them to the archive
         await exportSouvenirsToHtml(archive, db);
 
-        // Finalize the archive and handle download
         archive.on('end', () => {
           console.log("Archive finalized, sending to user...");
           const zipFileReadStream = fs.createReadStream(zipFilePath);
@@ -445,7 +455,6 @@ const server = http.createServer(async (req, res) => {
       try {
         console.log("The CSV export request has been triggered!");
 
-        // Create a temporary file path for the ZIP archive
         const tempDir = path.join(__dirname, 'temp');
         const zipFilePath = path.join(tempDir, 'exported_souvenirs_CSV.zip');
 
@@ -457,16 +466,13 @@ const server = http.createServer(async (req, res) => {
         const archive = archiver('zip');
         archive.pipe(output);
 
-        // Set response headers after archive is piped to output
         res.writeHead(200, {
           'Content-Type': 'application/zip',
           'Content-Disposition': 'attachment; filename=exported_souvenirs_CSV.zip'
         });
 
-        // Export souvenirs and add them to the archive
         await exportSouvenirsToCSV(archive, db);
 
-        // Finalize the archive and handle download
         archive.on('end', () => {
           console.log("Archive finalized, sending to user...");
           const zipFileReadStream = fs.createReadStream(zipFilePath);
@@ -490,7 +496,6 @@ const server = http.createServer(async (req, res) => {
       try {
         console.log("The XML export request has been triggered!");
 
-        // Create a temporary file path for the ZIP archive
         const tempDir = path.join(__dirname, 'temp');
         const zipFilePath = path.join(tempDir, 'exported_souvenirs_XML.zip');
 
@@ -502,16 +507,13 @@ const server = http.createServer(async (req, res) => {
         const archive = archiver('zip');
         archive.pipe(output);
 
-        // Set response headers after archive is piped to output
         res.writeHead(200, {
           'Content-Type': 'application/zip',
           'Content-Disposition': 'attachment; filename=exported_souvenirs_XML.zip'
         });
 
-        // Export souvenirs and add them to the archive
         await exportSouvenirsToXML(archive, db);
 
-        // Finalize the archive and handle download
         archive.on('end', () => {
           console.log("Archive finalized, sending to user...");
           const zipFileReadStream = fs.createReadStream(zipFilePath);
@@ -533,7 +535,6 @@ const server = http.createServer(async (req, res) => {
       try {
         console.log("The JSON export request has been triggered!");
 
-        // Create a temporary file path for the ZIP archive
         const tempDir = path.join(__dirname, 'temp');
         const zipFilePath = path.join(tempDir, 'exported_souvenirs_JSON.zip');
 
@@ -545,16 +546,13 @@ const server = http.createServer(async (req, res) => {
         const archive = archiver('zip');
         archive.pipe(output);
 
-        // Set response headers after archive is piped to output
         res.writeHead(200, {
           'Content-Type': 'application/zip',
           'Content-Disposition': 'attachment; filename=exported_souvenirs_JSON.zip'
         });
 
-        // Export souvenirs and add them to the archive
         await exportSouvenirsToJSON(archive, db);
 
-        // Finalize the archive and handle download
         archive.on('end', () => {
           console.log("Archive finalized, sending to user...");
           const zipFileReadStream = fs.createReadStream(zipFilePath);
@@ -626,7 +624,7 @@ const server = http.createServer(async (req, res) => {
     } else if ( urlWithoutParams === '/getJWTToken')
     {
       try {
-        await getJWTToken(req, res); // Ensure getJWTToken receives req and res
+        await getJWTToken(req, res);
       } catch (error) {
         console.error('Error getting token:', error);
         res.writeHead(500, { 'Content-Type': 'application/json' });
@@ -638,6 +636,11 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(403, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ error: 'Forbidden - Not authorized' }));
     }
+  }
+  else
+  {
+    res.writeHead(405, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ error: 'Method Not Allowed' }));
   }
 });
 

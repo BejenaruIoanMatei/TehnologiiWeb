@@ -1,14 +1,20 @@
-// Import Firestore instance
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
+
 const { db } = require('../../../utils/firebaseInit');
 const { collection, addDoc } = require('firebase/firestore');
 
-// Function to add test data to the 'suveniruri' collection
+
 async function addTestData() {
   try {
-    // Reference to the collection 'suveniruri'
+
     const suveniruriCollection = collection(db, 'suveniruri');
 
-    // Example documents to add
+
     const testSuveniruri = [
       // Paris
 { tara: 'France (FR)', oras: 'Paris', suvenir: 'Eiffel Tower Miniature', categorie: 'Art', destinatari: ['family', 'friend'] },
@@ -4295,7 +4301,7 @@ async function addTestData() {
 
     ];
 
-    // Add documents to the collection
+
     for (const suvenir of testSuveniruri) {
       await addDoc(suveniruriCollection, suvenir);
     }
@@ -4307,5 +4313,4 @@ async function addTestData() {
   }
 }
 
-// Call the function to add test data
 addTestData();

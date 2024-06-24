@@ -1,4 +1,10 @@
-// Import Firebase modules
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
+
 const { initializeApp } = require('firebase/app');
 const { getFirestore } = require('firebase/firestore');
 
@@ -12,7 +18,6 @@ const firebaseConfig = {
   measurementId: "G-GCV4W3XF8M"
 };
 
-// Initialize Firebase app
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 

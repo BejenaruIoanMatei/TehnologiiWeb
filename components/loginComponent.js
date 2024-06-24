@@ -1,3 +1,10 @@
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
+
 const { db } = require('../utils/firebaseInit');
 const { collection, query, where, getDocs, updateDoc, doc } = require('firebase/firestore');
 const bcrypt = require('bcrypt');
@@ -6,7 +13,6 @@ const { v4: uuidv4 } = require('uuid');
 
 
 const loginComponent = async (req, res, sessions) => {
-
 
   let body = '';
   req.on('data', chunk => {
@@ -43,28 +49,24 @@ const loginComponent = async (req, res, sessions) => {
         return;
       }
 
-      // Generate new session ID
-      const sessionId = uuidv4();
+      const sessionId = uuidv4(undefined, undefined, undefined);
 
-      // Update user's loggedIn and sessionId in Firestore
       await updateDoc(doc(db, 'users', userDoc.id), {
         loggedIn: true,
         sessionId: sessionId
       });
 
-      // Update session data with user info and role (assuming role is stored in user object)
       sessions[sessionId] = {
         loggedIn: true,
         email: user.email,
-        userRole: user.role // Access user role from the fetched user data
+        userRole: user.role
       };
 
-      // Set session cookie
       res.setHeader('Set-Cookie', cookie.serialize('sessionId', sessionId, {
         httpOnly: true,
-        maxAge: 60 * 60 * 24, // 1 day
-        path: '/', // Ensure the cookie is sent with every request to the server
-        sameSite: 'strict' // Ensure the cookie is only sent on same-site requests
+        maxAge: 60 * 60 * 24,
+        path: '/',
+        sameSite: 'strict'
       }));
 
       res.writeHead(200, { 'Content-Type': 'application/json' });

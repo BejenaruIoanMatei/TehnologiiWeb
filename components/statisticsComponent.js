@@ -1,6 +1,11 @@
-// statisticsComponent.js
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
 
-// Function to fetch data from server
+/* fetchData -> face handle la requesturi de fetch in functie de endpointul primit */
 async function fetchData(endpoint) {
   try {
     const response = await fetch(endpoint, {
@@ -14,18 +19,15 @@ async function fetchData(endpoint) {
       throw new Error(`Failed to fetch data from ${endpoint}`);
     }
 
-    const data = await response.json();
-    return data;
+    return await response.json();
   } catch (error) {
     console.error(`Error fetching data from ${endpoint}:`, error);
     throw error;
   }
 }
 
-// Function to update statistics values
 async function updateStatistics() {
   try {
-    // Fetch data from server endpoints
     const numberOfAccesses = await fetchData('/getNumberOfAccesses');
     console.log('Number of accesses:', numberOfAccesses);
     const loggedUsers = await fetchData('/getLoggedInUsers');
@@ -37,7 +39,6 @@ async function updateStatistics() {
     const globalLikeRatio = await fetchData('/getGlobalLikeRatio');
     console.log('Global likeRatio:', globalLikeRatio);
 
-    // Update HTML elements with fetched data
     document.getElementById('numberOfAccessesCounter').innerText = numberWithCommas(numberOfAccesses.numberOfAccesses);
     document.getElementById('loggedUsersCounter').innerText = loggedUsers.loggedUsers;
     document.getElementById('souvenirsSuggestedCounter').innerText = numberWithCommas(souvenirsSuggested.souvenirsSuggested);
@@ -48,12 +49,10 @@ async function updateStatistics() {
   }
 }
 
-// Function to add commas to numbers for better readability
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-// Automatically update statistics when the page loads
 window.addEventListener('load', () => {
-  updateStatistics();
+   updateStatistics();
 });

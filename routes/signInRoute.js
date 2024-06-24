@@ -1,4 +1,9 @@
-
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
 
 async function fetchSignedURL(urlToSign) {
   try {
@@ -7,7 +12,6 @@ async function fetchSignedURL(urlToSign) {
       headers: {
         'Content-Type': 'application/json'
       },
-      // Optionally, you can send a request body if required by your server
       body: JSON.stringify({})
     });
 
@@ -17,7 +21,7 @@ async function fetchSignedURL(urlToSign) {
 
     const { token } = await responseToken.json();
     const response = await fetch('/generateSignedURL', {
-      method: 'POST', // Adjust method as per your server route to generate signed URLs
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
@@ -53,9 +57,9 @@ document.getElementById('signinForm').addEventListener('submit', async function(
 
     const result = await response.json();
     if (response.ok) {
-      // Redirect or handle success as needed
+
       alert('Login Successful!');
-      window.location.href = '/'; // Redirect to home page after successful registration
+      window.location.href = '/';
     } else {
       alert('Login failed: ' + result.message);
     }
@@ -65,7 +69,6 @@ document.getElementById('signinForm').addEventListener('submit', async function(
   }
 });
 
-// Event listener for the register link click
 document.getElementById('submitRegisterFromSignIn').addEventListener('click', function() {
   window.location.href = '/views/registerPage.html';  // Redirect to registerPage.html
 });

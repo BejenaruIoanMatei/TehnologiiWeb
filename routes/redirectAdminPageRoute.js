@@ -1,3 +1,10 @@
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
+
 const { generateSignedUrl } = require('../utils/urlSigningServer');
 const { getSessionIdFromCookies } = require('../utils/sessionUtils');
 
@@ -10,7 +17,6 @@ const redirectAdminPageRoute = (req, res, sessions ) => {
     return;
   }
 
-  // Generate a signed URL for admin.html with session ID
   const signedUrl = generateSignedUrl('/views/admin.html', sessionId);
   res.writeHead(302, { 'Location': signedUrl });
   res.end();

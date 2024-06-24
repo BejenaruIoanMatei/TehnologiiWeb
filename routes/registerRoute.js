@@ -1,3 +1,9 @@
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
 
 async function fetchSignedURL(urlToSign) {
   try {
@@ -58,14 +64,13 @@ document.getElementById('submitRegister').addEventListener('click', async () => 
     });
 
     const responseData = await response.json();
-    alert(responseData.message); // Show response message
+    alert(responseData.message);
 
     if (response.ok) {
-      // Redirect or handle success as needed
-      window.location.href = '/'; // Redirect to home page after successful registration
+      window.location.href = '/';
     }
   } catch (error) {
     console.error('Error registering:', error);
-    alert('Error registering. Please try again.'); // Show generic error message
+    alert('Error registering. Please try again.');
   }
 });

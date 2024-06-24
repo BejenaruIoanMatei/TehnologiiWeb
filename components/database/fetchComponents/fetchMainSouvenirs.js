@@ -1,8 +1,13 @@
-// Import Firestore instance
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
+
 const { db } = require('../../../utils/firebaseInit');
 const { collection, getDocs, query, where, limit } = require('firebase/firestore');
 
-// Function to fetch a single souvenir based on oras, tara, and beneficiar
 const fetchMainSouvenirByDestination = async (req, res) => {
   try {
     let body = '';
@@ -16,10 +21,8 @@ const fetchMainSouvenirByDestination = async (req, res) => {
       const { oras, tara, beneficiari } = destination;
 
       console.log("Informatiile primite de la server sunt: ", oras, tara, beneficiari[0]);
-      // Reference to the collection 'suveniruri'
       const suveniruriCollection = collection(db, 'suveniruri');
 
-      // Query to filter documents based on oras, tara, and beneficiar, with a limit of 1
       const q = query(suveniruriCollection,
         where('oras', '==', oras),
         where('tara', '==', tara),
@@ -27,10 +30,8 @@ const fetchMainSouvenirByDestination = async (req, res) => {
         limit(1)
       );
 
-      // Get the matching document from the collection
       const snapshot = await getDocs(q);
 
-      // Variable to store the souvenir
       let souvenir = null;
       snapshot.forEach(doc => {
         souvenir = { id: doc.id, ...doc.data() };

@@ -1,8 +1,13 @@
-const { collection, getDocs } = require('firebase/firestore');
-const path = require('path');
-const fs = require('fs');
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
 
-async function exportSouvenirsToJson(archive, db) {  // Added db parameter
+const { collection, getDocs } = require('firebase/firestore');
+
+async function exportSouvenirsToJson(archive, db) {
   try {
     const suveniruriCollection = collection(db, 'suveniruri');
     const snapshot = await getDocs(suveniruriCollection);
@@ -13,7 +18,6 @@ async function exportSouvenirsToJson(archive, db) {  // Added db parameter
         const folderName = data.suvenir.replace(/\s+/g, '');
         const jsonContent = JSON.stringify({ id: doc.id, ...data }, null, 2);
 
-        // Append JSON content to the archive
         archive.append(jsonContent, { name: `${folderName}/souvenir.json` });
       } else {
         console.warn(`Document with ID: ${doc.id} is missing the 'suvenir' field`);

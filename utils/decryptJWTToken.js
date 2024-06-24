@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 2024. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
- * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
- * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
- * Vestibulum commodo. Ut rhoncus gravida arcu.
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
  */
+
 const crypto = require('crypto');
 
 const key = {
@@ -37,16 +37,13 @@ async function importKey(jwk) {
 }
 
 async function decryptJWTToken(encryptedToken) {
-  // Convert the base64 encrypted token to a Buffer
+
   const encryptedData = base64ToBuffer(encryptedToken);
 
-  // Convert the IV to a Buffer
   const ivBuffer = Buffer.from(iv);
 
-  // Import the key for decryption
   const importedKey = await importKey(key);
 
-  // Decrypt the token
   const decryptedTokenData = await crypto.webcrypto.subtle.decrypt(
     {
       name: "AES-GCM",
@@ -56,11 +53,8 @@ async function decryptJWTToken(encryptedToken) {
     encryptedData
   );
 
-  // Convert the decrypted token data back to a string
   const decoder = new TextDecoder();
-  const decryptedToken = decoder.decode(decryptedTokenData);
-
-  return decryptedToken;
+  return decoder.decode(decryptedTokenData);
 }
 
 module.exports = decryptJWTToken;

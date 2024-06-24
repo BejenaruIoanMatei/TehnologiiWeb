@@ -1,6 +1,9 @@
-// adminComponent.js (Client-Side)
-// Function to fetch signed URL from server for a specific endpoint
-
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
 
 async function fetchSignedURL(urlToSign) {
   try {
@@ -9,7 +12,6 @@ async function fetchSignedURL(urlToSign) {
       headers: {
         'Content-Type': 'application/json'
       },
-      // Optionally, you can send a request body if required by your server
       body: JSON.stringify({})
     });
 
@@ -56,18 +58,14 @@ async function loadUsersToTable() {
 
     const users = await response.json();
 
-    // Get the table body element
     const tableBody = document.getElementById('tableBody');
 
-    // Check if tableBody exists
     if (!tableBody) {
       throw new Error('Table body element not found');
     }
 
-    // Clear existing rows
     tableBody.innerHTML = '';
 
-    // Construct rows for each user
     users.forEach(user => {
       const row = `
         <tr>
@@ -86,7 +84,6 @@ async function loadUsersToTable() {
       tableBody.innerHTML += row;
     });
 
-    // Add event listener for action buttons using event delegation
     tableBody.addEventListener('click', async (event) => {
       const target = event.target;
 
@@ -104,7 +101,6 @@ async function loadUsersToTable() {
 
   } catch (error) {
     console.error('Error fetching or displaying users:', error);
-    // Display an error message to the user if needed
   }
 }
 
@@ -123,12 +119,10 @@ async function deleteUser(userId) {
       throw new Error(`Failed to delete user with ID ${userId}`);
     }
 
-    // Refresh user list after deletion
     await loadUsersToTable();
 
   } catch (error) {
     console.error(`Error deleting user with ID ${userId}:`, error);
-    // Display an error message to the user if needed
   }
 }
 
@@ -141,19 +135,17 @@ async function grantAdminPermission(userId) {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ userId }) // Include the userId in the request body
+      body: JSON.stringify({ userId })
     });
 
     if (!response.ok) {
       throw new Error(`Failed to grant admin permission to user with ID ${userId}`);
     }
 
-    // Refresh user list after permission change
     await loadUsersToTable();
 
   } catch (error) {
     console.error(`Error granting admin permission to user with ID ${userId}:`, error);
-    // Display an error message to the user if needed
   }
 }
 
@@ -165,26 +157,22 @@ async function revokeAdminPermission(userId) {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ userId }) // Include the userId in the request body
+      body: JSON.stringify({ userId })
     });
 
     if (!response.ok) {
       throw new Error(`Failed to revoke admin permission from user with ID ${userId}`);
     }
 
-    // Refresh user list after permission change
     await loadUsersToTable();
 
   } catch (error) {
     console.error(`Error revoking admin permission from user with ID ${userId}:`, error);
-    // Display an error message to the user if needed
   }
 }
 
-// Initialize the user table on page load
 window.addEventListener('load', loadUsersToTable);
 
-// Function to handle export to HTML
 document.getElementById('exportToHTML').addEventListener('click', async () => {
   console.log("Export to HTML has been clicked!");
   try {
@@ -215,7 +203,6 @@ document.getElementById('exportToHTML').addEventListener('click', async () => {
   }
 });
 
-// Function to handle export to CSV
 document.getElementById('exportToCSV').addEventListener('click', async () => {
   console.log('Export to CSV button clicked');
   try {
@@ -246,7 +233,6 @@ document.getElementById('exportToCSV').addEventListener('click', async () => {
   }
 });
 
-// Function to handle export to XML
 document.getElementById('exportToXML').addEventListener('click', async () => {
   console.log('Export to XML button clicked');
   try {
@@ -277,7 +263,6 @@ document.getElementById('exportToXML').addEventListener('click', async () => {
   }
 });
 
-// Function to handle export to JSON
 document.getElementById('exportToJSON').addEventListener('click', async () => {
   console.log('Export to JSON button clicked');
   try {

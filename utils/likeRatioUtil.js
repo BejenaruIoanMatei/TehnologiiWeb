@@ -1,7 +1,14 @@
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
+
 const { db } = require('./firebaseInit');
 const { collection, getDocs, updateDoc } = require('firebase/firestore');
 
-// Function to calculate like ratio
+/* functie ce calculeaza procentajul de multumire per suvenir si il updateaza in baza de date */
 function calculateLikeRatio(likeCount, dislikeCount) {
   const totalVotes = likeCount + dislikeCount;
   if (totalVotes === 0) {
@@ -15,20 +22,16 @@ async function updateLikeRatioForSouvenirs() {
     const suveniruriCollection = collection(db, 'suveniruri');
     const snapshot = await getDocs(suveniruriCollection);
 
-    // Iterate through each souvenir individually
     for (const souvenirDoc of snapshot.docs) {
       try {
-        // Use the corrected field names
         const { likesCount, dislikesCount } = souvenirDoc.data();
 
-        // Ensure likesCount and dislikesCount are treated as numbers
         const likesCountNum = Number(likesCount || 0);
         const dislikesCountNum = Number(dislikesCount || 0);
 
         const likeRatio = calculateLikeRatio(likesCountNum, dislikesCountNum);
         const likeRatioNumber = Number(likeRatio.toFixed(2));
 
-        // Update the individual document atomically (using updateDoc)
         await updateDoc(souvenirDoc.ref, { likeRatio: likeRatioNumber });
         console.log(`Updated likeRatio for souvenir with ID: ${souvenirDoc.id}`);
 

@@ -1,12 +1,17 @@
-// Import the utility function for URL signing
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
+
 const { generateSignedUrl } = require('../utils/urlSigningServer');
 
 const statisticAdminRoute = async (req, res) => {
   try {
-    // Generate signed URL for statistics.html
+
     const signedUrl = await generateSignedUrl('/views/statistics.html');
 
-    // Redirect to the signed URL
     res.writeHead(302, { 'Location': signedUrl });
     res.end();
   } catch (error) {

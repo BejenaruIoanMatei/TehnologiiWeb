@@ -1,10 +1,16 @@
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
+
 const { db } = require('../utils/firebaseInit');
 const { collection, query, where, getDocs, updateDoc, doc } = require('firebase/firestore');
 const cookie = require('cookie');
 
-// Function to reset the loggedIn field for the current user to false
 async function logoutComponent(req, res, sessions) {
-  const cookies = req.headers.cookie; // Get cookies from headers
+  const cookies = req.headers.cookie;
 
   if (!cookies) {
     res.writeHead(400, { 'Content-Type': 'text/plain' });
@@ -12,11 +18,10 @@ async function logoutComponent(req, res, sessions) {
     return;
   }
 
-  const parsedCookies = cookie.parse(cookies); // Parse cookies using cookie module
+  const parsedCookies = cookie.parse(cookies);
   const sessionId = parsedCookies.sessionId;
 
   if (sessions[sessionId]) {
-    // Update the loggedIn status in Firestore
     try {
       const usersRef = collection(db, 'users');
       const querySnapshot = await getDocs(query(usersRef, where('sessionId', '==', sessionId)));
@@ -35,16 +40,15 @@ async function logoutComponent(req, res, sessions) {
       return;
     }
 
-    // Remove session from in-memory storage
     delete sessions[sessionId];
     res.setHeader('Set-Cookie', cookie.serialize('sessionId', '', {
       httpOnly: true,
-      maxAge: 0, // Expire cookie immediately
-      path: '/', // Same path as when it was set
-      sameSite: 'strict' // SameSite attribute for security
+      maxAge: 0,
+      path: '/',
+      sameSite: 'strict'
     }));
 
-    res.writeHead(302, { 'Location': '/signIn' }); // Redirect to sign-in page after sign-out
+    res.writeHead(302, { 'Location': '/signIn' });
     res.end();
   } else {
     res.writeHead(400, { 'Content-Type': 'text/plain' });

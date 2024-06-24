@@ -1,3 +1,10 @@
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
+
 const crypto = require('crypto');
 
 const secretKey = 'I"th/80O{{+ptiLfNQX,)5&.IRy:^wno7KON>=:z7;;kAy{~+e$J7./O$9=!lH2/';
@@ -13,7 +20,6 @@ const generateSignedUrl = (url, sessionId) => {
     .update(dataToSign)
     .digest('hex');
 
-  // Check if the URL already has query parameters
   const separator = url.includes('?') ? '&' : '?';
 
   const signedUrl = `${url}${separator}timestamp=${timestamp}&hash=${hash}&sessionId=${sessionId}&nonce=${nonce}`;

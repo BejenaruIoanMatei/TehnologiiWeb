@@ -1,4 +1,9 @@
-// statisticsUtil.js
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
 const { db } = require('./firebaseInit');
 const { collection, getDocs, updateDoc, doc, getDoc, setDoc } = require('firebase/firestore');
 
@@ -16,9 +21,7 @@ async function calculateGlobalLikeRatio() {
   });
 
   const totalVotes = totalLikes + totalDislikes;
-  const globalLikeRatio = totalVotes === 0 ? 0 : (totalLikes / totalVotes) * 100;
-
-  return globalLikeRatio;
+  return totalVotes === 0 ? 0 : (totalLikes / totalVotes) * 100;
 }
 
 async function updateStatisticsDataGlobalLikeRatio() {
@@ -74,10 +77,7 @@ async function updateStatisticsDataNumberOfAccesses() {
     throw error;
   }
 }
-// const updateStatisticsDataLoggedUsers = (req,res)
-// {
-//
-// }
+
 // const updateStatisticsDataSouvenirsSuggested = (req,res)
 // {
 //

@@ -1,17 +1,25 @@
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
+
 const { collection, getDocs } = require('firebase/firestore');
 
-async function exportSouvenirsToHtml(archive, db) {  // Added db parameter
+async function exportSouvenirsToHtml(archive, db) {
   try {
     const suveniruriCollection = collection(db, 'suveniruri');
     const snapshot = await getDocs(suveniruriCollection);
 
     snapshot.forEach(doc => {
       const data = doc.data();
-      if (data.suvenir) {
+      if (data.suvenir)
+      {
         const folderName = data.suvenir.replace(/\s+/g, '');
         const htmlContent = `
                     <!DOCTYPE html>
-                    <html>
+                    <html lang="en">
                     <head>
                         <title>${data.suvenir}</title>
                     </head>
@@ -23,7 +31,9 @@ async function exportSouvenirsToHtml(archive, db) {  // Added db parameter
                     </html>
                 `;
         archive.append(htmlContent, { name: `${folderName}/souvenir.html` });
-      } else {
+      }
+      else
+      {
         console.warn(`Document with ID: ${doc.id} is missing the 'suvenir' field`);
       }
     });

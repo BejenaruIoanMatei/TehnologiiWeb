@@ -1,7 +1,14 @@
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
+
 const { db } = require('../../../utils/firebaseInit');
 const { collection, getDocs } = require('firebase/firestore');
 
-// Function to fetch all users with selected fields
+
 async function fetchAllUsers(req, res) {
   try {
     const usersCollection = collection(db, 'users');
@@ -11,7 +18,6 @@ async function fetchAllUsers(req, res) {
     snapshot.forEach(doc => {
       const userData = doc.data(); // Get the data for this user
 
-      // Check if the required fields exist in the data
       const missingFields = [];
       if (!userData.email) missingFields.push('email');
       if (!userData.username) missingFields.push('username');
@@ -21,7 +27,7 @@ async function fetchAllUsers(req, res) {
 
       if (missingFields.length === 0) {
         allUsers.push({
-          id: doc.id, // Include the document ID
+          id: doc.id,
           email: userData.email,
           username: userData.username,
           role: userData.role,
