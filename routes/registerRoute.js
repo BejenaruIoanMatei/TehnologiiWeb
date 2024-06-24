@@ -1,9 +1,20 @@
 
-
-
-const token = "m5CwxnhGPKjzcxU0nzlioeW6Mq4LEBCagiqfKP0Vpn8TyKcCFFegbL8/0rUGtXmJhXGvNRXQxvNtlvLLMdweiKgPgXZfa9gbsztC0PsPG2SDsscYOa9+v6zjHzgO+zNho7xGiOUYNje+nqFWqzs6kMDv4byuc85Uq9JCTeDT2/poWIO0PCQHOZ7+e2ZD2Qd0vOLV0Fiyp771c9lCL5lStM40zg5QLynx8hPb7/kni9g+K3R2iLMpWQZcZo6Wxk9UtBlfTY97hjo83NiACeBIbK4a4w==";
 async function fetchSignedURL(urlToSign) {
   try {
+    const responseToken = await fetch('/getJWTToken', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      // Optionally, you can send a request body if required by your server
+      body: JSON.stringify({})
+    });
+
+    if (!responseToken.ok) {
+      throw new Error('Failed to fetch token');
+    }
+
+    const { token } = await responseToken.json();
     const response = await fetch('/generateSignedURL', {
       method: 'POST', // Adjust method as per your server route to generate signed URLs
       headers: {

@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="121: Improve admin security">
-      <change afterPath="$PROJECT_DIR$/components/adminComponentAddons/adminDeleteUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/adminComponentAddons/adminGrantRights.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/adminComponentAddons/adminRevokeRights.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/getJWTToken.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/adminComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/adminComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/adminComponentAddons/validateAminRequest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/registerRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/registerRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/signInRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/signInRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +102,7 @@
       <workItem from="1719076640769" duration="453000" />
       <workItem from="1719159613462" duration="172000" />
       <workItem from="1719159823625" duration="10061000" />
-      <workItem from="1719216045951" duration="10040000" />
+      <workItem from="1719216045951" duration="11330000" />
     </task>
     <task id="LOCAL-00001" summary="54: Refactor dataBase scripts">
       <option name="closed" value="true" />
@@ -285,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719221787934</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="121: Improve admin security">
+      <option name="closed" value="true" />
+      <created>1719227775411</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1719227775411</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

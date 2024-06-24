@@ -18,7 +18,6 @@ async function fetchSignedURL(urlToSign) {
     }
 
     const { token } = await responseToken.json();
-    console.log('Token:', token);
 
     const response = await fetch('/generateSignedURL', {
         method: 'POST',
