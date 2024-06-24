@@ -6,36 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="128: Update and reformat server code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-Bold-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-Bold-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-Bold-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-BoldItalic-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-BoldItalic-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-BoldItalic-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-Italic-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-Italic-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-Italic-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-Light-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-Light-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-Light-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-LightItalic-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-LightItalic-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-LightItalic-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-Regular-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-Regular-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/fonts/OpenSans-Regular-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/scripts/linenumber.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/scripts/prettify/Apache-License-2.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/scripts/prettify/lang-css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/scripts/prettify/prettify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/styles/jsdoc-default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/styles/prettify-jsdoc.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/out/styles/prettify-tomorrow.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Documentatie.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentatie/Documentatie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/aboutUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/aboutUs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/explorePageAdminLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/explorePageAdminLoggedIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/explorePageLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/explorePageLoggedIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/recommendComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/recommendComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/statisticsUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/statisticsUtil.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -347,7 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719239169370</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="128: Update and reformat server code">
+      <option name="closed" value="true" />
+      <created>1719248643432</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1719248643432</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

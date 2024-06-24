@@ -1,7 +1,106 @@
-let destinations = []; // Declare destinations at a higher scope
+/*
+ * ----------------------------------------------------------------------------
+ * "Souvenir Recommender (SORE)" Project
+ * Copyright © 2024 Moscalu Stefan and Bejenaru Matei Ioan. All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
 
+let destinations = [];
+async function fetchSignedURL(urlToSign)
+{
+  try {
+    const responseToken = await fetch('/getJWTToken', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({})
+    });
+
+
+    if (!responseToken.ok) {
+      throw new Error('Failed to fetch token');
+    }
+
+    const { token } = await responseToken.json();
+
+    const response = await fetch('/generateSignedURL', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify({ url: urlToSign }),
+    });
+    if (!response.ok) {
+      throw new Error('Failed to fetch signed URL');
+    }
+    const { signedURL } = await response.json();
+    return signedURL;
+  } catch (error) {
+    console.error('Error fetching signed URL:', error);
+    throw error;
+  }
+}
+async function getMainSouvenir(destination)
+{
+  const response = await fetch('/getMainSouvenir', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(destination)
+  });
+
+  if (!response.ok) {
+    throw new Error('Failed to fetch main souvenir');
+  }
+
+  const relevantSouvenir = await response.json();
+  console.log('Componenta de recomandare main souvenir a primit', relevantSouvenir);
+  return relevantSouvenir || { suvenir: "No main souvenir found" };
+}
+async function getOtherSouvenirs(destination)
+{
+  try {
+    const response = await fetch('/getOtherSouvenirs', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(destination)
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch other souvenirs');
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching other souvenirs:', error);
+    throw error;
+  }
+}
+async function sendFeedback(destination, feedback) {
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  console.log(`Feedback sent to backend for ${feedback}:`, destination);
+}
+async function sendNumberOfSouvenirs(numberOfSouvenirs)
+{
+
+  const signedUrl = await fetchSignedURL('/updateStatisticsDataSouvenirsSuggested');
+  fetch(signedUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ value: numberOfSouvenirs }),
+  }).catch(error => {
+    console.error('Error sending number of souvenirs:', error);
+  });
+}
 document.addEventListener("DOMContentLoaded", async function () {
-  // Fetch countries
   const response = await fetch('/getCountries');
   if (!response.ok) {
     throw new Error('Failed to fetch countries');
@@ -21,7 +120,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   formContainer.appendChild(destinationsList);
 
-  // Populate country dropdown
   for (let country in countries) {
     let option = document.createElement("option");
     option.value = country;
@@ -29,15 +127,12 @@ document.addEventListener("DOMContentLoaded", async function () {
     countrySelect.appendChild(option);
   }
 
-  // Populate city dropdown based on selected country
   countrySelect.addEventListener("change", function () {
     let selectedCountry = countrySelect.value;
     let cities = countries[selectedCountry];
 
-    // Clear previous city options
     citySelect.innerHTML = "<option value='' disabled selected>Select a City</option>";
 
-    // Add new city options
     cities.forEach(city => {
       let option = document.createElement("option");
       option.value = city;
@@ -46,7 +141,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
   });
 
-  // Toggle beneficiaries options visibility
   beneficiariesToggle.addEventListener("click", function () {
     if (checkboxOptions.style.display === "none") {
       checkboxOptions.style.display = "block";
@@ -55,7 +149,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   });
 
-  // Populate beneficiaries options
   beneficiaries.forEach(beneficiary => {
     let label = document.createElement("label");
     let checkbox = document.createElement("input");
@@ -68,7 +161,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     checkboxOptions.appendChild(document.createElement("br"));
   });
 
-  // Add event listener for the add destination button
   addDestinationButton.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -108,55 +200,28 @@ document.addEventListener("DOMContentLoaded", async function () {
     displayDestinations();
   });
 
-  // Function to display destinations
-  function displayDestinations() {
-    destinationsList.innerHTML = "";
-    destinations.forEach((destination, index) => {
-      const listItem = document.createElement("li");
-      listItem.style.marginBottom = "5px";
-      listItem.textContent = `${destination.oras}, ${destination.tara} - from ${destination.startDate} to ${destination.endDate} - Beneficiaries: ${destination.beneficiari.join(', ')}`;
-
-      const deleteButton = document.createElement("button");
-      deleteButton.textContent = "-";
-      deleteButton.style.marginLeft = "10px";
-      deleteButton.addEventListener("click", function () {
-        destinations.splice(index, 1);
-        displayDestinations();
-      });
-
-      listItem.appendChild(deleteButton);
-      destinationsList.appendChild(listItem);
-    });
-  }
-
-  async function getLikeRatioForSouvenir(souvenir) {
-    const likeRatio = souvenir.likeRatio;
-    return { likeRatio };
-  }
 
   const createTripButton = document.getElementById("submit-trip");
   createTripButton.addEventListener("click", async function () {
-    // Show the map popup first
+
     const mapPopupContainer = document.getElementById("map-popup-container");
     mapPopupContainer.style.display = "block";
 
-    // Close map popup button
+
     const closeMapPopup = document.getElementById("close-map-popup");
     closeMapPopup.addEventListener("click", function () {
       mapPopupContainer.style.display = "none";
-      // Remove the map when the popup is closed
+
       if (map) {
         map.remove();
-        map = null; // Reset the map variable
+        map = null;
       }
       document.getElementById("map").innerHTML = "";
     });
 
-    // Initialize Leaflet map and add markers
-    initMap(); // Initialize the map
-    addMarkersForDestinations(destinations); // Pass the destinations array to add markers
+    initMap();
+    addMarkersForDestinations(destinations);
 
-    // Show the recommendation popup on top
     const popupContainer = document.getElementById("popup-container");
     const closePopup = document.getElementById("close-popup");
     const souvenirList = document.getElementById("souvenir-list");
@@ -170,8 +235,9 @@ document.addEventListener("DOMContentLoaded", async function () {
           const mainSouvenir = await getMainSouvenir(destination);
           const otherSouvenirs = await getOtherSouvenirs(destination);
 
-          console.log('Recommend component main souvenir:', mainSouvenir);
-          console.log('Recommend component other souvenirs:', otherSouvenirs);
+          const numberOfSouvenirs = 1 + otherSouvenirs.length;
+          console.log("The number of suggested souvenirs is: ", numberOfSouvenirs);
+          sendNumberOfSouvenirs(numberOfSouvenirs);
 
           const destinationDiv = document.createElement("div");
           destinationDiv.classList.add("destination-souvenirs");
@@ -193,7 +259,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             </div>
           `;
 
-          // Add event listeners to the like and dislike buttons
           const likeButton = destinationDiv.querySelector(".like-button");
           const dislikeButton = destinationDiv.querySelector(".dislike-button");
 
@@ -232,58 +297,26 @@ document.addEventListener("DOMContentLoaded", async function () {
       popupContainer.style.display = "none";
     });
   });
-  
-  // Function to determine main souvenir
-  async function getMainSouvenir(destination) {
-    const response = await fetch('/getMainSouvenir', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(destination)
-    });
+  function displayDestinations()
+  {
+    destinationsList.innerHTML = "";
+    destinations.forEach((destination, index) => {
+      const listItem = document.createElement("li");
+      listItem.style.marginBottom = "5px";
+      listItem.textContent = `${destination.oras}, ${destination.tara} - from ${destination.startDate} to ${destination.endDate} - Beneficiaries: ${destination.beneficiari.join(', ')}`;
 
-    if (!response.ok) {
-      throw new Error('Failed to fetch main souvenir');
-    }
-
-    const relevantSouvenir = await response.json();
-    console.log('Componenta de recomandare main souvenir a primit', relevantSouvenir);
-    return relevantSouvenir || { suvenir: "No main souvenir found" };
-  }
-
-  // Function to fetch other souvenirs
-  async function getOtherSouvenirs(destination) {
-    try {
-      const response = await fetch('/getOtherSouvenirs', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(destination)
+      const deleteButton = document.createElement("button");
+      deleteButton.textContent = "-";
+      deleteButton.style.marginLeft = "10px";
+      deleteButton.addEventListener("click", function () {
+        destinations.splice(index, 1);
+        displayDestinations();
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to fetch other souvenirs');
-      }
-
-      const otherSouvenirs = await response.json();
-      return otherSouvenirs;
-    } catch (error) {
-      console.error('Error fetching other souvenirs:', error);
-      throw error;
-    }
+      listItem.appendChild(deleteButton);
+      destinationsList.appendChild(listItem);
+    });
   }
-
-  // Function to simulate sending feedback to backend
-  async function sendFeedback(destination, feedback) {
-    // Simulate sending feedback to backend
-    await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate async operation
-
-    console.log(`Feedback sent to backend for ${feedback}:`, destination);
-    // Replace with your actual backend logic to handle feedback
-  } 
-  // Ensure the map is initialized when the script is loaded
   window.initMap = initMap;
 });
 

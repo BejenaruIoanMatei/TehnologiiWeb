@@ -62,11 +62,11 @@ async function getGlobalLikeRatio(req, res) {
 async function updateStatisticsDataNumberOfAccesses() {
   try {
     const statsCollectionRef = collection(db, 'statisticsData');
-    const docRef = doc(statsCollectionRef, 'numberOfAccesses'); // Assuming 'numberOfAccesses' is the auto-generated document ID
+    const docRef = doc(statsCollectionRef, 'numberOfAccesses');
     const docSnap = await getDoc(docRef);
 
     if (!docSnap.exists()) {
-      await setDoc(docRef, { value: 1 }); // Initialize with value 1 if document doesn't exist
+      await setDoc(docRef, { value: 1 });
     } else {
       const { value } = docSnap.data();
       const newValue = value + 1;
@@ -78,10 +78,40 @@ async function updateStatisticsDataNumberOfAccesses() {
   }
 }
 
-// const updateStatisticsDataSouvenirsSuggested = (req,res)
-// {
-//
-// }
+async function updateStatisticsDataSouvenirsSuggested(req, res) {
+  // Send immediate response to the client
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({ status: 'ok' }));
+
+  try {
+    let body = '';
+    req.on('data', chunk => {
+      body += chunk.toString();
+    });
+
+    req.on('end', async () => {
+      const { value: incrementValue } = JSON.parse(body);
+
+      console.log('The souvenirs recomended count is: ', incrementValue);
+      const statsCollectionRef = collection(db, 'statisticsData');
+      const docRef = doc(statsCollectionRef, 'souvenirsSuggested');
+      const docSnap = await getDoc(docRef);
+
+      if (!docSnap.exists()) {
+        await setDoc(docRef, { value: incrementValue });
+      } else {
+        const { value } = docSnap.data();
+        const newValue = value + incrementValue;
+        await updateDoc(docRef, { value: newValue });
+      }
+    });
+  } catch (error) {
+    console.error('Error updating souvenirsSuggested:', error);
+  }
+}
+{
+
+}
 // const updateStatisticsSatisfiedCustomers = (req,res)
 // {
 //
@@ -214,6 +244,7 @@ async function getSatisfiedCustomers(req, res) {
 
 
 module.exports = {
+  updateStatisticsDataSouvenirsSuggested,
   updateStatisticsDataNumberOfAccesses,
   getNumberOfAccesses,
   getLoggedInUsers,
