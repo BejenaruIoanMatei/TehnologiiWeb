@@ -1,4 +1,4 @@
-let map;
+let map; // Global map variable
 
 function initMap(destinations) {
   if (typeof L === 'undefined') {
