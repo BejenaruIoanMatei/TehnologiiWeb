@@ -19,10 +19,15 @@ function initMap() {
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
   }
-  
+
   // Ensure the map container is visible and has a size
   mapContainer.style.display = 'block';
   map.invalidateSize();
+}
+
+// Function to remove diacritics from a string
+function removeDiacritics(str) {
+  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
 function addMarkersForDestinations(destinations) {
@@ -44,7 +49,10 @@ function addMarkersForDestinations(destinations) {
   });
 
   destinations.forEach(destination => {
-    fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${destination.oras},${destination.tara}`)
+    const normalizedCity = removeDiacritics(destination.oras);
+    const normalizedCountry = removeDiacritics(destination.tara);
+
+    fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${normalizedCity},${normalizedCountry}`)
       .then(response => response.json())
       .then(data => {
         if (data.length > 0) {
