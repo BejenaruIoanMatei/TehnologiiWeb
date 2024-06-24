@@ -1,6 +1,6 @@
 let map; // Global map variable
 
-function initMap(destinations) {
+function initMap() {
   if (typeof L === 'undefined') {
     console.error('Leaflet is not loaded');
     return;
@@ -12,11 +12,28 @@ function initMap(destinations) {
     return;
   }
 
+  // Check if the map is already initialized
   if (!map) {
     map = L.map('map').setView([45.9432, 24.9668], 6);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
+  }
+  
+  // Ensure the map container is visible and has a size
+  mapContainer.style.display = 'block';
+  map.invalidateSize();
+}
+
+function addMarkersForDestinations(destinations) {
+  if (!map) {
+    console.error("Map is not initialized");
+    return;
+  }
+
+  if (!destinations || !Array.isArray(destinations) || destinations.length === 0) {
+    console.error("No valid destinations data");
+    return;
   }
 
   // Clear existing markers
@@ -25,20 +42,6 @@ function initMap(destinations) {
       map.removeLayer(layer);
     }
   });
-
-  // Add markers for destinations
-  addMarkersForDestinations(destinations);
-
-  // Ensure the map container is visible and has a size
-  mapContainer.style.display = 'block';
-  map.invalidateSize();
-}
-
-function addMarkersForDestinations(destinations) {
-  if (!destinations || !Array.isArray(destinations) || destinations.length === 0) {
-    console.error("No valid destinations data");
-    return;
-  }
 
   destinations.forEach(destination => {
     fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${destination.oras},${destination.tara}`)
@@ -58,3 +61,4 @@ function addMarkersForDestinations(destinations) {
 }
 
 window.initMap = initMap;
+window.addMarkersForDestinations = addMarkersForDestinations;

@@ -140,23 +140,21 @@ document.addEventListener("DOMContentLoaded", async function () {
     const mapPopupContainer = document.getElementById("map-popup-container");
     mapPopupContainer.style.display = "block";
 
-
-if (map) { // Check if map exists before removing
-  map.remove();
-  map = null; // Reset the map variable
-} 
-
     // Close map popup button
     const closeMapPopup = document.getElementById("close-map-popup");
     closeMapPopup.addEventListener("click", function () {
       mapPopupContainer.style.display = "none";
       // Remove the map when the popup is closed
+      if (map) {
+        map.remove();
+        map = null; // Reset the map variable
+      }
       document.getElementById("map").innerHTML = "";
-      map = null; // Reset the map variable
     });
 
-    // Initialize Leaflet map
-    initMap(destinations); // Pass the destinations array to initMap
+    // Initialize Leaflet map and add markers
+    initMap(); // Initialize the map
+    addMarkersForDestinations(destinations); // Pass the destinations array to add markers
 
     // Show the recommendation popup on top
     const popupContainer = document.getElementById("popup-container");
@@ -234,7 +232,7 @@ if (map) { // Check if map exists before removing
       popupContainer.style.display = "none";
     });
   });
-
+  
   // Function to determine main souvenir
   async function getMainSouvenir(destination) {
     const response = await fetch('/getMainSouvenir', {
