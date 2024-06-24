@@ -57,7 +57,6 @@ async function getMainSouvenir(destination)
   }
 
   const relevantSouvenir = await response.json();
-  console.log('Componenta de recomandare main souvenir a primit', relevantSouvenir);
   return relevantSouvenir || { suvenir: "No main souvenir found" };
 }
 async function getOtherSouvenirs(destination)
@@ -82,7 +81,6 @@ async function getOtherSouvenirs(destination)
   }
 }
 async function sendFeedback(destination, feedback) {
-  console.log('The sent feedback is', feedback)
   const signedUrl = await fetchSignedURL('/updateLikesAndGlobalUserSatisfactionFactor');
   fetch(signedUrl, {
     method: 'POST',
@@ -117,8 +115,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     throw new Error('Failed to fetch countries');
   }
   const countries = await response.json();
-  console.log(response);
-  console.log(countries);
   const beneficiaries = ["Family", "Friend", "Relative", "Lover", "Acquaintance", "Co-worker"];
 
   const countrySelect = document.getElementById("country");
@@ -237,9 +233,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     const closePopup = document.getElementById("close-popup");
     const souvenirList = document.getElementById("souvenir-list");
 
-    souvenirList.innerHTML = ""; // Clear previous content
+    souvenirList.innerHTML = "";
 
-    console.log('Recommend component destinations: ', destinations);
     try {
       const fetchPromises = destinations.map(async (destination) => {
         try {
@@ -247,7 +242,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           const otherSouvenirs = await getOtherSouvenirs(destination);
 
           const numberOfSouvenirs = 1 + otherSouvenirs.length;
-          console.log("The number of suggested souvenirs is: ", numberOfSouvenirs);
+
           sendNumberOfSouvenirs(numberOfSouvenirs);
 
           const destinationDiv = document.createElement("div");
@@ -275,7 +270,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
           likeButton.addEventListener("click", async () => {
             try {
-              console.log("Liked:", destination);
               await sendFeedback(destination, 'like');
             } catch (error) {
               console.error("Error handling like:", error);
@@ -284,7 +278,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
           dislikeButton.addEventListener("click", async () => {
             try {
-              console.log("Disliked:", destination);
               await sendFeedback(destination, 'dislike');
             } catch (error) {
               console.error("Error handling dislike:", error);
