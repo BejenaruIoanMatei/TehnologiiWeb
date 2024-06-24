@@ -110,12 +110,13 @@ async function loadUsersToTable() {
 
 async function deleteUser(userId) {
   try {
-    const signedUrl = await fetchSignedURL(`/deleteUser/${userId}`);
+    const signedUrl = await fetchSignedURL(`/adminDeleteUser`);
     const response = await fetch(signedUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
-      }
+      },
+      body: JSON.stringify({ userId }) // Include the userId in the request body
     });
 
     if (!response.ok) {
@@ -131,14 +132,16 @@ async function deleteUser(userId) {
   }
 }
 
+
 async function grantAdminPermission(userId) {
   try {
-    const signedUrl = await fetchSignedURL(`/grantAdminPermission/${userId}`);
+    const signedUrl = await fetchSignedURL(`/adminGrantRights`);
     const response = await fetch(signedUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
-      }
+      },
+      body: JSON.stringify({ userId }) // Include the userId in the request body
     });
 
     if (!response.ok) {
@@ -156,12 +159,13 @@ async function grantAdminPermission(userId) {
 
 async function revokeAdminPermission(userId) {
   try {
-    const signedUrl = await fetchSignedURL(`/revokeAdminPermission/${userId}`);
+    const signedUrl = await fetchSignedURL(`/adminRevokeRights`);
     const response = await fetch(signedUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
-      }
+      },
+      body: JSON.stringify({ userId }) // Include the userId in the request body
     });
 
     if (!response.ok) {

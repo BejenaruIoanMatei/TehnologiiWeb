@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="121: Improve admin security">
+    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="123: Improve admin page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/adminComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/adminComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchAllUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchAllUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/registerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/registerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/registerRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/registerRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/signInRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/signInRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/adminComponentAddons/adminDeleteUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/adminComponentAddons/adminDeleteUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/adminComponentAddons/adminGrantRights.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/adminComponentAddons/adminGrantRights.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/adminComponentAddons/adminRevokeRights.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/adminComponentAddons/adminRevokeRights.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719227775411</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="123: Improve admin page">
+      <option name="closed" value="true" />
+      <created>1719233640561</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1719233640561</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,6 +338,7 @@
     <MESSAGE value="119: Update admin page" />
     <MESSAGE value="120: Improve server security" />
     <MESSAGE value="121: Improve admin security" />
-    <option name="LAST_COMMIT_MESSAGE" value="121: Improve admin security" />
+    <MESSAGE value="123: Improve admin page" />
+    <option name="LAST_COMMIT_MESSAGE" value="123: Improve admin page" />
   </component>
 </project>
