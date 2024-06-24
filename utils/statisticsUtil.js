@@ -6,6 +6,16 @@
  */
 const { db } = require('./firebaseInit');
 const { collection, getDocs, updateDoc, doc, query, where, getDoc, setDoc } = require('firebase/firestore');
+function calculateLikeRatio(likeCount, dislikeCount) {
+  const totalVotes = likeCount + dislikeCount;
+  if (totalVotes === 0) {
+    return 0; // Handle division by zero case
+  }
+
+  const ratio = (likeCount / totalVotes) * 100;
+  return parseFloat(ratio.toFixed(2)); // Convert to float and limit to 2 decimal places
+}
+
 
 async function calculateGlobalLikeRatio() {
   const suveniruriCollection = collection(db, 'suveniruri');
@@ -251,44 +261,37 @@ const updateLikesAndGlobalUserSatisfactionFactor = async (req, res) => {
         const querySnapshot = await getDocs(query(souvenirsCollectionRef, where('tara', '==', destination.tara), where('oras', '==', destination.oras)));
 
         const updateTasks = [];
-        if (feedback === 'dislike') {
-          querySnapshot.forEach((souvenirDoc) => {
-            const souvenirRef = doc(db, 'suveniruri', souvenirDoc.id);
-            const { dislikesCount = 0 } = souvenirDoc.data();
+        querySnapshot.forEach((souvenirDoc) => {
+          const souvenirRef = doc(db, 'suveniruri', souvenirDoc.id);
+          const { likesCount = 0, dislikesCount = 0 } = souvenirDoc.data();
+
+          // Update likesCount or dislikesCount based on feedback
+          if (feedback === 'dislike') {
             updateTasks.push(updateDoc(souvenirRef, {
               dislikesCount: dislikesCount + 1
             }));
-          });
-
-          const statsCollectionRef = collection(db, 'statisticsData');
-          const statsDocRef = doc(statsCollectionRef, 'satisfiedCustomers');
-          const statsDocSnap = await getDoc(statsDocRef);
-
-          if (!statsDocSnap.exists()) {
-            await setDoc(statsDocRef, { value: -1 });
-          } else {
-            const { value } = statsDocSnap.data();
-            await updateDoc(statsDocRef, { value: value - 1 });
-          }
-        } else if (feedback === 'like') {
-          querySnapshot.forEach((souvenirDoc) => {
-            const souvenirRef = doc(db, 'suveniruri', souvenirDoc.id);
-            const { likesCount = 0 } = souvenirDoc.data();
+          } else if (feedback === 'like') {
             updateTasks.push(updateDoc(souvenirRef, {
               likesCount: likesCount + 1
             }));
-          });
-
-          const statsCollectionRef = collection(db, 'statisticsData');
-          const statsDocRef = doc(statsCollectionRef, 'satisfiedCustomers');
-          const statsDocSnap = await getDoc(statsDocRef);
-
-          if (!statsDocSnap.exists()) {
-            await setDoc(statsDocRef, { value: 1 });
-          } else {
-            const { value } = statsDocSnap.data();
-            await updateDoc(statsDocRef, { value: value + 1 });
           }
+
+          // Recalculate likeRatio
+          const likeRatio = calculateLikeRatio(likesCount, dislikesCount);
+          updateTasks.push(updateDoc(souvenirRef, { likeRatio }));
+        });
+
+        // Update satisfiedCustomers in statisticsData
+        const statsCollectionRef = collection(db, 'statisticsData');
+        const statsDocRef = doc(statsCollectionRef, 'satisfiedCustomers');
+        const statsDocSnap = await getDoc(statsDocRef);
+
+        if (!statsDocSnap.exists()) {
+          await setDoc(statsDocRef, { value: feedback === 'dislike' ? -1 : 1 });
+        } else {
+          const { value } = statsDocSnap.data();
+          const newValue = feedback === 'dislike' ? value - 1 : value + 1;
+          await updateDoc(statsDocRef, { value: newValue });
         }
 
         await Promise.all(updateTasks);

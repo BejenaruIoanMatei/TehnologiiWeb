@@ -6,7 +6,7 @@
  */
 
 /* flag defines */
-flagUpdateLikeRatioAllDocuments = false;
+flagUpdateLikeRatioAllDocuments = true;
 const secretKey = 'I"th/80O{{+ptiLfNQX,)5&.IRy:^wno7KON>=:z7;;kAy{~+e$J7./O$9=!lH2/';
 
 /* Dependencies definitions */

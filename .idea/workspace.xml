@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="130: Update statistics logic">
+    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="131: Update statistics logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/recommendComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/recommendComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/likeRatioUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/likeRatioUtil.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/statisticsUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/statisticsUtil.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -336,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719255624473</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="131: Update statistics logic">
+      <option name="closed" value="true" />
+      <created>1719259880103</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1719259880103</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,6 +389,7 @@
     <MESSAGE value="125: Wrap Up admin page logic" />
     <MESSAGE value="128: Update and reformat server code" />
     <MESSAGE value="130: Update statistics logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="130: Update statistics logic" />
+    <MESSAGE value="131: Update statistics logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="131: Update statistics logic" />
   </component>
 </project>

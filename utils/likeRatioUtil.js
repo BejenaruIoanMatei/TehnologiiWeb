@@ -14,8 +14,11 @@ function calculateLikeRatio(likeCount, dislikeCount) {
   if (totalVotes === 0) {
     return 0; // Handle division by zero case
   }
-  return (likeCount / totalVotes) * 100;
+
+  const ratio = (likeCount / totalVotes) * 100;
+  return parseFloat(ratio.toFixed(2)); // Convert to float and limit to 2 decimal places
 }
+
 
 async function updateLikeRatioForSouvenirs() {
   try {
