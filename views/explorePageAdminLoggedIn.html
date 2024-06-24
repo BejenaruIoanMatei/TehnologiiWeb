@@ -1,104 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SoRe - Explore Page</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Irish+Grover&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoRe - Explore Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Irish+Grover&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="../public/css/exploreCss.css" rel="stylesheet" />
+</head>
+<body>
+<header>
+  <div class="logo">
+    <span class="name">SoRe</span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/redirectAdmin">Admin Page</a></li>
+      <li><a href="/redirectStatistics">Statistics</a></li>
+      <li><a href="/signOut">Sign out</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <link href="../public/css/exploreCss.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <span class="name">SoRe</span>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/redirectAdmin">Admin Page</a></li>
-          <li><a href="/redirectStatistics">Statistics</a></li>
-          <li><a href="/signOut">Sign out</a></li>
-        </ul>
-      </nav>
-    </header>
+<section id="home" class="hero">
+  <h1>Let's get you started on your next trip!</h1>
+  <h3>It only takes 2 Steps!</h3>
+  <div class="hero-content">
+    <div class="form-container">
+      <h2>
+        <span style="color: grey">Step 1 :</span> Where do you want to go?
+      </h2>
+      <form action="/submit-destination" method="post">
+        <label for="country"></label>
+        <select id="country" name="country" required>
+          <option value="" disabled selected>
+            Select a Country
+          </option></select
+        ><br /><br />
 
-    <section id="home" class="hero">
-      <h1>Let's get you started on your next trip !</h1>
-      <h3>It only takes 3 Steps !</h3>
-      <div class="hero-content">
-        <div class="form-container">
-          <h2>
-            <span style="color: grey">Step 1 : </span>Where do you want to go?
-          </h2>
-          <form action="/submit-destination" method="post">
-            <label for="country"></label>
-            <input
-              type="text"
-              id="country"
-              name="country"
-              placeholder="Select a Country"
-              required
-            /><br /><br />
+        <label for="city"></label>
+        <select id="city" name="city" required>
+          <option value="" disabled selected>Select a City</option></select
+        ><br /><br />
 
-            <label for="city"></label>
-            <input
-              type="text"
-              id="city"
-              name="city"
-              placeholder="Select a City"
-              required
-            /><br /><br />
+        <label for="start">Starting day:</label>
+        <input
+          type="date"
+          id="start"
+          name="trip-start"
+          required
+        /><br /><br />
 
-            <label for="start">Starting day:</label>
-            <input
-              type="date"
-              id="start"
-              name="trip-start"
-              required
-            /><br /><br />
+        <label for="end">Final day:</label>
+        <input type="date" id="end" name="trip-end" required /><br /><br />
 
-            <label for="end">Final day:</label>
-            <input type="date" id="end" name="trip-end" required /><br /><br />
-
-            <div class="form-actions">
-              <img
-                src="../public/img/suitcase.png"
-                alt="Image Description"
-                id="add-image"
-              />
-              <button type="submit">+ Add destination</button>
-            </div>
-          </form>
-        </div>
-        <img
-          src="../public/img/chestii2.png"
-          alt="Hero Image"
-          class="hero-image"
-        />
-      </div>
-    </section>
-
-    <section id="create">
-      <div class="text">
-        <h2>
-          <span style="color: grey">Step 2 : </span>Don't forget to choose the :
+        <h2 class="custom-heading">
+          Also, don't forget to choose the
           <button
             type="button"
             id="beneficiaries-toggle"
@@ -106,23 +67,61 @@
           >
             Beneficiaries
           </button>
-          .
         </h2>
+
         <div
           class="checkbox-options"
           id="checkbox-options"
           style="display: none"
         ></div>
-      </div>
+        <br /><br />
 
-      <div class="overlay-container"> <div class="image-container">
-        <img src="../public/img/create-trip.png" alt="Circle Image" class="circle-image">
-      </div>
-      <div class="main-section">
-        <h2><span style="color : grey">Step 3 : </span>Enjoy your souvenirs !</h2>
-        <button type="submit" id="submit-trip" class="btn styled-button">Create Trip</button>
-      </div>
+        <div class="form-actions">
+          <img
+            src="../public/img/suitcase.png"
+            alt="Image Description"
+            id="add-image"
+          />
+          <button type="submit">+ Add destination</button>
+        </div>
+      </form>
     </div>
-    </section>
-  </body>
+    <img
+      src="../public/img/chestii2.png"
+      alt="Hero Image"
+      class="hero-image"
+    />
+  </div>
+</section>
+
+<section id="create">
+  <div class="overlay-container">
+    <div class="image-container">
+      <img
+        src="../public/img/create-trip.png"
+        alt="Circle Image"
+        class="circle-image"
+      />
+    </div>
+    <div class="main-section">
+      <h2>
+        <span style="color: grey">Step 2 :</span> Enjoy your souvenirs!
+      </h2>
+      <button type="submit" id="submit-trip" class="btn styled-button">
+        Create Trip
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Aici adaugi acest cod in sectiunea HTML a paginii tale -->
+<div id="popup-container" class="popup-container">
+  <div class="popup-content">
+    <span id="close-popup" class="close-popup">&times;</span>
+    <div id="souvenir-list"></div>
+  </div>
+</div>
+<script src="../components/recommendComponent.js"></script>
+</body>
 </html>
+

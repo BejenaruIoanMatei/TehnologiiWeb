@@ -7,13 +7,11 @@ const jwt = require('jsonwebtoken');
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const crypto = require('crypto');
 const { v4: uuidv4 } = require('uuid');
 const { db } = require('./utils/firebaseInit');
 const { collection, getDocs, updateDoc, doc } = require('firebase/firestore');
 const cookie = require('cookie');
 const archiver = require('archiver');
-const { PassThrough } = require('stream');
 
 /* Components and routes definitions */
 const { generateSignedUrl, verifySignedUrl } = require('./utils/urlSigningServer'); // Importing generateSignedUrl and verifySignedUrl
@@ -32,13 +30,14 @@ const fetchCountriesAndCities = require("./components/database/fetchComponents/f
 const { getNumberOfAccesses, getLoggedInUsers, getSouvenirsSuggested, getSatisfiedCustomers, getGlobalLikeRatio, updateStatisticsDataNumberOfAccesses } = require('./utils/statisticsUtil');
 const fetchMainSouvenir = require('./components/database/fetchComponents/fetchMainSouvenirs');
 const fetchOtherSouvenirs = require('./components/database/fetchComponents/fetchOtherSouvenirs');
-const { calculateLikeRatio, updateLikeRatioForSouvenirs } = require('./utils/likeRatioUtil');
+const { updateLikeRatioForSouvenirs } = require('./utils/likeRatioUtil');
 const exportSouvenirsToHtml = require('./components/database/exportScripts/exportSouvenirsToHtml');
 const exportSouvenirsToCSV = require('./components/database/exportScripts/exportSouvenirsToCSV');
 const exportSouvenirsToXML = require('./components/database/exportScripts/exportSouvenirsToXML');
 const exportSouvenirsToJSON = require('./components/database/exportScripts/exportSouvenirsToJSON');
 const fetchAllUsers = require('./components/database/fetchComponents/fetchAllUsers');
 const decryptJWTToken = require('./utils/decryptJWTToken');
+const validateAdminRequest = require('./components/adminComponentAddons/validateAminRequest');
 /* Protected routes to be hashed definitions */
 const GETProtectedRoutes = [
   '/explore',
@@ -65,14 +64,6 @@ const PORT = process.env.PORT || 3000;
 /* Global variables definition */
 const sessions = {};
 
-async function parseBodyJWT(req) {
-  return new Promise((resolve, reject) => {
-    let body = '';
-    req.on('data', chunk => body += chunk);
-    req.on('end', () => resolve(body));
-    req.on('error', err => reject(err));
-  });
-}
 const generateSession = async () => {
   const sessionId = uuidv4();
   sessions[sessionId] = { loggedIn: false, userRole: 'user' };
@@ -256,22 +247,16 @@ const routes = {
 
 function handlePOSTProtectedRoutes(req, res, sessionId) {
   try {
-    // Parse the URL and extract the pathname
-    const parsedUrl = new URL('http://dummyhost' + req.url);
-    const pathname = parsedUrl.pathname;
 
-    // Remove everything after '?' in the request URL
     const urlWithoutParams = req.url.split('?')[0];
 
-    // Check if the request URL is in POSTProtectedRoutes and is properly signed
     if (POSTProtectedRoutes.includes(urlWithoutParams) && req.method === 'POST' && !verifySignedUrl(req)) {
       const signedUrl = generateSignedUrl(req.url, sessionId);
       res.writeHead(302, { 'Location': signedUrl });
       res.end();
-      return true; // Indicate that redirection occurred
+      return true;
     }
 
-    // If no redirection occurred
     return false;
   } catch (error) {
     console.error('Error handling POST protected routes:', error);
@@ -592,6 +577,19 @@ const server = http.createServer(async (req, res) => {
       else
       {
         fetchAllUsers(req,res);
+      }
+    } else if ( urlWithoutParams === '/validateAdminRequest')
+    {
+      if (redirectIfNotLoggedIn(req, res)) return;
+      const sessionId = getSessionIdFromCookies(req);
+      if (sessions[sessionId].userRole !== 'admin')
+      {
+        aes.writeHead(405, { 'Content-Type': 'text/html' });
+        res.end('<h1>405 Method Not Allowed</h1>', 'utf8');
+      }
+      else
+      {
+        await validateAdminRequest(req,res,sessions);
       }
     }
     else

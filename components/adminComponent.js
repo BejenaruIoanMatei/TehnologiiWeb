@@ -48,6 +48,15 @@ async function loadUsersToTable() {
     // Clear any existing rows
     tableBody.innerHTML = '';
 
+    const heading = '\'<tr>\n' +
+      '            <th>Username</th>\n' +
+      '            <th>Email</th>\n' +
+      '            <th>Role</th>\n' +
+      '            <th>Login Status</th>\n' +
+      '            <th>Action</th>\n' +
+      '          </tr>\n' +
+      '\''
+    tableBody.innerHTML += heading;
     // Add rows for each user
     users.forEach(user => {
       const row = `
@@ -56,7 +65,8 @@ async function loadUsersToTable() {
           <td>${user.email}</td>
           <td>${user.role}</td>
           <td>${user.loggedIn ? 'Active' : 'Inactive'}</td>
-          <td><a href="#" class="btn">Submit</a></td>
+          <td><a href="#" class="btn">Delete user</a></td>
+          <td><a href="#" class="btn">Grant admin permission</a></td>
         </tr>
       `;
       tableBody.innerHTML += row;
