@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function () {
+  // Fetch countries
   const response = await fetch('/getCountries');
   if (!response.ok) {
     throw new Error('Failed to fetch countries');
@@ -136,6 +137,22 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   const createTripButton = document.getElementById("submit-trip");
   createTripButton.addEventListener("click", async function () {
+    // 1. Show the map popup first
+    const mapPopupContainer = document.getElementById("map-popup-container");
+    mapPopupContainer.style.display = "block";
+
+    // Initialize Leaflet map
+    initMap();
+
+    // Close map popup button
+    const closeMapPopup = document.getElementById("close-map-popup");
+    closeMapPopup.addEventListener("click", function () {
+      mapPopupContainer.style.display = "none";
+      // Optional: Remove the map when the popup is closed
+      document.getElementById("map").innerHTML = "";
+    });
+
+    // 2. Then, show the recommendation popup on top
     const popupContainer = document.getElementById("popup-container");
     const closePopup = document.getElementById("close-popup");
     const souvenirList = document.getElementById("souvenir-list");
@@ -266,4 +283,20 @@ document.addEventListener("DOMContentLoaded", async function () {
     console.log(`Feedback sent to backend for ${feedback}:`, destination);
     // Replace with your actual backend logic to handle feedback
   }
+
+  // Initialize the Leaflet map
+  function initMap() {
+    if (typeof L !== 'undefined') {
+      // Leaflet is loaded, proceed with map initialization
+      map = L.map('map').setView([51.505, -0.09], 13); 
+  
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+    } else {
+      // Leaflet is not yet loaded, try again later (e.g., using setTimeout)
+      setTimeout(initMap, 100); // Retry after 100 milliseconds
+    }
+  }
 });
+

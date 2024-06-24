@@ -16,6 +16,10 @@
   overflow: auto;
 }
 
+#popup-container {
+  z-index: 1001; /* Higher z-index for the recommendations popup */
+}
+
 .popup-content {
   background-color: #fefefe;
   margin: 10% auto;
@@ -61,7 +65,10 @@
 
 }
 
-/* ... (existing styles) ... */
+#map {
+  height: 400px;
+  width: 100%;
+}
 
 .feedback-section {
   text-align: center;
