@@ -21,15 +21,9 @@
 <div class="container">
   <div class="header">
     <div class="nav">
-      <div class="search">
-        <input type="text" placeholder="Search.." />
-        <button type="submit">
-          <img src="../public/img/search.png" alt="" />
-        </button>
-      </div>
       <div class="user">
         <a href="/redirectStatistics" class="btn">Statistics</a>
-        <a href="/" class="styled-button">Home</a>
+        <a href="/" class="btn">Home</a>
         <img src="../public/img/notifications.png" alt="" />
         <div class="img-case">
           <img src="../public/img/user.png" alt="" />
@@ -63,66 +57,13 @@
             <th>Email</th>
             <th>Role</th>
             <th>Login Status</th>
-            <th>Action</th>
-          </tr>
-          <tr>
-            <td>Info</td>
-            <td>Info</td>
-            <td>Info</td>
-            <td>Info</td>
-            <td>Info</td>
-            <td><a href="#" class="btn submit-btn">Submit</a></td>
+            <th>Actions</th>
           </tr>
         </table>
       </div>
     </div>
   </div>
 </div>
-
-<div id="myModal" class="popup-validate-request">
-  <div class="popup-validate-request-content">
-    <span class="close">&times;</span>
-    <div class="validate-request-box">
-      <h2>Sign In</h2>
-      <form id="validateOperationForm">
-        <div class="input-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="input-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit">Sign In</button>
-      </form>
-    </div>
-  </div>
-</div>
-
 <script src="../components/adminComponent.js"></script>
-<script>
-  // Get the modal
-  var modal = document.getElementById("myModal");
-
-  // Get the button that opens the modal
-  var btns = document.querySelectorAll(".submit-btn");
-
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-
-  // When the user clicks on the button, open the modal
-  btns.forEach(btn => {
-    btn.onclick = function(event) {
-      event.preventDefault();
-      modal.style.display = "block";
-    }
-  });
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-
-</script>
 </body>
 </html>

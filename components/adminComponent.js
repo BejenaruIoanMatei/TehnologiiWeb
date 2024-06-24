@@ -1,12 +1,27 @@
 // adminComponent.js (Client-Side)
 // Function to fetch signed URL from server for a specific endpoint
 
-const token = "m5CwxnhGPKjzcxU0nzlioeW6Mq4LEBCagiqfKP0Vpn8TyKcCFFegbL8/0rUGtXmJhXGvNRXQxvNtlvLLMdweiKgPgXZfa9gbsztC0PsPG2SDsscYOa9+v6zjHzgO+zNho7xGiOUYNje+nqFWqzs6kMDv4byuc85Uq9JCTeDT2/poWIO0PCQHOZ7+e2ZD2Qd0vOLV0Fiyp771c9lCL5lStM40zg5QLynx8hPb7/kni9g+K3R2iLMpWQZcZo6Wxk9UtBlfTY97hjo83NiACeBIbK4a4w==";
 
 async function fetchSignedURL(urlToSign) {
   try {
+    const responseToken = await fetch('/getJWTToken', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      // Optionally, you can send a request body if required by your server
+      body: JSON.stringify({})
+    });
+
+    if (!responseToken.ok) {
+      throw new Error('Failed to fetch token');
+    }
+
+    const { token } = await responseToken.json();
+    console.log('Token:', token);
+
     const response = await fetch('/generateSignedURL', {
-        method: 'POST', // Adjust method as per your server route to generate signed URLs
+        method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
@@ -65,8 +80,9 @@ async function loadUsersToTable() {
           <td>${user.email}</td>
           <td>${user.role}</td>
           <td>${user.loggedIn ? 'Active' : 'Inactive'}</td>
-          <td><a href="#" class="btn">Delete user</a></td>
-          <td><a href="#" class="btn">Grant admin permission</a></td>
+          <td><a id="deleteUser" href="/deleteUser" class="btn">Delete user</a></td>
+          <td><a id="grantAdminPermision" href="/grantAdminPermision" class="btn">Grant admin permission</a></td>
+          <td><a id="revokeAdminPermision" href="/revokeAdminPermision" class="btn">Revoke admin permission</a></td>
         </tr>
       `;
       tableBody.innerHTML += row;

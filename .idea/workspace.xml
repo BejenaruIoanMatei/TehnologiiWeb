@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="120: Improve server security">
-      <change afterPath="$PROJECT_DIR$/components/adminComponentAddons/validateAminRequest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Frontend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="121: Improve admin security">
+      <change afterPath="$PROJECT_DIR$/components/adminComponentAddons/adminDeleteUser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/adminComponentAddons/adminGrantRights.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/adminComponentAddons/adminRevokeRights.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/getJWTToken.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/adminComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/adminComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/adminCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/adminCss.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/exploreCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/exploreCss.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/adminComponentAddons/validateAminRequest.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/explorePageAdminLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/explorePageAdminLoggedIn.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,28 +45,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.explorePage.html.executor": "Run",
-    "Node.js.fetchCountriesAndCities.js.executor": "Run",
-    "Node.js.recommendComponent.js.executor": "Run",
-    "Node.js.testFetchCountriesAndCities.js.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "20.14.0",
-    "javascript.nodejs.core.library.typings.version": "20.14.2",
-    "last_opened_file_path": "C:/Users/Stefan/Documents/GitHub/TehnologiiWeb/Frontend/views",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "copyright",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.explorePage.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.fetchCountriesAndCities.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.recommendComponent.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.testFetchCountriesAndCities.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.14.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.14.2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Stefan/Documents/GitHub/TehnologiiWeb/Frontend/views&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.1.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Stefan\Documents\GitHub\TehnologiiWeb\Frontend\views" />
@@ -108,7 +107,7 @@
       <workItem from="1719076640769" duration="453000" />
       <workItem from="1719159613462" duration="172000" />
       <workItem from="1719159823625" duration="10061000" />
-      <workItem from="1719216045951" duration="5343000" />
+      <workItem from="1719216045951" duration="10040000" />
     </task>
     <task id="LOCAL-00001" summary="54: Refactor dataBase scripts">
       <option name="closed" value="true" />
@@ -278,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719218003305</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="121: Improve admin security">
+      <option name="closed" value="true" />
+      <created>1719221787934</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1719221787934</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +325,7 @@
     <MESSAGE value="88: Add RSA Encryption / Decryption" />
     <MESSAGE value="119: Update admin page" />
     <MESSAGE value="120: Improve server security" />
-    <option name="LAST_COMMIT_MESSAGE" value="120: Improve server security" />
+    <MESSAGE value="121: Improve admin security" />
+    <option name="LAST_COMMIT_MESSAGE" value="121: Improve admin security" />
   </component>
 </project>

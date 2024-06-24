@@ -37,7 +37,10 @@ const exportSouvenirsToXML = require('./components/database/exportScripts/export
 const exportSouvenirsToJSON = require('./components/database/exportScripts/exportSouvenirsToJSON');
 const fetchAllUsers = require('./components/database/fetchComponents/fetchAllUsers');
 const decryptJWTToken = require('./utils/decryptJWTToken');
-const validateAdminRequest = require('./components/adminComponentAddons/validateAminRequest');
+const adminRevokeRights = require('./components/adminComponentAddons/adminRevokeRights');
+const adminGrantRights = require('./components/adminComponentAddons/adminGrantRights');
+const adminDeleteUser = require('./components/adminComponentAddons/adminDeleteUser');
+const getJWTToken = require('./utils/getJWTToken');
 /* Protected routes to be hashed definitions */
 const GETProtectedRoutes = [
   '/explore',
@@ -57,7 +60,10 @@ const POSTProtectedRoutes = [
   '/exportToCSV',
   '/loginComponent',
   '/registerComponent',
-  '/fetchAllUsers'
+  '/fetchAllUsers',
+  '/adminDeleteUser',
+  '/adminRevokeRights',
+  '/adminGrantRights',
 ]
 const PORT = process.env.PORT || 3000;
 
@@ -578,7 +584,7 @@ const server = http.createServer(async (req, res) => {
       {
         fetchAllUsers(req,res);
       }
-    } else if ( urlWithoutParams === '/validateAdminRequest')
+    } else if ( urlWithoutParams === '/adminRevokeRights')
     {
       if (redirectIfNotLoggedIn(req, res)) return;
       const sessionId = getSessionIdFromCookies(req);
@@ -589,13 +595,48 @@ const server = http.createServer(async (req, res) => {
       }
       else
       {
-        await validateAdminRequest(req,res,sessions);
+        await adminRevokeRights(req,res);
+      }
+    } else if ( urlWithoutParams === '/adminGrantRights')
+    {
+      if (redirectIfNotLoggedIn(req, res)) return;
+      const sessionId = getSessionIdFromCookies(req);
+      if (sessions[sessionId].userRole !== 'admin')
+      {
+        res.writeHead(403, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Forbidden - Not authorized' }));
+      }
+      else
+      {
+        await adminGrantRights(req,res);
+      }
+    } else if ( urlWithoutParams === '/adminDeleteUser')
+    {
+      if (redirectIfNotLoggedIn(req, res)) return;
+      const sessionId = getSessionIdFromCookies(req);
+      if (sessions[sessionId].userRole !== 'admin' )
+      {
+        res.writeHead(403, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Forbidden - Not authorized' }));
+      }
+      else
+      {
+        await adminDeleteUser(req,res);
+      }
+    } else if ( urlWithoutParams === '/getJWTToken')
+    {
+      try {
+        await getJWTToken(req, res); // Ensure getJWTToken receives req and res
+      } catch (error) {
+        console.error('Error getting token:', error);
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Forbidden - Not authorized' }));
       }
     }
     else
     {
-      res.writeHead(405, { 'Content-Type': 'text/html' });
-      res.end('<h1>405 Method Not Allowed</h1>', 'utf8');
+      res.writeHead(403, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Forbidden - Not authorized' }));
     }
   }
 });
