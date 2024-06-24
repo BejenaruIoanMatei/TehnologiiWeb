@@ -64,9 +64,12 @@ const registerComponent = async (req, res, sessions) => {
         sessionId: sessionId
       });
 
-      sessions[sessionId] = { loggedIn: true, email };
-
-
+      sessions[sessionId] = {
+        loggedIn: true,
+        email: email,
+        userRole: 'user',
+        userId: userId
+      };
       res.setHeader('Set-Cookie', cookie.serialize('sessionId', sessionId, {
         httpOnly: true,
         maxAge: 60 * 60 * 24,

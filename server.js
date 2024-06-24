@@ -16,7 +16,7 @@ const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const { db } = require('./utils/firebaseInit');
-const { collection, getDocs, updateDoc, doc } = require('firebase/firestore');
+const { collection, getDocs, updateDoc,where, doc,query } = require('firebase/firestore');
 const cookie = require('cookie');
 const archiver = require('archiver');
 
@@ -295,6 +295,30 @@ function handlePOSTProtectedRoutes(req, res, sessionId) {
   }
 }
 
+async function getUserRoleFromDataBase(userId) {
+  try {
+    console.log(userId);
+    const usersCollectionRef = collection(db, 'users');
+    const q = query(usersCollectionRef, where('userId', '==', userId));
+    const querySnapshot = await getDocs(q);
+
+    if (querySnapshot.empty) {
+      throw new Error('User not found');
+    }
+
+    let userRole;
+    querySnapshot.forEach(doc => {
+      const userData = doc.data();
+      userRole = userData.role; // Assuming 'role' is the field in your user document
+    });
+
+    console.log('The fetched user role from the database is:', userRole);
+    return userRole;
+  } catch (error) {
+    console.error('Error fetching user role:', error);
+    throw error; // Propagate error to handle it further up in the call stack
+  }
+}
 /* setupul serverului */
 const server = http.createServer(async (req, res) => {
   let sessionId = getSessionIdFromCookies(req);
@@ -312,6 +336,14 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(302, { Location: signedRootUrl });
     res.end();
     return;
+  }
+
+  if( sessions[sessionId].loggedIn === true )
+  {
+    console.log('User role before: ', sessions[sessionId].userRole);
+    console.log('The user that performs the action is: ', sessions[sessionId].email )
+    sessions[sessionId].userRole = await getUserRoleFromDataBase(sessions[sessionId].userId);
+    console.log('User role after: ', sessions[sessionId].userRole);
   }
 
   console.log('Session ID: ${sessionId}');
@@ -428,6 +460,11 @@ const server = http.createServer(async (req, res) => {
       await updateLikesAndGlobalUserSatisfactionFactor(req, res);
     } else if ( urlWithoutParams === '/exportToHTML')
     {
+      if (sessions[sessionId].userRole !== 'admin')
+      {
+        res.writeHead(405, { 'Content-Type': 'text/html' });
+        res.end('<h1>405 Method Not Allowed</h1>', 'utf8');
+      }
       if (redirectIfNotLoggedIn(req, res)) return;
       try {
         console.log("The HTML export request has been triggered!");
@@ -469,6 +506,11 @@ const server = http.createServer(async (req, res) => {
       }
     } else if ( urlWithoutParams === '/exportToCSV')
     {
+      if (sessions[sessionId].userRole !== 'admin')
+      {
+        res.writeHead(405, { 'Content-Type': 'text/html' });
+        res.end('<h1>405 Method Not Allowed</h1>', 'utf8');
+      }
       if (redirectIfNotLoggedIn(req, res)) return;
       try {
         console.log("The CSV export request has been triggered!");
@@ -510,6 +552,11 @@ const server = http.createServer(async (req, res) => {
 
     } else if( urlWithoutParams === '/exportToXML')
     {
+      if (sessions[sessionId].userRole !== 'admin')
+      {
+        res.writeHead(405, { 'Content-Type': 'text/html' });
+        res.end('<h1>405 Method Not Allowed</h1>', 'utf8');
+      }
       if (redirectIfNotLoggedIn(req, res)) return;
       try {
         console.log("The XML export request has been triggered!");
@@ -550,6 +597,11 @@ const server = http.createServer(async (req, res) => {
       }
     } else if( urlWithoutParams === '/exportToJSON')
     {
+      if (sessions[sessionId].userRole !== 'admin')
+      {
+        res.writeHead(405, { 'Content-Type': 'text/html' });
+        res.end('<h1>405 Method Not Allowed</h1>', 'utf8');
+      }
       try {
         console.log("The JSON export request has been triggered!");
 
@@ -593,7 +645,7 @@ const server = http.createServer(async (req, res) => {
       const sessionId = getSessionIdFromCookies(req);
       if (sessions[sessionId].userRole !== 'admin')
       {
-        aes.writeHead(405, { 'Content-Type': 'text/html' });
+        res.writeHead(405, { 'Content-Type': 'text/html' });
         res.end('<h1>405 Method Not Allowed</h1>', 'utf8');
       }
       else

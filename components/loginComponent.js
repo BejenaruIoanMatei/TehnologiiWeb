@@ -59,7 +59,8 @@ const loginComponent = async (req, res, sessions) => {
       sessions[sessionId] = {
         loggedIn: true,
         email: user.email,
-        userRole: user.role
+        userRole: user.role,
+        userId: user.userId
       };
 
       res.setHeader('Set-Cookie', cookie.serialize('sessionId', sessionId, {
