@@ -1,18 +1,18 @@
-let map; // Global map variable
+let map; // Variabilă globală pentru hartă
 
 function initMap() {
   if (typeof L === 'undefined') {
-    console.error('Leaflet is not loaded');
+    console.error('Leaflet nu este încărcat');
     return;
   }
 
   const mapContainer = document.getElementById('map');
   if (!mapContainer) {
-    console.error('Map container not found');
+    console.error('Containerul pentru hartă nu a fost găsit');
     return;
   }
 
-  // Check if the map is already initialized
+  // Verificăm dacă harta este deja inițializată
   if (!map) {
     map = L.map('map').setView([45.9432, 24.9668], 6);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -20,28 +20,27 @@ function initMap() {
     }).addTo(map);
   }
 
-  // Ensure the map container is visible and has a size
+  // Ne asigurăm că containerul hărții este vizibil și are dimensiune
   mapContainer.style.display = 'block';
   map.invalidateSize();
 }
 
-// Function to remove diacritics from a string
+// Funcție pentru eliminarea diacriticelor dintr-un șir
 function removeDiacritics(str) {
   return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
 function addMarkersForDestinations(destinations) {
   if (!map) {
-    console.error("Map is not initialized");
+    console.error("Harta nu este inițializată");
     return;
   }
 
   if (!destinations || !Array.isArray(destinations) || destinations.length === 0) {
-    console.error("No valid destinations data");
+    console.error("Datele despre destinații nu sunt valide");
     return;
   }
 
-  // Clear existing markers
   map.eachLayer((layer) => {
     if (layer instanceof L.Marker) {
       map.removeLayer(layer);
@@ -52,7 +51,7 @@ function addMarkersForDestinations(destinations) {
     const normalizedCity = removeDiacritics(destination.oras);
     const normalizedCountry = removeDiacritics(destination.tara);
 
-    fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${normalizedCity},${normalizedCountry}`)
+    fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(normalizedCity)},${encodeURIComponent(normalizedCountry)}`)
       .then(response => response.json())
       .then(data => {
         if (data.length > 0) {
@@ -61,10 +60,25 @@ function addMarkersForDestinations(destinations) {
             .bindPopup(`<b>${destination.oras}, ${destination.tara}</b>`)
             .openPopup();
         } else {
-          console.error("Geocoding failed for:", destination);
+          // Dacă orașul nu este găsit, afișează mesaj și caută țara
+          console.warn("We could not locate the city:", destination.oras);
+
+          fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(normalizedCountry)}`)
+            .then(response => response.json())
+            .then(countryData => {
+              if (countryData.length > 0) {
+                const { lat, lon } = countryData[0];
+                L.marker([lat, lon]).addTo(map)
+                  .bindPopup(`<b>${destination.tara}</b> (We could not locate the city ${destination.oras})`)
+                  .openPopup();
+              } else {
+                console.error("Geocodarea a eșuat complet pentru:", destination);
+              }
+            })
+            .catch(error => console.error("Eroare la preluarea datelor pentru țară:", error));
         }
       })
-      .catch(error => console.error("Error fetching location data:", error));
+      .catch(error => console.error("Eroare la preluarea datelor de locație:", error));
   });
 }
 
