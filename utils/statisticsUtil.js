@@ -5,7 +5,7 @@
  * ----------------------------------------------------------------------------
  */
 const { db } = require('./firebaseInit');
-const { collection, getDocs, updateDoc, doc, getDoc, setDoc } = require('firebase/firestore');
+const { collection, getDocs, updateDoc, doc, query, where, getDoc, setDoc } = require('firebase/firestore');
 
 async function calculateGlobalLikeRatio() {
   const suveniruriCollection = collection(db, 'suveniruri');
@@ -112,14 +112,6 @@ async function updateStatisticsDataSouvenirsSuggested(req, res) {
 {
 
 }
-// const updateStatisticsSatisfiedCustomers = (req,res)
-// {
-//
-// }
-// const updateStatisticsDataGlobalLikeRatio = (req,res)
-// {
-//
-// }
 
 async function getNumberOfAccesses(req, res) {
   try {
@@ -241,9 +233,83 @@ async function getSatisfiedCustomers(req, res) {
   }
 }
 
+const updateLikesAndGlobalUserSatisfactionFactor = async (req, res) => {
+  try {
+    let body = '';
+    req.on('data', chunk => {
+      body += chunk.toString();
+    });
 
+    req.on('end', async () => {
+      try {
+        const { destination, feedback } = JSON.parse(body);
+
+        console.log("The received destination is: ", destination);
+        console.log("The received feedback is:", feedback);
+
+        const souvenirsCollectionRef = collection(db, 'suveniruri');
+        const querySnapshot = await getDocs(query(souvenirsCollectionRef, where('tara', '==', destination.tara), where('oras', '==', destination.oras)));
+
+        const updateTasks = [];
+        if (feedback === 'dislike') {
+          querySnapshot.forEach((souvenirDoc) => {
+            const souvenirRef = doc(db, 'suveniruri', souvenirDoc.id);
+            const { dislikesCount = 0 } = souvenirDoc.data();
+            updateTasks.push(updateDoc(souvenirRef, {
+              dislikesCount: dislikesCount + 1
+            }));
+          });
+
+          const statsCollectionRef = collection(db, 'statisticsData');
+          const statsDocRef = doc(statsCollectionRef, 'satisfiedCustomers');
+          const statsDocSnap = await getDoc(statsDocRef);
+
+          if (!statsDocSnap.exists()) {
+            await setDoc(statsDocRef, { value: -1 });
+          } else {
+            const { value } = statsDocSnap.data();
+            await updateDoc(statsDocRef, { value: value - 1 });
+          }
+        } else if (feedback === 'like') {
+          querySnapshot.forEach((souvenirDoc) => {
+            const souvenirRef = doc(db, 'suveniruri', souvenirDoc.id);
+            const { likesCount = 0 } = souvenirDoc.data();
+            updateTasks.push(updateDoc(souvenirRef, {
+              likesCount: likesCount + 1
+            }));
+          });
+
+          const statsCollectionRef = collection(db, 'statisticsData');
+          const statsDocRef = doc(statsCollectionRef, 'satisfiedCustomers');
+          const statsDocSnap = await getDoc(statsDocRef);
+
+          if (!statsDocSnap.exists()) {
+            await setDoc(statsDocRef, { value: 1 });
+          } else {
+            const { value } = statsDocSnap.data();
+            await updateDoc(statsDocRef, { value: value + 1 });
+          }
+        }
+
+        await Promise.all(updateTasks);
+
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ status: 'ok' }));
+      } catch (error) {
+        console.error('Error updating statistics or souvenirs:', error);
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Internal server error' }));
+      }
+    });
+  } catch (error) {
+    console.error('Error processing request:', error);
+    res.writeHead(500, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ error: 'Internal server error' }));
+  }
+};
 
 module.exports = {
+  updateLikesAndGlobalUserSatisfactionFactor,
   updateStatisticsDataSouvenirsSuggested,
   updateStatisticsDataNumberOfAccesses,
   getNumberOfAccesses,

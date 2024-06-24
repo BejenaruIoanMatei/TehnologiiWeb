@@ -34,7 +34,15 @@ const adminUserRoute = require('./routes/redirectExploreAdminRoute');
 const adminPageUserRoute = require('./routes/redirectAdminPageRoute');
 const adminStatisticsUserRoute = require('./routes/statisticsRoute');
 const fetchCountriesAndCities = require("./components/database/fetchComponents/fetchCountriesAndCities");
-const { getNumberOfAccesses, getLoggedInUsers, getSouvenirsSuggested, getSatisfiedCustomers, getGlobalLikeRatio, updateStatisticsDataNumberOfAccesses, updateStatisticsDataSouvenirsSuggested
+const {
+  getNumberOfAccesses,
+  getLoggedInUsers,
+  getSouvenirsSuggested,
+  getSatisfiedCustomers,
+  getGlobalLikeRatio,
+  updateStatisticsDataNumberOfAccesses,
+  updateStatisticsDataSouvenirsSuggested,
+  updateLikesAndGlobalUserSatisfactionFactor
 } = require('./utils/statisticsUtil');
 const fetchMainSouvenir = require('./components/database/fetchComponents/fetchMainSouvenirs');
 const fetchOtherSouvenirs = require('./components/database/fetchComponents/fetchOtherSouvenirs');
@@ -80,6 +88,7 @@ const POSTProtectedRoutes = [
   '/adminRevokeRights',
   '/adminGrantRights',
   '/updateStatisticsDataSouvenirsSuggested',
+  '/updateLikesAndGlobalUserSatisfactionFactor',
 ]
 const PORT = process.env.PORT || 3000;
 
@@ -413,6 +422,10 @@ const server = http.createServer(async (req, res) => {
     }else if ( urlWithoutParams === '/updateStatisticsDataSouvenirsSuggested' ) {
       if (redirectIfNotLoggedIn(req, res)) return;
       await updateStatisticsDataSouvenirsSuggested(req, res);
+    } else if( urlWithoutParams === '/updateLikesAndGlobalUserSatisfactionFactor')
+    {
+      if (redirectIfNotLoggedIn(req, res)) return;
+      await updateLikesAndGlobalUserSatisfactionFactor(req, res);
     } else if ( urlWithoutParams === '/exportToHTML')
     {
       if (redirectIfNotLoggedIn(req, res)) return;

@@ -82,9 +82,20 @@ async function getOtherSouvenirs(destination)
   }
 }
 async function sendFeedback(destination, feedback) {
-  await new Promise(resolve => setTimeout(resolve, 1000));
-
-  console.log(`Feedback sent to backend for ${feedback}:`, destination);
+  console.log('The sent feedback is', feedback)
+  const signedUrl = await fetchSignedURL('/updateLikesAndGlobalUserSatisfactionFactor');
+  fetch(signedUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(
+{ destination: destination,
+  feedback : feedback }
+  ),
+  }).catch(error => {
+    console.error('Error sending feedback of souvenirs:', error);
+  });
 }
 async function sendNumberOfSouvenirs(numberOfSouvenirs)
 {
