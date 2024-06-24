@@ -38,6 +38,7 @@ const exportSouvenirsToCSV = require('./components/database/exportScripts/export
 const exportSouvenirsToXML = require('./components/database/exportScripts/exportSouvenirsToXML');
 const exportSouvenirsToJSON = require('./components/database/exportScripts/exportSouvenirsToJSON');
 const fetchAllUsers = require('./components/database/fetchComponents/fetchAllUsers');
+const decryptJWTToken = require('./utils/decryptJWTToken');
 /* Protected routes to be hashed definitions */
 const GETProtectedRoutes = [
   '/explore',
@@ -57,22 +58,13 @@ const POSTProtectedRoutes = [
   '/exportToCSV',
   '/loginComponent',
   '/registerComponent',
+  '/fetchAllUsers'
 ]
 const PORT = process.env.PORT || 3000;
 
 /* Global variables definition */
 const sessions = {};
-let countries={};
 
-async function initializeCountries() {
-  try {
-    countries = await fetchCountriesAndCities();
-    console.log('Countries and cities fetched:', countries);
-  } catch (error) {
-    console.error('Error fetching countries and cities:', error);
-    throw error;
-  }
-}
 async function parseBodyJWT(req) {
   return new Promise((resolve, reject) => {
     let body = '';
@@ -357,9 +349,12 @@ const server = http.createServer(async (req, res) => {
           return;
         }
         const token = authHeader.split(' ')[1];
+        console.log('Ecrypted token: ', token);
+        const decryptedToken = await decryptJWTToken(token);
+        console.log('Decrypted token', decryptedToken);
         let decodedToken;
         try {
-          decodedToken = jwt.verify(token, secretKey);
+          decodedToken = jwt.verify(decryptedToken, secretKey);
         } catch (err) {
           res.writeHead(401, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ error: 'Unauthorized - Invalid token' }));
@@ -607,22 +602,6 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-// initializeCountries()
-//   .then(() => {
-//     // Start the server listening once initialization is complete
-//     server.listen(PORT, async () => {
-//       console.log('Server running on port', PORT);
-//       await resetLoggedInStatus();
-//       if( flagUpdateLikeRatioAllDocuments === true )
-//       {
-//         await updateLikeRatioForSouvenirs();
-//       }
-//     });
-//   })
-//   .catch((error) => {
-//     console.error('Failed to initialize countries:', error);
-//     process.exit(1); // Exit the process if initialization fails
-//   });
 server.listen(PORT, async () => {
   console.log('Server running on port', PORT);
   await resetLoggedInStatus();
@@ -631,4 +610,4 @@ server.listen(PORT, async () => {
     await updateLikeRatioForSouvenirs();
   }
 });
-module.exports = { countries };
+

@@ -1,7 +1,8 @@
 // adminComponent.js (Client-Side)
 // Function to fetch signed URL from server for a specific endpoint
 
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbnRpdHlJZCI6IjAyMjY0NjU3LTUwOWUtNGNhMS04ZTA0LTg5MmY3ZWI3MDRiMCIsImlhdCI6MTcxOTE3NTY2MCwiZXhwIjoxNzE5NzgwNDYwfQ.EkeEZlSzRCwEMLnRuHWCUzDI_cG67ngYrRpWFR_UpUQ";
+const token = "m5CwxnhGPKjzcxU0nzlioeW6Mq4LEBCagiqfKP0Vpn8TyKcCFFegbL8/0rUGtXmJhXGvNRXQxvNtlvLLMdweiKgPgXZfa9gbsztC0PsPG2SDsscYOa9+v6zjHzgO+zNho7xGiOUYNje+nqFWqzs6kMDv4byuc85Uq9JCTeDT2/poWIO0PCQHOZ7+e2ZD2Qd0vOLV0Fiyp771c9lCL5lStM40zg5QLynx8hPb7/kni9g+K3R2iLMpWQZcZo6Wxk9UtBlfTY97hjo83NiACeBIbK4a4w==";
+
 async function fetchSignedURL(urlToSign) {
   try {
     const response = await fetch('/generateSignedURL', {
@@ -27,7 +28,8 @@ async function loadUsersToTable() {
   try {
 
 
-    const response = await fetch('/fetchAllUsers', {
+    const signedUrl = await fetchSignedURL('/fetchAllUsers');
+    const response = await fetch(signedUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
