@@ -1,3 +1,5 @@
+let destinations = []; // Declare destinations at a higher scope
+
 document.addEventListener("DOMContentLoaded", async function () {
   // Fetch countries
   const response = await fetch('/getCountries');
@@ -65,9 +67,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     checkboxOptions.appendChild(label);
     checkboxOptions.appendChild(document.createElement("br"));
   });
-
-  // Array to store destinations
-  const destinations = [];
 
   // Add event listener for the add destination button
   addDestinationButton.addEventListener("click", function (event) {
@@ -137,22 +136,23 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   const createTripButton = document.getElementById("submit-trip");
   createTripButton.addEventListener("click", async function () {
-    // 1. Show the map popup first
+    // Show the map popup first
     const mapPopupContainer = document.getElementById("map-popup-container");
     mapPopupContainer.style.display = "block";
-
-    // Initialize Leaflet map
-    initMap();
 
     // Close map popup button
     const closeMapPopup = document.getElementById("close-map-popup");
     closeMapPopup.addEventListener("click", function () {
       mapPopupContainer.style.display = "none";
-      // Optional: Remove the map when the popup is closed
+      // Remove the map when the popup is closed
       document.getElementById("map").innerHTML = "";
+      map = null; // Reset the map variable
     });
 
-    // 2. Then, show the recommendation popup on top
+    // Initialize Leaflet map
+    initMap(destinations); // Pass the destinations array to initMap
+
+    // Show the recommendation popup on top
     const popupContainer = document.getElementById("popup-container");
     const closePopup = document.getElementById("close-popup");
     const souvenirList = document.getElementById("souvenir-list");
@@ -195,9 +195,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
           likeButton.addEventListener("click", async () => {
             try {
-              // Replace with your backend logic to handle like
               console.log("Liked:", destination);
-              // Simulate sending feedback to backend
               await sendFeedback(destination, 'like');
             } catch (error) {
               console.error("Error handling like:", error);
@@ -206,9 +204,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
           dislikeButton.addEventListener("click", async () => {
             try {
-              // Replace with your backend logic to handle dislike
               console.log("Disliked:", destination);
-              // Simulate sending feedback to backend
               await sendFeedback(destination, 'dislike');
             } catch (error) {
               console.error("Error handling dislike:", error);
@@ -285,18 +281,58 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 
   // Initialize the Leaflet map
-  function initMap() {
-    if (typeof L !== 'undefined') {
-      // Leaflet is loaded, proceed with map initialization
-      map = L.map('map').setView([51.505, -0.09], 13); 
-  
+  function initMap(destinations) {
+    if (typeof L === 'undefined') {
+      console.error('Leaflet is not loaded');
+      return;
+    }
+
+    if (!map) {
+      map = L.map('map').setView([45.9432, 24.9668], 6);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
       }).addTo(map);
-    } else {
-      // Leaflet is not yet loaded, try again later (e.g., using setTimeout)
-      setTimeout(initMap, 100); // Retry after 100 milliseconds
     }
+
+    // Clear existing markers
+    map.eachLayer((layer) => {
+      if (layer instanceof L.Marker) {
+        map.removeLayer(layer);
+      }
+    });
+
+    // Add markers for destinations
+    addMarkersForDestinations(destinations);
+
+    // Ensure the map container is visible and has a size
+    document.getElementById('map').style.display = 'block';
+    map.invalidateSize();
   }
+
+  function addMarkersForDestinations(destinations) {
+    if (!destinations || !Array.isArray(destinations) || destinations.length === 0) {
+      console.error("No valid destinations data");
+      return;
+    }
+
+    destinations.forEach(destination => {
+      fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${destination.oras},${destination.tara}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.length > 0) {
+            const { lat, lon } = data[0];
+            L.marker([lat, lon]).addTo(map)
+              .bindPopup(`<b>${destination.oras}, ${destination.tara}</b>`)
+              .openPopup();
+          } else {
+            console.error("Geocoding failed for:", destination);
+          }
+        })
+        .catch(error => console.error("Error fetching location data:", error));
+    });
+  }
+
+  // Ensure the map is initialized when the script is loaded
+  window.initMap = initMap;
 });
 
