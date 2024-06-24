@@ -7,9 +7,6 @@
   <title>Admin Panel</title>
   <style>
     /* CSS for modal and overlay */
-
-
-
   </style>
 </head>
 <body>
@@ -52,6 +49,7 @@
           <h2>Users</h2>
         </div>
         <table>
+          <thead>
           <tr>
             <th>Username</th>
             <th>Email</th>
@@ -59,6 +57,10 @@
             <th>Login Status</th>
             <th>Actions</th>
           </tr>
+          </thead>
+          <tbody id="tableBody"> <!-- Ensure you have an ID here for table body -->
+          <!-- This is where rows will be dynamically inserted -->
+          </tbody>
         </table>
       </div>
     </div>

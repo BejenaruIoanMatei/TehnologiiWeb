@@ -7,8 +7,11 @@
     <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="121: Improve admin security">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/adminComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/adminComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/database/fetchComponents/fetchAllUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/database/fetchComponents/fetchAllUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/registerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/registerComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/registerRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/registerRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/signInRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/signInRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -10,19 +10,29 @@ async function fetchAllUsers(req, res) {
     const allUsers = [];
     snapshot.forEach(doc => {
       const userData = doc.data(); // Get the data for this user
+
       // Check if the required fields exist in the data
-      if (userData.email && userData.username && userData.role && userData.loggedIn !== undefined) {
+      const missingFields = [];
+      if (!userData.email) missingFields.push('email');
+      if (!userData.username) missingFields.push('username');
+      if (!userData.role) missingFields.push('role');
+      if (userData.loggedIn === undefined) missingFields.push('loggedIn');
+      if (userData.userId === undefined) missingFields.push('userId');
+
+      if (missingFields.length === 0) {
         allUsers.push({
           id: doc.id, // Include the document ID
           email: userData.email,
           username: userData.username,
           role: userData.role,
           loggedIn: userData.loggedIn,
+          userId: userData.userId,
         });
       } else {
-        console.warn(`Document with ID: ${doc.id} is missing one or more required fields`);
+        console.warn(`Document with ID: ${doc.id} is missing the following fields: ${missingFields.join(', ')}`);
       }
     });
+
 
     console.log('All Users found (with selected fields):', allUsers);
 

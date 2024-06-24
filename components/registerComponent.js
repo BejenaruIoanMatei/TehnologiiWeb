@@ -3,6 +3,7 @@ const { collection, query, where, getDocs, addDoc } = require('firebase/firestor
 const bcrypt = require('bcrypt');
 const cookie = require('cookie');
 const { v4: uuidv4 } = require('uuid');
+const crypto = require('crypto');
 
 const registerComponent = async (req, res, sessions) => {
   let body = '';
@@ -43,11 +44,15 @@ const registerComponent = async (req, res, sessions) => {
       // Hash the password
       const hashedPassword = await bcrypt.hash(password, 10);
 
+      // Generate userId
+      const userId = crypto.randomBytes(16).toString('hex');
+
       // Generate new session ID
       const sessionId = uuidv4();
 
-      // Add the new user with default role "user"
+
       const newUserRef = await addDoc(usersRef, {
+        userId,
         username,
         password: hashedPassword,
         age,

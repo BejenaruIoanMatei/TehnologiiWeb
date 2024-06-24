@@ -13,6 +13,7 @@ async function fetchSignedURL(urlToSign) {
       body: JSON.stringify({})
     });
 
+
     if (!responseToken.ok) {
       throw new Error('Failed to fetch token');
     }
@@ -38,10 +39,9 @@ async function fetchSignedURL(urlToSign) {
   }
 }
 
+
 async function loadUsersToTable() {
   try {
-
-
     const signedUrl = await fetchSignedURL('/fetchAllUsers');
     const response = await fetch(signedUrl, {
       method: 'POST',
@@ -57,21 +57,17 @@ async function loadUsersToTable() {
     const users = await response.json();
 
     // Get the table body element
-    const tableBody = document.querySelector('.recent-payments table tbody');
+    const tableBody = document.getElementById('tableBody');
 
-    // Clear any existing rows
+    // Check if tableBody exists
+    if (!tableBody) {
+      throw new Error('Table body element not found');
+    }
+
+    // Clear existing rows
     tableBody.innerHTML = '';
 
-    const heading = '\'<tr>\n' +
-      '            <th>Username</th>\n' +
-      '            <th>Email</th>\n' +
-      '            <th>Role</th>\n' +
-      '            <th>Login Status</th>\n' +
-      '            <th>Action</th>\n' +
-      '          </tr>\n' +
-      '\''
-    tableBody.innerHTML += heading;
-    // Add rows for each user
+    // Construct rows for each user
     users.forEach(user => {
       const row = `
         <tr>
@@ -79,19 +75,109 @@ async function loadUsersToTable() {
           <td>${user.email}</td>
           <td>${user.role}</td>
           <td>${user.loggedIn ? 'Active' : 'Inactive'}</td>
-          <td><a id="deleteUser" href="/deleteUser" class="btn">Delete user</a></td>
-          <td><a id="grantAdminPermision" href="/grantAdminPermision" class="btn">Grant admin permission</a></td>
-          <td><a id="revokeAdminPermision" href="/revokeAdminPermision" class="btn">Revoke admin permission</a></td>
+          <td>${user.userId}</td>
+          <td>
+            <button class="btn deleteUser" data-user-id="${user.id}">Delete user</button>
+            <button class="btn grantAdminPermission" data-user-id="${user.id}">Grant admin permission</button>
+            <button class="btn revokeAdminPermission" data-user-id="${user.id}">Revoke admin permission</button>
+          </td>
         </tr>
       `;
       tableBody.innerHTML += row;
     });
+
+    // Add event listener for action buttons using event delegation
+    tableBody.addEventListener('click', async (event) => {
+      const target = event.target;
+
+      if (target.classList.contains('deleteUser')) {
+        const userId = target.getAttribute('data-user-id');
+        await deleteUser(userId);
+      } else if (target.classList.contains('grantAdminPermission')) {
+        const userId = target.getAttribute('data-user-id');
+        await grantAdminPermission(userId);
+      } else if (target.classList.contains('revokeAdminPermission')) {
+        const userId = target.getAttribute('data-user-id');
+        await revokeAdminPermission(userId);
+      }
+    });
+
   } catch (error) {
     console.error('Error fetching or displaying users:', error);
-    // You might want to display an error message to the user here
+    // Display an error message to the user if needed
   }
 }
 
+async function deleteUser(userId) {
+  try {
+    const signedUrl = await fetchSignedURL(`/deleteUser/${userId}`);
+    const response = await fetch(signedUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to delete user with ID ${userId}`);
+    }
+
+    // Refresh user list after deletion
+    await loadUsersToTable();
+
+  } catch (error) {
+    console.error(`Error deleting user with ID ${userId}:`, error);
+    // Display an error message to the user if needed
+  }
+}
+
+async function grantAdminPermission(userId) {
+  try {
+    const signedUrl = await fetchSignedURL(`/grantAdminPermission/${userId}`);
+    const response = await fetch(signedUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to grant admin permission to user with ID ${userId}`);
+    }
+
+    // Refresh user list after permission change
+    await loadUsersToTable();
+
+  } catch (error) {
+    console.error(`Error granting admin permission to user with ID ${userId}:`, error);
+    // Display an error message to the user if needed
+  }
+}
+
+async function revokeAdminPermission(userId) {
+  try {
+    const signedUrl = await fetchSignedURL(`/revokeAdminPermission/${userId}`);
+    const response = await fetch(signedUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to revoke admin permission from user with ID ${userId}`);
+    }
+
+    // Refresh user list after permission change
+    await loadUsersToTable();
+
+  } catch (error) {
+    console.error(`Error revoking admin permission from user with ID ${userId}:`, error);
+    // Display an error message to the user if needed
+  }
+}
+
+// Initialize the user table on page load
 window.addEventListener('load', loadUsersToTable);
 
 // Function to handle export to HTML

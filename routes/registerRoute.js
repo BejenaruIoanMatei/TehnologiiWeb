@@ -27,7 +27,6 @@ async function fetchSignedURL(urlToSign) {
       throw new Error('Failed to fetch signed URL');
     }
     const { signedURL } = await response.json();
-    console.log("The signed url is: ", signedURL);
     return signedURL;
   } catch (error) {
     console.error('Error fetching signed URL:', error);
