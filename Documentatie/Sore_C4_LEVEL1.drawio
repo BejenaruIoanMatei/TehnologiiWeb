@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net" modified="2024-06-24T23:13:58.542Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="KDGXPCsGjvtQqECbvtVc" version="24.6.2" type="device">
+  <diagram name="Page-1" id="QXPeTNBncEF4eeQSKUlk">
+    <mxGraphModel dx="3576" dy="2546" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object placeholders="1" c4Name="User" c4Type="Client" c4Description="Person that wants a souvenir sugestion" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="COm_rqQEN5jKaDhNb9Z0-1">
+          <mxCell style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" parent="1" vertex="1">
+            <mxGeometry x="-820" y="-1070" width="200" height="180" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="fY5cgNFYc6_N9_vYUAOr-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="fY5cgNFYc6_N9_vYUAOr-1" target="fY5cgNFYc6_N9_vYUAOr-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object placeholders="1" c4Name="SoRe" c4Technology="Software System" c4Description="Souvenir suggester that allows users to register , log in , create a trip and see recommendations based on the filters selected at every step " label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" c4Type="" id="fY5cgNFYc6_N9_vYUAOr-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+            <mxGeometry x="-810" y="-650" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="fY5cgNFYc6_N9_vYUAOr-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="COm_rqQEN5jKaDhNb9Z0-1" target="fY5cgNFYc6_N9_vYUAOr-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-700" y="-660" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-720" y="-775" />
+              <mxPoint x="-700" y="-775" />
+              <mxPoint x="-700" y="-650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fY5cgNFYc6_N9_vYUAOr-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-780" y="-820" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fY5cgNFYc6_N9_vYUAOr-4" value="Registers , signs in , uses the explore functionalities , creates a trip and gets to see some souvenir recommendations&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-765" y="-835" width="170" height="90" as="geometry" />
+        </mxCell>
+        <object placeholders="1" c4Type="Firestore" c4Container="Database" c4Technology="Firebase Firestore DB" c4Description="Stores information about souvenirs , locations related to souvenirs , and personal data" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Type%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Container%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="fY5cgNFYc6_N9_vYUAOr-5">
+          <mxCell style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" vertex="1" parent="1">
+            <mxGeometry x="-765" y="-330" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="fY5cgNFYc6_N9_vYUAOr-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fY5cgNFYc6_N9_vYUAOr-1" target="fY5cgNFYc6_N9_vYUAOr-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fY5cgNFYc6_N9_vYUAOr-7" value="Reads from and writes to&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-675" y="-480" width="60" height="30" as="geometry" />
+        </mxCell>
+        <object placeholders="1" c4Name="Nominatim" c4Type="Api: JSON , XML" c4Description="&#xa;Nominatim, the geocoding service provided by OpenStreetMap, converts addresses into geographic coordinates and vice versa.&#xa;" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="fY5cgNFYc6_N9_vYUAOr-9">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+            <mxGeometry x="-360" y="-650" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="fY5cgNFYc6_N9_vYUAOr-12" value="Makes API calls&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-500" y="-630" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fY5cgNFYc6_N9_vYUAOr-13" value="JSON" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-500" y="-580" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fY5cgNFYc6_N9_vYUAOr-14" value="JSON" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="-470" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
