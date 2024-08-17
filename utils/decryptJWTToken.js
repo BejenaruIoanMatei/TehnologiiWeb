@@ -11,13 +11,13 @@ const key = {
   key_ops: ['encrypt', 'decrypt'],
   ext: true,
   kty: 'oct',
-  k: 'afT04ZU0eMCCR0w_nLpg2MMGeAB7hWkutxMRK2hXdQ4',
+  k: 'xZGZ1TkHJAJ8wVAN3ntLFyAjZuCnfdQG-uF_H0XooKU',
   alg: 'A256GCM'
 };
 const iv = [
-  140, 123,  35, 183,
-  148, 228, 170, 130,
-  73, 117, 131,  64
+  133, 249,  90, 121,
+  70, 107, 59, 19,
+  17, 176, 77,  224
 ];
 
 function base64ToBuffer(base64) {

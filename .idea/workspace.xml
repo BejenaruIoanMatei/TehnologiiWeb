@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a72ad9e5-5e9b-404d-b115-8253079f14f4" name="Changes" comment="132: Separate client logic from server logic">
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/loginComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/loginComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/registerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/registerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentatie/Sore_C4_LEVEL2.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Documentatie/Sore_C4_LEVEL2.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentatie/Sore_C4_Level4.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Documentatie/Sore_C4_Level4.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/decryptJWTToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/decryptJWTToken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/encryptJWTToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/encryptJWTToken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/firebaseInit.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/firebaseInit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/getJWTToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/getJWTToken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/tokenSignUrl.json" beforeDir="false" afterPath="$PROJECT_DIR$/utils/tokenSignUrl.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +55,10 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.14.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.14.2&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Stefan/Documents/GitHub/TehnologiiWeb/Frontend/views&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.13.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.13.0&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/TehnologiiWeb&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -74,13 +80,6 @@
       <recent name="C:\Users\Stefan\Documents\GitHub\TehnologiiWeb\utils" />
       <recent name="C:\Users\Stefan\Documents\GitHub\TehnologiiWeb\components\database\exports" />
     </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.17011.90" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -104,6 +103,10 @@
       <workItem from="1719159613462" duration="172000" />
       <workItem from="1719159823625" duration="10061000" />
       <workItem from="1719216045951" duration="11330000" />
+      <workItem from="1719726906997" duration="644000" />
+      <workItem from="1719727585404" duration="2297000" />
+      <workItem from="1719747855822" duration="3857000" />
+      <workItem from="1723871677132" duration="1097000" />
     </task>
     <task id="LOCAL-00001" summary="54: Refactor dataBase scripts">
       <option name="closed" value="true" />
